@@ -1,19 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Briefcase, 
-  Lightbulb, 
-  Users, 
-  Rocket, 
-  Target,
-  Brain,
-  Database,
-  LineChart,
-  PieChart,
-  Zap
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -28,69 +15,66 @@ const staggerContainer = {
 const Services = () => {
   const serviceCategories = [
     {
+      number: 'I',
       title: 'Strategic Intelligence Advisory',
       description: 'Data-driven insights powered by advanced customer analytics platforms that inform and accelerate executive decision-making.',
-      icon: <Database size={32} strokeWidth={1.5} />,
-      color: 'from-blue-500/20 to-transparent',
       services: [
         {
-          icon: <BarChart3 size={24} strokeWidth={1.5} />,
+          id: 'A',
           name: 'Customer Intelligence & Analytics',
           description: 'Leverage o360 platform capabilities for comprehensive, real-time customer analytics that reveal who your customers really are and what drives their decisions.'
         },
         {
-          icon: <Brain size={24} strokeWidth={1.5} />,
+          id: 'B',
           name: 'Choice Analytics & Behavioral Insights',
           description: 'Using ASEMAP technology to understand the cognitive and behavioral drivers behind customer choice—moving beyond ratings to true understanding.'
         },
         {
-          icon: <LineChart size={24} strokeWidth={1.5} />,
+          id: 'C',
           name: 'Predictive Intelligence & Personalization',
           description: 'Forward-looking analytics that predict customer behavior and enable hyper-personalized engagement strategies for your market.'
         }
       ]
     },
     {
+      number: 'II',
       title: 'Customer Experience & Brand',
       description: 'Transform customer journeys and market positioning through choice analytics and experience intelligence.',
-      icon: <Users size={32} strokeWidth={1.5} />,
-      color: 'from-purple-500/20 to-transparent',
       services: [
         {
-          icon: <Users size={24} strokeWidth={1.5} />,
+          id: 'A',
           name: 'Customer Experience Strategy',
           description: 'Data-driven customer experience transformation using choice analytics to understand what customers truly want at every touchpoint.'
         },
         {
-          icon: <Rocket size={24} strokeWidth={1.5} />,
+          id: 'B',
           name: 'Strategic Execution Planning',
           description: 'Comprehensive execution roadmaps informed by customer intelligence, with ongoing advisory support to ensure successful implementation.'
         },
         {
-          icon: <Target size={24} strokeWidth={1.5} />,
+          id: 'C',
           name: 'Brand Intelligence & Positioning',
           description: 'Strategic brand development powered by competitive intelligence and customer perception analytics for market differentiation.'
         }
       ]
     },
     {
+      number: 'III',
       title: 'Healthcare Intelligence',
       description: 'Specialized patient-centric intelligence for healthcare organizations seeking to understand and improve patient choice and experience.',
-      icon: <PieChart size={32} strokeWidth={1.5} />,
-      color: 'from-emerald-500/20 to-transparent',
       services: [
         {
-          icon: <Users size={24} strokeWidth={1.5} />,
+          id: 'A',
           name: 'Patient Choice Analytics',
           description: 'PatientX360 platform capabilities to understand healthcare decision-making, patient preferences, and the drivers of patient loyalty.'
         },
         {
-          icon: <Zap size={24} strokeWidth={1.5} />,
+          id: 'B',
           name: 'Healthcare Experience Optimization',
           description: 'Transform patient journeys through deep behavioral insights, improving patient-centricity and healthcare outcomes.'
         },
         {
-          icon: <Briefcase size={24} strokeWidth={1.5} />,
+          id: 'C',
           name: 'Healthcare Market Intelligence',
           description: 'Comprehensive market analysis for healthcare organizations, including competitive positioning and growth opportunity identification.'
         }
@@ -208,8 +192,14 @@ const Services = () => {
               <motion.div
                 key={index}
                 variants={fadeUpVariant}
-                className="glass-card p-6 text-center"
+                className="glass-card p-6"
               >
+                <div className="mb-4">
+                  <span className="text-xs font-mono tracking-[0.15em] text-blue-400/60">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div className="h-px w-8 bg-gradient-to-r from-blue-500/50 to-transparent mt-2" />
+                </div>
                 <h3 className="text-lg font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
                   {cap.title}
                 </h3>
@@ -245,13 +235,15 @@ const Services = () => {
             >
               {/* Category Header */}
               <motion.div variants={fadeUpVariant} className="mb-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 border border-white/10 mb-6 text-white/80">
-                  {category.icon}
+                <div className="flex items-baseline gap-6 mb-4">
+                  <span className="text-6xl md:text-7xl font-bold text-white/10" style={{ fontFamily: 'Syne, sans-serif' }}>
+                    {category.number}
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
+                    {category.title}
+                  </h2>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {category.title}
-                </h2>
-                <p className="text-lg text-white/60 max-w-2xl">
+                <p className="text-lg text-white/60 max-w-2xl ml-0 md:ml-24">
                   {category.description}
                 </p>
               </motion.div>
@@ -259,7 +251,7 @@ const Services = () => {
               {/* Services Grid */}
               <motion.div
                 variants={staggerContainer}
-                className="bento-grid"
+                className="grid md:grid-cols-3 gap-6 md:ml-24"
               >
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
@@ -267,19 +259,18 @@ const Services = () => {
                     variants={fadeUpVariant}
                     className="glass-card service-card p-8"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/70">
-                        {service.icon}
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
-                          {service.name}
-                        </h3>
-                        <p className="text-white/60 text-sm leading-relaxed">
-                          {service.description}
-                        </p>
-                      </div>
+                    <div className="mb-4">
+                      <span className="text-xs font-mono tracking-[0.15em] text-white/30">
+                        {category.number}.{service.id}
+                      </span>
+                      <div className="h-px w-8 bg-gradient-to-r from-white/20 to-transparent mt-2" />
                     </div>
+                    <h3 className="text-lg font-bold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+                      {service.name}
+                    </h3>
+                    <p className="text-white/60 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
                   </motion.div>
                 ))}
               </motion.div>

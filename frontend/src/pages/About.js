@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Zap, Shield, Eye, Target, Database, Brain, BarChart3 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -16,22 +16,22 @@ const staggerContainer = {
 const About = () => {
   const values = [
     {
-      icon: <Eye size={28} strokeWidth={1.5} />,
+      number: '01',
       title: 'Insight-Driven',
       description: 'Every recommendation is powered by advanced analytics platforms and real customer data.'
     },
     {
-      icon: <Target size={28} strokeWidth={1.5} />,
+      number: '02',
       title: 'Execution-Focused',
       description: 'We don\'t just strategize — we partner with you to implement and deliver measurable results.'
     },
     {
-      icon: <Shield size={28} strokeWidth={1.5} />,
+      number: '03',
       title: 'Client-Centric',
       description: 'Your success is our priority. We align our efforts with your strategic goals and challenges.'
     },
     {
-      icon: <Zap size={28} strokeWidth={1.5} />,
+      number: '04',
       title: 'Technology-Enabled',
       description: 'We leverage industry-leading analytics platforms to deliver intelligence at scale.'
     }
@@ -45,17 +45,17 @@ const About = () => {
 
   const platforms = [
     {
-      icon: <BarChart3 size={24} strokeWidth={1.5} />,
+      label: 'Platform',
       name: 'o360',
       description: 'Real-time customer intelligence platform for comprehensive analytics about your customers.'
     },
     {
-      icon: <Database size={24} strokeWidth={1.5} />,
+      label: 'Healthcare',
       name: 'PatientX360',
       description: 'Healthcare-specific intelligence for understanding patient choice and behavior.'
     },
     {
-      icon: <Brain size={24} strokeWidth={1.5} />,
+      label: 'Analytics',
       name: 'ASEMAP',
       description: 'Proprietary choice analytics technology revealing behavioral drivers behind customer decisions.'
     }
@@ -193,12 +193,15 @@ const About = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="glass-card p-8 text-center"
+                  className="glass-card p-8"
                 >
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6 text-blue-400">
-                    {platform.icon}
+                  <div className="mb-6">
+                    <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-blue-400/80 block mb-2">
+                      {platform.label}
+                    </span>
+                    <div className="h-px w-12 bg-gradient-to-r from-blue-500 to-transparent" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  <h3 className="text-2xl font-bold mb-3 tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
                     {platform.name}
                   </h3>
                   <p className="text-white/60 text-sm leading-relaxed">
@@ -240,14 +243,16 @@ const About = () => {
             
             <motion.div
               variants={fadeUpVariant}
-              className="space-y-6"
+              className="space-y-4"
             >
               {strengths.map((strength, index) => (
                 <div
                   key={index}
-                  className="glass-card p-6 flex items-center gap-4"
+                  className="glass-card p-6 flex items-center gap-6"
                 >
-                  <CheckCircle size={24} className="text-blue-500 flex-shrink-0" strokeWidth={1.5} />
+                  <span className="text-3xl font-bold text-white/20 w-12" style={{ fontFamily: 'Syne, sans-serif' }}>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                   <p className="text-lg text-left text-white/80">{strength}</p>
                 </div>
               ))}
@@ -285,11 +290,11 @@ const About = () => {
               <motion.div
                 key={index}
                 variants={fadeUpVariant}
-                className="glass-card p-8 text-center"
+                className="glass-card p-8"
               >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/5 border border-white/10 mb-6 text-white/80">
-                  {value.icon}
-                </div>
+                <span className="text-4xl font-bold text-white/10 block mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  {value.number}
+                </span>
                 <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
                   {value.title}
                 </h3>

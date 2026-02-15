@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Mail, Download, FileText, MessageCircle } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -15,18 +15,36 @@ const staggerContainer = {
 const Contact = () => {
   const resources = [
     {
-      icon: <FileText size={24} strokeWidth={1.5} />,
+      id: '01',
       title: 'Advisory Overview',
       description: 'Comprehensive deck on our strategic intelligence services and methodology.',
       link: 'https://brackett.agency/s/brackett_strategic_intelligence_deck.pdf',
       cta: 'Download PDF'
     },
     {
-      icon: <Download size={24} strokeWidth={1.5} />,
+      id: '02',
       title: 'One Page Brochure',
       description: 'Quick overview of BRACKETT services and value proposition.',
       link: 'https://brackett.agency/s/brackett_agency_one_pager_1.pdf',
       cta: 'Download PDF'
+    }
+  ];
+
+  const processSteps = [
+    {
+      step: '01',
+      title: 'Discovery Call',
+      description: 'We learn about your strategic challenges, goals, and vision for transformation.'
+    },
+    {
+      step: '02',
+      title: 'Custom Proposal',
+      description: 'We develop a tailored engagement plan aligned with your specific needs.'
+    },
+    {
+      step: '03',
+      title: 'Strategic Partnership',
+      description: 'We collaborate closely to deliver insights and drive measurable results.'
     }
   ];
 
@@ -83,8 +101,10 @@ const Contact = () => {
             <div className="glow-orb glow-blue w-[300px] h-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40" />
             
             <div className="relative z-10">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-white/10 mb-8">
-                <MessageCircle size={32} strokeWidth={1.5} className="text-white/80" />
+              <div className="mb-8">
+                <span className="text-7xl font-bold text-white/10 block" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  &
+                </span>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
@@ -146,10 +166,10 @@ const Contact = () => {
                 className="glass-card p-8 group cursor-pointer block"
                 data-testid={`resource-${index}`}
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/70 group-hover:text-white transition-colors">
-                    {resource.icon}
-                  </div>
+                <div className="flex items-start gap-6">
+                  <span className="text-4xl font-bold text-white/10 flex-shrink-0" style={{ fontFamily: 'Syne, sans-serif' }}>
+                    {resource.id}
+                  </span>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors" style={{ fontFamily: 'Syne, sans-serif' }}>
                       {resource.title}
@@ -194,23 +214,7 @@ const Contact = () => {
               variants={staggerContainer}
               className="grid md:grid-cols-3 gap-6"
             >
-              {[
-                {
-                  step: '01',
-                  title: 'Discovery Call',
-                  description: 'We learn about your strategic challenges, goals, and vision for transformation.'
-                },
-                {
-                  step: '02',
-                  title: 'Custom Proposal',
-                  description: 'We develop a tailored engagement plan aligned with your specific needs.'
-                },
-                {
-                  step: '03',
-                  title: 'Strategic Partnership',
-                  description: 'We collaborate closely to deliver insights and drive measurable results.'
-                }
-              ].map((item, index) => (
+              {processSteps.map((item, index) => (
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}

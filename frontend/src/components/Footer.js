@@ -22,7 +22,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-mono tracking-[0.2em] uppercase text-white/40 mb-6">
+            <h4 className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40 mb-6">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -42,7 +42,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="text-sm font-mono tracking-[0.2em] uppercase text-white/40 mb-6">
+            <h4 className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/40 mb-6">
               Resources
             </h4>
             <ul className="space-y-3">
@@ -89,7 +89,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-sm">
-            &copy; {currentYear} Brackett Agency. All rights reserved.
+            {currentYear} Brackett Agency. All rights reserved.
           </p>
           <p className="text-white/40 text-sm">
             Strategic Intelligence & Advisory Services

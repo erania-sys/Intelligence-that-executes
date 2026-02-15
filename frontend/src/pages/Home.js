@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Lightbulb, Target, TrendingUp, Users, Sparkles, Database, Brain, BarChart3 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -16,19 +16,19 @@ const staggerContainer = {
 const Home = () => {
   const services = [
     {
-      icon: <Database size={32} strokeWidth={1.5} />,
+      number: '01',
       title: 'Strategic Intelligence',
       description: 'Real-time customer analytics and market intelligence powered by advanced behavioral data platforms.',
       link: '/services'
     },
     {
-      icon: <Users size={32} strokeWidth={1.5} />,
+      number: '02',
       title: 'Customer Experience',
       description: 'Data-driven transformation of customer journeys through choice analytics and experience mapping.',
       link: '/services'
     },
     {
-      icon: <Target size={32} strokeWidth={1.5} />,
+      number: '03',
       title: 'Brand & Market Positioning',
       description: 'Strategic brand development informed by predictive customer behavior insights.',
       link: '/services'
@@ -55,17 +55,17 @@ const Home = () => {
 
   const intelligenceFeatures = [
     {
-      icon: <BarChart3 size={24} strokeWidth={1.5} />,
+      label: 'Platform',
       title: 'o360',
       description: 'Comprehensive customer intelligence platform delivering real-time analytics about your customers, enabling data-driven decisions at every touchpoint.'
     },
     {
-      icon: <Users size={24} strokeWidth={1.5} />,
+      label: 'Healthcare',
       title: 'PatientX360',
       description: 'Healthcare-specific intelligence for understanding patient choice and behavior, transforming how organizations approach patient-centricity.'
     },
     {
-      icon: <Brain size={24} strokeWidth={1.5} />,
+      label: 'Analytics',
       title: 'ASEMAP',
       description: 'Proprietary choice analytics technology that reveals the behavioral and cognitive drivers behind customer decisions—not just ratings, but real understanding.'
     }
@@ -178,12 +178,15 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="glass-card p-8"
+                  className="glass-card p-8 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6">
-                    {feature.icon}
+                  <div className="mb-6">
+                    <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-blue-400/80 block mb-2">
+                      {feature.label}
+                    </span>
+                    <div className="h-px w-12 bg-gradient-to-r from-blue-500 to-transparent" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  <h3 className="text-2xl font-bold mb-3 tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
                     {feature.title}
                   </h3>
                   <p className="text-white/60 text-sm leading-relaxed">
@@ -272,7 +275,9 @@ const Home = () => {
                 variants={fadeUpVariant}
                 className="glass-card service-card p-8 md:p-10"
               >
-                <div className="text-white/80 mb-6">{service.icon}</div>
+                <span className="text-5xl font-bold text-white/10 block mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  {service.number}
+                </span>
                 <h3 className="text-xl md:text-2xl font-bold mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
                   {service.title}
                 </h3>
@@ -340,11 +345,11 @@ const Home = () => {
                 variants={fadeUpVariant}
                 className="glass-card testimonial-card p-8"
               >
-                <Sparkles size={24} className="text-white/30 mb-6" strokeWidth={1.5} />
+                <div className="text-6xl font-serif text-white/10 leading-none mb-4">"</div>
                 <p className="text-white/80 text-lg leading-relaxed mb-8">
-                  "{testimonial.quote}"
+                  {testimonial.quote}
                 </p>
-                <div>
+                <div className="pt-6 border-t border-white/10">
                   <p className="font-semibold text-white">{testimonial.author}</p>
                   <p className="text-white/50 text-sm">{testimonial.company}</p>
                 </div>
