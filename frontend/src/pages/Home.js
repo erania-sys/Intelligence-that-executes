@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -65,13 +66,34 @@ const Home = () => {
     }
   ];
 
+  const stats = [
+    { value: 50, suffix: '+', label: 'Strategic Projects' },
+    { value: 3, suffix: 'x', label: 'Average ROI' },
+    { value: 95, suffix: '%', label: 'Client Retention' },
+    { value: 12, suffix: '+', label: 'Industries Served' }
+  ];
+
   return (
     <div data-testid="home-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
       <section className="hero-section relative overflow-hidden" data-testid="hero-section">
         {/* Decorative shapes */}
-        <div className="shape-circle w-96 h-96 -top-20 -right-20" />
-        <div className="shape-square w-64 h-64 bottom-20 -left-10" />
+        <motion.div 
+          className="shape-circle w-96 h-96 -top-20 -right-20"
+          animate={{ 
+            scale: [1, 1.05, 1],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="shape-square w-64 h-64 bottom-20 -left-10"
+          animate={{ 
+            scale: [1, 1.1, 1],
+            rotate: [15, 20, 15]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
         
         <div className="section-container relative z-10">
           <motion.div
@@ -107,24 +129,54 @@ const Home = () => {
               variants={fadeUpVariant}
               className="flex flex-wrap gap-4"
             >
-              <a
+              <motion.a
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
                 data-testid="hero-cta-primary"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
                 Start a Conversation
                 <ArrowRight size={18} className="ml-2" />
-              </a>
-              <Link
-                to="/services"
-                className="btn-secondary"
-                data-testid="hero-cta-secondary"
-              >
-                Our Services
-              </Link>
+              </motion.a>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  to="/services"
+                  className="btn-secondary"
+                  data-testid="hero-cta-secondary"
+                >
+                  Our Services
+                </Link>
+              </motion.div>
             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section with Animated Counters */}
+      <section className="py-16 bg-[#1A1A1A]" data-testid="stats-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUpVariant}
+                className="text-center"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-[#B8956B] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                </div>
+                <p className="text-white/60 text-sm">{stat.label}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
@@ -153,7 +205,12 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="classic-card service-card p-8"
+                  className="classic-card service-card p-8 cursor-pointer"
+                  whileHover={{ 
+                    y: -8,
+                    boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)"
+                  }}
+                  transition={{ duration: 0.3 }}
                 >
                   <div className="accent-line mb-6" />
                   <h3 className="text-xl font-bold mb-3 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -162,6 +219,15 @@ const Home = () => {
                   <p className="text-[#6B6B6B] leading-relaxed">
                     {service.description}
                   </p>
+                  <motion.div 
+                    className="mt-4 text-[#B8956B] font-medium inline-flex items-center gap-2 opacity-0"
+                    whileHover={{ x: 5 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    Learn more <ArrowRight size={14} />
+                  </motion.div>
                 </motion.div>
               ))}
             </motion.div>
@@ -208,12 +274,16 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]"
+                  className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] group cursor-pointer"
+                  whileHover={{ 
+                    scale: 1.02,
+                    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.08)"
+                  }}
                 >
-                  <p className="text-xs font-semibold text-[#B8956B] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#B8956B] uppercase tracking-wider mb-2 group-hover:tracking-widest transition-all">
                     {platform.tagline}
                   </p>
-                  <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3 group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {platform.name}
                   </h3>
                   <p className="text-[#6B6B6B] text-sm leading-relaxed">
@@ -236,9 +306,13 @@ const Home = () => {
             variants={fadeUpVariant}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <motion.h2 
+              className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6" 
+              style={{ fontFamily: 'Playfair Display, serif' }}
+              whileHover={{ scale: 1.02 }}
+            >
               "Why should anyone buy from you?"
-            </h2>
+            </motion.h2>
             <p className="text-xl text-[#6B6B6B] leading-relaxed">
               We help you find the answer—then use it to change customer behavior. 
               That's strategic intelligence in action.
@@ -247,8 +321,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="testimonials-section">
+      {/* Testimonials with Carousel Effect */}
+      <section className="py-20 md:py-28 bg-[#F5F3EF] overflow-hidden" data-testid="testimonials-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -272,8 +346,18 @@ const Home = () => {
                   key={index}
                   variants={fadeUpVariant}
                   className="testimonial-card classic-card p-8"
+                  whileHover={{ 
+                    y: -5,
+                    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.08)"
+                  }}
                 >
-                  <span className="quote-mark">"</span>
+                  <motion.span 
+                    className="quote-mark"
+                    animate={{ opacity: [0.2, 0.4, 0.2] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  >
+                    "
+                  </motion.span>
                   <p className="text-[#1A1A1A] text-lg leading-relaxed mb-6 -mt-6">
                     {testimonial.quote}
                   </p>
@@ -296,25 +380,44 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white"
+            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white relative overflow-hidden"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-              Ready to get started?
-            </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-              Let's discuss how strategic intelligence can drive your organization's growth.
-            </p>
-            <div className="flex justify-center gap-4 flex-wrap">
-              <a
+            {/* Animated background elements */}
+            <motion.div 
+              className="absolute w-64 h-64 rounded-full bg-white/10 -top-20 -left-20"
+              animate={{ 
+                scale: [1, 1.2, 1],
+                rotate: [0, 90, 0]
+              }}
+              transition={{ duration: 15, repeat: Infinity }}
+            />
+            <motion.div 
+              className="absolute w-48 h-48 rounded-full bg-white/5 -bottom-10 -right-10"
+              animate={{ 
+                scale: [1, 1.3, 1],
+              }}
+              transition={{ duration: 10, repeat: Infinity }}
+            />
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Ready to get started?
+              </h2>
+              <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
+                Let's discuss how strategic intelligence can drive your organization's growth.
+              </p>
+              <motion.a
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-[#1A1A1A] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
                 data-testid="cta-connect"
+                whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.2)" }}
+                whileTap={{ scale: 0.98 }}
               >
                 Connect With Us
                 <ArrowRight size={18} className="ml-2" />
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         </div>

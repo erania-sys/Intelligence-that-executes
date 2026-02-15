@@ -91,25 +91,41 @@ const Contact = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white max-w-3xl mx-auto"
+            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white max-w-3xl mx-auto relative overflow-hidden"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-              Start the conversation
-            </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-lg mx-auto">
-              Complete our brief inquiry form and a senior advisor will 
-              reach out within 24 hours to discuss your needs.
-            </p>
-            <a
-              href="https://form.jotform.com/252728460666061"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-[#1A1A1A] font-semibold px-10 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center text-lg"
-              data-testid="contact-form-button"
-            >
-              Connect With Us
-              <ArrowRight size={20} className="ml-2" />
-            </a>
+            {/* Animated elements */}
+            <motion.div 
+              className="absolute w-48 h-48 rounded-full bg-white/10 -top-10 -left-10"
+              animate={{ scale: [1, 1.3, 1], rotate: [0, 45, 0] }}
+              transition={{ duration: 12, repeat: Infinity }}
+            />
+            <motion.div 
+              className="absolute w-32 h-32 rounded-full bg-white/5 -bottom-5 -right-5"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 8, repeat: Infinity }}
+            />
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Start the conversation
+              </h2>
+              <p className="text-white/90 text-lg mb-8 max-w-lg mx-auto">
+                Complete our brief inquiry form and a senior advisor will 
+                reach out within 24 hours to discuss your needs.
+              </p>
+              <motion.a
+                href="https://form.jotform.com/252728460666061"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-[#1A1A1A] font-semibold px-10 py-4 rounded-lg inline-flex items-center text-lg"
+                data-testid="contact-form-button"
+                whileHover={{ scale: 1.05, boxShadow: "0 15px 40px rgba(0,0,0,0.2)" }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Connect With Us
+                <ArrowRight size={20} className="ml-2" />
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -138,12 +154,20 @@ const Contact = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="classic-card p-8 text-center"
+                  className="classic-card p-8 text-center group"
+                  whileHover={{ 
+                    y: -8,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+                  }}
                 >
-                  <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F5F0E8] text-[#B8956B] font-bold text-xl mb-4">
+                  <motion.span 
+                    className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#F5F0E8] text-[#B8956B] font-bold text-xl mb-4"
+                    whileHover={{ scale: 1.1, backgroundColor: "#B8956B", color: "#fff" }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {step.number}
-                  </span>
-                  <h3 className="text-xl font-bold mb-3 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  </motion.span>
+                  <h3 className="text-xl font-bold mb-3 text-[#1A1A1A] group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {step.title}
                   </h3>
                   <p className="text-[#6B6B6B] text-sm leading-relaxed">
@@ -185,6 +209,10 @@ const Contact = () => {
                   variants={fadeUpVariant}
                   className="classic-card p-8 group cursor-pointer block"
                   data-testid={`resource-${index}`}
+                  whileHover={{ 
+                    y: -5,
+                    boxShadow: "0 15px 30px rgba(0,0,0,0.08)"
+                  }}
                 >
                   <h3 className="text-xl font-bold mb-2 text-[#1A1A1A] group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {resource.title}
@@ -194,7 +222,11 @@ const Contact = () => {
                   </p>
                   <span className="inline-flex items-center gap-2 text-[#B8956B] text-sm font-medium">
                     {resource.cta}
-                    <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <motion.span
+                      whileHover={{ x: 3, y: -3 }}
+                    >
+                      <ArrowUpRight size={14} />
+                    </motion.span>
                   </span>
                 </motion.a>
               ))}
@@ -226,16 +258,18 @@ const Contact = () => {
               Your strategic transformation journey starts with a single conversation.
             </motion.p>
             <motion.div variants={fadeUpVariant}>
-              <a
+              <motion.a
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-lg px-10 py-4"
                 data-testid="final-cta-button"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
                 Transform Your Vision
                 <ArrowRight size={20} className="ml-2" />
-              </a>
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>

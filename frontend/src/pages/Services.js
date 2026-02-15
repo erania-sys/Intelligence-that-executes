@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -13,8 +13,11 @@ const staggerContainer = {
 };
 
 const Services = () => {
+  const [expandedCategory, setExpandedCategory] = useState(null);
+
   const serviceCategories = [
     {
+      id: 'strategic',
       title: 'Strategic Intelligence Advisory',
       description: 'Data-driven insights that inform and accelerate executive decision-making.',
       services: [
@@ -33,6 +36,7 @@ const Services = () => {
       ]
     },
     {
+      id: 'experience',
       title: 'Customer Experience & Brand',
       description: 'Transform customer journeys and market positioning through experience intelligence.',
       services: [
@@ -51,6 +55,7 @@ const Services = () => {
       ]
     },
     {
+      id: 'healthcare',
       title: 'Healthcare Intelligence',
       description: 'Specialized patient-centric intelligence for healthcare organizations.',
       services: [
@@ -116,6 +121,7 @@ const Services = () => {
             viewport={{ once: true }}
             variants={fadeUpVariant}
             className="bg-white rounded-2xl p-10 md:p-16 text-center max-w-3xl mx-auto border border-[rgba(0,0,0,0.05)]"
+            whileHover={{ boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
               "Why should anyone buy from you?"
@@ -129,56 +135,87 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Service Categories */}
-      {serviceCategories.map((category, categoryIndex) => (
-        <section
-          key={categoryIndex}
-          className={`py-20 md:py-28 ${categoryIndex % 2 === 1 ? 'bg-[#F5F3EF]' : ''}`}
-          data-testid={`service-category-${categoryIndex}`}
-        >
-          <div className="section-container">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-            >
-              {/* Category Header */}
-              <motion.div variants={fadeUpVariant} className="mb-12">
-                <div className="accent-line mb-4" />
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                  {category.title}
-                </h2>
-                <p className="text-lg text-[#6B6B6B] max-w-2xl">
-                  {category.description}
-                </p>
-              </motion.div>
-
-              {/* Services Grid */}
+      {/* Interactive Service Categories */}
+      <section className="py-20 md:py-28 bg-[#F5F3EF]">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="space-y-6"
+          >
+            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
-                variants={staggerContainer}
-                className="grid md:grid-cols-3 gap-6"
+                key={category.id}
+                variants={fadeUpVariant}
+                className="bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)]"
               >
-                {category.services.map((service, serviceIndex) => (
-                  <motion.div
-                    key={serviceIndex}
-                    variants={fadeUpVariant}
-                    className="classic-card p-8"
-                  >
-                    <div className="accent-dot mb-4" />
-                    <h3 className="text-lg font-bold mb-3 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                      {service.name}
-                    </h3>
-                    <p className="text-[#6B6B6B] text-sm leading-relaxed">
-                      {service.description}
+                {/* Category Header - Clickable */}
+                <motion.button
+                  onClick={() => setExpandedCategory(expandedCategory === category.id ? null : category.id)}
+                  className="w-full p-8 text-left flex items-center justify-between group"
+                  whileHover={{ backgroundColor: "rgba(184, 149, 107, 0.05)" }}
+                >
+                  <div>
+                    <div className="accent-line mb-4" />
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[#1A1A1A] group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
+                      {category.title}
+                    </h2>
+                    <p className="text-[#6B6B6B]">
+                      {category.description}
                     </p>
+                  </div>
+                  <motion.div
+                    animate={{ rotate: expandedCategory === category.id ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="ml-4 flex-shrink-0"
+                  >
+                    <ChevronDown size={24} className="text-[#B8956B]" />
                   </motion.div>
-                ))}
+                </motion.button>
+
+                {/* Expandable Services */}
+                <AnimatePresence>
+                  {expandedCategory === category.id && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-8 pb-8 grid md:grid-cols-3 gap-6 border-t border-[rgba(0,0,0,0.05)] pt-6">
+                        {category.services.map((service, serviceIndex) => (
+                          <motion.div
+                            key={serviceIndex}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: serviceIndex * 0.1 }}
+                            className="p-6 bg-[#FAFAF8] rounded-lg"
+                            whileHover={{ 
+                              scale: 1.02,
+                              backgroundColor: "#F5F3EF"
+                            }}
+                          >
+                            <div className="accent-dot mb-3" />
+                            <h3 className="text-lg font-bold mb-2 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                              {service.name}
+                            </h3>
+                            <p className="text-[#6B6B6B] text-sm leading-relaxed">
+                              {service.description}
+                            </p>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
-            </motion.div>
-          </div>
-        </section>
-      ))}
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 md:py-28" data-testid="services-cta">
@@ -188,25 +225,33 @@ const Services = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white"
+            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white relative overflow-hidden"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-              Ready to unlock customer intelligence?
-            </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-              Contact us to discover how our strategic intelligence can transform your business outcomes.
-            </p>
-            <div className="flex justify-center gap-4 flex-wrap">
-              <a
+            <motion.div 
+              className="absolute w-64 h-64 rounded-full bg-white/10 -top-20 -right-20"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 8, repeat: Infinity }}
+            />
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Ready to unlock customer intelligence?
+              </h2>
+              <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
+                Contact us to discover how our strategic intelligence can transform your business outcomes.
+              </p>
+              <motion.a
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-[#1A1A1A] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
                 data-testid="services-cta-connect"
+                whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.2)" }}
+                whileTap={{ scale: 0.98 }}
               >
                 Connect With Us
                 <ArrowRight size={18} className="ml-2" />
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         </div>

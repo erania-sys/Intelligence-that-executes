@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -41,10 +42,10 @@ const CaseStudies = () => {
   ];
 
   const stats = [
-    { number: '50+', label: 'Strategic Projects' },
-    { number: '3x', label: 'Average ROI' },
-    { number: '95%', label: 'Client Retention' },
-    { number: '12+', label: 'Industries Served' }
+    { value: 50, suffix: '+', label: 'Strategic Projects' },
+    { value: 3, suffix: 'x', label: 'Average ROI' },
+    { value: 95, suffix: '%', label: 'Client Retention' },
+    { value: 12, suffix: '+', label: 'Industries Served' }
   ];
 
   return (
@@ -84,7 +85,7 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section with Animated Counters */}
       <section className="py-16" data-testid="case-studies-stats">
         <div className="section-container">
           <motion.div
@@ -99,9 +100,10 @@ const CaseStudies = () => {
                 key={index}
                 variants={fadeUpVariant}
                 className="classic-card p-6 md:p-8 text-center"
+                whileHover={{ scale: 1.03, boxShadow: "0 10px 30px rgba(0,0,0,0.08)" }}
               >
                 <p className="text-3xl md:text-4xl font-bold text-[#B8956B] mb-1" style={{ fontFamily: 'Playfair Display, serif' }}>
-                  {stat.number}
+                  <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="text-[#6B6B6B] text-sm">{stat.label}</p>
               </motion.div>
@@ -124,25 +126,32 @@ const CaseStudies = () => {
               <motion.div
                 key={index}
                 variants={fadeUpVariant}
-                className="classic-card overflow-hidden"
+                className="classic-card overflow-hidden group cursor-pointer"
+                whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
               >
                 <div className="grid md:grid-cols-2">
                   {/* Image */}
                   <div className="relative h-64 md:h-auto overflow-hidden">
-                    <img
+                    <motion.img
                       src={study.image}
                       alt={study.title}
                       className="w-full h-full object-cover"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.6 }}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   
                   {/* Content */}
                   <div className="p-8 md:p-10">
-                    <p className="text-xs font-semibold text-[#B8956B] uppercase tracking-wider mb-2">
+                    <motion.p 
+                      className="text-xs font-semibold text-[#B8956B] uppercase tracking-wider mb-2"
+                      whileHover={{ letterSpacing: "0.15em" }}
+                    >
                       {study.industry}
-                    </p>
+                    </motion.p>
                     
-                    <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#1A1A1A] group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
                       {study.title}
                     </h3>
                     
@@ -191,26 +200,30 @@ const CaseStudies = () => {
               Join the leaders who have transformed their strategic capabilities with Brackett.
             </motion.p>
             <motion.div variants={fadeUpVariant} className="flex justify-center gap-4 flex-wrap">
-              <a
+              <motion.a
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
                 data-testid="case-studies-cta-connect"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
                 Start Your Transformation
                 <ArrowRight size={18} className="ml-2" />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="https://brackett.agency/s/brackett_agency_one_pager_1.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
                 data-testid="case-studies-cta-download"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
                 Download Brochure
                 <ArrowUpRight size={16} className="ml-2" />
-              </a>
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
