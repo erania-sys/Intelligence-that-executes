@@ -3,19 +3,18 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 const fadeUpVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
 };
 
 const staggerContainer = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
 };
 
 const CaseStudies = () => {
   const caseStudies = [
     {
-      id: '01',
       title: 'Fast-Casual Food Brand',
       industry: 'Food & Beverage',
       challenge: 'Needed to differentiate in a crowded market and identify growth opportunities.',
@@ -24,7 +23,6 @@ const CaseStudies = () => {
       image: 'https://images.unsplash.com/photo-1652081155813-bf703fadbbaf?crop=entropy&cs=srgb&fm=jpg&q=85'
     },
     {
-      id: '02',
       title: 'Healthcare Technology Leader',
       industry: 'Healthcare Tech',
       challenge: 'Required clarity on market opportunities amidst rapid industry transformation.',
@@ -33,7 +31,6 @@ const CaseStudies = () => {
       image: 'https://images.unsplash.com/photo-1761449779811-33f7c48ed367?crop=entropy&cs=srgb&fm=jpg&q=85'
     },
     {
-      id: '03',
       title: 'Global MedTech Company',
       industry: 'Medical Technology',
       challenge: 'Complexity in translating innovative vision into executable strategy.',
@@ -51,37 +48,34 @@ const CaseStudies = () => {
   ];
 
   return (
-    <div data-testid="case-studies-page">
+    <div data-testid="case-studies-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32 relative" data-testid="case-studies-hero">
-        <div className="glow-orb glow-blue w-[500px] h-[500px] -top-[100px] -left-[200px] opacity-30" />
-        
-        <div className="section-container relative z-10">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-[#F5F3EF]" data-testid="case-studies-hero">
+        <div className="section-container">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-4xl"
+            className="max-w-3xl"
           >
             <motion.p
               variants={fadeUpVariant}
-              className="text-xs font-mono tracking-[0.2em] uppercase text-white/50 mb-6"
+              className="text-sm font-medium text-[#2D5A4A] mb-4"
             >
               Case Studies
             </motion.p>
             
             <motion.h1
               variants={fadeUpVariant}
-              className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-8"
-              style={{ fontFamily: 'Syne, sans-serif' }}
+              className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A1A1A]"
+              style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Results That<br />
-              <span className="text-gradient">Speak For Themselves.</span>
+              Results that speak for themselves.
             </motion.h1>
             
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed"
+              className="text-lg md:text-xl text-[#6B6B6B] max-w-xl leading-relaxed"
             >
               Explore how we've partnered with industry leaders to transform 
               strategic challenges into competitive advantages.
@@ -91,7 +85,7 @@ const CaseStudies = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 relative" data-testid="case-studies-stats">
+      <section className="py-16" data-testid="case-studies-stats">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -104,12 +98,12 @@ const CaseStudies = () => {
               <motion.div
                 key={index}
                 variants={fadeUpVariant}
-                className="glass-card p-6 md:p-8 text-center"
+                className="classic-card p-6 md:p-8 text-center"
               >
-                <p className="text-4xl md:text-5xl font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
+                <p className="text-3xl md:text-4xl font-bold text-[#2D5A4A] mb-1" style={{ fontFamily: 'Playfair Display, serif' }}>
                   {stat.number}
                 </p>
-                <p className="text-white/50 text-sm">{stat.label}</p>
+                <p className="text-[#6B6B6B] text-sm">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -117,20 +111,20 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-24 md:py-32 relative" data-testid="case-studies-grid">
+      <section className="py-20 md:py-28" data-testid="case-studies-grid">
         <div className="section-container">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="space-y-12"
+            className="space-y-8"
           >
             {caseStudies.map((study, index) => (
               <motion.div
                 key={index}
                 variants={fadeUpVariant}
-                className="glass-card case-study-card overflow-hidden"
+                className="classic-card overflow-hidden"
               >
                 <div className="grid md:grid-cols-2">
                   {/* Image */}
@@ -140,39 +134,30 @@ const CaseStudies = () => {
                       alt={study.title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/60" />
                   </div>
                   
                   {/* Content */}
-                  <div className="p-8 md:p-12">
-                    <div className="flex items-center gap-4 mb-6">
-                      <span className="text-4xl font-bold text-white/10" style={{ fontFamily: 'Syne, sans-serif' }}>
-                        {study.id}
-                      </span>
-                      <div>
-                        <span className="text-[10px] font-mono tracking-[0.15em] uppercase text-blue-400/80 block">
-                          {study.industry}
-                        </span>
-                        <div className="h-px w-12 bg-gradient-to-r from-blue-500/50 to-transparent mt-1" />
-                      </div>
-                    </div>
+                  <div className="p-8 md:p-10">
+                    <p className="text-xs font-semibold text-[#2D5A4A] uppercase tracking-wider mb-2">
+                      {study.industry}
+                    </p>
                     
-                    <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
                       {study.title}
                     </h3>
                     
-                    <div className="space-y-4 mb-8">
+                    <div className="space-y-4">
                       <div>
-                        <p className="text-[10px] font-mono tracking-[0.15em] uppercase text-white/40 mb-1">Challenge</p>
-                        <p className="text-white/70">{study.challenge}</p>
+                        <p className="text-xs font-semibold text-[#6B6B6B] uppercase tracking-wider mb-1">Challenge</p>
+                        <p className="text-[#1A1A1A]">{study.challenge}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] font-mono tracking-[0.15em] uppercase text-white/40 mb-1">Solution</p>
-                        <p className="text-white/70">{study.solution}</p>
+                        <p className="text-xs font-semibold text-[#6B6B6B] uppercase tracking-wider mb-1">Solution</p>
+                        <p className="text-[#1A1A1A]">{study.solution}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] font-mono tracking-[0.15em] uppercase text-white/40 mb-1">Result</p>
-                        <p className="text-white/70">{study.result}</p>
+                        <p className="text-xs font-semibold text-[#6B6B6B] uppercase tracking-wider mb-1">Result</p>
+                        <p className="text-[#1A1A1A]">{study.result}</p>
                       </div>
                     </div>
                   </div>
@@ -183,45 +168,9 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="py-24 md:py-32 relative" data-testid="partners-section">
-        <div className="section-container">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUpVariant}
-            className="text-center mb-12"
-          >
-            <p className="text-xs font-mono tracking-[0.2em] uppercase text-white/50 mb-4">
-              Trusted By
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-              Industry Leaders Across Sectors
-            </h2>
-          </motion.div>
-          
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUpVariant}
-            className="flex flex-wrap justify-center items-center gap-12 opacity-40"
-          >
-            {['Healthcare', 'Technology', 'Food & Beverage', 'MedTech', 'Finance'].map((industry, index) => (
-              <div key={index} className="text-xl md:text-2xl font-bold tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-                {industry}
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-24 md:py-32 relative" data-testid="case-studies-cta">
-        <div className="glow-orb glow-blue w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30" />
-        
-        <div className="section-container relative z-10 text-center">
+      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="case-studies-cta">
+        <div className="section-container text-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -230,17 +179,16 @@ const CaseStudies = () => {
           >
             <motion.h2
               variants={fadeUpVariant}
-              className="text-3xl md:text-5xl font-bold tracking-tight mb-6"
-              style={{ fontFamily: 'Syne, sans-serif' }}
+              className="text-3xl md:text-4xl font-bold mb-4 text-[#1A1A1A]"
+              style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Your Success Story<br />Starts Here.
+              Your success story starts here.
             </motion.h2>
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg text-white/60 max-w-2xl mx-auto mb-10"
+              className="text-lg text-[#6B6B6B] max-w-xl mx-auto mb-8"
             >
-              Join the leaders who have transformed their strategic 
-              capabilities with BRACKETT.
+              Join the leaders who have transformed their strategic capabilities with Brackett.
             </motion.p>
             <motion.div variants={fadeUpVariant} className="flex justify-center gap-4 flex-wrap">
               <a

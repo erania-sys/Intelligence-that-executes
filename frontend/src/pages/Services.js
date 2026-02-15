@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const fadeUpVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
 };
 
 const staggerContainer = {
@@ -15,199 +15,116 @@ const staggerContainer = {
 const Services = () => {
   const serviceCategories = [
     {
-      number: 'I',
       title: 'Strategic Intelligence Advisory',
-      description: 'Data-driven insights powered by advanced customer analytics platforms that inform and accelerate executive decision-making.',
+      description: 'Data-driven insights that inform and accelerate executive decision-making.',
       services: [
         {
-          id: 'A',
           name: 'Customer Intelligence & Analytics',
-          description: 'Leverage o360 platform capabilities for comprehensive, real-time customer analytics that reveal who your customers really are and what drives their decisions.'
+          description: 'Leverage o360 for real-time customer analytics that reveal who your customers are and what drives their decisions.'
         },
         {
-          id: 'B',
           name: 'Choice Analytics & Behavioral Insights',
-          description: 'Using ASEMAP technology to understand the cognitive and behavioral drivers behind customer choice—moving beyond ratings to true understanding.'
+          description: 'Using ASEMAP to understand the cognitive drivers behind customer choice—moving beyond ratings to understanding.'
         },
         {
-          id: 'C',
-          name: 'Predictive Intelligence & Personalization',
-          description: 'Forward-looking analytics that predict customer behavior and enable hyper-personalized engagement strategies for your market.'
+          name: 'Predictive Intelligence',
+          description: 'Forward-looking analytics that predict customer behavior and enable personalized engagement strategies.'
         }
       ]
     },
     {
-      number: 'II',
       title: 'Customer Experience & Brand',
-      description: 'Transform customer journeys and market positioning through choice analytics and experience intelligence.',
+      description: 'Transform customer journeys and market positioning through experience intelligence.',
       services: [
         {
-          id: 'A',
           name: 'Customer Experience Strategy',
-          description: 'Data-driven customer experience transformation using choice analytics to understand what customers truly want at every touchpoint.'
+          description: 'Data-driven experience transformation using choice analytics to understand what customers truly want.'
         },
         {
-          id: 'B',
           name: 'Strategic Execution Planning',
-          description: 'Comprehensive execution roadmaps informed by customer intelligence, with ongoing advisory support to ensure successful implementation.'
+          description: 'Comprehensive execution roadmaps with ongoing advisory support to ensure successful implementation.'
         },
         {
-          id: 'C',
           name: 'Brand Intelligence & Positioning',
-          description: 'Strategic brand development powered by competitive intelligence and customer perception analytics for market differentiation.'
+          description: 'Strategic brand development powered by competitive intelligence and customer perception analytics.'
         }
       ]
     },
     {
-      number: 'III',
       title: 'Healthcare Intelligence',
-      description: 'Specialized patient-centric intelligence for healthcare organizations seeking to understand and improve patient choice and experience.',
+      description: 'Specialized patient-centric intelligence for healthcare organizations.',
       services: [
         {
-          id: 'A',
           name: 'Patient Choice Analytics',
-          description: 'PatientX360 platform capabilities to understand healthcare decision-making, patient preferences, and the drivers of patient loyalty.'
+          description: 'PatientX360 capabilities to understand healthcare decision-making and the drivers of patient loyalty.'
         },
         {
-          id: 'B',
           name: 'Healthcare Experience Optimization',
-          description: 'Transform patient journeys through deep behavioral insights, improving patient-centricity and healthcare outcomes.'
+          description: 'Transform patient journeys through behavioral insights, improving patient-centricity and outcomes.'
         },
         {
-          id: 'C',
           name: 'Healthcare Market Intelligence',
-          description: 'Comprehensive market analysis for healthcare organizations, including competitive positioning and growth opportunity identification.'
+          description: 'Comprehensive market analysis including competitive positioning and growth opportunity identification.'
         }
       ]
-    }
-  ];
-
-  const platformCapabilities = [
-    {
-      title: 'Real-Time Analytics',
-      description: 'Continuous insights that keep pace with changing customer behaviors and market dynamics.'
-    },
-    {
-      title: 'Seamless Integration',
-      description: 'Connect with your existing platforms—CDPs, visualization tools, CRMs, and loyalty programs.'
-    },
-    {
-      title: 'Behavioral Understanding',
-      description: 'Go beyond surface metrics to understand the "why" behind customer decisions.'
-    },
-    {
-      title: 'Actionable Recommendations',
-      description: 'Data-driven recommendations that translate directly into strategic execution.'
     }
   ];
 
   return (
-    <div data-testid="services-page">
+    <div data-testid="services-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32 relative" data-testid="services-hero">
-        <div className="glow-orb glow-blue w-[600px] h-[600px] -top-[200px] left-1/2 -translate-x-1/2 opacity-20" />
-        
-        <div className="section-container relative z-10">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-[#F5F3EF]" data-testid="services-hero">
+        <div className="section-container">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-3xl mx-auto text-center"
           >
             <motion.p
               variants={fadeUpVariant}
-              className="text-xs font-mono tracking-[0.2em] uppercase text-white/50 mb-6"
+              className="text-sm font-medium text-[#2D5A4A] mb-4"
             >
               Our Services
             </motion.p>
             
             <motion.h1
               variants={fadeUpVariant}
-              className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-8"
-              style={{ fontFamily: 'Syne, sans-serif' }}
+              className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A1A1A]"
+              style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Intelligence-Driven<br />
-              <span className="text-gradient">Strategic Excellence</span>
+              Intelligence-driven strategic excellence
             </motion.h1>
             
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed"
             >
-              We combine advanced customer analytics platforms with strategic expertise 
-              to transform how organizations understand and engage their customers.
+              We combine advanced customer analytics with strategic expertise to transform 
+              how organizations understand and engage their customers.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
       {/* Key Question */}
-      <section className="py-16 md:py-24 relative" data-testid="key-question">
+      <section className="py-20 md:py-28" data-testid="key-question">
         <div className="section-container">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="glass-card p-10 md:p-16 text-center max-w-4xl mx-auto"
+            className="bg-white rounded-2xl p-10 md:p-16 text-center max-w-3xl mx-auto border border-[rgba(0,0,0,0.05)]"
           >
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
               "Why should anyone buy from you?"
             </h2>
-            <p className="text-lg md:text-xl text-white/70 leading-relaxed">
+            <p className="text-lg text-[#6B6B6B] leading-relaxed">
               We help you find the answer—then use it to change customer behavior. 
               Through choice analytics and behavioral intelligence, we reveal what 
-              truly drives customer decisions and how to influence them.
+              truly drives decisions.
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Platform Capabilities */}
-      <section className="py-16 md:py-24 relative" data-testid="platform-capabilities">
-        <div className="section-container">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUpVariant}
-            className="text-center mb-12"
-          >
-            <p className="text-xs font-mono tracking-[0.2em] uppercase text-white/50 mb-4">
-              Our Intelligence Edge
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-              Platform-Powered Insights
-            </h2>
-          </motion.div>
-          
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {platformCapabilities.map((cap, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUpVariant}
-                className="glass-card p-6"
-              >
-                <div className="mb-4">
-                  <span className="text-xs font-mono tracking-[0.15em] text-blue-400/60">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <div className="h-px w-8 bg-gradient-to-r from-blue-500/50 to-transparent mt-2" />
-                </div>
-                <h3 className="text-lg font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {cap.title}
-                </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {cap.description}
-                </p>
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </section>
@@ -216,17 +133,10 @@ const Services = () => {
       {serviceCategories.map((category, categoryIndex) => (
         <section
           key={categoryIndex}
-          className="py-24 md:py-32 relative"
+          className={`py-20 md:py-28 ${categoryIndex % 2 === 1 ? 'bg-[#F5F3EF]' : ''}`}
           data-testid={`service-category-${categoryIndex}`}
         >
-          {categoryIndex % 2 === 0 && (
-            <div className="glow-orb glow-blue w-[400px] h-[400px] top-1/2 right-0 -translate-y-1/2 opacity-15" />
-          )}
-          {categoryIndex % 2 === 1 && (
-            <div className="glow-orb glow-white w-[300px] h-[300px] top-1/2 left-0 -translate-y-1/2 opacity-10" />
-          )}
-          
-          <div className="section-container relative z-10">
+          <div className="section-container">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -235,15 +145,11 @@ const Services = () => {
             >
               {/* Category Header */}
               <motion.div variants={fadeUpVariant} className="mb-12">
-                <div className="flex items-baseline gap-6 mb-4">
-                  <span className="text-6xl md:text-7xl font-bold text-white/10" style={{ fontFamily: 'Syne, sans-serif' }}>
-                    {category.number}
-                  </span>
-                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-                    {category.title}
-                  </h2>
-                </div>
-                <p className="text-lg text-white/60 max-w-2xl ml-0 md:ml-24">
+                <div className="accent-line mb-4" />
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  {category.title}
+                </h2>
+                <p className="text-lg text-[#6B6B6B] max-w-2xl">
                   {category.description}
                 </p>
               </motion.div>
@@ -251,24 +157,19 @@ const Services = () => {
               {/* Services Grid */}
               <motion.div
                 variants={staggerContainer}
-                className="grid md:grid-cols-3 gap-6 md:ml-24"
+                className="grid md:grid-cols-3 gap-6"
               >
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={serviceIndex}
                     variants={fadeUpVariant}
-                    className="glass-card service-card p-8"
+                    className="classic-card p-8"
                   >
-                    <div className="mb-4">
-                      <span className="text-xs font-mono tracking-[0.15em] text-white/30">
-                        {category.number}.{service.id}
-                      </span>
-                      <div className="h-px w-8 bg-gradient-to-r from-white/20 to-transparent mt-2" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+                    <div className="accent-dot mb-4" />
+                    <h3 className="text-lg font-bold mb-3 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
                       {service.name}
                     </h3>
-                    <p className="text-white/60 text-sm leading-relaxed">
+                    <p className="text-[#6B6B6B] text-sm leading-relaxed">
                       {service.description}
                     </p>
                   </motion.div>
@@ -280,51 +181,33 @@ const Services = () => {
       ))}
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 relative" data-testid="services-cta">
-        <div className="glow-orb glow-blue w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30" />
-        
-        <div className="section-container relative z-10 text-center">
+      <section className="py-20 md:py-28" data-testid="services-cta">
+        <div className="section-container">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={staggerContainer}
+            variants={fadeUpVariant}
+            className="bg-[#2D5A4A] rounded-2xl p-10 md:p-16 text-center text-white"
           >
-            <motion.h2
-              variants={fadeUpVariant}
-              className="text-3xl md:text-5xl font-bold tracking-tight mb-6"
-              style={{ fontFamily: 'Syne, sans-serif' }}
-            >
-              Ready to Unlock<br />Customer Intelligence?
-            </motion.h2>
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-lg text-white/60 max-w-2xl mx-auto mb-10"
-            >
-              Contact us to discover how our strategic intelligence capabilities 
-              can transform your customer understanding and business outcomes.
-            </motion.p>
-            <motion.div variants={fadeUpVariant} className="flex justify-center gap-4 flex-wrap">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+              Ready to unlock customer intelligence?
+            </h2>
+            <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+              Contact us to discover how our strategic intelligence can transform your business outcomes.
+            </p>
+            <div className="flex justify-center gap-4 flex-wrap">
               <a
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="bg-white text-[#2D5A4A] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
                 data-testid="services-cta-connect"
               >
                 Connect With Us
                 <ArrowRight size={18} className="ml-2" />
               </a>
-              <a
-                href="https://brackett.agency/s/brackett_strategic_intelligence_deck.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-                data-testid="services-cta-download"
-              >
-                Download Overview
-              </a>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>

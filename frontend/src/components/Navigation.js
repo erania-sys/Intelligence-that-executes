@@ -30,57 +30,53 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Desktop Navigation */}
+      {/* Navigation */}
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="nav-container hidden md:block"
+        transition={{ duration: 0.5 }}
+        className={`nav-container ${isScrolled ? 'shadow-sm' : ''}`}
         data-testid="desktop-navigation"
       >
-        <div
-          className={`nav-inner transition-all duration-300 ${
-            isScrolled ? 'bg-black/80' : 'bg-black/50'
-          }`}
-        >
+        <div className="nav-inner">
           <Link to="/" className="nav-logo" data-testid="nav-logo">
-            BRACKETT
+            Brackett
           </Link>
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-              data-testid={`nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
+          
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                data-testid={`nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <a
+              href="https://form.jotform.com/252728460666061"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary py-2 px-5 text-sm"
+              data-testid="nav-cta"
             >
-              {link.name}
-            </Link>
-          ))}
+              Let's Talk
+            </a>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2"
+            data-testid="mobile-menu-toggle"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </motion.nav>
-
-      {/* Mobile Navigation Toggle */}
-      <div className="md:hidden fixed top-4 right-4 z-[101]">
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="p-3 bg-black/50 backdrop-blur-lg border border-white/10 rounded-full"
-          data-testid="mobile-menu-toggle"
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Logo */}
-      <div className="md:hidden fixed top-4 left-4 z-[101]">
-        <Link
-          to="/"
-          className="nav-logo text-lg bg-black/50 backdrop-blur-lg border border-white/10 rounded-full px-4 py-3 inline-block"
-          data-testid="mobile-logo"
-        >
-          BRACKETT
-        </Link>
-      </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -104,7 +100,7 @@ const Navigation = () => {
                 <Link
                   to={link.path}
                   className={`mobile-nav-link ${
-                    location.pathname === link.path ? 'opacity-100' : 'opacity-70'
+                    location.pathname === link.path ? 'text-accent' : ''
                   }`}
                   data-testid={`mobile-nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
                 >
