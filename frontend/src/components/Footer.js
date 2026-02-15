@@ -1,0 +1,103 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="footer py-16 md:py-24" data-testid="footer">
+      <div className="section-container">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
+              BRACKETT
+            </h3>
+            <p className="text-white/60 max-w-md leading-relaxed">
+              Strategic Intelligence for the Modern Age. We transform executive vision into 
+              measurable business advantage through data-driven insights and strategic execution.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-sm font-mono tracking-[0.2em] uppercase text-white/40 mb-6">
+              Navigation
+            </h4>
+            <ul className="space-y-3">
+              {['Home', 'About', 'Services', 'Case Studies', 'Contact'].map((link) => (
+                <li key={link}>
+                  <Link
+                    to={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '-')}`}
+                    className="text-white/70 hover:text-white transition-colors"
+                    data-testid={`footer-link-${link.toLowerCase().replace(' ', '-')}`}
+                  >
+                    {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-sm font-mono tracking-[0.2em] uppercase text-white/40 mb-6">
+              Resources
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="https://brackett.agency/s/brackett_strategic_intelligence_deck.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors inline-flex items-center gap-2"
+                  data-testid="footer-advisory-overview"
+                >
+                  Advisory Overview
+                  <ArrowUpRight size={14} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://brackett.agency/s/brackett_agency_one_pager_1.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors inline-flex items-center gap-2"
+                  data-testid="footer-one-pager"
+                >
+                  One Page Brochure
+                  <ArrowUpRight size={14} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://form.jotform.com/252728460666061"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors inline-flex items-center gap-2"
+                  data-testid="footer-contact-form"
+                >
+                  Contact Form
+                  <ArrowUpRight size={14} />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/40 text-sm">
+            &copy; {currentYear} Brackett Agency. All rights reserved.
+          </p>
+          <p className="text-white/40 text-sm">
+            Strategic Intelligence & Advisory Services
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
