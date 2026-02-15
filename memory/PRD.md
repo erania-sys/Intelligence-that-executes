@@ -69,13 +69,12 @@ The website now explains that Brackett's strategic intelligence is powered by th
 - Organizational Transformation Advisory
 
 ### Design System (Updated January 2026)
-- **No cartoon icons**: Replaced all Lucide icons with sophisticated typography-based elements
-- **Numbers**: 01, 02, 03 numbering system for cards and lists
-- **Roman Numerals**: I, II, III for major service categories
-- **Alphanumeric IDs**: I.A, I.B, I.C for sub-services
-- **Labels**: PLATFORM, HEALTHCARE, ANALYTICS category labels
-- **Accent Lines**: Gradient lines (blue-to-transparent) for visual hierarchy
-- **Quotation Marks**: Large typographic quotes for testimonials
+- **Theme**: Light, warm, business-oriented with approachable personality
+- **Colors**: Cream background (#FAFAF8), Forest green accent (#2D5A4A), Dark footer (#1A1A1A)
+- **Typography**: Playfair Display (serif headings), DM Sans (body text)
+- **Cards**: Clean white backgrounds with subtle borders, gentle hover effects
+- **Accent Elements**: Colored dots, accent lines, stylized quote marks
+- **CTAs**: Forest green buttons with white text, friendly "Let's Talk" language
 
 ### Components
 - **Navigation**: Floating glassmorphism navbar with mobile responsive menu
