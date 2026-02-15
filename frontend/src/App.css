@@ -43,6 +43,7 @@
 .nav-logo {
   height: 36px;
   width: auto;
+  mix-blend-mode: multiply;
 }
 
 @media (min-width: 768px) {
