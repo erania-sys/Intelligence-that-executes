@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Lightbulb, Target, TrendingUp, Users, Award, Sparkles } from 'lucide-react';
+import { ArrowRight, Lightbulb, Target, TrendingUp, Users, Sparkles, Database, Brain, BarChart3 } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -16,21 +16,21 @@ const staggerContainer = {
 const Home = () => {
   const services = [
     {
-      icon: <Target size={32} strokeWidth={1.5} />,
+      icon: <Database size={32} strokeWidth={1.5} />,
       title: 'Strategic Intelligence',
-      description: 'Advanced market analytics and research that power executive decision-making.',
+      description: 'Real-time customer analytics and market intelligence powered by advanced behavioral data platforms.',
       link: '/services'
     },
     {
       icon: <Users size={32} strokeWidth={1.5} />,
       title: 'Customer Experience',
-      description: 'Data-driven transformation of customer journeys and brand positioning.',
+      description: 'Data-driven transformation of customer journeys through choice analytics and experience mapping.',
       link: '/services'
     },
     {
-      icon: <TrendingUp size={32} strokeWidth={1.5} />,
-      title: 'Leadership & Transformation',
-      description: 'Organizational change management and executive development programs.',
+      icon: <Target size={32} strokeWidth={1.5} />,
+      title: 'Brand & Market Positioning',
+      description: 'Strategic brand development informed by predictive customer behavior insights.',
       link: '/services'
     }
   ];
@@ -50,6 +50,24 @@ const Home = () => {
       quote: "The Brackett team has an unmatched ability to distill complexity into clarity. Their execution brought our vision to life in ways we couldn't have imagined.",
       author: 'Executive Leader',
       company: 'Global MedTech Company'
+    }
+  ];
+
+  const intelligenceFeatures = [
+    {
+      icon: <BarChart3 size={24} strokeWidth={1.5} />,
+      title: 'o360',
+      description: 'Comprehensive customer intelligence platform delivering real-time analytics about your customers, enabling data-driven decisions at every touchpoint.'
+    },
+    {
+      icon: <Users size={24} strokeWidth={1.5} />,
+      title: 'PatientX360',
+      description: 'Healthcare-specific intelligence for understanding patient choice and behavior, transforming how organizations approach patient-centricity.'
+    },
+    {
+      icon: <Brain size={24} strokeWidth={1.5} />,
+      title: 'ASEMAP',
+      description: 'Proprietary choice analytics technology that reveals the behavioral and cognitive drivers behind customer decisions—not just ratings, but real understanding.'
     }
   ];
 
@@ -96,8 +114,8 @@ const Home = () => {
               className="text-lg md:text-xl text-white/60 max-w-2xl mb-10 leading-relaxed"
             >
               We transform executive vision into measurable business advantage. 
-              Through data-driven insight and strategic execution, we help brands 
-              make smarter decisions and build lasting competitive advantage.
+              Powered by advanced customer analytics platforms, we help brands 
+              understand choice, predict behavior, and build lasting competitive advantage.
             </motion.p>
             
             <motion.div
@@ -126,6 +144,58 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Intelligence Platform Section */}
+      <section className="py-24 md:py-32 relative" data-testid="intelligence-section">
+        <div className="glow-orb glow-blue w-[500px] h-[500px] top-1/2 right-0 -translate-y-1/2 opacity-20" />
+        
+        <div className="section-container relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="max-w-3xl mb-16">
+              <p className="text-xs font-mono tracking-[0.2em] uppercase text-white/50 mb-4">
+                Our Intelligence Engine
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>
+                Powered by Advanced<br />
+                <span className="text-white/60">Analytics Platforms</span>
+              </h2>
+              <p className="text-lg text-white/70 leading-relaxed">
+                We leverage industry-leading customer intelligence platforms to deliver insights 
+                that go beyond surface-level data. Our strategic intelligence reveals the behavioral 
+                and cognitive drivers behind customer decisions.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              variants={staggerContainer}
+              className="grid md:grid-cols-3 gap-6"
+            >
+              {intelligenceFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUpVariant}
+                  className="glass-card p-8"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+                    {feature.title}
+                  </h3>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Philosophy Section */}
       <section className="py-24 md:py-32 relative" data-testid="philosophy-section">
         <div className="section-container">
@@ -149,11 +219,12 @@ const Home = () => {
             <motion.div variants={fadeUpVariant} className="space-y-6">
               <p className="text-lg text-white/70 leading-relaxed">
                 We don't chase trends — we set trajectories. Strategy is strongest 
-                when grounded in intelligence, not instinct.
+                when grounded in real customer intelligence, not instinct or assumptions.
               </p>
               <p className="text-lg text-white/70 leading-relaxed">
-                The best advisory doesn't just consult — it transforms. We are BRACKETT, 
-                where insight meets execution and ambition becomes advantage.
+                The best advisory doesn't just consult — it transforms. By understanding 
+                the "why" behind customer choice, we help you change behaviors and address 
+                individualized needs.
               </p>
               <Link
                 to="/about"

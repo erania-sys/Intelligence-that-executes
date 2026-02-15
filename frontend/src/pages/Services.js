@@ -8,9 +8,11 @@ import {
   Users, 
   Rocket, 
   Target,
-  MessageSquare,
-  Award,
-  RefreshCw
+  Brain,
+  Database,
+  LineChart,
+  PieChart,
+  Zap
 } from 'lucide-react';
 
 const fadeUpVariant = {
@@ -27,72 +29,91 @@ const Services = () => {
   const serviceCategories = [
     {
       title: 'Strategic Intelligence Advisory',
-      description: 'Data-driven insights that inform and accelerate executive decision-making.',
-      icon: <BarChart3 size={32} strokeWidth={1.5} />,
+      description: 'Data-driven insights powered by advanced customer analytics platforms that inform and accelerate executive decision-making.',
+      icon: <Database size={32} strokeWidth={1.5} />,
       color: 'from-blue-500/20 to-transparent',
       services: [
         {
           icon: <BarChart3 size={24} strokeWidth={1.5} />,
-          name: 'Strategic Intelligence & Market Research',
-          description: 'Advanced analytics and market intelligence that inform decision-making and reveal competitive opportunities.'
+          name: 'Customer Intelligence & Analytics',
+          description: 'Leverage o360 platform capabilities for comprehensive, real-time customer analytics that reveal who your customers really are and what drives their decisions.'
         },
         {
-          icon: <Briefcase size={24} strokeWidth={1.5} />,
-          name: 'Executive Strategy Development',
-          description: 'Senior leader partnership for comprehensive business strategy, growth planning, and market expansion.'
+          icon: <Brain size={24} strokeWidth={1.5} />,
+          name: 'Choice Analytics & Behavioral Insights',
+          description: 'Using ASEMAP technology to understand the cognitive and behavioral drivers behind customer choice—moving beyond ratings to true understanding.'
         },
         {
-          icon: <Lightbulb size={24} strokeWidth={1.5} />,
-          name: 'Innovation Intelligence & Product Strategy',
-          description: 'Market-driven innovation frameworks and product development guidance aligned with customer needs.'
+          icon: <LineChart size={24} strokeWidth={1.5} />,
+          name: 'Predictive Intelligence & Personalization',
+          description: 'Forward-looking analytics that predict customer behavior and enable hyper-personalized engagement strategies for your market.'
         }
       ]
     },
     {
       title: 'Customer Experience & Brand',
-      description: 'Transform customer journeys and market positioning through strategic insights.',
+      description: 'Transform customer journeys and market positioning through choice analytics and experience intelligence.',
       icon: <Users size={32} strokeWidth={1.5} />,
       color: 'from-purple-500/20 to-transparent',
       services: [
         {
           icon: <Users size={24} strokeWidth={1.5} />,
-          name: 'Customer Intelligence & Experience Strategy',
-          description: 'Data-driven customer experience transformation, journey mapping, and satisfaction optimization.'
+          name: 'Customer Experience Strategy',
+          description: 'Data-driven customer experience transformation using choice analytics to understand what customers truly want at every touchpoint.'
         },
         {
           icon: <Rocket size={24} strokeWidth={1.5} />,
-          name: 'Strategic Execution Planning & Support',
-          description: 'Comprehensive execution roadmaps with ongoing advisory support to ensure successful implementation.'
+          name: 'Strategic Execution Planning',
+          description: 'Comprehensive execution roadmaps informed by customer intelligence, with ongoing advisory support to ensure successful implementation.'
         },
         {
           icon: <Target size={24} strokeWidth={1.5} />,
-          name: 'Brand Intelligence & Market Positioning',
-          description: 'Strategic brand development, competitive positioning, and market differentiation strategies.'
+          name: 'Brand Intelligence & Positioning',
+          description: 'Strategic brand development powered by competitive intelligence and customer perception analytics for market differentiation.'
         }
       ]
     },
     {
-      title: 'Transformation & Leadership',
-      description: 'Build organizational capabilities and develop transformational leaders.',
-      icon: <RefreshCw size={32} strokeWidth={1.5} />,
+      title: 'Healthcare Intelligence',
+      description: 'Specialized patient-centric intelligence for healthcare organizations seeking to understand and improve patient choice and experience.',
+      icon: <PieChart size={32} strokeWidth={1.5} />,
       color: 'from-emerald-500/20 to-transparent',
       services: [
         {
-          icon: <RefreshCw size={24} strokeWidth={1.5} />,
-          name: 'Organizational Transformation Advisory',
-          description: 'Change management frameworks and strategic organizational development for sustainable growth.'
+          icon: <Users size={24} strokeWidth={1.5} />,
+          name: 'Patient Choice Analytics',
+          description: 'PatientX360 platform capabilities to understand healthcare decision-making, patient preferences, and the drivers of patient loyalty.'
         },
         {
-          icon: <Award size={24} strokeWidth={1.5} />,
-          name: 'Executive Leadership Development',
-          description: 'Strategic leadership coaching, executive presence building, and high-performance team development.'
+          icon: <Zap size={24} strokeWidth={1.5} />,
+          name: 'Healthcare Experience Optimization',
+          description: 'Transform patient journeys through deep behavioral insights, improving patient-centricity and healthcare outcomes.'
         },
         {
-          icon: <MessageSquare size={24} strokeWidth={1.5} />,
-          name: 'Strategic Communications & Reputation',
-          description: 'Executive communications strategy, thought leadership development, and stakeholder engagement.'
+          icon: <Briefcase size={24} strokeWidth={1.5} />,
+          name: 'Healthcare Market Intelligence',
+          description: 'Comprehensive market analysis for healthcare organizations, including competitive positioning and growth opportunity identification.'
         }
       ]
+    }
+  ];
+
+  const platformCapabilities = [
+    {
+      title: 'Real-Time Analytics',
+      description: 'Continuous insights that keep pace with changing customer behaviors and market dynamics.'
+    },
+    {
+      title: 'Seamless Integration',
+      description: 'Connect with your existing platforms—CDPs, visualization tools, CRMs, and loyalty programs.'
+    },
+    {
+      title: 'Behavioral Understanding',
+      description: 'Go beyond surface metrics to understand the "why" behind customer decisions.'
+    },
+    {
+      title: 'Actionable Recommendations',
+      description: 'Data-driven recommendations that translate directly into strategic execution.'
     }
   ];
 
@@ -129,8 +150,8 @@ const Services = () => {
               variants={fadeUpVariant}
               className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed"
             >
-              Comprehensive advisory services designed to transform your organization's 
-              strategic capabilities and drive measurable business outcomes.
+              We combine advanced customer analytics platforms with strategic expertise 
+              to transform how organizations understand and engage their customers.
             </motion.p>
           </motion.div>
         </div>
@@ -151,9 +172,52 @@ const Services = () => {
             </h2>
             <p className="text-lg md:text-xl text-white/70 leading-relaxed">
               We help you find the answer—then use it to change customer behavior. 
-              Through data-driven insight and strategic execution, we help brands 
-              make smarter decisions and build lasting competitive advantage.
+              Through choice analytics and behavioral intelligence, we reveal what 
+              truly drives customer decisions and how to influence them.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Platform Capabilities */}
+      <section className="py-16 md:py-24 relative" data-testid="platform-capabilities">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUpVariant}
+            className="text-center mb-12"
+          >
+            <p className="text-xs font-mono tracking-[0.2em] uppercase text-white/50 mb-4">
+              Our Intelligence Edge
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
+              Platform-Powered Insights
+            </h2>
+          </motion.div>
+          
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            {platformCapabilities.map((cap, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUpVariant}
+                className="glass-card p-6 text-center"
+              >
+                <h3 className="text-lg font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  {cap.title}
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  {cap.description}
+                </p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
@@ -240,14 +304,14 @@ const Services = () => {
               className="text-3xl md:text-5xl font-bold tracking-tight mb-6"
               style={{ fontFamily: 'Syne, sans-serif' }}
             >
-              Ready to Elevate Your<br />Strategic Capabilities?
+              Ready to Unlock<br />Customer Intelligence?
             </motion.h2>
             <motion.p
               variants={fadeUpVariant}
               className="text-lg text-white/60 max-w-2xl mx-auto mb-10"
             >
-              Contact us to discuss which services best align with your 
-              organization's goals and challenges.
+              Contact us to discover how our strategic intelligence capabilities 
+              can transform your customer understanding and business outcomes.
             </motion.p>
             <motion.div variants={fadeUpVariant} className="flex justify-center gap-4 flex-wrap">
               <a

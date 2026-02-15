@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Zap, Shield, Eye, Target } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, Shield, Eye, Target, Database, Brain, BarChart3 } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -18,29 +18,47 @@ const About = () => {
     {
       icon: <Eye size={28} strokeWidth={1.5} />,
       title: 'Insight-Driven',
-      description: 'Every recommendation is backed by rigorous research and data analysis.'
+      description: 'Every recommendation is powered by advanced analytics platforms and real customer data.'
     },
     {
       icon: <Target size={28} strokeWidth={1.5} />,
       title: 'Execution-Focused',
-      description: 'We don\'t just strategize — we partner with you to implement and deliver results.'
+      description: 'We don\'t just strategize — we partner with you to implement and deliver measurable results.'
     },
     {
       icon: <Shield size={28} strokeWidth={1.5} />,
       title: 'Client-Centric',
-      description: 'Your success is our priority. We align our efforts with your strategic goals.'
+      description: 'Your success is our priority. We align our efforts with your strategic goals and challenges.'
     },
     {
       icon: <Zap size={28} strokeWidth={1.5} />,
-      title: 'Transformative',
-      description: 'We challenge conventions and push boundaries to create lasting impact.'
+      title: 'Technology-Enabled',
+      description: 'We leverage industry-leading analytics platforms to deliver intelligence at scale.'
     }
   ];
 
   const strengths = [
     'Market complexity into strategic clarity',
-    'Executive vision into operational velocity',
-    'Bold ideas into business results that endure'
+    'Customer data into behavioral understanding',
+    'Insights into competitive advantage'
+  ];
+
+  const platforms = [
+    {
+      icon: <BarChart3 size={24} strokeWidth={1.5} />,
+      name: 'o360',
+      description: 'Real-time customer intelligence platform for comprehensive analytics about your customers.'
+    },
+    {
+      icon: <Database size={24} strokeWidth={1.5} />,
+      name: 'PatientX360',
+      description: 'Healthcare-specific intelligence for understanding patient choice and behavior.'
+    },
+    {
+      icon: <Brain size={24} strokeWidth={1.5} />,
+      name: 'ASEMAP',
+      description: 'Proprietary choice analytics technology revealing behavioral drivers behind customer decisions.'
+    }
   ];
 
   return (
@@ -76,7 +94,7 @@ const About = () => {
               variants={fadeUpVariant}
               className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed"
             >
-              At BRACKETT, everything begins with you—your strategic goals, 
+              At BRACKETT, everything begins with understanding—your customers, 
               your market challenges, and your vision for transformational growth.
             </motion.p>
           </motion.div>
@@ -122,23 +140,74 @@ const About = () => {
                 className="text-3xl md:text-4xl font-bold tracking-tight mb-6"
                 style={{ fontFamily: 'Syne, sans-serif' }}
               >
-                Partnership-Driven Strategy
+                Intelligence-Powered Strategy
               </motion.h2>
               
               <motion.div variants={fadeUpVariant} className="space-y-6 text-white/70">
                 <p className="leading-relaxed">
-                  We partner with executive teams to cut through complexity and uncover 
-                  clarity in dynamic markets, translating insight into intelligent strategy 
-                  that drives real, measurable advantage.
+                  We partner with executive teams to cut through complexity using advanced 
+                  customer analytics platforms. Our intelligence capabilities go beyond 
+                  surface-level data to reveal the behavioral and cognitive drivers behind 
+                  customer decisions.
                 </p>
                 <p className="leading-relaxed">
-                  Whether accelerating growth, navigating digital transformation, or harnessing 
-                  advanced market intelligence, our senior advisors collaborate directly with 
-                  leadership to craft strategies that deliver lasting impact.
+                  By understanding the "why" behind customer choice, we help organizations 
+                  change behaviors, address individualized needs, and build lasting competitive 
+                  advantage in highly personalized markets.
                 </p>
               </motion.div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Intelligence Platforms */}
+      <section className="py-24 md:py-32 relative" data-testid="about-platforms">
+        <div className="glow-orb glow-blue w-[500px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-15" />
+        
+        <div className="section-container relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="text-center mb-12">
+              <p className="text-xs font-mono tracking-[0.2em] uppercase text-white/50 mb-4">
+                Our Intelligence Engine
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
+                Powered by Advanced Platforms
+              </h2>
+              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+                We leverage industry-leading customer intelligence platforms to deliver 
+                insights that transform how organizations understand their customers.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              variants={staggerContainer}
+              className="grid md:grid-cols-3 gap-6"
+            >
+              {platforms.map((platform, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUpVariant}
+                  className="glass-card p-8 text-center"
+                >
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6 text-blue-400">
+                    {platform.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+                    {platform.name}
+                  </h3>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    {platform.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -255,7 +324,8 @@ const About = () => {
               variants={fadeUpVariant}
               className="text-lg text-white/60 max-w-2xl mx-auto mb-10"
             >
-              Let's explore how we can turn your strategic vision into measurable results.
+              Let's explore how our intelligence capabilities can transform your 
+              customer understanding and drive measurable results.
             </motion.p>
             <motion.div variants={fadeUpVariant} className="flex justify-center gap-4 flex-wrap">
               <a
