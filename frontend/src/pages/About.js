@@ -64,7 +64,7 @@ const About = () => {
           >
             <motion.p
               variants={fadeUpVariant}
-              className="text-sm font-medium text-[#2D5A4A] mb-4"
+              className="text-sm font-medium text-[#B8956B] mb-4"
             >
               About Brackett
             </motion.p>
@@ -115,7 +115,7 @@ const About = () => {
             >
               <motion.p
                 variants={fadeUpVariant}
-                className="text-sm font-medium text-[#2D5A4A] mb-3"
+                className="text-sm font-medium text-[#B8956B] mb-3"
               >
                 Our Approach
               </motion.p>
@@ -154,7 +154,7 @@ const About = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-medium text-[#2D5A4A] mb-3">Our Intelligence Engine</p>
+              <p className="text-sm font-medium text-[#B8956B] mb-3">Our Intelligence Engine</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Powered by advanced platforms
               </h2>
@@ -170,7 +170,7 @@ const About = () => {
                   variants={fadeUpVariant}
                   className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]"
                 >
-                  <p className="text-xs font-semibold text-[#2D5A4A] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#B8956B] uppercase tracking-wider mb-2">
                     {platform.tagline}
                   </p>
                   <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -196,7 +196,7 @@ const About = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-medium text-[#2D5A4A] mb-3">What Drives Us</p>
+              <p className="text-sm font-medium text-[#B8956B] mb-3">What Drives Us</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Our core values
               </h2>

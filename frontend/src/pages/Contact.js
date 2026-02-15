@@ -59,7 +59,7 @@ const Contact = () => {
           >
             <motion.p
               variants={fadeUpVariant}
-              className="text-sm font-medium text-[#2D5A4A] mb-4"
+              className="text-sm font-medium text-[#B8956B] mb-4"
             >
               Get In Touch
             </motion.p>
@@ -91,12 +91,12 @@ const Contact = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="bg-[#2D5A4A] rounded-2xl p-10 md:p-16 text-center text-white max-w-3xl mx-auto"
+            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white max-w-3xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Start the conversation
             </h2>
-            <p className="text-white/80 text-lg mb-8 max-w-lg mx-auto">
+            <p className="text-white/90 text-lg mb-8 max-w-lg mx-auto">
               Complete our brief inquiry form and a senior advisor will 
               reach out within 24 hours to discuss your needs.
             </p>
@@ -104,7 +104,7 @@ const Contact = () => {
               href="https://form.jotform.com/252728460666061"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-[#2D5A4A] font-semibold px-10 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center text-lg"
+              className="bg-white text-[#1A1A1A] font-semibold px-10 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center text-lg"
               data-testid="contact-form-button"
             >
               Connect With Us
@@ -124,7 +124,7 @@ const Contact = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-medium text-[#2D5A4A] mb-3">What to Expect</p>
+              <p className="text-sm font-medium text-[#B8956B] mb-3">What to Expect</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Our engagement process
               </h2>
@@ -140,7 +140,7 @@ const Contact = () => {
                   variants={fadeUpVariant}
                   className="classic-card p-8 text-center"
                 >
-                  <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#E8F0ED] text-[#2D5A4A] font-bold text-xl mb-4">
+                  <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F5F0E8] text-[#B8956B] font-bold text-xl mb-4">
                     {step.number}
                   </span>
                   <h3 className="text-xl font-bold mb-3 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -166,7 +166,7 @@ const Contact = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <p className="text-sm font-medium text-[#2D5A4A] mb-3">Resources</p>
+              <p className="text-sm font-medium text-[#B8956B] mb-3">Resources</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Learn more about Brackett
               </h2>
@@ -186,13 +186,13 @@ const Contact = () => {
                   className="classic-card p-8 group cursor-pointer block"
                   data-testid={`resource-${index}`}
                 >
-                  <h3 className="text-xl font-bold mb-2 text-[#1A1A1A] group-hover:text-[#2D5A4A] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-xl font-bold mb-2 text-[#1A1A1A] group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {resource.title}
                   </h3>
                   <p className="text-[#6B6B6B] text-sm mb-4 leading-relaxed">
                     {resource.description}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#2D5A4A] text-sm font-medium">
+                  <span className="inline-flex items-center gap-2 text-[#B8956B] text-sm font-medium">
                     {resource.cta}
                     <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>

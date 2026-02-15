@@ -11,9 +11,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-              Brackett
-            </h3>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
+              alt="Brackett" 
+              className="h-10 mb-4 brightness-0 invert"
+            />
             <p className="text-white/60 max-w-md leading-relaxed text-sm">
               Strategic Intelligence for the Modern Age. We transform executive vision into 
               measurable business advantage through data-driven insights and strategic execution.

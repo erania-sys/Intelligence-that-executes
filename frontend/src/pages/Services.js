@@ -83,7 +83,7 @@ const Services = () => {
           >
             <motion.p
               variants={fadeUpVariant}
-              className="text-sm font-medium text-[#2D5A4A] mb-4"
+              className="text-sm font-medium text-[#B8956B] mb-4"
             >
               Our Services
             </motion.p>
@@ -188,12 +188,12 @@ const Services = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="bg-[#2D5A4A] rounded-2xl p-10 md:p-16 text-center text-white"
+            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Ready to unlock customer intelligence?
             </h2>
-            <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
               Contact us to discover how our strategic intelligence can transform your business outcomes.
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
@@ -201,7 +201,7 @@ const Services = () => {
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-[#2D5A4A] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
+                className="bg-white text-[#1A1A1A] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
                 data-testid="services-cta-connect"
               >
                 Connect With Us

@@ -60,7 +60,7 @@ const CaseStudies = () => {
           >
             <motion.p
               variants={fadeUpVariant}
-              className="text-sm font-medium text-[#2D5A4A] mb-4"
+              className="text-sm font-medium text-[#B8956B] mb-4"
             >
               Case Studies
             </motion.p>
@@ -100,7 +100,7 @@ const CaseStudies = () => {
                 variants={fadeUpVariant}
                 className="classic-card p-6 md:p-8 text-center"
               >
-                <p className="text-3xl md:text-4xl font-bold text-[#2D5A4A] mb-1" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <p className="text-3xl md:text-4xl font-bold text-[#B8956B] mb-1" style={{ fontFamily: 'Playfair Display, serif' }}>
                   {stat.number}
                 </p>
                 <p className="text-[#6B6B6B] text-sm">{stat.label}</p>
@@ -138,7 +138,7 @@ const CaseStudies = () => {
                   
                   {/* Content */}
                   <div className="p-8 md:p-10">
-                    <p className="text-xs font-semibold text-[#2D5A4A] uppercase tracking-wider mb-2">
+                    <p className="text-xs font-semibold text-[#B8956B] uppercase tracking-wider mb-2">
                       {study.industry}
                     </p>
                     

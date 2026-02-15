@@ -9,8 +9,9 @@
   --foreground: #1A1A1A;
   --primary: #1A1A1A;
   --secondary: #6B6B6B;
-  --accent: #2D5A4A;
-  --accent-light: #E8F0ED;
+  --accent: #B8956B;
+  --accent-dark: #9A7B56;
+  --accent-light: #F5F0E8;
   --cream: #F5F3EF;
   --border: rgba(0, 0, 0, 0.08);
   --card-bg: #FFFFFF;
@@ -93,8 +94,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-  background: #234A3C;
-  box-shadow: 0 4px 20px rgba(45, 90, 74, 0.3);
+  background: var(--accent-dark);
+  box-shadow: 0 4px 20px rgba(184, 149, 107, 0.3);
 }
 
 .btn-secondary {
@@ -115,6 +116,26 @@ h1, h2, h3, h4, h5, h6 {
 .btn-secondary:hover {
   background: var(--cream);
   border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Button dark variant for dark backgrounds */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: var(--foreground);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-dark:hover {
+  background: #333;
 }
 
 /* Link Style */
@@ -176,21 +197,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
 }
 
-/* Fun wave decoration */
-.wave-decoration {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
 /* Testimonial quote */
 .quote-mark {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   color: var(--accent);
-  opacity: 0.3;
+  opacity: 0.4;
   line-height: 1;
 }

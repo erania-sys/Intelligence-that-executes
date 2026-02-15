@@ -41,11 +41,14 @@
 }
 
 .nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #1A1A1A;
-  letter-spacing: -0.02em;
+  height: 36px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .nav-logo {
+    height: 44px;
+  }
 }
 
 /* Hero Section */
@@ -70,7 +73,7 @@
   left: 0;
   width: 0;
   height: 3px;
-  background: #2D5A4A;
+  background: #B8956B;
   transition: width 0.3s ease;
 }
 
@@ -110,7 +113,7 @@
 }
 
 .mobile-nav-link:hover {
-  color: #2D5A4A;
+  color: #B8956B;
 }
 
 /* Hamburger */
@@ -162,7 +165,7 @@
 .shape-circle {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, #E8F0ED 0%, #D4E4DE 100%);
+  background: linear-gradient(135deg, #F5F0E8 0%, #EBE4D8 100%);
   opacity: 0.6;
 }
 
@@ -172,4 +175,9 @@
   border-radius: 20px;
   transform: rotate(15deg);
   opacity: 0.5;
+}
+
+/* Gold accent CTA section */
+.cta-gold {
+  background: linear-gradient(135deg, #B8956B 0%, #9A7B56 100%);
 }

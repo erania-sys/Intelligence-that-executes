@@ -39,8 +39,12 @@ const Navigation = () => {
         data-testid="desktop-navigation"
       >
         <div className="nav-inner">
-          <Link to="/" className="nav-logo" data-testid="nav-logo">
-            Brackett
+          <Link to="/" data-testid="nav-logo">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
+              alt="Brackett" 
+              className="nav-logo"
+            />
           </Link>
           
           {/* Desktop Links */}
@@ -59,7 +63,7 @@ const Navigation = () => {
               href="https://form.jotform.com/252728460666061"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary py-2 px-5 text-sm"
+              className="btn-dark py-2 px-5 text-sm"
               data-testid="nav-cta"
             >
               Let's Talk
@@ -89,6 +93,13 @@ const Navigation = () => {
             className="mobile-nav"
             data-testid="mobile-navigation"
           >
+            <Link to="/" className="mb-8">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
+                alt="Brackett" 
+                className="h-12"
+              />
+            </Link>
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.path}
@@ -100,7 +111,7 @@ const Navigation = () => {
                 <Link
                   to={link.path}
                   className={`mobile-nav-link ${
-                    location.pathname === link.path ? 'text-accent' : ''
+                    location.pathname === link.path ? 'text-[#B8956B]' : ''
                   }`}
                   data-testid={`mobile-nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
                 >

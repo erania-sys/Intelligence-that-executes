@@ -82,7 +82,7 @@ const Home = () => {
           >
             <motion.p
               variants={fadeUpVariant}
-              className="text-sm font-medium text-[#2D5A4A] mb-4"
+              className="text-sm font-medium text-[#B8956B] mb-4"
             >
               Strategic Intelligence & Advisory
             </motion.p>
@@ -139,7 +139,7 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-medium text-[#2D5A4A] mb-3">What We Do</p>
+              <p className="text-sm font-medium text-[#B8956B] mb-3">What We Do</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Intelligence that drives results
               </h2>
@@ -169,7 +169,7 @@ const Home = () => {
             <motion.div variants={fadeUpVariant} className="text-center mt-12">
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 text-[#2D5A4A] font-medium hover:underline"
+                className="inline-flex items-center gap-2 text-[#B8956B] font-medium hover:underline"
                 data-testid="view-all-services"
               >
                 View all services
@@ -190,7 +190,7 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="max-w-2xl mb-16">
-              <p className="text-sm font-medium text-[#2D5A4A] mb-3">Our Intelligence Engine</p>
+              <p className="text-sm font-medium text-[#B8956B] mb-3">Our Intelligence Engine</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Powered by advanced analytics
               </h2>
@@ -210,7 +210,7 @@ const Home = () => {
                   variants={fadeUpVariant}
                   className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]"
                 >
-                  <p className="text-xs font-semibold text-[#2D5A4A] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#B8956B] uppercase tracking-wider mb-2">
                     {platform.tagline}
                   </p>
                   <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -257,7 +257,7 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-medium text-[#2D5A4A] mb-3">Client Stories</p>
+              <p className="text-sm font-medium text-[#B8956B] mb-3">Client Stories</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
                 What our clients say
               </h2>
@@ -296,12 +296,12 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="bg-[#2D5A4A] rounded-2xl p-10 md:p-16 text-center text-white"
+            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Ready to get started?
             </h2>
-            <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
               Let's discuss how strategic intelligence can drive your organization's growth.
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
@@ -309,7 +309,7 @@ const Home = () => {
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-[#2D5A4A] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
+                className="bg-white text-[#1A1A1A] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
                 data-testid="cta-connect"
               >
                 Connect With Us
