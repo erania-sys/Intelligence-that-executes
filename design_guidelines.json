@@ -1,0 +1,121 @@
+{
+  "identity": {
+    "persona": "E1 - The Anti-AI Designer",
+    "tone": "Strategic, Bold, Intellectual, High-Contrast",
+    "theme_mode": "dark",
+    "design_principles": [
+      "Fusion over Imitation: Mix Swiss Brutalism with Corporate Strategy.",
+      "Emotion First: Every interaction must feel 'premium' and 'calculated'.",
+      "Content is King: Typography is the main visual element.",
+      "Negative Space: Massive padding (py-32) to signal luxury/confidence.",
+      "Dark Mode Only: As per brand requirements."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Syne, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9]",
+      "h2": "text-4xl md:text-6xl font-bold tracking-tight",
+      "h3": "text-2xl md:text-4xl font-semibold tracking-tight",
+      "body": "text-base md:text-lg leading-relaxed text-muted-foreground",
+      "label": "text-xs font-mono tracking-[0.2em] uppercase text-muted-foreground"
+    },
+    "installation": "Import from Google Fonts: Syne (400, 700, 800) and Manrope (400, 500, 600)."
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "foreground": "#FAFAFA",
+      "primary": "#FFFFFF",
+      "secondary": "#A3A3A3",
+      "accent": "#2563EB",
+      "border": "rgba(255, 255, 255, 0.1)",
+      "surface": "rgba(20, 20, 20, 0.6)"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%)",
+      "card_hover": "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%)",
+      "text_gradient": "linear-gradient(to right, #FFFFFF, #A3A3A3)"
+    },
+    "rules": "Dark mode strictly. No solid white backgrounds. Use subtle borders and glow effects for separation."
+  },
+  "components": {
+    "buttons": {
+      "primary": "rounded-full bg-white text-black px-8 py-4 font-bold hover:scale-105 transition-transform duration-300",
+      "secondary": "rounded-full border border-white/20 bg-transparent text-white px-8 py-4 hover:bg-white/10 transition-colors",
+      "link": "text-white underline decoration-white/30 underline-offset-4 hover:decoration-white transition-all"
+    },
+    "cards": {
+      "style": "glassmorphism",
+      "classes": "bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-500 group"
+    },
+    "inputs": {
+      "style": "minimal",
+      "classes": "bg-transparent border-b border-white/20 rounded-none px-0 py-4 focus:border-white transition-colors placeholder:text-white/30 text-white"
+    },
+    "navigation": {
+      "wrapper": "fixed top-4 left-1/2 -translate-x-1/2 z-50 w-auto",
+      "container": "bg-black/50 backdrop-blur-lg border border-white/10 rounded-full px-6 py-3 flex items-center gap-6"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Mode A for Services)",
+    "container": "max-w-[1400px] mx-auto px-6 md:px-12",
+    "spacing": {
+      "section_gap": "py-24 md:py-32",
+      "element_gap": "gap-8"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "animations": {
+      "fade_up": {
+        "initial": { "opacity": 0, "y": 40 },
+        "whileInView": { "opacity": 1, "y": 0 },
+        "viewport": { "once": true },
+        "transition": { "duration": 0.8, "ease": [0.22, 1, 0.36, 1] }
+      },
+      "stagger": {
+        "container": { "hidden": { "opacity": 0 }, "show": { "opacity": 1, "transition": { "staggerChildren": 0.1 } } },
+        "item": { "hidden": { "opacity": 0, "y": 20 }, "show": { "opacity": 1, "y": 0 } }
+      },
+      "parallax": "Use useScroll and useTransform for subtle y-axis movement on images."
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1736858405207-fa4dca877d6d?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "about_meeting": "https://images.unsplash.com/photo-1671722294182-ed01cbe66bd1?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "transformation_abstract": "https://images.unsplash.com/photo-1761449779811-33f7c48ed367?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "consulting_dark": "https://images.unsplash.com/photo-1652081155813-bf703fadbbaf?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "icons": "lucide-react (Use thin stroke width: 1.5px)"
+  },
+  "visual_enhancers": {
+    "noise": "Add a fixed position div with a noise svg overlay at 3% opacity to kill flat colors.",
+    "glow_orbs": "Use absolute positioned divs with heavy blur (blur-[100px]) for ambient lighting."
+  },
+  "content_strategy": {
+    "tagline": "Strategic Intelligence for the Modern Age.",
+    "cta": "Transform Your Vision",
+    "tone": "Direct. Concise. Powerful. No fluff."
+  },
+  "universal_guidelines": [
+    "Do not use gradients for text unless it is the main hero title.",
+    "Ensure 3:1 contrast ratio for all text.",
+    "Use data-testid for all interactive elements.",
+    "Mobile images max-height: 80vh.",
+    "Never center align long text blocks."
+  ],
+  "instructions_to_main_agent": [
+    "Install 'framer-motion', 'lucide-react', 'clsx', 'tailwind-merge' if not present.",
+    "Create a 'Noise' component for the background texture.",
+    "Implement the 'Syne' font via Google Fonts in index.css.",
+    "Use the Bento Grid layout for the Services section.",
+    "Ensure the contact form links directly to the provided JotForm URL."
+  ]
+}
