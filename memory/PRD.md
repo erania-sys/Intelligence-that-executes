@@ -9,9 +9,10 @@ Create a cleaner version of the Brackett Agency website (https://brackett.agency
 - **Pages**: Home + About + Services + Case Studies + Contact (all pages)
 - **Contact Form**: External JotForm (https://form.jotform.com/252728460666061)
 - **Updates**: New tagline and service descriptions
+- **Intelligence Partner**: OSG Analytics platforms (o360, PatientX360, ASEMAP) - not mentioned by company name
 
 ## Target Audience
-Corporate executives, startup founders, and small business owners seeking strategic consulting and advisory services.
+Corporate executives, startup founders, and small business owners seeking strategic consulting powered by advanced customer analytics.
 
 ## Tech Stack
 - **Frontend**: React 19 with React Router
@@ -24,24 +25,32 @@ Corporate executives, startup founders, and small business owners seeking strate
 
 ## What's Been Implemented (January 2026)
 
+### Intelligence Platform Integration
+The website now explains that Brackett's strategic intelligence is powered by three advanced platforms:
+- **o360**: Comprehensive customer intelligence platform for real-time analytics
+- **PatientX360**: Healthcare-specific intelligence for patient choice and behavior
+- **ASEMAP**: Proprietary choice analytics revealing behavioral/cognitive drivers behind decisions
+
 ### Core Pages
 1. **Home Page**
-   - Hero section with new tagline: "Strategic Intelligence for the Modern Age"
+   - Hero section with tagline: "Strategic Intelligence for the Modern Age"
+   - NEW: "Our Intelligence Engine" section showcasing o360, PatientX360, ASEMAP
    - Philosophy section highlighting approach
    - Services overview with 3 key categories
    - Testimonials from industry leaders
    - CTA sections with JotForm integration
 
 2. **About Page**
-   - Company story and approach
-   - Core values grid (Insight-Driven, Execution-Focused, Client-Centric, Transformative)
+   - Company story and intelligence-powered approach
+   - NEW: Platform cards explaining o360, PatientX360, ASEMAP capabilities
+   - Core values grid (Insight-Driven, Execution-Focused, Client-Centric, Technology-Enabled)
    - Key strengths with visual design
 
-3. **Services Page**
-   - Strategic Intelligence Advisory (3 sub-services)
-   - Customer Experience & Brand (3 sub-services)
-   - Transformation & Leadership (3 sub-services)
-   - Bento grid layout for service cards
+3. **Services Page** (Updated - Removed Executive Coaching/Leadership)
+   - Strategic Intelligence Advisory (Customer Intelligence, Choice Analytics, Predictive Intelligence)
+   - Customer Experience & Brand (CX Strategy, Execution Planning, Brand Positioning)
+   - Healthcare Intelligence (Patient Choice Analytics, Healthcare Experience, Market Intelligence)
+   - Platform-Powered Insights capabilities section
 
 4. **Case Studies Page**
    - Stats section (50+ Projects, 3x ROI, 95% Retention, 12+ Industries)
@@ -53,17 +62,15 @@ Corporate executives, startup founders, and small business owners seeking strate
    - Resource downloads (Advisory Overview, One Page Brochure)
    - Engagement process steps
 
+### Removed Services
+- Executive Leadership Development
+- Executive Coaching
+- Leadership Transformation
+- Organizational Transformation Advisory
+
 ### Components
 - **Navigation**: Floating glassmorphism navbar with mobile responsive menu
 - **Footer**: Full footer with navigation, resources, and copyright
-
-### Design Features
-- Dark mode theme (#050505 background)
-- Glassmorphism cards with backdrop blur
-- Subtle glow orbs for ambient lighting
-- Noise texture overlay for depth
-- Smooth animations via Framer Motion
-- Custom scroll behavior
 
 ---
 
@@ -77,18 +84,15 @@ Corporate executives, startup founders, and small business owners seeking strate
 ## Future Backlog (P1/P2)
 
 ### P1 - High Priority
-- Add actual client logos/partner images
-- Implement form validation feedback for embedded forms
+- Add demo request form or platform showcase
 - Add analytics tracking (Google Analytics/Plausible)
 
 ### P2 - Medium Priority
 - Add individual case study detail pages
-- Blog/Insights section
-- Team members page with bios
-- Add testimonial carousel for mobile
+- Blog/Insights section for thought leadership
+- Platform integration demos or videos
 
 ### P3 - Nice to Have
-- Dark/light theme toggle
 - Newsletter signup integration
 - Live chat widget
 - CRM integration for leads
