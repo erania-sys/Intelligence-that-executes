@@ -67,26 +67,38 @@ const About = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-3xl"
-          >
-            <motion.h1
-              variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
             >
-              Battle-Tested Leadership. Enterprise-Grade Results.
-            </motion.h1>
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+              <motion.h1
+                variants={fadeUpVariant}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              >
+                Battle-Tested Leadership. Enterprise-Grade Results.
+              </motion.h1>
+              <motion.p
+                variants={fadeUpVariant}
+                className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+              >
+                Senior strategic executives who've led Fortune 500 transformations.
+              </motion.p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hidden lg:block"
             >
-              Senior strategic executives who've led Fortune 500 transformations.
-            </motion.p>
-          </motion.div>
+              <img 
+                src="https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwxfHxsZWFkZXJzaGlwJTIwdGVhbSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc3MTcwNzg4N3ww&ixlib=rb-4.1.0&q=85"
+                alt="Professional leadership team"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

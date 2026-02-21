@@ -168,45 +168,57 @@ const BrandDesign = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-3xl"
-          >
-            <motion.h1
-              variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              
-            >
-              Build Brands That Command Attention.
-            </motion.h1>
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6C757D] leading-relaxed mb-8"
-            >
-              Strategic brand development and visual identity systems 
-              that differentiate you in competitive markets.
-            </motion.p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              variants={fadeUpVariant}
-              className="flex flex-wrap gap-4"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
             >
-              <a
-                href="https://form.jotform.com/252728460666061"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-                data-testid="hero-cta-primary"
+              <motion.h1
+                variants={fadeUpVariant}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
               >
-                Request Brand Consultation
-                <ArrowRight size={18} className="ml-2" />
-              </a>
-              <a href="#approach" className="btn-secondary">
-                View Our Approach
-              </a>
+                Build Brands That Command Attention.
+              </motion.h1>
+              <motion.p
+                variants={fadeUpVariant}
+                className="text-lg md:text-xl text-[#6C757D] leading-relaxed mb-8"
+              >
+                Strategic brand development and visual identity systems 
+                that differentiate you in competitive markets.
+              </motion.p>
+              <motion.div
+                variants={fadeUpVariant}
+                className="flex flex-wrap gap-4"
+              >
+                <a
+                  href="https://form.jotform.com/252728460666061"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                  data-testid="hero-cta-primary"
+                >
+                  Request Brand Consultation
+                  <ArrowRight size={18} className="ml-2" />
+                </a>
+                <a href="#approach" className="btn-secondary">
+                  View Our Approach
+                </a>
+              </motion.div>
             </motion.div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hidden lg:block"
+            >
+              <img 
+                src="https://images.pexels.com/photos/7661185/pexels-photo-7661185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="Branding and marketing concept"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

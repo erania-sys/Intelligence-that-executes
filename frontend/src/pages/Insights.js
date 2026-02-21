@@ -147,26 +147,38 @@ const Insights = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-3xl"
-          >
-            <motion.h1
-              variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
             >
-              Strategic Intelligence. Delivered Weekly.
-            </motion.h1>
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+              <motion.h1
+                variants={fadeUpVariant}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              >
+                Strategic Intelligence. Delivered Weekly.
+              </motion.h1>
+              <motion.p
+                variants={fadeUpVariant}
+                className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+              >
+                Insights on customer intelligence, market positioning, and execution excellence.
+              </motion.p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hidden lg:block"
             >
-              Insights on customer intelligence, market positioning, and execution excellence.
-            </motion.p>
-          </motion.div>
+              <img 
+                src="https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="Data analytics visualization"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

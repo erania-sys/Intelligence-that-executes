@@ -71,26 +71,38 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-3xl"
-          >
-            <motion.h1
-              variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
             >
-              Ready to See What You're Missing?
-            </motion.h1>
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+              <motion.h1
+                variants={fadeUpVariant}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              >
+                Ready to See What You're Missing?
+              </motion.h1>
+              <motion.p
+                variants={fadeUpVariant}
+                className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+              >
+                Request a strategic consultation and discover the opportunities hiding in your business.
+              </motion.p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hidden lg:block"
             >
-              Request a strategic consultation and discover the opportunities hiding in your business.
-            </motion.p>
-          </motion.div>
+              <img 
+                src="https://images.pexels.com/photos/7793715/pexels-photo-7793715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="Team collaboration and discussion"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

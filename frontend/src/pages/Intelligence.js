@@ -122,26 +122,38 @@ const Intelligence = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-3xl"
-          >
-            <motion.h1
-              variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
             >
-              Proprietary Technology. Predictive Intelligence.
-            </motion.h1>
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+              <motion.h1
+                variants={fadeUpVariant}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              >
+                Proprietary Technology. Predictive Intelligence.
+              </motion.h1>
+              <motion.p
+                variants={fadeUpVariant}
+                className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+              >
+                Enterprise-grade AI/ML analytics powered by our strategic partnership with OSG Analytics.
+              </motion.p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hidden lg:block"
             >
-              Enterprise-grade AI/ML analytics powered by our strategic partnership with OSG Analytics.
-            </motion.p>
-          </motion.div>
+              <img 
+                src="https://images.unsplash.com/photo-1744640326166-433469d102f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYnVzaW5lc3N8ZW58MHx8fHwxNzcxNzA3ODg2fDA&ixlib=rb-4.1.0&q=85"
+                alt="AI technology chip on circuit board"
+                className="rounded-lg shadow-lg w-full h-auto object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
