@@ -1,0 +1,505 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowRight, Check, Brain, BarChart3, Users, Shield, Database, Zap } from 'lucide-react';
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
+};
+
+const Intelligence = () => {
+  const platforms = [
+    {
+      icon: Brain,
+      name: 'Customer Choice Intelligence™',
+      tagline: 'Predictive Tradeoff Technology',
+      description: 'Measures the magnitude of customer decisions—not just preferences or rankings.',
+      howItWorks: [
+        'Tests multiple decision attributes without increasing survey length',
+        'Pairwise tradeoff algorithm learns in real-time',
+        'Captures not just choice, but conviction of choice',
+        'Individual-level analysis without expanded sample sizes',
+        'Predicts future behavior with exceptional accuracy'
+      ],
+      whyMatters: 'Traditional market research asks what customers say they want. Our technology predicts what will actually drive their future decisions. That\'s the difference between interesting data and strategic advantage.',
+      benefits: [
+        { title: 'Accurate', desc: 'Measures conviction, not just preference' },
+        { title: 'Efficient', desc: 'Engaging respondent experience prevents fatigue' },
+        { title: 'Flexible', desc: 'Handles multiple benefits with many levels each' },
+        { title: 'Validated', desc: 'Stanford-born, academically peer-reviewed' }
+      ],
+      useCases: [
+        'Product-market fit validation',
+        'Pricing and packaging optimization',
+        'Competitive positioning strategy',
+        'Innovation pipeline prioritization',
+        'Customer segmentation and targeting'
+      ],
+      partner: 'Powered by OSG Analytics\' ASEMAP™ methodology'
+    },
+    {
+      icon: Database,
+      name: 'Brackett Intelligence Engine™',
+      tagline: 'AI/ML Analytics Platform',
+      description: 'Consolidates structured and unstructured data sources into real-time intelligence dashboards.',
+      capabilities: {
+        dataIntegration: [
+          'Multiple source consolidation (CRM, marketing, sales, product)',
+          'Structured and unstructured data processing',
+          'Real-time streaming and batch analysis',
+          'Secure enterprise infrastructure (GDPR/HIPAA compliant)'
+        ],
+        aiMl: [
+          'Descriptive analytics (what happened)',
+          'Predictive analytics (what will happen)',
+          'Prescriptive analytics (what to do about it)',
+          'Behavioral modeling and cognitive analytics'
+        ],
+        outputs: [
+          'Real-time executive dashboards',
+          'Automated intelligence briefs',
+          'Trend identification and anomaly detection',
+          'Strategic intervention triggers'
+        ]
+      },
+      whyMatters: 'You get live dashboards tracking the metrics that matter—not static PowerPoints collecting dust. Intelligence updates in real-time as market conditions change.',
+      partner: 'Powered by OSG Analytics platform'
+    },
+    {
+      icon: Users,
+      name: 'Customer Experience Analytics™',
+      tagline: 'Advanced CX Measurement',
+      description: 'Measures customer sentiment drivers, engagement triggers, and lifetime value optimization opportunities.',
+      capabilities: {
+        npsPlus: [
+          'Beyond Net Promoter Score to why customers promote or detract',
+          'Sentiment driver identification',
+          'Engagement trigger mapping',
+          'Retention and churn prediction'
+        ],
+        journey: [
+          'Touchpoint effectiveness analysis',
+          'Friction point identification',
+          'Behavioral nudge design',
+          'Personalization opportunity detection'
+        ],
+        ltv: [
+          'Customer segmentation by profitability',
+          'Cross-sell/up-sell opportunity identification',
+          'Retention strategy recommendations',
+          'Loyalty program design'
+        ]
+      },
+      whyMatters: 'Most companies measure NPS. We tell you why customers feel that way and what interventions will change behavior. That\'s actionable intelligence, not just interesting metrics.',
+      partner: 'Powered by OSG Analytics\' o360™ platform'
+    }
+  ];
+
+  const comparisonData = [
+    { traditional: 'Survey-based opinions', brackett: 'AI-powered predictive analytics' },
+    { traditional: 'Static reports', brackett: 'Real-time dashboards' },
+    { traditional: 'Generic frameworks', brackett: 'Proprietary algorithms' },
+    { traditional: 'Consultant judgment', brackett: 'Data-driven insights' },
+    { traditional: 'One-time deliverable', brackett: 'Ongoing intelligence platform' }
+  ];
+
+  const securityFeatures = [
+    'GDPR compliant (EU data protection)',
+    'HIPAA compliant (healthcare data security)',
+    'SOC 2 certified data centers',
+    'End-to-end encryption',
+    'Role-based access controls'
+  ];
+
+  return (
+    <div data-testid="intelligence-page" className="bg-[#FAFAF8]">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" data-testid="hero-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="max-w-3xl"
+          >
+            <motion.h1
+              variants={fadeUpVariant}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
+              style={{ fontFamily: 'Playfair Display, serif' }}
+            >
+              Proprietary Technology. Predictive Intelligence.
+            </motion.h1>
+            <motion.p
+              variants={fadeUpVariant}
+              className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed"
+            >
+              Enterprise-grade AI/ML analytics powered by our strategic partnership with OSG Analytics.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Technology Overview */}
+      <section className="py-16 border-b border-[rgba(0,0,0,0.05)]" data-testid="overview-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="max-w-3xl">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                What Makes Brackett Different
+              </h2>
+              <p className="text-[#6B6B6B] leading-relaxed mb-6">
+                Most strategy consultants bring experience and frameworks. We bring that plus proprietary intelligence technology that processes customer behavioral data in ways traditional consulting can't.
+              </p>
+              <div className="bg-[#1E4D7B]/5 rounded-xl p-6 border border-[#1E4D7B]/10">
+                <h4 className="font-semibold text-[#1E4D7B] mb-2">Our Strategic Partnership</h4>
+                <p className="text-[#6B6B6B] text-sm leading-relaxed">
+                  Brackett Agency partners strategically with OSG Analytics, a leader in AI/ML-powered customer intelligence and behavioral analytics. This partnership gives our clients access to enterprise-grade technology platforms typically reserved for Fortune 500 companies.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Platform 1: Customer Choice Intelligence */}
+      <section className="py-20 md:py-28" data-testid="platform-1">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
+              <div className="w-16 h-16 rounded-xl bg-[#B8975A]/10 flex items-center justify-center flex-shrink-0">
+                <Brain className="text-[#B8975A]" size={32} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[#B8975A] uppercase tracking-wider">Platform 1</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  {platforms[0].name}
+                </h2>
+                <p className="text-[#6B6B6B] mt-1">{platforms[0].tagline}</p>
+              </div>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-8 mb-8">
+              <motion.div variants={fadeUpVariant}>
+                <p className="text-[#6B6B6B] leading-relaxed mb-6">
+                  {platforms[0].description}
+                </p>
+                <h4 className="font-semibold text-[#2C2C2C] mb-4">How It Works</h4>
+                <ul className="space-y-3">
+                  {platforms[0].howItWorks.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-[#6B6B6B]">
+                      <ArrowRight size={16} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant}>
+                <div className="bg-[#F5F3EF] rounded-xl p-6 mb-6">
+                  <h4 className="font-semibold text-[#2C2C2C] mb-3">Why It Matters</h4>
+                  <p className="text-[#6B6B6B] text-sm leading-relaxed">
+                    {platforms[0].whyMatters}
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  {platforms[0].benefits.map((benefit, i) => (
+                    <div key={i} className="bg-white rounded-lg p-4 border border-[rgba(0,0,0,0.05)]">
+                      <Check size={16} className="text-[#2D7B7B] mb-2" />
+                      <h5 className="font-semibold text-[#2C2C2C] text-sm">{benefit.title}</h5>
+                      <p className="text-[#6B6B6B] text-xs">{benefit.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+              <h4 className="font-semibold text-[#2C2C2C] mb-4">Use Cases</h4>
+              <div className="flex flex-wrap gap-3">
+                {platforms[0].useCases.map((useCase, i) => (
+                  <span key={i} className="bg-[#F5F3EF] text-[#6B6B6B] px-4 py-2 rounded-full text-sm">
+                    {useCase}
+                  </span>
+                ))}
+              </div>
+              <p className="text-[#B8975A] text-sm mt-4 font-medium">{platforms[0].partner}</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Platform 2: Brackett Intelligence Engine */}
+      <section className="py-20 md:py-28 bg-[#2C2C2C] text-white" data-testid="platform-2">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
+              <div className="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                <Database className="text-[#B8975A]" size={32} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[#B8975A] uppercase tracking-wider">Platform 2</p>
+                <h2 className="text-2xl md:text-3xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  {platforms[1].name}
+                </h2>
+                <p className="text-white/60 mt-1">{platforms[1].tagline}</p>
+              </div>
+            </motion.div>
+
+            <motion.p variants={fadeUpVariant} className="text-white/70 leading-relaxed mb-8 max-w-2xl">
+              {platforms[1].description}
+            </motion.p>
+
+            <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-6 mb-8">
+              <motion.div variants={fadeUpVariant} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                <h4 className="font-semibold text-[#B8975A] mb-4">Data Integration</h4>
+                <ul className="space-y-2">
+                  {platforms[1].capabilities.dataIntegration.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-white/70">
+                      <ArrowRight size={14} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div variants={fadeUpVariant} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                <h4 className="font-semibold text-[#B8975A] mb-4">AI/ML Analytics</h4>
+                <ul className="space-y-2">
+                  {platforms[1].capabilities.aiMl.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-white/70">
+                      <ArrowRight size={14} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div variants={fadeUpVariant} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                <h4 className="font-semibold text-[#B8975A] mb-4">Strategic Outputs</h4>
+                <ul className="space-y-2">
+                  {platforms[1].capabilities.outputs.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-white/70">
+                      <ArrowRight size={14} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </motion.div>
+
+            <motion.div variants={fadeUpVariant} className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <h4 className="font-semibold text-white mb-3">Why It Matters</h4>
+              <p className="text-white/70 leading-relaxed">
+                {platforms[1].whyMatters}
+              </p>
+              <p className="text-[#B8975A] text-sm mt-4 font-medium">{platforms[1].partner}</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Platform 3: Customer Experience Analytics */}
+      <section className="py-20 md:py-28" data-testid="platform-3">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
+              <div className="w-16 h-16 rounded-xl bg-[#2D7B7B]/10 flex items-center justify-center flex-shrink-0">
+                <Users className="text-[#2D7B7B]" size={32} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[#B8975A] uppercase tracking-wider">Platform 3</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  {platforms[2].name}
+                </h2>
+                <p className="text-[#6B6B6B] mt-1">{platforms[2].tagline}</p>
+              </div>
+            </motion.div>
+
+            <motion.p variants={fadeUpVariant} className="text-[#6B6B6B] leading-relaxed mb-8 max-w-2xl">
+              {platforms[2].description}
+            </motion.p>
+
+            <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-6 mb-8">
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                <h4 className="font-semibold text-[#2C2C2C] mb-4">NPS+ Methodology</h4>
+                <ul className="space-y-2">
+                  {platforms[2].capabilities.npsPlus.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
+                      <ArrowRight size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                <h4 className="font-semibold text-[#2C2C2C] mb-4">Journey Intelligence</h4>
+                <ul className="space-y-2">
+                  {platforms[2].capabilities.journey.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
+                      <ArrowRight size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                <h4 className="font-semibold text-[#2C2C2C] mb-4">Lifetime Value Optimization</h4>
+                <ul className="space-y-2">
+                  {platforms[2].capabilities.ltv.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
+                      <ArrowRight size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </motion.div>
+
+            <motion.div variants={fadeUpVariant} className="bg-[#F5F3EF] rounded-xl p-6">
+              <h4 className="font-semibold text-[#2C2C2C] mb-3">Why It Matters</h4>
+              <p className="text-[#6B6B6B] leading-relaxed">
+                {platforms[2].whyMatters}
+              </p>
+              <p className="text-[#B8975A] text-sm mt-4 font-medium">{platforms[2].partner}</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Technology Advantages */}
+      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="comparison-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Technology Advantages
+              </h2>
+            </motion.div>
+
+            <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)]">
+              <div className="grid grid-cols-2">
+                <div className="bg-[#6B6B6B] text-white p-4 font-semibold text-center text-sm">
+                  Traditional Consulting
+                </div>
+                <div className="bg-[#1E4D7B] text-white p-4 font-semibold text-center text-sm">
+                  Brackett Intelligence
+                </div>
+              </div>
+              {comparisonData.map((row, index) => (
+                <div key={index} className="grid grid-cols-2 border-t border-[rgba(0,0,0,0.05)]">
+                  <div className="p-4 text-[#6B6B6B] text-sm">{row.traditional}</div>
+                  <div className="p-4 text-[#2C2C2C] font-medium text-sm bg-[#1E4D7B]/5">{row.brackett}</div>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Security & Compliance */}
+      <section className="py-20 md:py-28" data-testid="security-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
+              <div className="w-16 h-16 rounded-xl bg-[#4A7C59]/10 flex items-center justify-center flex-shrink-0">
+                <Shield className="text-[#4A7C59]" size={32} />
+              </div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  Security & Compliance
+                </h2>
+                <p className="text-[#6B6B6B] mt-1">Enterprise-Grade Infrastructure</p>
+              </div>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div variants={fadeUpVariant}>
+                <ul className="space-y-3">
+                  {securityFeatures.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3 text-[#6B6B6B]">
+                      <Check size={18} className="text-[#4A7C59] mt-1 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div variants={fadeUpVariant} className="bg-[#F5F3EF] rounded-xl p-6">
+                <h4 className="font-semibold text-[#2C2C2C] mb-3">Trusted By</h4>
+                <p className="text-[#6B6B6B] text-sm leading-relaxed">
+                  Healthcare systems, pharmaceutical companies, medical device manufacturers, financial services firms, and Fortune 500 enterprises with the most demanding security requirements.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-28 bg-[#2D7B7B] text-white" data-testid="cta-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUpVariant}
+            className="text-center max-w-2xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+              See What Our Intelligence Can Reveal About Your Business
+            </h2>
+            <p className="text-white/80 mb-8 leading-relaxed">
+              The Strategic Blindspot Audit™ includes access to all three intelligence platforms with analysis of your customer and market data.
+            </p>
+            <a
+              href="https://form.jotform.com/252728460666061"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-[#2C2C2C] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              data-testid="cta-audit"
+            >
+              Request Your Strategic Audit
+              <ArrowRight size={16} />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Intelligence;
