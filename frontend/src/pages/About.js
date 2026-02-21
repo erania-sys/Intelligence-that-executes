@@ -231,7 +231,7 @@ const About = () => {
                     className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]"
                   >
                     <div className="flex items-start gap-3">
-                      <Check size={18} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                      <Check size={18} className="text-[#1A365D] mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-[#2C2C2C] mb-1">{belief.title}</h4>
                         <p className="text-[#6B6B6B] text-sm">{belief.desc}</p>

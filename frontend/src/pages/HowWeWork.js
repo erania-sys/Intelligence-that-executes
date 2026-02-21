@@ -69,7 +69,7 @@ const HowWeWork = () => {
       title: 'Execution Partnership',
       subtitle: 'We don\'t hand you a deck and disappear. We partner through implementation.',
       icon: Rocket,
-      color: '#2D7B7B',
+      color: '#1A365D',
       whatHappens: [
         'Regular strategic reviews',
         'Real-time course corrections',
@@ -228,7 +228,7 @@ const HowWeWork = () => {
                     <ul className="space-y-2">
                       {phase.deliverables.map((item, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                          <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                          <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}

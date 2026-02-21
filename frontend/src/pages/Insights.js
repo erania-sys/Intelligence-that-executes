@@ -127,7 +127,7 @@ const Insights = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      revenue: '#2D7B7B',
+      revenue: '#1A365D',
       positioning: '#B8975A',
       intelligence: '#1E4D7B',
       execution: '#4A7C59'

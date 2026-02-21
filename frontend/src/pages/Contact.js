@@ -160,7 +160,7 @@ const Contact = () => {
 
               {/* Right Column - Strategic Blindspot Audit */}
               <motion.div variants={fadeUpVariant}>
-                <div className="bg-[#2D7B7B] rounded-xl p-8 text-white">
+                <div className="bg-[#1A365D] rounded-xl p-8 text-white">
                   <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
                     The Strategic Blindspot Audit™
                   </h2>
