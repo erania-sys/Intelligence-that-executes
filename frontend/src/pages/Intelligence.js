@@ -424,7 +424,7 @@ const Intelligence = () => {
                   Traditional Consulting
                 </div>
                 <div className="bg-[#2E5C8A] text-white p-4 font-semibold text-center text-sm">
-                  Brackett Intelligence
+                  OSG Intelligence
                 </div>
               </div>
               {comparisonData.map((row, index) => (
