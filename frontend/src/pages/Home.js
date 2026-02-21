@@ -338,8 +338,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white" data-testid="stats-section">
+      {/* Stats Section - More dynamic */}
+      <section className="py-16 bg-white border-y border-[#E9ECEF]" data-testid="stats-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -352,9 +352,10 @@ const Home = () => {
               <motion.div
                 key={index}
                 variants={fadeUpVariant}
-                className="text-center"
+                whileHover={{ scale: 1.05 }}
+                className="text-center p-4"
               >
-                <div className="text-[36px] md:text-[48px] font-bold text-[#1A2B4A]">
+                <div className="text-[36px] md:text-[48px] font-bold text-[#0A0A0A]">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </div>
                 <p className="text-[#6C757D] text-sm font-medium">{stat.label}</p>
@@ -375,14 +376,18 @@ const Home = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Leadership</p>
-              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1A2B4A]">
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0A0A0A]">
                 Battle-Tested Leadership. Enterprise-Grade Results.
               </h2>
             </motion.div>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <motion.div variants={fadeUpVariant} className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm">
-                <h3 className="text-xl font-semibold mb-2 text-[#1A2B4A]">
+              <motion.div 
+                variants={fadeUpVariant} 
+                whileHover={{ y: -6 }}
+                className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold mb-2 text-[#0A0A0A]">
                   Erania Brackett, CEO
                 </h3>
                 <ul className="text-[#6C757D] text-sm space-y-2">
@@ -393,8 +398,12 @@ const Home = () => {
                 </ul>
               </motion.div>
               
-              <motion.div variants={fadeUpVariant} className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm">
-                <h3 className="text-xl font-semibold mb-2 text-[#1A2B4A]">
+              <motion.div 
+                variants={fadeUpVariant} 
+                whileHover={{ y: -6 }}
+                className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold mb-2 text-[#0A0A0A]">
                   Dr. R. Sukumar, President & Global CEO
                 </h3>
                 <ul className="text-[#6C757D] text-sm space-y-2">
@@ -409,9 +418,13 @@ const Home = () => {
             
             <motion.div variants={fadeUpVariant} className="flex flex-wrap justify-center gap-4">
               {['Stanford-Born Methodology', 'NYSE Company Leadership', 'GDPR/HIPAA Compliant', 'OSG Analytics Partnership'].map((badge, i) => (
-                <span key={i} className="bg-white text-[#6C757D] px-4 py-2 rounded-md text-sm font-medium border border-[#E9ECEF]">
+                <motion.span 
+                  key={i} 
+                  whileHover={{ scale: 1.05, backgroundColor: '#0A0A0A', color: '#fff' }}
+                  className="bg-white text-[#0A0A0A] px-4 py-2 rounded-md text-sm font-medium border border-[#E9ECEF] cursor-default transition-all duration-300"
+                >
                   {badge}
-                </span>
+                </motion.span>
               ))}
             </motion.div>
           </motion.div>
