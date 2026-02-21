@@ -90,12 +90,9 @@ const Home = () => {
   ];
 
   return (
-    <div data-testid="home-page" className="bg-[#FAFAF8]">
+    <div data-testid="home-page" className="bg-white">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center pt-20 pb-16 relative overflow-hidden" data-testid="hero-section">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" />
-        
+      <section className="min-h-[90vh] flex items-center pt-20 pb-16 relative overflow-hidden bg-gradient-to-b from-[#F8F9FA] to-white" data-testid="hero-section">
         <div className="section-container relative z-10">
           <motion.div
             initial="hidden"
@@ -105,19 +102,19 @@ const Home = () => {
           >
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
-              style={{ fontFamily: 'Playfair Display, serif' }}
+              className="text-[42px] md:text-[48px] font-semibold tracking-tight leading-[1.15] mb-6 text-[#1A2B4A]"
+              style={{ letterSpacing: '-0.5px' }}
             >
               Stop Leaving Millions on the Table.
               <br />
-              <span className="text-[#8B6F47]">Get the Strategic Intelligence You Need—</span>
+              <span className="text-[#C9A961]">Get the Strategic Intelligence You Need—</span>
               <br />
               Without the Full-Time Overhead.
             </motion.h1>
             
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6B6B6B] max-w-2xl mb-8 leading-relaxed"
+              className="text-lg text-[#6C757D] max-w-2xl mb-8 leading-relaxed"
             >
               Fractional strategic executives backed by AI-powered intelligence 
               for mid-market B2B companies who need clarity, not more consultants.
@@ -154,7 +151,7 @@ const Home = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 md:py-28" data-testid="problem-section">
+      <section className="py-20 md:py-28 bg-white" data-testid="problem-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -163,7 +160,7 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-[32px] md:text-[36px] font-semibold text-[#1A2B4A] mb-4">
                 You're Making Million-Dollar Decisions in the Dark
               </h2>
             </motion.div>
@@ -176,15 +173,15 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]"
+                  className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm"
                 >
-                  <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center mb-4">
                     <problem.icon className="text-red-500" size={20} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-xl font-semibold mb-3 text-[#1A2B4A]">
                     {problem.title}
                   </h3>
-                  <p className="text-[#6B6B6B] leading-relaxed">
+                  <p className="text-[#6C757D] leading-relaxed">
                     {problem.description}
                   </p>
                 </motion.div>
@@ -195,7 +192,7 @@ const Home = () => {
       </section>
 
       {/* Solution Overview */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="solution-section">
+      <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="solution-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -204,8 +201,8 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">What You Actually Need</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">What You Actually Need</p>
+              <h2 className="text-[32px] md:text-[36px] font-semibold text-[#1A2B4A]">
                 Intelligence That Executes.
               </h2>
             </motion.div>
@@ -218,15 +215,15 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-[#1A365D]/10 flex items-center justify-center mb-4">
-                    <prop.icon className="text-[#1A365D]" size={24} />
+                  <div className="w-12 h-12 rounded-md bg-[#1A2B4A]/5 flex items-center justify-center mb-4">
+                    <prop.icon className="text-[#1A2B4A]" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-xl font-semibold mb-3 text-[#1A2B4A]">
                     {prop.title}
                   </h3>
-                  <p className="text-[#6B6B6B] leading-relaxed">
+                  <p className="text-[#6C757D] leading-relaxed">
                     {prop.description}
                   </p>
                 </motion.div>
@@ -237,7 +234,7 @@ const Home = () => {
       </section>
 
       {/* How We're Different */}
-      <section className="py-20 md:py-28" data-testid="comparison-section">
+      <section className="py-20 md:py-28 bg-white" data-testid="comparison-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -246,28 +243,28 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">How We're Different</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">How We're Different</p>
+              <h2 className="text-[32px] md:text-[36px] font-semibold text-[#1A2B4A]">
                 Not Consultants. Strategic Partners.
               </h2>
             </motion.div>
             
             <motion.div
               variants={fadeUpVariant}
-              className="max-w-3xl mx-auto bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)]"
+              className="max-w-3xl mx-auto bg-white rounded-md overflow-hidden border border-[#E9ECEF] shadow-sm"
             >
               <div className="grid grid-cols-2">
-                <div className="bg-[#6B6B6B] text-white p-4 font-semibold text-center text-sm">
+                <div className="bg-[#6C757D] text-white p-4 font-semibold text-center text-sm">
                   Traditional Consultants
                 </div>
-                <div className="bg-[#1A365D] text-white p-4 font-semibold text-center text-sm">
+                <div className="bg-[#1A2B4A] text-white p-4 font-semibold text-center text-sm">
                   Brackett Agency
                 </div>
               </div>
               {comparisonData.map((row, index) => (
-                <div key={index} className="grid grid-cols-2 border-t border-[rgba(0,0,0,0.05)]">
-                  <div className="p-4 text-[#6B6B6B] text-sm">{row.traditional}</div>
-                  <div className="p-4 text-[#2C2C2C] font-medium text-sm bg-[#F5F3EF]/50">{row.brackett}</div>
+                <div key={index} className="grid grid-cols-2 border-t border-[#E9ECEF]">
+                  <div className="p-4 text-[#6C757D] text-sm">{row.traditional}</div>
+                  <div className="p-4 text-[#2D3748] font-medium text-sm bg-[#F8F9FA]">{row.brackett}</div>
                 </div>
               ))}
             </motion.div>
@@ -276,7 +273,7 @@ const Home = () => {
       </section>
 
       {/* Technology Preview */}
-      <section className="py-20 md:py-28 bg-[#2C2C2C] text-white" data-testid="technology-section">
+      <section className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="technology-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -285,8 +282,8 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="max-w-2xl mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Technology</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Technology</p>
+              <h2 className="text-[32px] md:text-[36px] font-semibold mb-4 text-white">
                 Powered by Brackett Intelligence Engine™
               </h2>
               <p className="text-white/70 leading-relaxed">
@@ -302,9 +299,9 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white/5 rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-colors"
+                  className="bg-white/5 rounded-md p-8 border border-white/10 hover:bg-white/10 transition-colors"
                 >
-                  <h3 className="text-lg font-bold mb-3 text-[#B8975A]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-lg font-semibold mb-3 text-[#C9A961]">
                     {pillar.name}
                   </h3>
                   <p className="text-white/60 text-sm leading-relaxed">
@@ -317,7 +314,7 @@ const Home = () => {
             <motion.div variants={fadeUpVariant} className="mt-10 flex items-center gap-4">
               <Link
                 to="/intelligence"
-                className="inline-flex items-center gap-2 text-[#B8975A] font-medium hover:underline"
+                className="inline-flex items-center gap-2 text-[#C9A961] font-medium hover:underline"
                 data-testid="view-intelligence"
               >
                 See Our Intelligence Capabilities
@@ -331,7 +328,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-[#F5F3EF]" data-testid="stats-section">
+      <section className="py-16 bg-[#F8F9FA]" data-testid="stats-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -346,10 +343,10 @@ const Home = () => {
                 variants={fadeUpVariant}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-[#8B6F47] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <div className="stat-number text-[#1A2B4A]">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="text-[#6B6B6B] text-sm">{stat.label}</p>
+                <p className="stat-label">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -357,7 +354,7 @@ const Home = () => {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-20 md:py-28" data-testid="leadership-section">
+      <section className="py-20 md:py-28 bg-white" data-testid="leadership-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -366,18 +363,18 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Leadership</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Leadership</p>
+              <h2 className="text-[32px] md:text-[36px] font-semibold text-[#1A2B4A]">
                 Battle-Tested Leadership. Enterprise-Grade Results.
               </h2>
             </motion.div>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]">
-                <h3 className="text-xl font-bold mb-2 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm">
+                <h3 className="text-xl font-semibold mb-2 text-[#1A2B4A]">
                   Erania Brackett, CEO
                 </h3>
-                <ul className="text-[#6B6B6B] text-sm space-y-2">
+                <ul className="text-[#6C757D] text-sm space-y-2">
                   <li>• Former CMO & Chief Customer Experience Officer, Dentsply Sirona (NYSE: XRAY)</li>
                   <li>• Former Independent Board Director, Knowles Corporation (NYSE: KN)</li>
                   <li>• Led Fortune 500 transformations across MedTech, Healthcare, Consumer sectors</li>
@@ -385,11 +382,11 @@ const Home = () => {
                 </ul>
               </motion.div>
               
-              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]">
-                <h3 className="text-xl font-bold mb-2 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm">
+                <h3 className="text-xl font-semibold mb-2 text-[#1A2B4A]">
                   Dr. R. Sukumar, President & Global CEO
                 </h3>
-                <ul className="text-[#6B6B6B] text-sm space-y-2">
+                <ul className="text-[#6C757D] text-sm space-y-2">
                   <li>• 25+ years academia and global corporations</li>
                   <li>• Former Associate Dean, Indian School of Business</li>
                   <li>• Taught at Rutgers, Thunderbird, University of Maryland, Rice University</li>
@@ -399,9 +396,9 @@ const Home = () => {
               </motion.div>
             </div>
             
-            <motion.div variants={fadeUpVariant} className="flex flex-wrap justify-center gap-6">
+            <motion.div variants={fadeUpVariant} className="flex flex-wrap justify-center gap-4">
               {['Stanford-Born Methodology', 'NYSE Company Leadership', 'GDPR/HIPAA Compliant', 'OSG Analytics Partnership'].map((badge, i) => (
-                <span key={i} className="bg-[#F5F3EF] text-[#6B6B6B] px-4 py-2 rounded-full text-sm font-medium">
+                <span key={i} className="bg-[#F8F9FA] text-[#6C757D] px-4 py-2 rounded-md text-sm font-medium border border-[#E9ECEF]">
                   {badge}
                 </span>
               ))}
@@ -411,7 +408,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="cta-section">
+      <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -420,27 +417,27 @@ const Home = () => {
             variants={fadeUpVariant}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h2 className="text-[32px] md:text-[36px] font-semibold mb-4 text-[#1A2B4A]">
               Ready to See What You're Missing?
             </h2>
-            <h3 className="text-xl font-semibold mb-4 text-[#8B6F47]" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h3 className="text-xl font-semibold mb-4 text-[#C9A961]">
               The Strategic Blindspot Audit™
             </h3>
-            <p className="text-[#6B6B6B] mb-8 leading-relaxed">
+            <p className="text-[#6C757D] mb-8 leading-relaxed">
               Half-day intensive revealing the strategic gaps costing your business significant annual opportunity.
             </p>
             
-            <div className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] text-left mb-8">
-              <h4 className="font-semibold text-[#2C2C2C] mb-4">What You Get:</h4>
+            <div className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm text-left mb-8">
+              <h4 className="font-semibold text-[#1A2B4A] mb-4">What You Get:</h4>
               <ul className="space-y-3">
                 {auditFeatures.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[#6B6B6B]">
-                    <ArrowRight size={16} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                  <li key={i} className="flex items-start gap-3 text-[#6C757D]">
+                    <ArrowRight size={16} className="text-[#C9A961] mt-1 flex-shrink-0" />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm text-[#6B6B6B] italic">
+              <p className="mt-6 text-sm text-[#6C757D] italic">
                 Premium diagnostic intensive using AI-powered intelligence technology. Investment fully credited toward full engagement.
               </p>
             </div>
