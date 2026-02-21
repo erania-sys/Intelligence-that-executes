@@ -181,8 +181,8 @@ const Home = () => {
                   variants={fadeUpVariant}
                   className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm"
                 >
-                  <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mb-4">
-                    <span className="text-red-600 font-semibold text-sm">{index + 1}</span>
+                  <div className="w-8 h-8 rounded-full bg-[#1A2B4A] flex items-center justify-center mb-4">
+                    <span className="text-white font-semibold text-sm">{index + 1}</span>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#1A2B4A]">
                     {problem.title}
