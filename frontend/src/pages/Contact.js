@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Check, ChevronDown, Mail, MapPin, Clock } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -13,125 +13,89 @@ const staggerContainer = {
 };
 
 const Contact = () => {
-  const resources = [
-    {
-      title: 'Advisory Overview',
-      description: 'Comprehensive deck on our strategic intelligence services and methodology.',
-      link: 'https://brackett.agency/s/brackett_strategic_intelligence_deck.pdf',
-      cta: 'Download PDF'
-    },
-    {
-      title: 'One Page Brochure',
-      description: 'Quick overview of Brackett services and value proposition.',
-      link: 'https://brackett.agency/s/brackett_agency_one_pager_1.pdf',
-      cta: 'Download PDF'
-    }
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const auditFeatures = [
+    'Intensive facilitated session',
+    'Customer Choice Intelligence™ technology access',
+    'Comprehensive Strategic Intelligence Brief',
+    'Prioritized action roadmap',
+    'Follow-up consultation'
   ];
 
-  const processSteps = [
+  const faqs = [
     {
-      number: '1',
-      title: 'Discovery Call',
-      description: 'We learn about your challenges, goals, and vision for transformation.'
+      question: 'Who is the Strategic Blindspot Audit for?',
+      answer: 'CEOs and leadership teams of B2B companies ($10-50M revenue) who need strategic clarity on growth levers, competitive positioning, or execution effectiveness. Also ideal for PE firms evaluating portfolio company strategic needs.'
     },
     {
-      number: '2',
-      title: 'Custom Proposal',
-      description: 'We develop a tailored engagement plan aligned with your needs.'
+      question: 'What makes this different from a free consultation?',
+      answer: 'This isn\'t a sales pitch. It\'s a premium diagnostic intensive using proprietary AI-powered intelligence technology. You get immediate strategic insights from senior executives using enterprise-grade analytics—and the investment is fully credited if you proceed with a full engagement.'
     },
     {
-      number: '3',
-      title: 'Strategic Partnership',
-      description: 'We collaborate to deliver insights and drive measurable results.'
+      question: 'What if I\'m not ready for a full engagement?',
+      answer: 'No problem. The Strategic Blindspot Audit delivers immediate value regardless of whether we work together further. You\'ll leave with a comprehensive intelligence brief and action plan you can implement yourself or with your existing team.'
+    },
+    {
+      question: 'How long does a typical engagement last?',
+      answer: 'Our signature programs range from 90-120 days for positioning or revenue intelligence projects. The Growth Execution Accelerator is a 6-month diagnostic + execution partnership. Strategic Intelligence Partnerships (retainers) have minimum commitments with ongoing renewal options.'
+    },
+    {
+      question: 'Do you work remotely or on-site?',
+      answer: 'Both. We conduct strategic sessions and workshops on-site or virtually based on your preference. Most intelligence gathering and analysis happens remotely, with strategic working sessions scheduled at key milestones.'
+    },
+    {
+      question: 'What industries do you serve?',
+      answer: 'We specialize in mid-market B2B companies across Healthcare, MedTech, Pharmaceutical, Financial Services, and B2B Technology. Our proprietary intelligence platforms are built for complex, regulated industries with demanding data security requirements.'
+    },
+    {
+      question: 'Can you help with implementation, or just strategy?',
+      answer: 'Both. Unlike traditional consultants who hand you a deck and disappear, we offer execution partnership through our Growth Execution Accelerator and Strategic Intelligence Partnerships. You get strategic thinking plus hands-on support through implementation.'
+    },
+    {
+      question: 'What makes your intelligence technology different?',
+      answer: 'Our Customer Choice Intelligence™ methodology doesn\'t just measure what customers say they want—it predicts what will drive their future decisions with exceptional accuracy. Through our strategic partnership with OSG Analytics, we bring Stanford-born behavioral science combined with AI/ML analytics—technology typically available only to Fortune 500 companies.'
+    },
+    {
+      question: 'How do you work with OSG Analytics?',
+      answer: 'OSG Analytics (Optimal Strategix Group) is our strategic technology partner. Dr. R. Sukumar serves as President & Global CEO of OSG and strategic partner to Brackett Agency. This partnership gives our clients access to OSG\'s enterprise-grade ASEMAP™ and o360™ platforms, along with AI/ML analytics infrastructure.'
     }
   ];
 
   return (
     <div data-testid="contact-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-[#F5F3EF]" data-testid="contact-hero">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-3xl"
           >
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-sm font-medium text-[#B8956B] mb-4"
-            >
-              Get In Touch
-            </motion.p>
-            
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A1A1A]"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Let's transform your strategic vision.
+              Ready to See What You're Missing?
             </motion.h1>
-            
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6B6B6B] max-w-xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed"
             >
-              Ready to elevate your strategic capabilities? Contact us to discuss 
-              your organization's unique challenges and opportunities.
+              Request a strategic consultation and discover the opportunities hiding in your business.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* Main Contact CTA */}
-      <section className="py-20 md:py-28" data-testid="contact-main-cta">
-        <div className="section-container">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUpVariant}
-            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white max-w-3xl mx-auto relative overflow-hidden"
-          >
-            {/* Animated elements */}
-            <motion.div 
-              className="absolute w-48 h-48 rounded-full bg-white/10 -top-10 -left-10"
-              animate={{ scale: [1, 1.3, 1], rotate: [0, 45, 0] }}
-              transition={{ duration: 12, repeat: Infinity }}
-            />
-            <motion.div 
-              className="absolute w-32 h-32 rounded-full bg-white/5 -bottom-5 -right-5"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 8, repeat: Infinity }}
-            />
-            
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Start the conversation
-              </h2>
-              <p className="text-white/90 text-lg mb-8 max-w-lg mx-auto">
-                Complete our brief inquiry form and a senior advisor will 
-                reach out within 24 hours to discuss your needs.
-              </p>
-              <motion.a
-                href="https://form.jotform.com/252728460666061"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-[#1A1A1A] font-semibold px-10 py-4 rounded-lg inline-flex items-center text-lg"
-                data-testid="contact-form-button"
-                whileHover={{ scale: 1.05, boxShadow: "0 15px 40px rgba(0,0,0,0.2)" }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Connect With Us
-                <ArrowRight size={20} className="ml-2" />
-              </motion.a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Process Steps */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="what-to-expect">
+      {/* Contact Section */}
+      <section className="py-16 md:py-20" data-testid="contact-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -139,49 +103,106 @@ const Contact = () => {
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-medium text-[#B8956B] mb-3">What to Expect</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Our engagement process
-              </h2>
-            </motion.div>
-            
-            <motion.div
-              variants={staggerContainer}
-              className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto"
-            >
-              {processSteps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUpVariant}
-                  className="classic-card p-8 text-center group"
-                  whileHover={{ 
-                    y: -8,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
-                  }}
-                >
-                  <motion.span 
-                    className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#F5F0E8] text-[#B8956B] font-bold text-xl mb-4"
-                    whileHover={{ scale: 1.1, backgroundColor: "#B8956B", color: "#fff" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {step.number}
-                  </motion.span>
-                  <h3 className="text-xl font-bold mb-3 text-[#1A1A1A] group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    {step.title}
-                  </h3>
-                  <p className="text-[#6B6B6B] text-sm leading-relaxed">
-                    {step.description}
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Left Column - Contact Form CTA */}
+              <motion.div variants={fadeUpVariant}>
+                <div className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] mb-8">
+                  <h2 className="text-2xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    Request Strategic Consultation
+                  </h2>
+                  <p className="text-[#6B6B6B] mb-6 leading-relaxed">
+                    Tell us about your strategic challenges and we'll schedule a conversation to explore how we can help.
                   </p>
-                </motion.div>
-              ))}
-            </motion.div>
+                  
+                  <a
+                    href="https://form.jotform.com/252728460666061"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary w-full justify-center"
+                    data-testid="contact-form-cta"
+                  >
+                    Open Consultation Request Form
+                    <ArrowRight size={18} className="ml-2" />
+                  </a>
+                  
+                  <p className="text-[#6B6B6B] text-xs mt-4 text-center">
+                    Your information is secure and will never be shared.
+                  </p>
+                </div>
+
+                {/* Contact Information */}
+                <div className="bg-[#F5F3EF] rounded-xl p-8">
+                  <h3 className="text-lg font-bold text-[#2C2C2C] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    Contact Information
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <Mail size={18} className="text-[#B8975A] mt-1" />
+                      <div>
+                        <p className="text-sm text-[#6B6B6B]">Email</p>
+                        <a href="mailto:erania@brackett.agency" className="text-[#2C2C2C] font-medium hover:text-[#B8975A] transition-colors">
+                          erania@brackett.agency
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <Clock size={18} className="text-[#B8975A] mt-1" />
+                      <div>
+                        <p className="text-sm text-[#6B6B6B]">Office Hours</p>
+                        <p className="text-[#2C2C2C] font-medium">Monday-Friday, 9:00 AM - 5:00 PM EST</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Right Column - Strategic Blindspot Audit */}
+              <motion.div variants={fadeUpVariant}>
+                <div className="bg-[#2D7B7B] rounded-xl p-8 text-white">
+                  <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    The Strategic Blindspot Audit™
+                  </h2>
+                  <p className="text-white/80 mb-6">
+                    Premium diagnostic intensive using AI-powered intelligence technology.
+                  </p>
+                  
+                  <h4 className="font-semibold mb-4">What You Get:</h4>
+                  <ul className="space-y-3 mb-6">
+                    {auditFeatures.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <Check size={16} className="text-white mt-1 flex-shrink-0" />
+                        <span className="text-white/90">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="bg-white/10 rounded-lg p-4 mb-6">
+                    <p className="text-white/80 text-sm">
+                      <span className="font-semibold text-white">Value:</span> Premium diagnostic intensive with full credit toward engagement.
+                    </p>
+                  </div>
+                  
+                  <a
+                    href="https://form.jotform.com/252728460666061"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-white text-[#2C2C2C] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors w-full justify-center"
+                    data-testid="cta-audit"
+                  >
+                    Request Your Strategic Audit
+                    <ArrowRight size={16} />
+                  </a>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Resources Section */}
-      <section className="py-20 md:py-28" data-testid="contact-resources">
+      {/* FAQ Section */}
+      <section className="py-16 md:py-20 bg-[#F5F3EF]" data-testid="faq-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -190,86 +211,46 @@ const Contact = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <p className="text-sm font-medium text-[#B8956B] mb-3">Resources</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Learn more about Brackett
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Frequently Asked Questions
               </h2>
             </motion.div>
-            
-            <motion.div
-              variants={staggerContainer}
-              className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto"
-            >
-              {resources.map((resource, index) => (
-                <motion.a
-                  key={index}
-                  href={resource.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variants={fadeUpVariant}
-                  className="classic-card p-8 group cursor-pointer block"
-                  data-testid={`resource-${index}`}
-                  whileHover={{ 
-                    y: -5,
-                    boxShadow: "0 15px 30px rgba(0,0,0,0.08)"
-                  }}
-                >
-                  <h3 className="text-xl font-bold mb-2 text-[#1A1A1A] group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    {resource.title}
-                  </h3>
-                  <p className="text-[#6B6B6B] text-sm mb-4 leading-relaxed">
-                    {resource.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-[#B8956B] text-sm font-medium">
-                    {resource.cta}
-                    <motion.span
-                      whileHover={{ x: 3, y: -3 }}
-                    >
-                      <ArrowUpRight size={14} />
-                    </motion.span>
-                  </span>
-                </motion.a>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Final CTA */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="contact-final-cta">
-        <div className="section-container text-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUpVariant}
-              className="text-3xl md:text-4xl font-bold mb-4 text-[#1A1A1A]"
-              style={{ fontFamily: 'Playfair Display, serif' }}
-            >
-              Ready to begin?
-            </motion.h2>
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-lg text-[#6B6B6B] max-w-xl mx-auto mb-8"
-            >
-              Your strategic transformation journey starts with a single conversation.
-            </motion.p>
-            <motion.div variants={fadeUpVariant}>
-              <motion.a
-                href="https://form.jotform.com/252728460666061"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-lg px-10 py-4"
-                data-testid="final-cta-button"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Transform Your Vision
-                <ArrowRight size={20} className="ml-2" />
-              </motion.a>
+            <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto">
+              <div className="bg-white rounded-xl border border-[rgba(0,0,0,0.05)] overflow-hidden">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="border-b border-[rgba(0,0,0,0.05)] last:border-b-0">
+                    <button
+                      onClick={() => toggleFaq(index)}
+                      className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FAFAF8] transition-colors"
+                      data-testid={`faq-${index}`}
+                    >
+                      <span className="font-semibold text-[#2C2C2C] pr-4">{faq.question}</span>
+                      <ChevronDown
+                        size={20}
+                        className={`text-[#B8975A] flex-shrink-0 transition-transform ${
+                          openFaq === index ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {openFaq === index && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-6 pb-5">
+                            <p className="text-[#6B6B6B] leading-relaxed">{faq.answer}</p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
         </div>
