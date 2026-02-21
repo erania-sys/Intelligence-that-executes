@@ -1,75 +1,116 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const mainLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'How We Work', path: '/how-we-work' },
+    { name: 'Solutions', path: '/solutions' },
+    { name: 'Brand & Design', path: '/brand-design' },
+  ];
+
+  const moreLinks = [
+    { name: 'Intelligence', path: '/intelligence' },
+    { name: 'Insights', path: '/insights' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   return (
     <footer className="footer py-16 md:py-20" data-testid="footer">
       <div className="section-container">
+        {/* CTA Banner */}
+        <div className="bg-[#2D7B7B] rounded-2xl p-8 md:p-12 mb-16 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+            Ready to See What You're Missing?
+          </h3>
+          <p className="text-white/80 mb-6 max-w-xl mx-auto">
+            Request your Strategic Blindspot Audit and discover the opportunities hiding in your business.
+          </p>
+          <a
+            href="https://form.jotform.com/252728460666061"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white text-[#2C2C2C] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+            data-testid="footer-cta"
+          >
+            Request Strategic Consultation
+            <ArrowRight size={16} />
+          </a>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             <img 
               src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
-              alt="Brackett" 
+              alt="Brackett Agency" 
               className="h-10 mb-4 brightness-0 invert"
             />
-            <p className="text-white/60 max-w-md leading-relaxed text-sm">
-              Strategic Intelligence for the Modern Age. We transform executive vision into 
-              measurable business advantage through data-driven insights and strategic execution.
+            <p className="text-white/60 leading-relaxed text-sm mb-4">
+              Intelligence That Executes.
+            </p>
+            <p className="text-white/40 text-xs leading-relaxed">
+              Fractional strategy partners for mid-market B2B companies who need senior strategic thinking backed by AI-powered intelligence.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
             <h4 className="text-xs font-semibold tracking-wider uppercase text-white/40 mb-6">
               Navigation
             </h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Services', 'Case Studies', 'Contact'].map((link) => (
-                <li key={link}>
+              {mainLinks.map((link) => (
+                <li key={link.path}>
                   <Link
-                    to={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '-')}`}
-                    className="text-sm transition-colors"
-                    data-testid={`footer-link-${link.toLowerCase().replace(' ', '-')}`}
+                    to={link.path}
+                    className="text-sm transition-colors hover:text-white"
+                    data-testid={`footer-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* More */}
           <div>
             <h4 className="text-xs font-semibold tracking-wider uppercase text-white/40 mb-6">
-              Resources
+              More
+            </h4>
+            <ul className="space-y-3">
+              {moreLinks.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-sm transition-colors hover:text-white"
+                    data-testid={`footer-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact & Resources */}
+          <div>
+            <h4 className="text-xs font-semibold tracking-wider uppercase text-white/40 mb-6">
+              Connect
             </h4>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://brackett.agency/s/brackett_strategic_intelligence_deck.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm inline-flex items-center gap-2 transition-colors"
-                  data-testid="footer-advisory-overview"
+                  href="mailto:erania@brackett.agency"
+                  className="text-sm transition-colors hover:text-white"
+                  data-testid="footer-email"
                 >
-                  Advisory Overview
-                  <ArrowUpRight size={12} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://brackett.agency/s/brackett_agency_one_pager_1.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm inline-flex items-center gap-2 transition-colors"
-                  data-testid="footer-one-pager"
-                >
-                  One Page Brochure
-                  <ArrowUpRight size={12} />
+                  erania@brackett.agency
                 </a>
               </li>
               <li>
@@ -77,7 +118,7 @@ const Footer = () => {
                   href="https://form.jotform.com/252728460666061"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm inline-flex items-center gap-2 transition-colors"
+                  className="text-sm inline-flex items-center gap-2 transition-colors hover:text-white"
                   data-testid="footer-contact-form"
                 >
                   Contact Form
@@ -85,17 +126,25 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+            
+            <h4 className="text-xs font-semibold tracking-wider uppercase text-white/40 mb-4 mt-8">
+              Partners
+            </h4>
+            <p className="text-white/40 text-xs">
+              Strategic Partnership with OSG Analytics
+            </p>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-sm">
-            {currentYear} Brackett Agency
+            &copy; {currentYear} Brackett Agency. All rights reserved.
           </p>
-          <p className="text-white/40 text-sm">
-            Strategic Intelligence & Advisory
-          </p>
+          <div className="flex items-center gap-6 text-white/40 text-xs">
+            <span>GDPR Compliant</span>
+            <span>HIPAA Compliant</span>
+          </div>
         </div>
       </div>
     </footer>
