@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer py-16 md:py-20 bg-[#1A2B4A]" data-testid="footer">
+    <footer className="footer py-16 md:py-20 bg-[#0A0A0A]" data-testid="footer">
       <div className="section-container">
         {/* CTA Banner */}
         <div className="bg-[#C9A961] rounded-md p-8 md:p-12 mb-16 text-center">
@@ -35,7 +35,7 @@ const Footer = () => {
             href="https://form.jotform.com/252728460666061"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#1A2B4A] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#0D1B2E] transition-colors"
+            className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#1A1A1A] transition-colors"
             data-testid="footer-cta"
           >
             Request Strategic Consultation
