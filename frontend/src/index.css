@@ -244,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 .accent-line {
   width: 40px;
   height: 3px;
-  background: var(--accent);
+  background: var(--brackett-gold);
   border-radius: 2px;
 }
 
@@ -252,7 +252,82 @@ h1, h2, h3, h4, h5, h6 {
 .quote-mark {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
-  color: var(--accent);
+  color: var(--brackett-gold);
   opacity: 0.4;
   line-height: 1;
+}
+
+/* Gold Arrow Accent */
+.gold-arrow {
+  color: var(--brackett-gold);
+}
+
+/* Intelligence Blue accent */
+.text-intelligence {
+  color: var(--intelligence-blue);
+}
+
+/* Growth Teal accent */
+.text-teal {
+  color: var(--growth-teal);
+}
+
+/* Section divider with gold arrow */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--brackett-gold), transparent);
+}
+
+/* Tab styles */
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--secondary);
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.tab-button:hover {
+  color: var(--foreground);
+}
+
+.tab-button.active {
+  color: var(--brackett-gold);
+  border-bottom-color: var(--brackett-gold);
+}
+
+/* FAQ Accordion */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--brackett-gold);
+}
+
+.faq-answer {
+  padding-bottom: 1.25rem;
+  color: var(--secondary);
+  line-height: 1.7;
 }
