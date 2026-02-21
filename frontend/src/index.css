@@ -1,32 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Georgia&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Primary Brand Colors */
-  --brackett-brown: #8B6F47;
-  --brackett-gold: #B8975A;
-  --deep-charcoal: #2C2C2C;
-  --warm-gray: #6B6B6B;
-  --cream: #F5F3EF;
+  /* Primary Colors */
+  --navy-blue: #1A2B4A;
+  --navy-dark: #0D1B2E;
   --white: #FFFFFF;
+  --gray-light: #F8F9FA;
+  --gray-alt: #E9ECEF;
   
-  /* Accent Colors */
-  --intelligence-blue: #1E4D7B;
-  --cta-navy: #1A365D;
-  --success-green: #4A7C59;
+  /* Secondary Colors */
+  --gold: #C9A961;
+  --gold-dark: #B8985F;
+  --gray-medium: #6C757D;
+  --accent-blue: #2E5C8A;
+  --accent-blue-light: #3A7CA5;
   
-  /* Semantic Colors */
-  --background: #FAFAF8;
-  --foreground: #2C2C2C;
-  --primary: #2C2C2C;
-  --secondary: #6B6B6B;
-  --accent: #8B6F47;
-  --accent-dark: #705A39;
-  --accent-light: #F5F0E8;
-  --border: rgba(0, 0, 0, 0.08);
+  /* Text Colors */
+  --text-dark: #2D3748;
+  --text-light: #FFFFFF;
+  
+  /* Semantic mappings */
+  --background: #FFFFFF;
+  --foreground: #2D3748;
+  --primary: #1A2B4A;
+  --secondary: #6C757D;
+  --accent: #C9A961;
+  --border: #E9ECEF;
   --card-bg: #FFFFFF;
 }
 
@@ -41,18 +44,57 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: var(--background);
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--navy-blue);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 22px;
+  }
 }
 
 /* Scrollbar Styling */
@@ -61,51 +103,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: var(--gray-light);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--gray-medium);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.25);
+  background: var(--navy-blue);
 }
 
 /* Selection Styling */
 ::selection {
-  background: var(--accent);
-  color: white;
+  background: var(--gold);
+  color: var(--navy-blue);
 }
 
-/* Classic Card */
+/* Classic Card - Business Style */
 .classic-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .classic-card:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
 }
 
-/* Button Styles */
+/* Primary CTA Button - Gold */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
-  background: var(--cta-navy);
-  color: white;
+  padding: 0.875rem 1.75rem;
+  background: var(--gold);
+  color: var(--navy-blue);
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.875rem;
-  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 4px;
   transition: all 0.3s ease;
   text-decoration: none;
   border: none;
@@ -113,47 +154,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-  background: #142743;
-  box-shadow: 0 4px 20px rgba(26, 54, 93, 0.3);
-  transform: translateY(-2px);
+  background: var(--gold-dark);
+  box-shadow: 0 4px 12px rgba(201, 169, 97, 0.35);
 }
 
+/* Secondary CTA Button - Navy Outline */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  padding: 0.875rem 1.75rem;
   background: transparent;
-  color: var(--foreground);
+  color: var(--navy-blue);
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1.5px solid var(--navy-blue);
   transition: all 0.3s ease;
   text-decoration: none;
   cursor: pointer;
 }
 
 .btn-secondary:hover {
-  background: var(--cream);
-  border-color: rgba(0, 0, 0, 0.15);
+  background: var(--navy-blue);
+  color: var(--white);
 }
 
-/* Button dark variant for dark backgrounds */
+/* Button dark variant - Navy solid */
 .btn-dark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
-  background: var(--cta-navy);
-  color: white;
+  padding: 0.875rem 1.75rem;
+  background: var(--navy-blue);
+  color: var(--white);
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.875rem;
-  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 4px;
   transition: all 0.3s ease;
   text-decoration: none;
   border: none;
@@ -161,7 +200,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-dark:hover {
-  background: #142743;
+  background: var(--navy-dark);
+  box-shadow: 0 4px 12px rgba(26, 43, 74, 0.3);
 }
 
 /* Gold accent button */
@@ -169,15 +209,13 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
-  background: var(--brackett-gold);
-  color: white;
+  padding: 0.875rem 1.75rem;
+  background: var(--gold);
+  color: var(--navy-blue);
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.875rem;
-  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 4px;
   transition: all 0.3s ease;
   text-decoration: none;
   border: none;
@@ -185,20 +223,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-gold:hover {
-  background: #9A7B4A;
-  box-shadow: 0 4px 20px rgba(184, 151, 90, 0.3);
+  background: var(--gold-dark);
+  box-shadow: 0 4px 12px rgba(201, 169, 97, 0.35);
 }
 
 /* Link Style */
 .link-underline {
   text-decoration: underline;
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--accent-blue);
   text-underline-offset: 4px;
   transition: text-decoration-color 0.3s ease;
 }
 
 .link-underline:hover {
-  text-decoration-color: var(--foreground);
+  text-decoration-color: var(--navy-blue);
 }
 
 /* Section container */
@@ -214,18 +252,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Accent backgrounds */
-.bg-cream {
-  background: var(--cream);
+/* Background utilities */
+.bg-navy {
+  background: var(--navy-blue);
 }
 
-.bg-accent-light {
-  background: var(--accent-light);
+.bg-gray-light {
+  background: var(--gray-light);
+}
+
+.bg-gray-alt {
+  background: var(--gray-alt);
 }
 
 /* Text colors */
-.text-accent {
-  color: var(--accent);
+.text-gold {
+  color: var(--gold);
+}
+
+.text-navy {
+  color: var(--navy-blue);
 }
 
 .text-secondary {
@@ -237,60 +283,38 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background: var(--accent);
+  background: var(--gold);
   border-radius: 50%;
 }
 
 .accent-line {
   width: 40px;
   height: 3px;
-  background: var(--brackett-gold);
+  background: var(--gold);
   border-radius: 2px;
 }
 
-/* Testimonial quote */
+/* Testimonial quote - Georgia serif */
 .quote-mark {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Georgia', serif;
   font-size: 4rem;
-  color: var(--brackett-gold);
-  opacity: 0.4;
+  color: var(--gold);
+  opacity: 0.5;
   line-height: 1;
 }
 
-/* Gold Arrow Accent */
-.gold-arrow {
-  color: var(--brackett-gold);
-}
-
-/* Intelligence Blue accent */
-.text-intelligence {
-  color: var(--intelligence-blue);
-}
-
-/* Growth Teal accent */
-.text-teal {
-  color: var(--growth-teal);
-}
-
-/* Section divider with gold arrow */
-.section-divider {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.section-divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, var(--brackett-gold), transparent);
+/* Callout box */
+.callout-box {
+  border-left: 4px solid var(--gold);
+  background: var(--gray-light);
+  padding: 20px 24px;
 }
 
 /* Tab styles */
 .tab-button {
   padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  font-size: 0.875rem;
+  font-weight: 500;
+  font-size: 0.9rem;
   color: var(--secondary);
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
@@ -299,12 +323,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tab-button:hover {
-  color: var(--foreground);
+  color: var(--navy-blue);
 }
 
 .tab-button.active {
-  color: var(--brackett-gold);
-  border-bottom-color: var(--brackett-gold);
+  color: var(--navy-blue);
+  border-bottom-color: var(--gold);
 }
 
 /* FAQ Accordion */
@@ -318,16 +342,38 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   padding: 1.25rem 0;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .faq-question:hover {
-  color: var(--brackett-gold);
+  color: var(--accent-blue);
 }
 
 .faq-answer {
   padding-bottom: 1.25rem;
   color: var(--secondary);
   line-height: 1.7;
+}
+
+/* Statistics/Metrics styling */
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--navy-blue);
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+@media (min-width: 768px) {
+  .stat-number {
+    font-size: 48px;
+  }
+  .stat-label {
+    font-size: 16px;
+  }
 }
