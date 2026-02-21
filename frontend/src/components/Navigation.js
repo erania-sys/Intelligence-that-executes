@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import logo from '../assets/logo.svg';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,9 +45,9 @@ const Navigation = () => {
         <div className="nav-inner">
           <Link to="/" data-testid="nav-logo">
             <img 
-              src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
+              src={logo}
               alt="Brackett Agency" 
-              className="nav-logo"
+              className="h-12 md:h-14 lg:h-16 w-auto"
             />
           </Link>
           
@@ -106,9 +107,9 @@ const Navigation = () => {
             
             <Link to="/" className="mb-8">
               <img 
-                src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
+                src={logo}
                 alt="Brackett Agency" 
-                className="h-12"
+                className="h-14 w-auto"
               />
             </Link>
             
