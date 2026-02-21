@@ -126,6 +126,8 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   color: var(--foreground);
   font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
   border-radius: 8px;
   border: 1px solid var(--border);
   transition: all 0.3s ease;
@@ -144,9 +146,13 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  background: var(--foreground);
+  background: var(--growth-teal);
   color: white;
   font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
   border-radius: 8px;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -155,7 +161,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-dark:hover {
-  background: #333;
+  background: #256666;
+}
+
+/* Gold accent button */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: var(--brackett-gold);
+  color: white;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-gold:hover {
+  background: #9A7B4A;
+  box-shadow: 0 4px 20px rgba(184, 151, 90, 0.3);
 }
 
 /* Link Style */
