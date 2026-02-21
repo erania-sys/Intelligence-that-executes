@@ -119,15 +119,15 @@
 
 .mobile-nav-link {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #1A1A1A;
+  color: #2C2C2C;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .mobile-nav-link:hover {
-  color: #B8956B;
+  color: #B8975A;
 }
 
 /* Hamburger */
