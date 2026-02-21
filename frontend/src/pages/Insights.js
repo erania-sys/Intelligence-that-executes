@@ -129,7 +129,7 @@ const Insights = () => {
     const colors = {
       revenue: '#1A2B4A',
       positioning: '#C9A961',
-      intelligence: '#1E4D7B',
+      intelligence: '#2E5C8A',
       execution: '#4A7C59'
     };
     return colors[category] || '#6C757D';
@@ -236,7 +236,7 @@ const Insights = () => {
                 variants={fadeUpVariant}
                 className="mb-12"
               >
-                <div className="bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="md:flex">
                     <div className="md:w-1/2 bg-gradient-to-br from-[#1A2B4A] to-[#1A1A1A] p-12 flex items-center justify-center">
                       <div className="text-center">
@@ -283,7 +283,7 @@ const Insights = () => {
                 <motion.article
                   key={article.id}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow cursor-pointer group"
+                  className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-lg transition-shadow cursor-pointer group"
                   data-testid={`article-${article.id}`}
                 >
                   <div className="p-6">

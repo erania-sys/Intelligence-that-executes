@@ -255,7 +255,7 @@ const Solutions = () => {
                       </div>
                     </div>
 
-                    <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)] mb-8">
+                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF] mb-8">
                       <h4 className="font-semibold text-[#1A2B4A] mb-4">Who This Is For</h4>
                       <ul className="grid md:grid-cols-2 gap-2">
                         {program.whoFor.map((item, i) => (
@@ -293,7 +293,7 @@ const Solutions = () => {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-6">
-                      <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                         <h4 className="font-semibold text-[#1A2B4A] mb-4">What You Get</h4>
                         <ul className="space-y-2">
                           {program.deliverables.map((item, i) => (
@@ -304,7 +304,7 @@ const Solutions = () => {
                           ))}
                         </ul>
                       </div>
-                      <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                         <div className="flex items-center gap-2 mb-4">
                           <Clock size={18} className="text-[#C9A961]" />
                           <h4 className="font-semibold text-[#1A2B4A]">Timeline</h4>
@@ -313,7 +313,7 @@ const Solutions = () => {
                           {program.timeline}
                         </p>
                       </div>
-                      <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                         <div className="flex items-center gap-2 mb-4">
                           <TrendingUp size={18} className="text-[#1A2B4A]" />
                           <h4 className="font-semibold text-[#1A2B4A]">Expected ROI</h4>
@@ -360,10 +360,10 @@ const Solutions = () => {
 
                 {strategicPartnerships.map((partnership, index) => (
                   <div key={index} className="mb-16 last:mb-0">
-                    <div className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]">
+                    <div className="bg-white rounded-xl p-8 border border-[#E9ECEF]">
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-[#1E4D7B]/10 flex items-center justify-center flex-shrink-0">
-                          <Users className="text-[#1E4D7B]" size={24} />
+                        <div className="w-12 h-12 rounded-xl bg-[#2E5C8A]/10 flex items-center justify-center flex-shrink-0">
+                          <Users className="text-[#2E5C8A]" size={24} />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-[#1A2B4A]" style={{  }}>
@@ -440,7 +440,7 @@ const Solutions = () => {
                         )}
                       </div>
 
-                      <div className="mt-6 pt-6 border-t border-[rgba(0,0,0,0.05)]">
+                      <div className="mt-6 pt-6 border-t border-[#E9ECEF]">
                         <a
                           href="https://form.jotform.com/252728460666061"
                           target="_blank"
@@ -484,7 +484,7 @@ const Solutions = () => {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                       <h4 className="font-semibold text-[#1A2B4A] mb-4">Pre-Work</h4>
                       <ul className="space-y-2">
                         {auditFeatures.map((item, i) => (
@@ -495,7 +495,7 @@ const Solutions = () => {
                         ))}
                       </ul>
                     </div>
-                    <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                       <h4 className="font-semibold text-[#1A2B4A] mb-4">Intensive Facilitated Session</h4>
                       <ul className="space-y-2">
                         {auditSession.map((item, i) => (
@@ -509,7 +509,7 @@ const Solutions = () => {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                       <h4 className="font-semibold text-[#1A2B4A] mb-4">Post-Session Deliverables</h4>
                       <ul className="space-y-2">
                         {auditDeliverables.map((item, i) => (
@@ -520,7 +520,7 @@ const Solutions = () => {
                         ))}
                       </ul>
                     </div>
-                    <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                       <h4 className="font-semibold text-[#1A2B4A] mb-4">Technology Access</h4>
                       <ul className="space-y-2">
                         {auditTechnology.map((item, i) => (

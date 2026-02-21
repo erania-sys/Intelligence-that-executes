@@ -20,7 +20,7 @@ const HowWeWork = () => {
       title: 'Intelligence Gathering',
       subtitle: 'We don\'t start with assumptions. We start with proprietary AI-powered intelligence.',
       icon: Search,
-      color: '#1E4D7B',
+      color: '#2E5C8A',
       whatHappens: [
         'Customer Choice Intelligence™ analysis (understanding decision drivers)',
         'Competitive positioning gap assessment',
@@ -197,7 +197,7 @@ const HowWeWork = () => {
                 </div>
                 
                 <div className="grid md:grid-cols-3 gap-6 ml-0 md:ml-22">
-                  <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                  <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                     <h4 className="font-semibold text-[#1A2B4A] mb-4">What Happens</h4>
                     <ul className="space-y-2">
                       {phase.whatHappens.map((item, i) => (
@@ -209,7 +209,7 @@ const HowWeWork = () => {
                     </ul>
                   </div>
                   
-                  <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                  <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                     <h4 className="font-semibold text-[#1A2B4A] mb-4">
                       {phase.technology ? 'Technology Used' : phase.different ? 'How We\'re Different' : 'Engagement Models'}
                     </h4>
@@ -223,7 +223,7 @@ const HowWeWork = () => {
                     </ul>
                   </div>
                   
-                  <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                  <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                     <h4 className="font-semibold text-[#1A2B4A] mb-4">Deliverables</h4>
                     <ul className="space-y-2">
                       {phase.deliverables.map((item, i) => (
@@ -303,7 +303,7 @@ const HowWeWork = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:shadow-lg transition-shadow"
                 >
                   <div className="w-12 h-12 rounded-lg bg-[#F8F9FA] flex items-center justify-center mb-4">
                     <industry.icon className="text-[#C9A961]" size={24} />

@@ -108,7 +108,7 @@ const About = () => {
 
             {/* Erania Brackett */}
             <motion.div variants={fadeUpVariant} className="mb-16">
-              <div className="bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)]">
+              <div className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF]">
                 <div className="md:flex">
                   <div className="md:w-1/3 bg-gradient-to-br from-[#C9A961] to-[#6B5A3A] p-8 md:p-12 flex items-center justify-center">
                     <div className="text-center">
@@ -151,9 +151,9 @@ const About = () => {
 
             {/* Dr. R. Sukumar */}
             <motion.div variants={fadeUpVariant}>
-              <div className="bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)]">
+              <div className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF]">
                 <div className="md:flex">
-                  <div className="md:w-1/3 bg-gradient-to-br from-[#1E4D7B] to-[#153A5E] p-8 md:p-12 flex items-center justify-center">
+                  <div className="md:w-1/3 bg-gradient-to-br from-[#2E5C8A] to-[#153A5E] p-8 md:p-12 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-32 h-32 rounded-full bg-white/20 mx-auto mb-4 flex items-center justify-center">
                         <span className="text-5xl font-bold text-white" style={{  }}>RS</span>
@@ -177,7 +177,7 @@ const About = () => {
                       <ul className="grid md:grid-cols-2 gap-2">
                         {sukumarExpertise.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#1E4D7B] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#2E5C8A] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -208,7 +208,7 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-xl p-8 md:p-12 border border-[rgba(0,0,0,0.05)] mb-12">
+              <div className="bg-white rounded-xl p-8 md:p-12 border border-[#E9ECEF] mb-12">
                 <p className="text-[#6C757D] leading-relaxed mb-6">
                   Mid-market B2B companies face an impossible choice: hire a full-time strategic executive (with lengthy searches, significant salary expectations, and equity), or work with traditional consultants who bill hourly, delegate to junior teams, and hand you a deck without execution support.
                 </p>
@@ -228,7 +228,7 @@ const About = () => {
                   <motion.div
                     key={i}
                     variants={fadeUpVariant}
-                    className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]"
+                    className="bg-white rounded-xl p-6 border border-[#E9ECEF]"
                   >
                     <div className="flex items-start gap-3">
                       <Check size={18} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
@@ -262,7 +262,7 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto">
-              <div className="bg-[#1E4D7B]/5 rounded-xl p-8 border border-[#1E4D7B]/10">
+              <div className="bg-[#2E5C8A]/5 rounded-xl p-8 border border-[#2E5C8A]/10">
                 <p className="text-[#6C757D] leading-relaxed mb-6">
                   Brackett Agency partners strategically with OSG Analytics, a global leader in AI/ML-powered customer intelligence and behavioral analytics. This partnership enables us to offer enterprise-grade technology platforms to mid-market companies.
                 </p>
@@ -277,13 +277,13 @@ const About = () => {
                     'Trusted by Fortune 500 companies across industries'
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                      <Check size={14} className="text-[#1E4D7B] mt-1 flex-shrink-0" />
+                      <Check size={14} className="text-[#2E5C8A] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="bg-white rounded-lg p-4 border border-[rgba(0,0,0,0.05)]">
+                <div className="bg-white rounded-lg p-4 border border-[#E9ECEF]">
                   <h5 className="font-semibold text-[#1A2B4A] mb-2">Why This Partnership Matters</h5>
                   <p className="text-[#6C757D] text-sm">
                     Most mid-market companies can't afford to build or license enterprise-grade intelligence technology. Through our strategic partnership with OSG Analytics, Brackett clients get access to platforms typically reserved for Fortune 500 organizations—at a fraction of the cost.

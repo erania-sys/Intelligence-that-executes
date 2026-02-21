@@ -106,7 +106,7 @@ const Contact = () => {
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Left Column - Contact Form CTA */}
               <motion.div variants={fadeUpVariant}>
-                <div className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] mb-8">
+                <div className="bg-white rounded-xl p-8 border border-[#E9ECEF] mb-8">
                   <h2 className="text-2xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
                     Request Strategic Consultation
                   </h2>
@@ -217,9 +217,9 @@ const Contact = () => {
             </motion.div>
 
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-xl border border-[rgba(0,0,0,0.05)] overflow-hidden">
+              <div className="bg-white rounded-xl border border-[#E9ECEF] overflow-hidden">
                 {faqs.map((faq, index) => (
-                  <div key={index} className="border-b border-[rgba(0,0,0,0.05)] last:border-b-0">
+                  <div key={index} className="border-b border-[#E9ECEF] last:border-b-0">
                     <button
                       onClick={() => toggleFaq(index)}
                       className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FAFAF8] transition-colors"

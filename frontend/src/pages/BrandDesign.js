@@ -211,7 +211,7 @@ const BrandDesign = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 border-b border-[rgba(0,0,0,0.05)]" data-testid="intro-section">
+      <section className="py-16 border-b border-[#E9ECEF]" data-testid="intro-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -233,7 +233,7 @@ const BrandDesign = () => {
                 <motion.div
                   key={i}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]"
+                  className="bg-white rounded-xl p-6 border border-[#E9ECEF]"
                 >
                   <div className="flex items-start gap-3">
                     <ArrowRight size={16} className="text-[#C9A961] mt-1 flex-shrink-0" />
@@ -282,7 +282,7 @@ const BrandDesign = () => {
                 
                 <div className="grid md:grid-cols-2 gap-4 pl-0 md:pl-16">
                   {category.services.map((service, i) => (
-                    <div key={i} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+                    <div key={i} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                       <h4 className="font-semibold text-[#1A2B4A] mb-2">{service.name}</h4>
                       <p className="text-[#6C757D] text-sm leading-relaxed">{service.desc}</p>
                     </div>
@@ -315,7 +315,7 @@ const BrandDesign = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-xl p-8 border border-[#E9ECEF] hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#C9A961]/10 mb-4">
                     <Sparkles className="text-[#C9A961]" size={24} />
@@ -334,7 +334,7 @@ const BrandDesign = () => {
                     ))}
                   </ul>
                   
-                  <div className="pt-4 border-t border-[rgba(0,0,0,0.05)]">
+                  <div className="pt-4 border-t border-[#E9ECEF]">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm text-[#6C757D]">Timeline</span>
                       <span className="font-semibold text-[#1A2B4A]">{pkg.timeline}</span>
@@ -371,7 +371,7 @@ const BrandDesign = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]"
+                  className="bg-white rounded-xl p-6 border border-[#E9ECEF]"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-[#F8F9FA] flex items-center justify-center flex-shrink-0">
@@ -487,9 +487,9 @@ const BrandDesign = () => {
             </motion.div>
 
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-xl border border-[rgba(0,0,0,0.05)] overflow-hidden">
+              <div className="bg-white rounded-xl border border-[#E9ECEF] overflow-hidden">
                 {faqs.map((faq, index) => (
-                  <div key={index} className="border-b border-[rgba(0,0,0,0.05)] last:border-b-0">
+                  <div key={index} className="border-b border-[#E9ECEF] last:border-b-0">
                     <button
                       onClick={() => toggleFaq(index)}
                       className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FAFAF8] transition-colors"

@@ -146,7 +146,7 @@ const Intelligence = () => {
       </section>
 
       {/* Technology Overview */}
-      <section className="py-16 border-b border-[rgba(0,0,0,0.05)]" data-testid="overview-section">
+      <section className="py-16 border-b border-[#E9ECEF]" data-testid="overview-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -161,8 +161,8 @@ const Intelligence = () => {
               <p className="text-[#6C757D] leading-relaxed mb-6">
                 Most strategy consultants bring experience and frameworks. We bring that plus proprietary intelligence technology that processes customer behavioral data in ways traditional consulting can't.
               </p>
-              <div className="bg-[#1E4D7B]/5 rounded-xl p-6 border border-[#1E4D7B]/10">
-                <h4 className="font-semibold text-[#1E4D7B] mb-2">Our Strategic Partnership</h4>
+              <div className="bg-[#2E5C8A]/5 rounded-xl p-6 border border-[#2E5C8A]/10">
+                <h4 className="font-semibold text-[#2E5C8A] mb-2">Our Strategic Partnership</h4>
                 <p className="text-[#6C757D] text-sm leading-relaxed">
                   Brackett Agency partners strategically with OSG Analytics, a leader in AI/ML-powered customer intelligence and behavioral analytics. This partnership gives our clients access to enterprise-grade technology platforms typically reserved for Fortune 500 companies.
                 </p>
@@ -220,7 +220,7 @@ const Intelligence = () => {
                 
                 <div className="grid grid-cols-2 gap-4">
                   {platforms[0].benefits.map((benefit, i) => (
-                    <div key={i} className="bg-white rounded-lg p-4 border border-[rgba(0,0,0,0.05)]">
+                    <div key={i} className="bg-white rounded-lg p-4 border border-[#E9ECEF]">
                       <Check size={16} className="text-[#1A2B4A] mb-2" />
                       <h5 className="font-semibold text-[#1A2B4A] text-sm">{benefit.title}</h5>
                       <p className="text-[#6C757D] text-xs">{benefit.desc}</p>
@@ -230,7 +230,7 @@ const Intelligence = () => {
               </motion.div>
             </div>
 
-            <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+            <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
               <h4 className="font-semibold text-[#1A2B4A] mb-4">Use Cases</h4>
               <div className="flex flex-wrap gap-3">
                 {platforms[0].useCases.map((useCase, i) => (
@@ -345,7 +345,7 @@ const Intelligence = () => {
             </motion.p>
 
             <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-6 mb-8">
-              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                 <h4 className="font-semibold text-[#1A2B4A] mb-4">NPS+ Methodology</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.npsPlus.map((item, i) => (
@@ -356,7 +356,7 @@ const Intelligence = () => {
                   ))}
                 </ul>
               </motion.div>
-              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                 <h4 className="font-semibold text-[#1A2B4A] mb-4">Journey Intelligence</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.journey.map((item, i) => (
@@ -367,7 +367,7 @@ const Intelligence = () => {
                   ))}
                 </ul>
               </motion.div>
-              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                 <h4 className="font-semibold text-[#1A2B4A] mb-4">Lifetime Value Optimization</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.ltv.map((item, i) => (
@@ -406,19 +406,19 @@ const Intelligence = () => {
               </h2>
             </motion.div>
 
-            <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)]">
+            <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto bg-white rounded-xl overflow-hidden border border-[#E9ECEF]">
               <div className="grid grid-cols-2">
                 <div className="bg-[#6C757D] text-white p-4 font-semibold text-center text-sm">
                   Traditional Consulting
                 </div>
-                <div className="bg-[#1E4D7B] text-white p-4 font-semibold text-center text-sm">
+                <div className="bg-[#2E5C8A] text-white p-4 font-semibold text-center text-sm">
                   Brackett Intelligence
                 </div>
               </div>
               {comparisonData.map((row, index) => (
-                <div key={index} className="grid grid-cols-2 border-t border-[rgba(0,0,0,0.05)]">
+                <div key={index} className="grid grid-cols-2 border-t border-[#E9ECEF]">
                   <div className="p-4 text-[#6C757D] text-sm">{row.traditional}</div>
-                  <div className="p-4 text-[#1A2B4A] font-medium text-sm bg-[#1E4D7B]/5">{row.brackett}</div>
+                  <div className="p-4 text-[#1A2B4A] font-medium text-sm bg-[#2E5C8A]/5">{row.brackett}</div>
                 </div>
               ))}
             </motion.div>
