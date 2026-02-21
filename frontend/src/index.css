@@ -8,6 +8,8 @@
   /* Primary Colors */
   --navy-blue: #1A2B4A;
   --navy-dark: #0D1B2E;
+  --black: #0A0A0A;
+  --black-soft: #1A1A1A;
   --white: #FFFFFF;
   --gray-light: #F8F9FA;
   --gray-alt: #E9ECEF;
@@ -26,7 +28,7 @@
   /* Semantic mappings */
   --background: #FFFFFF;
   --foreground: #2D3748;
-  --primary: #1A2B4A;
+  --primary: #0A0A0A;
   --secondary: #6C757D;
   --accent: #C9A961;
   --border: #E9ECEF;
