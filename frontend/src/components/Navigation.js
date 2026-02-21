@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,9 +22,12 @@ const Navigation = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'How We Work', path: '/how-we-work' },
+    { name: 'Solutions', path: '/solutions' },
+    { name: 'Brand & Design', path: '/brand-design' },
+    { name: 'Intelligence', path: '/intelligence' },
+    { name: 'Insights', path: '/insights' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Case Studies', path: '/case-studies' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -42,19 +45,19 @@ const Navigation = () => {
           <Link to="/" data-testid="nav-logo">
             <img 
               src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
-              alt="Brackett" 
+              alt="Brackett Agency" 
               className="nav-logo"
             />
           </Link>
           
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                data-testid={`nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
+                data-testid={`nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {link.name}
               </Link>
@@ -63,17 +66,17 @@ const Navigation = () => {
               href="https://form.jotform.com/252728460666061"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-dark py-2 px-5 text-sm"
+              className="btn-dark py-2 px-4 text-xs"
               data-testid="nav-cta"
             >
-              Let's Talk
+              Request Consultation
             </a>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             data-testid="mobile-menu-toggle"
             aria-label="Toggle menu"
           >
@@ -93,32 +96,53 @@ const Navigation = () => {
             className="mobile-nav"
             data-testid="mobile-navigation"
           >
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-6 right-6 p-2"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+            
             <Link to="/" className="mb-8">
               <img 
                 src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
-                alt="Brackett" 
+                alt="Brackett Agency" 
                 className="h-12"
               />
             </Link>
+            
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.path}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.05 }}
               >
                 <Link
                   to={link.path}
-                  className={`mobile-nav-link ${
-                    location.pathname === link.path ? 'text-[#B8956B]' : ''
+                  className={`mobile-nav-link text-xl ${
+                    location.pathname === link.path ? 'text-[#B8975A]' : ''
                   }`}
-                  data-testid={`mobile-nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
+                  data-testid={`mobile-nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   {link.name}
                 </Link>
               </motion.div>
             ))}
+            
+            <motion.a
+              href="https://form.jotform.com/252728460666061"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: navLinks.length * 0.05 }}
+            >
+              Request Consultation
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
