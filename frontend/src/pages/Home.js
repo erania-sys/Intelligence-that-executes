@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, X, Target, Zap, Brain, Shield, BarChart3, Users } from 'lucide-react';
 import AnimatedCounter from '../components/AnimatedCounter';
 
 const fadeUpVariant = {
@@ -15,114 +15,112 @@ const staggerContainer = {
 };
 
 const Home = () => {
-  const services = [
+  const problems = [
     {
-      title: 'Strategic Intelligence',
-      description: 'Real-time customer analytics and market intelligence that inform smarter business decisions.',
+      icon: X,
+      title: 'Unclear Growth Levers',
+      description: 'You know revenue could be higher, but can\'t pinpoint which customer segments, channels, or products actually drive profitable growth—and which drain resources.'
     },
     {
-      title: 'Customer Experience',
-      description: 'Transform customer journeys through choice analytics and behavioral insights.',
+      icon: X,
+      title: 'Competitive Noise',
+      description: 'Your positioning sounds like everyone else. Sales can\'t articulate why prospects should choose you in 30 seconds. Buyers default to price comparisons.'
     },
     {
-      title: 'Brand Positioning',
-      description: 'Strategic brand development informed by predictive customer behavior data.',
+      icon: X,
+      title: 'Scattered Execution',
+      description: 'You have a strategic plan (maybe even a great one), but six months in, results aren\'t materializing. Teams are misaligned. Resources are burning without clear ROI.'
     }
   ];
 
-  const testimonials = [
+  const valueProps = [
     {
-      quote: "Brackett elevated our strategic thinking. They deliver the intelligence that powers our competitive advantage.",
-      author: 'Founder',
-      company: 'Fast-Casual Food Brand'
+      icon: Target,
+      title: 'Fractional Strategic Executives',
+      description: 'Senior strategic thinking when you need it—without full-time salary, benefits, and equity overhead. Direct access to battle-tested executives who\'ve led Fortune 500 transformations.'
     },
     {
-      quote: "Their strategic intelligence capabilities transformed how we approach market opportunities.",
-      author: 'CEO',
-      company: 'Healthcare Technology'
+      icon: Brain,
+      title: 'Proprietary Intelligence Technology',
+      description: 'AI-powered Customer Choice Intelligence™ and behavioral analytics that predict what drives customer decisions with exceptional accuracy. Not consultant opinions—data-driven insights.'
     },
     {
-      quote: "The Brackett team distills complexity into clarity. Their execution brought our vision to life.",
-      author: 'Executive Leader',
-      company: 'Global MedTech'
+      icon: Zap,
+      title: 'Outcomes, Not Overhead',
+      description: 'Structured programs with measurable outcomes. Revenue intelligence roadmaps. Positioning transformations. Execution partnerships. Real results, not endless retainers.'
     }
   ];
 
-  const platforms = [
+  const techPillars = [
     {
-      name: 'o360',
-      tagline: 'Customer Intelligence',
-      description: 'Real-time analytics platform delivering comprehensive insights about your customers.'
+      name: 'Customer Choice Intelligence™',
+      description: 'Predictive tradeoff methodology that measures the magnitude of customer decisions—not just preferences. Stanford-born behavioral science.'
     },
     {
-      name: 'PatientX360',
-      tagline: 'Healthcare Intelligence',
-      description: 'Understanding patient choice and behavior to transform patient-centricity.'
+      name: 'Brackett Intelligence Engine™',
+      description: 'AI/ML-powered analytics platform consolidating structured and unstructured data. Real-time dashboards, predictive modeling, and behavioral analytics.'
     },
     {
-      name: 'ASEMAP',
-      tagline: 'Choice Analytics',
-      description: 'Revealing the behavioral drivers behind customer decisions.'
+      name: 'Customer Experience Analytics™',
+      description: 'Advanced NPS+ methodology measuring sentiment drivers and engagement triggers. Journey mapping with behavioral nudge identification.'
     }
+  ];
+
+  const comparisonData = [
+    { traditional: 'Hourly billing, scope creep', brackett: 'Fixed programs, clear outcomes' },
+    { traditional: 'Junior teams do the work', brackett: 'Senior executives lead directly' },
+    { traditional: 'Generic frameworks', brackett: 'Proprietary AI/ML technology' },
+    { traditional: 'Recommendations you implement', brackett: 'Strategic partnership through execution' },
+    { traditional: 'Uncertain timelines', brackett: '90-120 day transformations' },
   ];
 
   const stats = [
+    { value: 500, suffix: 'M+', label: 'Revenue Influenced' },
     { value: 50, suffix: '+', label: 'Strategic Projects' },
-    { value: 3, suffix: 'x', label: 'Average ROI' },
     { value: 95, suffix: '%', label: 'Client Retention' },
     { value: 12, suffix: '+', label: 'Industries Served' }
+  ];
+
+  const auditFeatures = [
+    'Proprietary Customer Choice Intelligence™ technology access',
+    'Facilitated session with senior strategists',
+    'Comprehensive Strategic Intelligence Brief',
+    'Prioritized action roadmap',
+    'Follow-up strategy consultation'
   ];
 
   return (
     <div data-testid="home-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="hero-section relative overflow-hidden" data-testid="hero-section">
-        {/* Decorative shapes */}
-        <motion.div 
-          className="shape-circle w-96 h-96 -top-20 -right-20"
-          animate={{ 
-            scale: [1, 1.05, 1],
-            rotate: [0, 5, 0]
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="shape-square w-64 h-64 bottom-20 -left-10"
-          animate={{ 
-            scale: [1, 1.1, 1],
-            rotate: [15, 20, 15]
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
+      <section className="min-h-[90vh] flex items-center pt-20 pb-16 relative overflow-hidden" data-testid="hero-section">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" />
         
         <div className="section-container relative z-10">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
-            <motion.p
-              variants={fadeUpVariant}
-              className="text-sm font-medium text-[#B8956B] mb-4"
-            >
-              Strategic Intelligence & Advisory
-            </motion.p>
-            
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A1A1A]"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
-              Smarter decisions start with better intelligence.
+              Stop Leaving Millions on the Table.
+              <br />
+              <span className="text-[#8B6F47]">Get the Strategic Intelligence You Need—</span>
+              <br />
+              Without the Full-Time Overhead.
             </motion.h1>
             
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6B6B6B] max-w-xl mb-8 leading-relaxed"
+              className="text-lg md:text-xl text-[#6B6B6B] max-w-2xl mb-8 leading-relaxed"
             >
-              We help brands understand their customers, predict behavior, 
-              and build lasting competitive advantage through data-driven strategy.
+              Fractional strategic executives backed by AI-powered intelligence 
+              for mid-market B2B companies who need clarity, not more consultants.
             </motion.p>
             
             <motion.div
@@ -135,19 +133,19 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="btn-primary"
                 data-testid="hero-cta-primary"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Start a Conversation
+                Request Strategic Consultation
                 <ArrowRight size={18} className="ml-2" />
               </motion.a>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link
-                  to="/services"
+                  to="/how-we-work"
                   className="btn-secondary"
                   data-testid="hero-cta-secondary"
                 >
-                  Our Services
+                  Explore Our Approach
                 </Link>
               </motion.div>
             </motion.div>
@@ -155,8 +153,185 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section with Animated Counters */}
-      <section className="py-16 bg-[#1A1A1A]" data-testid="stats-section">
+      {/* Problem Section */}
+      <section className="py-20 md:py-28" data-testid="problem-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                You're Making Million-Dollar Decisions in the Dark
+              </h2>
+            </motion.div>
+            
+            <motion.div
+              variants={staggerContainer}
+              className="grid md:grid-cols-3 gap-8"
+            >
+              {problems.map((problem, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUpVariant}
+                  className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]"
+                >
+                  <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-4">
+                    <problem.icon className="text-red-500" size={20} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    {problem.title}
+                  </h3>
+                  <p className="text-[#6B6B6B] leading-relaxed">
+                    {problem.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Solution Overview */}
+      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="solution-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="text-center mb-16">
+              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">What You Actually Need</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Intelligence That Executes.
+              </h2>
+            </motion.div>
+            
+            <motion.div
+              variants={staggerContainer}
+              className="grid md:grid-cols-3 gap-8"
+            >
+              {valueProps.map((prop, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUpVariant}
+                  className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-[#2D7B7B]/10 flex items-center justify-center mb-4">
+                    <prop.icon className="text-[#2D7B7B]" size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    {prop.title}
+                  </h3>
+                  <p className="text-[#6B6B6B] leading-relaxed">
+                    {prop.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* How We're Different */}
+      <section className="py-20 md:py-28" data-testid="comparison-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="text-center mb-16">
+              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">How We're Different</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Not Consultants. Strategic Partners.
+              </h2>
+            </motion.div>
+            
+            <motion.div
+              variants={fadeUpVariant}
+              className="max-w-3xl mx-auto bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)]"
+            >
+              <div className="grid grid-cols-2">
+                <div className="bg-[#6B6B6B] text-white p-4 font-semibold text-center text-sm">
+                  Traditional Consultants
+                </div>
+                <div className="bg-[#2D7B7B] text-white p-4 font-semibold text-center text-sm">
+                  Brackett Agency
+                </div>
+              </div>
+              {comparisonData.map((row, index) => (
+                <div key={index} className="grid grid-cols-2 border-t border-[rgba(0,0,0,0.05)]">
+                  <div className="p-4 text-[#6B6B6B] text-sm">{row.traditional}</div>
+                  <div className="p-4 text-[#2C2C2C] font-medium text-sm bg-[#F5F3EF]/50">{row.brackett}</div>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Technology Preview */}
+      <section className="py-20 md:py-28 bg-[#2C2C2C] text-white" data-testid="technology-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="max-w-2xl mb-16">
+              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Technology</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Powered by Brackett Intelligence Engine™
+              </h2>
+              <p className="text-white/70 leading-relaxed">
+                Enterprise-grade AI/ML analytics powered by our strategic partnership with OSG Analytics.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              variants={staggerContainer}
+              className="grid md:grid-cols-3 gap-6"
+            >
+              {techPillars.map((pillar, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUpVariant}
+                  className="bg-white/5 rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-colors"
+                >
+                  <h3 className="text-lg font-bold mb-3 text-[#B8975A]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    {pillar.name}
+                  </h3>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    {pillar.description}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+            
+            <motion.div variants={fadeUpVariant} className="mt-10 flex items-center gap-4">
+              <Link
+                to="/intelligence"
+                className="inline-flex items-center gap-2 text-[#B8975A] font-medium hover:underline"
+                data-testid="view-intelligence"
+              >
+                See Our Intelligence Capabilities
+                <ArrowRight size={16} />
+              </Link>
+              <span className="text-white/30">|</span>
+              <span className="text-white/50 text-sm">In strategic partnership with OSG Analytics</span>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-[#F5F3EF]" data-testid="stats-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -171,18 +346,18 @@ const Home = () => {
                 variants={fadeUpVariant}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-[#B8956B] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <div className="text-4xl md:text-5xl font-bold text-[#8B6F47] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </div>
-                <p className="text-white/60 text-sm">{stat.label}</p>
+                <p className="text-[#6B6B6B] text-sm">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* What We Do - Quick Overview */}
-      <section className="py-20 md:py-28" data-testid="services-overview">
+      {/* Social Proof Section */}
+      <section className="py-20 md:py-28" data-testid="leadership-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -191,181 +366,44 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-medium text-[#B8956B] mb-3">What We Do</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Intelligence that drives results
+              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Leadership</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Battle-Tested Leadership. Enterprise-Grade Results.
               </h2>
             </motion.div>
             
-            <motion.div
-              variants={staggerContainer}
-              className="grid md:grid-cols-3 gap-8"
-            >
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUpVariant}
-                  className="classic-card service-card p-8 cursor-pointer"
-                  whileHover={{ 
-                    y: -8,
-                    boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)"
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="accent-line mb-6" />
-                  <h3 className="text-xl font-bold mb-3 text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    {service.title}
-                  </h3>
-                  <p className="text-[#6B6B6B] leading-relaxed">
-                    {service.description}
-                  </p>
-                  <motion.div 
-                    className="mt-4 text-[#B8956B] font-medium inline-flex items-center gap-2 opacity-0"
-                    whileHover={{ x: 5 }}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    Learn more <ArrowRight size={14} />
-                  </motion.div>
-                </motion.div>
-              ))}
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]">
+                <h3 className="text-xl font-bold mb-2 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  Erania Brackett, CEO
+                </h3>
+                <ul className="text-[#6B6B6B] text-sm space-y-2">
+                  <li>• Former CMO & Chief Customer Experience Officer, Dentsply Sirona (NYSE: XRAY)</li>
+                  <li>• Former Independent Board Director, Knowles Corporation (NYSE: KN)</li>
+                  <li>• Led Fortune 500 transformations across MedTech, Healthcare, Consumer sectors</li>
+                  <li>• Award-winning marketer with people-first leadership approach</li>
+                </ul>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)]">
+                <h3 className="text-xl font-bold mb-2 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  Dr. R. Sukumar, President & Global CEO
+                </h3>
+                <ul className="text-[#6B6B6B] text-sm space-y-2">
+                  <li>• 25+ years academia and global corporations</li>
+                  <li>• Former Associate Dean, Indian School of Business</li>
+                  <li>• Taught at Rutgers, Thunderbird, University of Maryland, Rice University</li>
+                  <li>• Founder of Stanford-born ASEMAP™ methodology</li>
+                  <li>• President & Global CEO, Optimal Strategix Group (OSG Analytics)</li>
+                </ul>
+              </motion.div>
+            </div>
             
-            <motion.div variants={fadeUpVariant} className="text-center mt-12">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 text-[#B8956B] font-medium hover:underline"
-                data-testid="view-all-services"
-              >
-                View all services
-                <ArrowRight size={16} />
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Intelligence Platforms */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="intelligence-section">
-        <div className="section-container">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeUpVariant} className="max-w-2xl mb-16">
-              <p className="text-sm font-medium text-[#B8956B] mb-3">Our Intelligence Engine</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Powered by advanced analytics
-              </h2>
-              <p className="text-[#6B6B6B] text-lg leading-relaxed">
-                We leverage industry-leading platforms to deliver insights that go beyond 
-                surface-level data, revealing the real drivers behind customer decisions.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              variants={staggerContainer}
-              className="grid md:grid-cols-3 gap-6"
-            >
-              {platforms.map((platform, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] group cursor-pointer"
-                  whileHover={{ 
-                    scale: 1.02,
-                    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.08)"
-                  }}
-                >
-                  <p className="text-xs font-semibold text-[#B8956B] uppercase tracking-wider mb-2 group-hover:tracking-widest transition-all">
-                    {platform.tagline}
-                  </p>
-                  <h3 className="text-2xl font-bold text-[#1A1A1A] mb-3 group-hover:text-[#B8956B] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    {platform.name}
-                  </h3>
-                  <p className="text-[#6B6B6B] text-sm leading-relaxed">
-                    {platform.description}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Key Question */}
-      <section className="py-20 md:py-28" data-testid="key-question">
-        <div className="section-container">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUpVariant}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <motion.h2 
-              className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6" 
-              style={{ fontFamily: 'Playfair Display, serif' }}
-              whileHover={{ scale: 1.02 }}
-            >
-              "Why should anyone buy from you?"
-            </motion.h2>
-            <p className="text-xl text-[#6B6B6B] leading-relaxed">
-              We help you find the answer—then use it to change customer behavior. 
-              That's strategic intelligence in action.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Testimonials with Carousel Effect */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF] overflow-hidden" data-testid="testimonials-section">
-        <div className="section-container">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-medium text-[#B8956B] mb-3">Client Stories</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]" style={{ fontFamily: 'Playfair Display, serif' }}>
-                What our clients say
-              </h2>
-            </motion.div>
-            
-            <motion.div
-              variants={staggerContainer}
-              className="grid md:grid-cols-3 gap-6"
-            >
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUpVariant}
-                  className="testimonial-card classic-card p-8"
-                  whileHover={{ 
-                    y: -5,
-                    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.08)"
-                  }}
-                >
-                  <motion.span 
-                    className="quote-mark"
-                    animate={{ opacity: [0.2, 0.4, 0.2] }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    "
-                  </motion.span>
-                  <p className="text-[#1A1A1A] text-lg leading-relaxed mb-6 -mt-6">
-                    {testimonial.quote}
-                  </p>
-                  <div className="pt-4 border-t border-[rgba(0,0,0,0.08)]">
-                    <p className="font-semibold text-[#1A1A1A]">{testimonial.author}</p>
-                    <p className="text-[#6B6B6B] text-sm">{testimonial.company}</p>
-                  </div>
-                </motion.div>
+            <motion.div variants={fadeUpVariant} className="flex flex-wrap justify-center gap-6">
+              {['Stanford-Born Methodology', 'NYSE Company Leadership', 'GDPR/HIPAA Compliant', 'OSG Analytics Partnership'].map((badge, i) => (
+                <span key={i} className="bg-[#F5F3EF] text-[#6B6B6B] px-4 py-2 rounded-full text-sm font-medium">
+                  {badge}
+                </span>
               ))}
             </motion.div>
           </motion.div>
@@ -373,52 +411,52 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28" data-testid="cta-section">
+      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="cta-gold rounded-2xl p-10 md:p-16 text-center text-white relative overflow-hidden"
+            className="max-w-3xl mx-auto text-center"
           >
-            {/* Animated background elements */}
-            <motion.div 
-              className="absolute w-64 h-64 rounded-full bg-white/10 -top-20 -left-20"
-              animate={{ 
-                scale: [1, 1.2, 1],
-                rotate: [0, 90, 0]
-              }}
-              transition={{ duration: 15, repeat: Infinity }}
-            />
-            <motion.div 
-              className="absolute w-48 h-48 rounded-full bg-white/5 -bottom-10 -right-10"
-              animate={{ 
-                scale: [1, 1.3, 1],
-              }}
-              transition={{ duration: 10, repeat: Infinity }}
-            />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              Ready to See What You're Missing?
+            </h2>
+            <h3 className="text-xl font-semibold mb-4 text-[#8B6F47]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              The Strategic Blindspot Audit™
+            </h3>
+            <p className="text-[#6B6B6B] mb-8 leading-relaxed">
+              Half-day intensive revealing the strategic gaps costing your business significant annual opportunity.
+            </p>
             
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Ready to get started?
-              </h2>
-              <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
-                Let's discuss how strategic intelligence can drive your organization's growth.
+            <div className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] text-left mb-8">
+              <h4 className="font-semibold text-[#2C2C2C] mb-4">What You Get:</h4>
+              <ul className="space-y-3">
+                {auditFeatures.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[#6B6B6B]">
+                    <ArrowRight size={16} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-sm text-[#6B6B6B] italic">
+                Premium diagnostic intensive using AI-powered intelligence technology. Investment fully credited toward full engagement.
               </p>
-              <motion.a
-                href="https://form.jotform.com/252728460666061"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-[#1A1A1A] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
-                data-testid="cta-connect"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.2)" }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Connect With Us
-                <ArrowRight size={18} className="ml-2" />
-              </motion.a>
             </div>
+            
+            <motion.a
+              href="https://form.jotform.com/252728460666061"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              data-testid="cta-audit"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Request Your Strategic Audit
+              <ArrowRight size={18} className="ml-2" />
+            </motion.a>
           </motion.div>
         </div>
       </section>
