@@ -220,8 +220,8 @@ const Home = () => {
                   variants={fadeUpVariant}
                   className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-[#2D7B7B]/10 flex items-center justify-center mb-4">
-                    <prop.icon className="text-[#2D7B7B]" size={24} />
+                  <div className="w-12 h-12 rounded-lg bg-[#1A365D]/10 flex items-center justify-center mb-4">
+                    <prop.icon className="text-[#1A365D]" size={24} />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {prop.title}
