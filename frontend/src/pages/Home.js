@@ -260,7 +260,7 @@ const Home = () => {
                 <div className="bg-[#6B6B6B] text-white p-4 font-semibold text-center text-sm">
                   Traditional Consultants
                 </div>
-                <div className="bg-[#2D7B7B] text-white p-4 font-semibold text-center text-sm">
+                <div className="bg-[#1A365D] text-white p-4 font-semibold text-center text-sm">
                   Brackett Agency
                 </div>
               </div>
