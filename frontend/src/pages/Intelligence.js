@@ -257,7 +257,7 @@ const Intelligence = () => {
         </div>
       </section>
 
-      {/* Platform 2: Brackett Intelligence Engine */}
+      {/* Platform 2: OSG Intelligence Engine */}
       <section className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="platform-2">
         <div className="section-container">
           <motion.div
