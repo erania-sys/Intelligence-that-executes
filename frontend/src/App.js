@@ -8,9 +8,12 @@ import Footer from './components/Footer';
 
 // Pages
 import Home from './pages/Home';
+import HowWeWork from './pages/HowWeWork';
+import Solutions from './pages/Solutions';
+import BrandDesign from './pages/BrandDesign';
+import Intelligence from './pages/Intelligence';
+import Insights from './pages/Insights';
 import About from './pages/About';
-import Services from './pages/Services';
-import CaseStudies from './pages/CaseStudies';
 import Contact from './pages/Contact';
 
 // Noise Overlay Component
@@ -20,16 +23,19 @@ const NoiseOverlay = () => (
 
 function App() {
   return (
-    <div className="App min-h-screen bg-[#050505] text-white">
+    <div className="App min-h-screen bg-[#FAFAF8] text-[#2C2C2C]">
       <BrowserRouter>
         <NoiseOverlay />
         <Navigation />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/how-we-work" element={<HowWeWork />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/brand-design" element={<BrandDesign />} />
+            <Route path="/intelligence" element={<Intelligence />} />
+            <Route path="/insights" element={<Insights />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
