@@ -20,21 +20,21 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer py-16 md:py-20" data-testid="footer">
+    <footer className="footer py-16 md:py-20 bg-[#1A2B4A]" data-testid="footer">
       <div className="section-container">
         {/* CTA Banner */}
-        <div className="bg-[#1A365D] rounded-2xl p-8 md:p-12 mb-16 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <div className="bg-[#C9A961] rounded-md p-8 md:p-12 mb-16 text-center">
+          <h3 className="text-2xl md:text-3xl font-semibold text-[#1A2B4A] mb-4">
             Ready to See What You're Missing?
           </h3>
-          <p className="text-white/80 mb-6 max-w-xl mx-auto">
+          <p className="text-[#1A2B4A]/80 mb-6 max-w-xl mx-auto">
             Request your Strategic Blindspot Audit and discover the opportunities hiding in your business.
           </p>
           <a
             href="https://form.jotform.com/252728460666061"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-[#2C2C2C] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center gap-2 bg-[#1A2B4A] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#0D1B2E] transition-colors"
             data-testid="footer-cta"
           >
             Request Strategic Consultation
@@ -68,7 +68,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm transition-colors hover:text-white"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                     data-testid={`footer-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {link.name}
@@ -88,7 +88,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm transition-colors hover:text-white"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                     data-testid={`footer-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {link.name}
@@ -107,7 +107,7 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:erania@brackett.agency"
-                  className="text-sm transition-colors hover:text-white"
+                  className="text-sm text-white/70 transition-colors hover:text-white"
                   data-testid="footer-email"
                 >
                   erania@brackett.agency
@@ -118,7 +118,7 @@ const Footer = () => {
                   href="https://form.jotform.com/252728460666061"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm inline-flex items-center gap-2 transition-colors hover:text-white"
+                  className="text-sm inline-flex items-center gap-2 text-white/70 transition-colors hover:text-white"
                   data-testid="footer-contact-form"
                 >
                   Contact Form
