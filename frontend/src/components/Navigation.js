@@ -67,7 +67,7 @@ const Navigation = () => {
               href="https://form.jotform.com/252728460666061"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-dark py-2 px-4 text-xs"
+              className="bg-[#0A0A0A] text-white font-semibold py-2 px-4 text-xs rounded-md hover:bg-[#1A1A1A] transition-all duration-300"
               data-testid="nav-cta"
             >
               Request Consultation
