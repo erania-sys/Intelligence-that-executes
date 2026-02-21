@@ -431,8 +431,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-white" data-testid="cta-section">
+      {/* CTA Section - Black background */}
+      <section className="py-20 md:py-28 bg-[#0A0A0A]" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -441,27 +441,34 @@ const Home = () => {
             variants={fadeUpVariant}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-[28px] md:text-[36px] font-semibold mb-4 text-[#1A2B4A]">
+            <h2 className="text-[28px] md:text-[36px] font-semibold mb-4 text-white">
               Ready to See What You're Missing?
             </h2>
             <h3 className="text-xl font-semibold mb-4 text-[#C9A961]">
               The Strategic Blindspot Audit
             </h3>
-            <p className="text-[#6C757D] mb-8 leading-relaxed">
+            <p className="text-white/70 mb-8 leading-relaxed">
               Half-day intensive revealing the strategic gaps costing your business significant annual opportunity.
             </p>
             
-            <div className="bg-[#F8F9FA] rounded-md p-8 border border-[#E9ECEF] text-left mb-8">
-              <h4 className="font-semibold text-[#1A2B4A] mb-4">What You Get:</h4>
+            <div className="bg-[#1A1A1A] rounded-md p-8 border border-[#2A2A2A] text-left mb-8">
+              <h4 className="font-semibold text-white mb-4">What You Get:</h4>
               <ul className="space-y-3">
                 {auditFeatures.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[#6C757D]">
+                  <motion.li 
+                    key={i} 
+                    className="flex items-start gap-3 text-white/70"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                  >
                     <Check size={16} className="text-[#C9A961] mt-1 flex-shrink-0" />
                     <span>{feature}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm text-[#6C757D] italic">
+              <p className="mt-6 text-sm text-white/50 italic">
                 Premium diagnostic intensive using AI-powered intelligence technology. Investment fully credited toward full engagement.
               </p>
             </div>
@@ -470,13 +477,13 @@ const Home = () => {
               href="https://form.jotform.com/252728460666061"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#C9A961] text-[#0A0A0A] font-semibold rounded-md hover:bg-[#B8985F] transition-all duration-300 group"
               data-testid="cta-audit"
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
               Request Your Strategic Audit
-              <ArrowRight size={18} className="ml-2" />
+              <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </motion.a>
           </motion.div>
         </div>
