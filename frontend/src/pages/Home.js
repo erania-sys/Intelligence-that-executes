@@ -210,7 +210,7 @@ const Home = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">What You Actually Need</p>
-              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1A2B4A]">
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0A0A0A]">
                 Intelligence That Executes
               </h2>
             </motion.div>
@@ -223,9 +223,10 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-[#F8F9FA] rounded-md p-8 border border-[#E9ECEF] hover:shadow-md transition-shadow"
+                  whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                  className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm hover:shadow-xl hover:border-[#C9A961] transition-all duration-300"
                 >
-                  <h3 className="text-xl font-semibold mb-3 text-[#1A2B4A]">
+                  <h3 className="text-xl font-semibold mb-3 text-[#0A0A0A]">
                     {prop.title}
                   </h3>
                   <p className="text-[#6C757D] leading-relaxed">
@@ -249,36 +250,40 @@ const Home = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">How We're Different</p>
-              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1A2B4A]">
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0A0A0A]">
                 Not Consultants. Strategic Partners.
               </h2>
             </motion.div>
             
             <motion.div
               variants={fadeUpVariant}
-              className="max-w-3xl mx-auto bg-white rounded-md overflow-hidden border border-[#E9ECEF] shadow-sm"
+              className="max-w-3xl mx-auto bg-white rounded-md overflow-hidden border border-[#E9ECEF] shadow-lg"
             >
               <div className="grid grid-cols-2">
                 <div className="bg-[#6C757D] text-white p-4 font-semibold text-center text-sm">
                   Traditional Consultants
                 </div>
-                <div className="bg-[#1A2B4A] text-white p-4 font-semibold text-center text-sm">
+                <div className="bg-[#0A0A0A] text-white p-4 font-semibold text-center text-sm">
                   Brackett Agency
                 </div>
               </div>
               {comparisonData.map((row, index) => (
-                <div key={index} className="grid grid-cols-2 border-t border-[#E9ECEF]">
+                <motion.div 
+                  key={index} 
+                  className="grid grid-cols-2 border-t border-[#E9ECEF] hover:bg-[#F8F9FA] transition-colors"
+                  whileHover={{ x: 4 }}
+                >
                   <div className="p-4 text-[#6C757D] text-sm">{row.traditional}</div>
-                  <div className="p-4 text-[#2D3748] font-medium text-sm bg-[#F8F9FA]">{row.brackett}</div>
-                </div>
+                  <div className="p-4 text-[#0A0A0A] font-medium text-sm bg-[#F8F9FA]">{row.brackett}</div>
+                </motion.div>
               ))}
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Technology Preview */}
-      <section className="py-20 md:py-28 bg-[#1A2B4A]" data-testid="technology-section">
+      {/* Technology Preview - Black background */}
+      <section className="py-20 md:py-28 bg-[#0A0A0A]" data-testid="technology-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -291,7 +296,7 @@ const Home = () => {
               <h2 className="text-[28px] md:text-[36px] font-semibold mb-4 text-white">
                 Powered by Brackett Intelligence Engine
               </h2>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 Enterprise-grade AI/ML analytics powered by our strategic partnership with OSG Analytics.
               </p>
             </motion.div>
@@ -304,12 +309,13 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white/10 rounded-md p-8 border border-white/20 hover:bg-white/15 transition-colors"
+                  whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+                  className="bg-[#1A1A1A] rounded-md p-8 border border-[#2A2A2A] hover:border-[#C9A961] transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold mb-3 text-[#C9A961]">
                     {pillar.name}
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
+                  <p className="text-white/70 text-sm leading-relaxed">
                     {pillar.description}
                   </p>
                 </motion.div>
