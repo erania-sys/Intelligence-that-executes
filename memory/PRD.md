@@ -150,3 +150,8 @@ For deploying to Squarespace:
    - Use Squarespace Code Block for embedding
    - Use Developer Mode for full integration
    - Consider external hosting (Vercel/Netlify) with custom domain redirect
+
+---
+
+## Deployment Instructions (Pending)
+**P0 Task:** Provide detailed Squarespace deployment instructions for embedding or deploying this React application.
