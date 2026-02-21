@@ -402,7 +402,7 @@ const BrandDesign = () => {
       </section>
 
       {/* Our Approach */}
-      <section id="approach" className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="approach-section">
+      <section id="approach" className="py-20 md:py-28 bg-[#1A2B4A]" data-testid="approach-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -412,10 +412,10 @@ const BrandDesign = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Approach</p>
-              <h2 className="text-3xl md:text-4xl font-bold" style={{  }}>
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-white">
                 Intelligence-Driven Design
               </h2>
-              <p className="text-white/60 mt-4 max-w-2xl mx-auto">
+              <p className="text-white/70 mt-4 max-w-2xl mx-auto">
                 Where Data Meets Design
               </p>
             </motion.div>
@@ -425,13 +425,13 @@ const BrandDesign = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white/5 rounded-xl p-6 border border-white/10"
+                  className="bg-white/10 rounded-md p-6 border border-white/20"
                 >
-                  <span className="text-[#C9A961] font-bold text-2xl" style={{  }}>
+                  <span className="text-[#C9A961] font-bold text-2xl">
                     {item.num}
                   </span>
                   <h4 className="font-semibold text-white mt-3 mb-2">{item.title}</h4>
-                  <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
             </motion.div>
