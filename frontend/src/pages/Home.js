@@ -51,7 +51,7 @@ const Home = () => {
       description: 'Predictive tradeoff methodology that measures the magnitude of customer decisions—not just preferences. Stanford-born behavioral science.'
     },
     {
-      name: 'Brackett Intelligence Engine',
+      name: 'OSG Intelligence Engine',
       description: 'AI/ML-powered analytics platform consolidating structured and unstructured data. Real-time dashboards, predictive modeling, and behavioral analytics.'
     },
     {
@@ -294,7 +294,7 @@ const Home = () => {
             <motion.div variants={fadeUpVariant} className="max-w-2xl mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Technology</p>
               <h2 className="text-[28px] md:text-[36px] font-semibold mb-4 text-white">
-                Powered by Brackett Intelligence Engine
+                Powered by OSG Intelligence Engine
               </h2>
               <p className="text-white/70 leading-relaxed">
                 Enterprise-grade AI/ML analytics powered by our strategic partnership with OSG Analytics.

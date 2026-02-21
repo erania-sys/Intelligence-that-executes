@@ -28,7 +28,7 @@ const HowWeWork = () => {
         'Market trend and opportunity identification'
       ],
       technology: [
-        'Brackett Intelligence Engine platform access',
+        'OSG Intelligence Engine platform access',
         'Customer Experience Analytics tracking',
         'Predictive modeling and segmentation'
       ],
