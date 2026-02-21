@@ -123,7 +123,7 @@ const Navigation = () => {
                 <Link
                   to={link.path}
                   className={`mobile-nav-link text-xl ${
-                    location.pathname === link.path ? 'text-[#B8975A]' : ''
+                    location.pathname === link.path ? 'text-[#C9A961]' : ''
                   }`}
                   data-testid={`mobile-nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                 >
