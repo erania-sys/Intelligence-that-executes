@@ -234,8 +234,8 @@ const Solutions = () => {
                 {signaturePrograms.map((program, index) => (
                   <div key={index} className="mb-20 last:mb-0">
                     <div className="flex items-start gap-4 mb-8">
-                      <div className="w-14 h-14 rounded-xl bg-[#2D7B7B]/10 flex items-center justify-center flex-shrink-0">
-                        <program.icon className="text-[#2D7B7B]" size={28} />
+                      <div className="w-14 h-14 rounded-xl bg-[#1A365D]/10 flex items-center justify-center flex-shrink-0">
+                        <program.icon className="text-[#1A365D]" size={28} />
                       </div>
                       <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -249,8 +249,8 @@ const Solutions = () => {
                         <h4 className="font-semibold text-red-800 mb-3">The Problem You're Facing</h4>
                         <p className="text-red-700 text-sm leading-relaxed">{program.problem}</p>
                       </div>
-                      <div className="bg-[#2D7B7B]/5 rounded-xl p-6 border border-[#2D7B7B]/10">
-                        <h4 className="font-semibold text-[#2D7B7B] mb-3">The Outcome</h4>
+                      <div className="bg-[#1A365D]/5 rounded-xl p-6 border border-[#1A365D]/10">
+                        <h4 className="font-semibold text-[#1A365D] mb-3">The Outcome</h4>
                         <p className="text-[#6B6B6B] text-sm leading-relaxed">{program.outcome}</p>
                       </div>
                     </div>
@@ -260,7 +260,7 @@ const Solutions = () => {
                       <ul className="grid md:grid-cols-2 gap-2">
                         {program.whoFor.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                            <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -298,7 +298,7 @@ const Solutions = () => {
                         <ul className="space-y-2">
                           {program.deliverables.map((item, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                              <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                              <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -315,7 +315,7 @@ const Solutions = () => {
                       </div>
                       <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
                         <div className="flex items-center gap-2 mb-4">
-                          <TrendingUp size={18} className="text-[#2D7B7B]" />
+                          <TrendingUp size={18} className="text-[#1A365D]" />
                           <h4 className="font-semibold text-[#2C2C2C]">Expected ROI</h4>
                         </div>
                         <p className="text-sm text-[#6B6B6B] leading-relaxed">{program.roi}</p>
@@ -380,7 +380,7 @@ const Solutions = () => {
                         <ul className="grid md:grid-cols-3 gap-2">
                           {partnership.whoFor.map((item, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                              <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                              <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -489,7 +489,7 @@ const Solutions = () => {
                       <ul className="space-y-2">
                         {auditFeatures.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                            <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -500,7 +500,7 @@ const Solutions = () => {
                       <ul className="space-y-2">
                         {auditSession.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                            <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -514,7 +514,7 @@ const Solutions = () => {
                       <ul className="space-y-2">
                         {auditDeliverables.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                            <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -525,7 +525,7 @@ const Solutions = () => {
                       <ul className="space-y-2">
                         {auditTechnology.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                            <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -543,7 +543,7 @@ const Solutions = () => {
                     </p>
                   </div>
 
-                  <div className="bg-[#2D7B7B] rounded-xl p-8 text-center text-white">
+                  <div className="bg-[#1A365D] rounded-xl p-8 text-center text-white">
                     <h4 className="font-bold text-xl mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
                       Why This Matters
                     </h4>

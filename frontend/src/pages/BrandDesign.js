@@ -328,7 +328,7 @@ const BrandDesign = () => {
                   <ul className="space-y-2 mb-6">
                     {pkg.includes.map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                        <Check size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                        <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -460,7 +460,7 @@ const BrandDesign = () => {
                 <ul className="space-y-4">
                   {promises.map((promise, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <Check size={18} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                      <Check size={18} className="text-[#1A365D] mt-1 flex-shrink-0" />
                       <span className="text-[#6B6B6B]">{promise}</span>
                     </li>
                   ))}

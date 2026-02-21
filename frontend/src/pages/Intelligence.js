@@ -221,7 +221,7 @@ const Intelligence = () => {
                 <div className="grid grid-cols-2 gap-4">
                   {platforms[0].benefits.map((benefit, i) => (
                     <div key={i} className="bg-white rounded-lg p-4 border border-[rgba(0,0,0,0.05)]">
-                      <Check size={16} className="text-[#2D7B7B] mb-2" />
+                      <Check size={16} className="text-[#1A365D] mb-2" />
                       <h5 className="font-semibold text-[#2C2C2C] text-sm">{benefit.title}</h5>
                       <p className="text-[#6B6B6B] text-xs">{benefit.desc}</p>
                     </div>
@@ -328,8 +328,8 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
-              <div className="w-16 h-16 rounded-xl bg-[#2D7B7B]/10 flex items-center justify-center flex-shrink-0">
-                <Users className="text-[#2D7B7B]" size={32} />
+              <div className="w-16 h-16 rounded-xl bg-[#1A365D]/10 flex items-center justify-center flex-shrink-0">
+                <Users className="text-[#1A365D]" size={32} />
               </div>
               <div>
                 <p className="text-sm font-semibold text-[#B8975A] uppercase tracking-wider">Platform 3</p>
@@ -350,7 +350,7 @@ const Intelligence = () => {
                 <ul className="space-y-2">
                   {platforms[2].capabilities.npsPlus.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                      <ArrowRight size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -361,7 +361,7 @@ const Intelligence = () => {
                 <ul className="space-y-2">
                   {platforms[2].capabilities.journey.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                      <ArrowRight size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -372,7 +372,7 @@ const Intelligence = () => {
                 <ul className="space-y-2">
                   {platforms[2].capabilities.ltv.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                      <ArrowRight size={14} className="text-[#2D7B7B] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -470,7 +470,7 @@ const Intelligence = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-[#2D7B7B] text-white" data-testid="cta-section">
+      <section className="py-20 md:py-28 bg-[#1A365D] text-white" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
