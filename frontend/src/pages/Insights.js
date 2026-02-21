@@ -127,12 +127,12 @@ const Insights = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      revenue: '#1A365D',
-      positioning: '#B8975A',
+      revenue: '#1A2B4A',
+      positioning: '#C9A961',
       intelligence: '#1E4D7B',
       execution: '#4A7C59'
     };
-    return colors[category] || '#6B6B6B';
+    return colors[category] || '#6C757D';
   };
 
   const handleSubscribe = (e) => {
@@ -145,7 +145,7 @@ const Insights = () => {
   return (
     <div data-testid="insights-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" data-testid="hero-section">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -155,14 +155,14 @@ const Insights = () => {
           >
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
-              style={{ fontFamily: 'Playfair Display, serif' }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              style={{  }}
             >
               Strategic Intelligence. Delivered Weekly.
             </motion.h1>
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed"
+              className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
             >
               Insights on customer intelligence, market positioning, and execution excellence.
             </motion.p>
@@ -180,14 +180,14 @@ const Insights = () => {
             onSubmit={handleSubscribe}
             className="flex flex-col md:flex-row gap-4 items-center justify-center"
           >
-            <p className="text-[#6B6B6B] text-sm">Get weekly strategic intelligence delivered to your inbox:</p>
+            <p className="text-[#6C757D] text-sm">Get weekly strategic intelligence delivered to your inbox:</p>
             <div className="flex gap-2 w-full md:w-auto">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="px-4 py-2 border border-[rgba(0,0,0,0.1)] rounded-lg text-sm focus:outline-none focus:border-[#B8975A] w-full md:w-64"
+                className="px-4 py-2 border border-[rgba(0,0,0,0.1)] rounded-lg text-sm focus:outline-none focus:border-[#C9A961] w-full md:w-64"
                 required
                 data-testid="newsletter-email"
               />
@@ -238,7 +238,7 @@ const Insights = () => {
               >
                 <div className="bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="md:flex">
-                    <div className="md:w-1/2 bg-gradient-to-br from-[#2C2C2C] to-[#1A1A1A] p-12 flex items-center justify-center">
+                    <div className="md:w-1/2 bg-gradient-to-br from-[#1A2B4A] to-[#1A1A1A] p-12 flex items-center justify-center">
                       <div className="text-center">
                         <span 
                           className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4"
@@ -246,26 +246,26 @@ const Insights = () => {
                         >
                           {getCategoryLabel(featuredArticle.category)}
                         </span>
-                        <h2 className="text-2xl md:text-3xl font-bold text-white" style={{ fontFamily: 'Playfair Display, serif' }}>
+                        <h2 className="text-2xl md:text-3xl font-bold text-white" style={{  }}>
                           Featured Article
                         </h2>
                       </div>
                     </div>
                     <div className="md:w-1/2 p-8 md:p-12">
                       <div className="flex items-center gap-4 mb-4">
-                        <span className="text-[#6B6B6B] text-sm">{featuredArticle.date}</span>
-                        <span className="flex items-center gap-1 text-[#6B6B6B] text-sm">
+                        <span className="text-[#6C757D] text-sm">{featuredArticle.date}</span>
+                        <span className="flex items-center gap-1 text-[#6C757D] text-sm">
                           <Clock size={14} />
                           {featuredArticle.readTime}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <h3 className="text-2xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
                         {featuredArticle.title}
                       </h3>
-                      <p className="text-[#6B6B6B] leading-relaxed mb-6">
+                      <p className="text-[#6C757D] leading-relaxed mb-6">
                         {featuredArticle.excerpt}
                       </p>
-                      <span className="inline-flex items-center gap-2 text-[#B8975A] font-medium hover:underline">
+                      <span className="inline-flex items-center gap-2 text-[#C9A961] font-medium hover:underline">
                         Read Article <ArrowRight size={16} />
                       </span>
                     </div>
@@ -295,20 +295,20 @@ const Insights = () => {
                         <Tag size={12} />
                         {getCategoryLabel(article.category)}
                       </span>
-                      <span className="flex items-center gap-1 text-[#6B6B6B] text-xs">
+                      <span className="flex items-center gap-1 text-[#6C757D] text-xs">
                         <Clock size={12} />
                         {article.readTime}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-[#2C2C2C] mb-3 group-hover:text-[#B8975A] transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    <h3 className="text-lg font-bold text-[#1A2B4A] mb-3 group-hover:text-[#C9A961] transition-colors" style={{  }}>
                       {article.title}
                     </h3>
-                    <p className="text-[#6B6B6B] text-sm leading-relaxed mb-4 line-clamp-3">
+                    <p className="text-[#6C757D] text-sm leading-relaxed mb-4 line-clamp-3">
                       {article.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-[#6B6B6B] text-xs">{article.date}</span>
-                      <span className="inline-flex items-center gap-1 text-[#B8975A] font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="text-[#6C757D] text-xs">{article.date}</span>
+                      <span className="inline-flex items-center gap-1 text-[#C9A961] font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
                         Read <ArrowRight size={14} />
                       </span>
                     </div>
@@ -323,7 +323,7 @@ const Insights = () => {
                 variants={fadeUpVariant}
                 className="text-center py-16"
               >
-                <p className="text-[#6B6B6B]">No articles found in this category.</p>
+                <p className="text-[#6C757D]">No articles found in this category.</p>
               </motion.div>
             )}
           </motion.div>
@@ -331,7 +331,7 @@ const Insights = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#F5F3EF]" data-testid="cta-section">
+      <section className="py-16 bg-[#F8F9FA]" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -340,10 +340,10 @@ const Insights = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
               Want Strategic Intelligence Applied to Your Business?
             </h2>
-            <p className="text-[#6B6B6B] mb-6">
+            <p className="text-[#6C757D] mb-6">
               Request a Strategic Blindspot Audit™ to uncover the opportunities hiding in your data.
             </p>
             <a

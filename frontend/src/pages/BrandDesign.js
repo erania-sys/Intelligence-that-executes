@@ -166,7 +166,7 @@ const BrandDesign = () => {
   return (
     <div data-testid="brand-design-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" data-testid="hero-section">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -176,14 +176,14 @@ const BrandDesign = () => {
           >
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
-              style={{ fontFamily: 'Playfair Display, serif' }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              style={{  }}
             >
               Build Brands That Command Attention.
             </motion.h1>
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed mb-8"
+              className="text-lg md:text-xl text-[#6C757D] leading-relaxed mb-8"
             >
               Strategic brand development and visual identity systems 
               that differentiate you in competitive markets.
@@ -220,10 +220,10 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
                 Your Brand Is Your Strategic Advantage
               </h2>
-              <p className="text-[#6B6B6B] leading-relaxed">
+              <p className="text-[#6C757D] leading-relaxed">
                 In crowded B2B markets, your brand isn't just a logo—it's the strategic clarity that helps customers choose you over competitors. Brackett Agency combines strategic intelligence with brand design excellence to create identity systems that position you for growth.
               </p>
             </motion.div>
@@ -236,10 +236,10 @@ const BrandDesign = () => {
                   className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]"
                 >
                   <div className="flex items-start gap-3">
-                    <ArrowRight size={16} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                    <ArrowRight size={16} className="text-[#C9A961] mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-[#2C2C2C] mb-1">{item.title}</h4>
-                      <p className="text-[#6B6B6B] text-sm">{item.desc}</p>
+                      <h4 className="font-semibold text-[#1A2B4A] mb-1">{item.title}</h4>
+                      <p className="text-[#6C757D] text-sm">{item.desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -259,8 +259,8 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Services</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Services</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
                 Brand & Design Services
               </h2>
             </motion.div>
@@ -272,10 +272,10 @@ const BrandDesign = () => {
                 className="mb-12 last:mb-0"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#B8975A]/10 flex items-center justify-center">
-                    <category.icon className="text-[#B8975A]" size={24} />
+                  <div className="w-12 h-12 rounded-xl bg-[#C9A961]/10 flex items-center justify-center">
+                    <category.icon className="text-[#C9A961]" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-xl font-bold text-[#1A2B4A]" style={{  }}>
                     {category.title}
                   </h3>
                 </div>
@@ -283,8 +283,8 @@ const BrandDesign = () => {
                 <div className="grid md:grid-cols-2 gap-4 pl-0 md:pl-16">
                   {category.services.map((service, i) => (
                     <div key={i} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
-                      <h4 className="font-semibold text-[#2C2C2C] mb-2">{service.name}</h4>
-                      <p className="text-[#6B6B6B] text-sm leading-relaxed">{service.desc}</p>
+                      <h4 className="font-semibold text-[#1A2B4A] mb-2">{service.name}</h4>
+                      <p className="text-[#6C757D] text-sm leading-relaxed">{service.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -295,7 +295,7 @@ const BrandDesign = () => {
       </section>
 
       {/* Signature Packages */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="packages-section">
+      <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="packages-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -304,8 +304,8 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Packages</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Packages</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
                 Signature Packages
               </h2>
             </motion.div>
@@ -317,18 +317,18 @@ const BrandDesign = () => {
                   variants={fadeUpVariant}
                   className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#B8975A]/10 mb-4">
-                    <Sparkles className="text-[#B8975A]" size={24} />
+                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#C9A961]/10 mb-4">
+                    <Sparkles className="text-[#C9A961]" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#2C2C2C] mb-1" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-xl font-bold text-[#1A2B4A] mb-1" style={{  }}>
                     {pkg.name}
                   </h3>
-                  <p className="text-[#B8975A] text-sm mb-4">{pkg.subtitle}</p>
+                  <p className="text-[#C9A961] text-sm mb-4">{pkg.subtitle}</p>
                   
                   <ul className="space-y-2 mb-6">
                     {pkg.includes.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                        <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
+                      <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                        <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -336,10 +336,10 @@ const BrandDesign = () => {
                   
                   <div className="pt-4 border-t border-[rgba(0,0,0,0.05)]">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-[#6B6B6B]">Timeline</span>
-                      <span className="font-semibold text-[#2C2C2C]">{pkg.timeline}</span>
+                      <span className="text-sm text-[#6C757D]">Timeline</span>
+                      <span className="font-semibold text-[#1A2B4A]">{pkg.timeline}</span>
                     </div>
-                    <p className="text-xs text-[#6B6B6B]">
+                    <p className="text-xs text-[#6C757D]">
                       <span className="font-semibold">Ideal for:</span> {pkg.ideal}
                     </p>
                   </div>
@@ -360,8 +360,8 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Specialization</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Specialization</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
                 Industry Expertise
               </h2>
             </motion.div>
@@ -374,21 +374,21 @@ const BrandDesign = () => {
                   className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]"
                 >
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-[#F5F3EF] flex items-center justify-center flex-shrink-0">
-                      <industry.icon className="text-[#8B6F47]" size={20} />
+                    <div className="w-10 h-10 rounded-lg bg-[#F8F9FA] flex items-center justify-center flex-shrink-0">
+                      <industry.icon className="text-[#C9A961]" size={20} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <h3 className="font-bold text-[#1A2B4A]" style={{  }}>
                         {industry.name}
                       </h3>
-                      <p className="text-[#6B6B6B] text-sm mt-1">{industry.expertise}</p>
+                      <p className="text-[#6C757D] text-sm mt-1">{industry.expertise}</p>
                     </div>
                   </div>
                   <div className="pl-14">
                     <ul className="space-y-1">
                       {industry.services.map((service, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                          <ArrowRight size={12} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                        <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                          <ArrowRight size={12} className="text-[#C9A961] mt-1 flex-shrink-0" />
                           <span>{service}</span>
                         </li>
                       ))}
@@ -402,7 +402,7 @@ const BrandDesign = () => {
       </section>
 
       {/* Our Approach */}
-      <section id="approach" className="py-20 md:py-28 bg-[#2C2C2C] text-white" data-testid="approach-section">
+      <section id="approach" className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="approach-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -411,8 +411,8 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Approach</p>
-              <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Approach</p>
+              <h2 className="text-3xl md:text-4xl font-bold" style={{  }}>
                 Intelligence-Driven Design
               </h2>
               <p className="text-white/60 mt-4 max-w-2xl mx-auto">
@@ -427,7 +427,7 @@ const BrandDesign = () => {
                   variants={fadeUpVariant}
                   className="bg-white/5 rounded-xl p-6 border border-white/10"
                 >
-                  <span className="text-[#B8975A] font-bold text-2xl" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <span className="text-[#C9A961] font-bold text-2xl" style={{  }}>
                     {item.num}
                   </span>
                   <h4 className="font-semibold text-white mt-3 mb-2">{item.title}</h4>
@@ -449,19 +449,19 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
                 The Brackett Brand Promise
               </h2>
-              <p className="text-[#6B6B6B] mt-4">What You Can Expect</p>
+              <p className="text-[#6C757D] mt-4">What You Can Expect</p>
             </motion.div>
 
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto">
-              <div className="bg-[#F5F3EF] rounded-xl p-8">
+              <div className="bg-[#F8F9FA] rounded-xl p-8">
                 <ul className="space-y-4">
                   {promises.map((promise, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <Check size={18} className="text-[#1A365D] mt-1 flex-shrink-0" />
-                      <span className="text-[#6B6B6B]">{promise}</span>
+                      <Check size={18} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                      <span className="text-[#6C757D]">{promise}</span>
                     </li>
                   ))}
                 </ul>
@@ -472,7 +472,7 @@ const BrandDesign = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="faq-section">
+      <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="faq-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -481,7 +481,7 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
                 Frequently Asked Questions
               </h2>
             </motion.div>
@@ -495,10 +495,10 @@ const BrandDesign = () => {
                       className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FAFAF8] transition-colors"
                       data-testid={`faq-${index}`}
                     >
-                      <span className="font-semibold text-[#2C2C2C] pr-4">{faq.question}</span>
+                      <span className="font-semibold text-[#1A2B4A] pr-4">{faq.question}</span>
                       <ChevronDown
                         size={20}
-                        className={`text-[#B8975A] flex-shrink-0 transition-transform ${
+                        className={`text-[#C9A961] flex-shrink-0 transition-transform ${
                           openFaq === index ? 'rotate-180' : ''
                         }`}
                       />
@@ -513,7 +513,7 @@ const BrandDesign = () => {
                           className="overflow-hidden"
                         >
                           <div className="px-6 pb-5">
-                            <p className="text-[#6B6B6B] leading-relaxed">{faq.answer}</p>
+                            <p className="text-[#6C757D] leading-relaxed">{faq.answer}</p>
                           </div>
                         </motion.div>
                       )}
@@ -527,7 +527,7 @@ const BrandDesign = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-r from-[#8B6F47] to-[#B8975A] text-white" data-testid="cta-section">
+      <section className="py-20 md:py-28 bg-gradient-to-r from-[#C9A961] to-[#C9A961] text-white" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -536,7 +536,7 @@ const BrandDesign = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{  }}>
               Your Brand Is Your Competitive Advantage. Let's Build It.
             </h2>
             <p className="text-white/80 mb-8 leading-relaxed">
@@ -547,7 +547,7 @@ const BrandDesign = () => {
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white text-[#2C2C2C] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center gap-2 bg-white text-[#1A2B4A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
                 data-testid="cta-consultation"
               >
                 Request Brand Consultation

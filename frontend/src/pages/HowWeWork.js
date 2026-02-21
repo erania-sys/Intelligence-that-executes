@@ -44,7 +44,7 @@ const HowWeWork = () => {
       title: 'Strategy Development',
       subtitle: 'Intelligence without strategy is just interesting data. We turn insights into executable plans.',
       icon: Lightbulb,
-      color: '#B8975A',
+      color: '#C9A961',
       whatHappens: [
         'Priority stack-ranking (high-impact opportunities)',
         'Strategic roadmap development',
@@ -69,7 +69,7 @@ const HowWeWork = () => {
       title: 'Execution Partnership',
       subtitle: 'We don\'t hand you a deck and disappear. We partner through implementation.',
       icon: Rocket,
-      color: '#1A365D',
+      color: '#1A2B4A',
       whatHappens: [
         'Regular strategic reviews',
         'Real-time course corrections',
@@ -136,7 +136,7 @@ const HowWeWork = () => {
   return (
     <div data-testid="how-we-work-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" data-testid="hero-section">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -146,14 +146,14 @@ const HowWeWork = () => {
           >
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
-              style={{ fontFamily: 'Playfair Display, serif' }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              style={{  }}
             >
               Intelligence → Strategy → Execution
             </motion.h1>
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed"
+              className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
             >
               Our proven methodology turns customer data into competitive advantage.
             </motion.p>
@@ -184,13 +184,13 @@ const HowWeWork = () => {
                     <phase.icon size={28} style={{ color: phase.color }} />
                   </div>
                   <div>
-                    <span className="text-sm font-semibold text-[#B8975A] uppercase tracking-wider">
+                    <span className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">
                       Phase {phase.number}
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] mt-1" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mt-1" style={{  }}>
                       {phase.title}
                     </h2>
-                    <p className="text-[#6B6B6B] mt-2 max-w-2xl">
+                    <p className="text-[#6C757D] mt-2 max-w-2xl">
                       {phase.subtitle}
                     </p>
                   </div>
@@ -198,11 +198,11 @@ const HowWeWork = () => {
                 
                 <div className="grid md:grid-cols-3 gap-6 ml-0 md:ml-22">
                   <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
-                    <h4 className="font-semibold text-[#2C2C2C] mb-4">What Happens</h4>
+                    <h4 className="font-semibold text-[#1A2B4A] mb-4">What Happens</h4>
                     <ul className="space-y-2">
                       {phase.whatHappens.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                          <ArrowRight size={14} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                        <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                          <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -210,13 +210,13 @@ const HowWeWork = () => {
                   </div>
                   
                   <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
-                    <h4 className="font-semibold text-[#2C2C2C] mb-4">
+                    <h4 className="font-semibold text-[#1A2B4A] mb-4">
                       {phase.technology ? 'Technology Used' : phase.different ? 'How We\'re Different' : 'Engagement Models'}
                     </h4>
                     <ul className="space-y-2">
                       {(phase.technology || phase.different || phase.models).map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                          <ArrowRight size={14} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                        <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                          <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -224,11 +224,11 @@ const HowWeWork = () => {
                   </div>
                   
                   <div className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
-                    <h4 className="font-semibold text-[#2C2C2C] mb-4">Deliverables</h4>
+                    <h4 className="font-semibold text-[#1A2B4A] mb-4">Deliverables</h4>
                     <ul className="space-y-2">
                       {phase.deliverables.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                          <Check size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
+                        <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                          <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -242,7 +242,7 @@ const HowWeWork = () => {
       </section>
 
       {/* Our Guarantee */}
-      <section className="py-20 md:py-28 bg-[#2C2C2C] text-white" data-testid="guarantee-section">
+      <section className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="guarantee-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -251,7 +251,7 @@ const HowWeWork = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-3xl md:text-4xl font-bold" style={{  }}>
                 Our Guarantee
               </h2>
             </motion.div>
@@ -266,7 +266,7 @@ const HowWeWork = () => {
                   variants={fadeUpVariant}
                   className="bg-white/5 rounded-xl p-8 border border-white/10"
                 >
-                  <h3 className="text-xl font-bold mb-3 text-[#B8975A]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-xl font-bold mb-3 text-[#C9A961]" style={{  }}>
                     {item.title}
                   </h3>
                   <p className="text-white/70 leading-relaxed text-sm">
@@ -289,8 +289,8 @@ const HowWeWork = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#B8975A] mb-3 uppercase tracking-wider">Industries</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Industries</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
                 Industries We Serve
               </h2>
             </motion.div>
@@ -305,13 +305,13 @@ const HowWeWork = () => {
                   variants={fadeUpVariant}
                   className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-[#F5F3EF] flex items-center justify-center mb-4">
-                    <industry.icon className="text-[#8B6F47]" size={24} />
+                  <div className="w-12 h-12 rounded-lg bg-[#F8F9FA] flex items-center justify-center mb-4">
+                    <industry.icon className="text-[#C9A961]" size={24} />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h3 className="text-lg font-bold mb-2 text-[#1A2B4A]" style={{  }}>
                     {industry.name}
                   </h3>
-                  <p className="text-[#6B6B6B] text-sm leading-relaxed">
+                  <p className="text-[#6C757D] text-sm leading-relaxed">
                     {industry.description}
                   </p>
                 </motion.div>
@@ -322,7 +322,7 @@ const HowWeWork = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="cta-section">
+      <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -331,10 +331,10 @@ const HowWeWork = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A2B4A]" style={{  }}>
               Ready to Transform Strategy into Results?
             </h2>
-            <p className="text-[#6B6B6B] mb-8 leading-relaxed">
+            <p className="text-[#6C757D] mb-8 leading-relaxed">
               Schedule a consultation to discuss how our methodology can address your specific strategic challenges.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

@@ -120,7 +120,7 @@ const Intelligence = () => {
   return (
     <div data-testid="intelligence-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" data-testid="hero-section">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -130,14 +130,14 @@ const Intelligence = () => {
           >
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
-              style={{ fontFamily: 'Playfair Display, serif' }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              style={{  }}
             >
               Proprietary Technology. Predictive Intelligence.
             </motion.h1>
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed"
+              className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
             >
               Enterprise-grade AI/ML analytics powered by our strategic partnership with OSG Analytics.
             </motion.p>
@@ -155,15 +155,15 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
                 What Makes Brackett Different
               </h2>
-              <p className="text-[#6B6B6B] leading-relaxed mb-6">
+              <p className="text-[#6C757D] leading-relaxed mb-6">
                 Most strategy consultants bring experience and frameworks. We bring that plus proprietary intelligence technology that processes customer behavioral data in ways traditional consulting can't.
               </p>
               <div className="bg-[#1E4D7B]/5 rounded-xl p-6 border border-[#1E4D7B]/10">
                 <h4 className="font-semibold text-[#1E4D7B] mb-2">Our Strategic Partnership</h4>
-                <p className="text-[#6B6B6B] text-sm leading-relaxed">
+                <p className="text-[#6C757D] text-sm leading-relaxed">
                   Brackett Agency partners strategically with OSG Analytics, a leader in AI/ML-powered customer intelligence and behavioral analytics. This partnership gives our clients access to enterprise-grade technology platforms typically reserved for Fortune 500 companies.
                 </p>
               </div>
@@ -182,28 +182,28 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
-              <div className="w-16 h-16 rounded-xl bg-[#B8975A]/10 flex items-center justify-center flex-shrink-0">
-                <Brain className="text-[#B8975A]" size={32} />
+              <div className="w-16 h-16 rounded-xl bg-[#C9A961]/10 flex items-center justify-center flex-shrink-0">
+                <Brain className="text-[#C9A961]" size={32} />
               </div>
               <div>
-                <p className="text-sm font-semibold text-[#B8975A] uppercase tracking-wider">Platform 1</p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 1</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
                   {platforms[0].name}
                 </h2>
-                <p className="text-[#6B6B6B] mt-1">{platforms[0].tagline}</p>
+                <p className="text-[#6C757D] mt-1">{platforms[0].tagline}</p>
               </div>
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
               <motion.div variants={fadeUpVariant}>
-                <p className="text-[#6B6B6B] leading-relaxed mb-6">
+                <p className="text-[#6C757D] leading-relaxed mb-6">
                   {platforms[0].description}
                 </p>
-                <h4 className="font-semibold text-[#2C2C2C] mb-4">How It Works</h4>
+                <h4 className="font-semibold text-[#1A2B4A] mb-4">How It Works</h4>
                 <ul className="space-y-3">
                   {platforms[0].howItWorks.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[#6B6B6B]">
-                      <ArrowRight size={16} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-3 text-[#6C757D]">
+                      <ArrowRight size={16} className="text-[#C9A961] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -211,9 +211,9 @@ const Intelligence = () => {
               </motion.div>
               
               <motion.div variants={fadeUpVariant}>
-                <div className="bg-[#F5F3EF] rounded-xl p-6 mb-6">
-                  <h4 className="font-semibold text-[#2C2C2C] mb-3">Why It Matters</h4>
-                  <p className="text-[#6B6B6B] text-sm leading-relaxed">
+                <div className="bg-[#F8F9FA] rounded-xl p-6 mb-6">
+                  <h4 className="font-semibold text-[#1A2B4A] mb-3">Why It Matters</h4>
+                  <p className="text-[#6C757D] text-sm leading-relaxed">
                     {platforms[0].whyMatters}
                   </p>
                 </div>
@@ -221,9 +221,9 @@ const Intelligence = () => {
                 <div className="grid grid-cols-2 gap-4">
                   {platforms[0].benefits.map((benefit, i) => (
                     <div key={i} className="bg-white rounded-lg p-4 border border-[rgba(0,0,0,0.05)]">
-                      <Check size={16} className="text-[#1A365D] mb-2" />
-                      <h5 className="font-semibold text-[#2C2C2C] text-sm">{benefit.title}</h5>
-                      <p className="text-[#6B6B6B] text-xs">{benefit.desc}</p>
+                      <Check size={16} className="text-[#1A2B4A] mb-2" />
+                      <h5 className="font-semibold text-[#1A2B4A] text-sm">{benefit.title}</h5>
+                      <p className="text-[#6C757D] text-xs">{benefit.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -231,22 +231,22 @@ const Intelligence = () => {
             </div>
 
             <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
-              <h4 className="font-semibold text-[#2C2C2C] mb-4">Use Cases</h4>
+              <h4 className="font-semibold text-[#1A2B4A] mb-4">Use Cases</h4>
               <div className="flex flex-wrap gap-3">
                 {platforms[0].useCases.map((useCase, i) => (
-                  <span key={i} className="bg-[#F5F3EF] text-[#6B6B6B] px-4 py-2 rounded-full text-sm">
+                  <span key={i} className="bg-[#F8F9FA] text-[#6C757D] px-4 py-2 rounded-full text-sm">
                     {useCase}
                   </span>
                 ))}
               </div>
-              <p className="text-[#B8975A] text-sm mt-4 font-medium">{platforms[0].partner}</p>
+              <p className="text-[#C9A961] text-sm mt-4 font-medium">{platforms[0].partner}</p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Platform 2: Brackett Intelligence Engine */}
-      <section className="py-20 md:py-28 bg-[#2C2C2C] text-white" data-testid="platform-2">
+      <section className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="platform-2">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -256,11 +256,11 @@ const Intelligence = () => {
           >
             <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
               <div className="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                <Database className="text-[#B8975A]" size={32} />
+                <Database className="text-[#C9A961]" size={32} />
               </div>
               <div>
-                <p className="text-sm font-semibold text-[#B8975A] uppercase tracking-wider">Platform 2</p>
-                <h2 className="text-2xl md:text-3xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 2</p>
+                <h2 className="text-2xl md:text-3xl font-bold" style={{  }}>
                   {platforms[1].name}
                 </h2>
                 <p className="text-white/60 mt-1">{platforms[1].tagline}</p>
@@ -273,33 +273,33 @@ const Intelligence = () => {
 
             <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-6 mb-8">
               <motion.div variants={fadeUpVariant} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h4 className="font-semibold text-[#B8975A] mb-4">Data Integration</h4>
+                <h4 className="font-semibold text-[#C9A961] mb-4">Data Integration</h4>
                 <ul className="space-y-2">
                   {platforms[1].capabilities.dataIntegration.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-white/70">
-                      <ArrowRight size={14} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
               <motion.div variants={fadeUpVariant} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h4 className="font-semibold text-[#B8975A] mb-4">AI/ML Analytics</h4>
+                <h4 className="font-semibold text-[#C9A961] mb-4">AI/ML Analytics</h4>
                 <ul className="space-y-2">
                   {platforms[1].capabilities.aiMl.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-white/70">
-                      <ArrowRight size={14} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
               <motion.div variants={fadeUpVariant} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h4 className="font-semibold text-[#B8975A] mb-4">Strategic Outputs</h4>
+                <h4 className="font-semibold text-[#C9A961] mb-4">Strategic Outputs</h4>
                 <ul className="space-y-2">
                   {platforms[1].capabilities.outputs.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-white/70">
-                      <ArrowRight size={14} className="text-[#B8975A] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -312,7 +312,7 @@ const Intelligence = () => {
               <p className="text-white/70 leading-relaxed">
                 {platforms[1].whyMatters}
               </p>
-              <p className="text-[#B8975A] text-sm mt-4 font-medium">{platforms[1].partner}</p>
+              <p className="text-[#C9A961] text-sm mt-4 font-medium">{platforms[1].partner}</p>
             </motion.div>
           </motion.div>
         </div>
@@ -328,51 +328,51 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
-              <div className="w-16 h-16 rounded-xl bg-[#1A365D]/10 flex items-center justify-center flex-shrink-0">
-                <Users className="text-[#1A365D]" size={32} />
+              <div className="w-16 h-16 rounded-xl bg-[#1A2B4A]/10 flex items-center justify-center flex-shrink-0">
+                <Users className="text-[#1A2B4A]" size={32} />
               </div>
               <div>
-                <p className="text-sm font-semibold text-[#B8975A] uppercase tracking-wider">Platform 3</p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 3</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
                   {platforms[2].name}
                 </h2>
-                <p className="text-[#6B6B6B] mt-1">{platforms[2].tagline}</p>
+                <p className="text-[#6C757D] mt-1">{platforms[2].tagline}</p>
               </div>
             </motion.div>
 
-            <motion.p variants={fadeUpVariant} className="text-[#6B6B6B] leading-relaxed mb-8 max-w-2xl">
+            <motion.p variants={fadeUpVariant} className="text-[#6C757D] leading-relaxed mb-8 max-w-2xl">
               {platforms[2].description}
             </motion.p>
 
             <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-6 mb-8">
               <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
-                <h4 className="font-semibold text-[#2C2C2C] mb-4">NPS+ Methodology</h4>
+                <h4 className="font-semibold text-[#1A2B4A] mb-4">NPS+ Methodology</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.npsPlus.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                      <ArrowRight size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                      <ArrowRight size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
               <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
-                <h4 className="font-semibold text-[#2C2C2C] mb-4">Journey Intelligence</h4>
+                <h4 className="font-semibold text-[#1A2B4A] mb-4">Journey Intelligence</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.journey.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                      <ArrowRight size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                      <ArrowRight size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
               <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[rgba(0,0,0,0.05)]">
-                <h4 className="font-semibold text-[#2C2C2C] mb-4">Lifetime Value Optimization</h4>
+                <h4 className="font-semibold text-[#1A2B4A] mb-4">Lifetime Value Optimization</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.ltv.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[#6B6B6B]">
-                      <ArrowRight size={14} className="text-[#1A365D] mt-1 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                      <ArrowRight size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -380,19 +380,19 @@ const Intelligence = () => {
               </motion.div>
             </motion.div>
 
-            <motion.div variants={fadeUpVariant} className="bg-[#F5F3EF] rounded-xl p-6">
-              <h4 className="font-semibold text-[#2C2C2C] mb-3">Why It Matters</h4>
-              <p className="text-[#6B6B6B] leading-relaxed">
+            <motion.div variants={fadeUpVariant} className="bg-[#F8F9FA] rounded-xl p-6">
+              <h4 className="font-semibold text-[#1A2B4A] mb-3">Why It Matters</h4>
+              <p className="text-[#6C757D] leading-relaxed">
                 {platforms[2].whyMatters}
               </p>
-              <p className="text-[#B8975A] text-sm mt-4 font-medium">{platforms[2].partner}</p>
+              <p className="text-[#C9A961] text-sm mt-4 font-medium">{platforms[2].partner}</p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Technology Advantages */}
-      <section className="py-20 md:py-28 bg-[#F5F3EF]" data-testid="comparison-section">
+      <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="comparison-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -401,14 +401,14 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
                 Technology Advantages
               </h2>
             </motion.div>
 
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto bg-white rounded-xl overflow-hidden border border-[rgba(0,0,0,0.05)]">
               <div className="grid grid-cols-2">
-                <div className="bg-[#6B6B6B] text-white p-4 font-semibold text-center text-sm">
+                <div className="bg-[#6C757D] text-white p-4 font-semibold text-center text-sm">
                   Traditional Consulting
                 </div>
                 <div className="bg-[#1E4D7B] text-white p-4 font-semibold text-center text-sm">
@@ -417,8 +417,8 @@ const Intelligence = () => {
               </div>
               {comparisonData.map((row, index) => (
                 <div key={index} className="grid grid-cols-2 border-t border-[rgba(0,0,0,0.05)]">
-                  <div className="p-4 text-[#6B6B6B] text-sm">{row.traditional}</div>
-                  <div className="p-4 text-[#2C2C2C] font-medium text-sm bg-[#1E4D7B]/5">{row.brackett}</div>
+                  <div className="p-4 text-[#6C757D] text-sm">{row.traditional}</div>
+                  <div className="p-4 text-[#1A2B4A] font-medium text-sm bg-[#1E4D7B]/5">{row.brackett}</div>
                 </div>
               ))}
             </motion.div>
@@ -440,10 +440,10 @@ const Intelligence = () => {
                 <Shield className="text-[#4A7C59]" size={32} />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
                   Security & Compliance
                 </h2>
-                <p className="text-[#6B6B6B] mt-1">Enterprise-Grade Infrastructure</p>
+                <p className="text-[#6C757D] mt-1">Enterprise-Grade Infrastructure</p>
               </div>
             </motion.div>
 
@@ -451,16 +451,16 @@ const Intelligence = () => {
               <motion.div variants={fadeUpVariant}>
                 <ul className="space-y-3">
                   {securityFeatures.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[#6B6B6B]">
+                    <li key={i} className="flex items-start gap-3 text-[#6C757D]">
                       <Check size={18} className="text-[#4A7C59] mt-1 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
-              <motion.div variants={fadeUpVariant} className="bg-[#F5F3EF] rounded-xl p-6">
-                <h4 className="font-semibold text-[#2C2C2C] mb-3">Trusted By</h4>
-                <p className="text-[#6B6B6B] text-sm leading-relaxed">
+              <motion.div variants={fadeUpVariant} className="bg-[#F8F9FA] rounded-xl p-6">
+                <h4 className="font-semibold text-[#1A2B4A] mb-3">Trusted By</h4>
+                <p className="text-[#6C757D] text-sm leading-relaxed">
                   Healthcare systems, pharmaceutical companies, medical device manufacturers, financial services firms, and Fortune 500 enterprises with the most demanding security requirements.
                 </p>
               </motion.div>
@@ -470,7 +470,7 @@ const Intelligence = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-[#1A365D] text-white" data-testid="cta-section">
+      <section className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -479,7 +479,7 @@ const Intelligence = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{  }}>
               See What Our Intelligence Can Reveal About Your Business
             </h2>
             <p className="text-white/80 mb-8 leading-relaxed">
@@ -489,7 +489,7 @@ const Intelligence = () => {
               href="https://form.jotform.com/252728460666061"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-[#2C2C2C] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[#1A2B4A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
               data-testid="cta-audit"
             >
               Request Your Strategic Audit

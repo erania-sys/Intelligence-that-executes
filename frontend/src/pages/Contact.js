@@ -69,7 +69,7 @@ const Contact = () => {
   return (
     <div data-testid="contact-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-[#F5F3EF] to-[#FAFAF8]" data-testid="hero-section">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -79,14 +79,14 @@ const Contact = () => {
           >
             <motion.h1
               variants={fadeUpVariant}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#2C2C2C]"
-              style={{ fontFamily: 'Playfair Display, serif' }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+              style={{  }}
             >
               Ready to See What You're Missing?
             </motion.h1>
             <motion.p
               variants={fadeUpVariant}
-              className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed"
+              className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
             >
               Request a strategic consultation and discover the opportunities hiding in your business.
             </motion.p>
@@ -107,10 +107,10 @@ const Contact = () => {
               {/* Left Column - Contact Form CTA */}
               <motion.div variants={fadeUpVariant}>
                 <div className="bg-white rounded-xl p-8 border border-[rgba(0,0,0,0.05)] mb-8">
-                  <h2 className="text-2xl font-bold text-[#2C2C2C] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+                  <h2 className="text-2xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
                     Request Strategic Consultation
                   </h2>
-                  <p className="text-[#6B6B6B] mb-6 leading-relaxed">
+                  <p className="text-[#6C757D] mb-6 leading-relaxed">
                     Tell us about your strategic challenges and we'll schedule a conversation to explore how we can help.
                   </p>
                   
@@ -125,33 +125,33 @@ const Contact = () => {
                     <ArrowRight size={18} className="ml-2" />
                   </a>
                   
-                  <p className="text-[#6B6B6B] text-xs mt-4 text-center">
+                  <p className="text-[#6C757D] text-xs mt-4 text-center">
                     Your information is secure and will never be shared.
                   </p>
                 </div>
 
                 {/* Contact Information */}
-                <div className="bg-[#F5F3EF] rounded-xl p-8">
-                  <h3 className="text-lg font-bold text-[#2C2C2C] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <div className="bg-[#F8F9FA] rounded-xl p-8">
+                  <h3 className="text-lg font-bold text-[#1A2B4A] mb-6" style={{  }}>
                     Contact Information
                   </h3>
                   
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <Mail size={18} className="text-[#B8975A] mt-1" />
+                      <Mail size={18} className="text-[#C9A961] mt-1" />
                       <div>
-                        <p className="text-sm text-[#6B6B6B]">Email</p>
-                        <a href="mailto:erania@brackett.agency" className="text-[#2C2C2C] font-medium hover:text-[#B8975A] transition-colors">
+                        <p className="text-sm text-[#6C757D]">Email</p>
+                        <a href="mailto:erania@brackett.agency" className="text-[#1A2B4A] font-medium hover:text-[#C9A961] transition-colors">
                           erania@brackett.agency
                         </a>
                       </div>
                     </div>
                     
                     <div className="flex items-start gap-3">
-                      <Clock size={18} className="text-[#B8975A] mt-1" />
+                      <Clock size={18} className="text-[#C9A961] mt-1" />
                       <div>
-                        <p className="text-sm text-[#6B6B6B]">Office Hours</p>
-                        <p className="text-[#2C2C2C] font-medium">Monday-Friday, 9:00 AM - 5:00 PM EST</p>
+                        <p className="text-sm text-[#6C757D]">Office Hours</p>
+                        <p className="text-[#1A2B4A] font-medium">Monday-Friday, 9:00 AM - 5:00 PM EST</p>
                       </div>
                     </div>
                   </div>
@@ -160,8 +160,8 @@ const Contact = () => {
 
               {/* Right Column - Strategic Blindspot Audit */}
               <motion.div variants={fadeUpVariant}>
-                <div className="bg-[#1A365D] rounded-xl p-8 text-white">
-                  <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <div className="bg-[#1A2B4A] rounded-xl p-8 text-white">
+                  <h2 className="text-2xl font-bold mb-2" style={{  }}>
                     The Strategic Blindspot Audit™
                   </h2>
                   <p className="text-white/80 mb-6">
@@ -188,7 +188,7 @@ const Contact = () => {
                     href="https://form.jotform.com/252728460666061"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white text-[#2C2C2C] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors w-full justify-center"
+                    className="inline-flex items-center gap-2 bg-white text-[#1A2B4A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors w-full justify-center"
                     data-testid="cta-audit"
                   >
                     Request Your Strategic Audit
@@ -202,7 +202,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-20 bg-[#F5F3EF]" data-testid="faq-section">
+      <section className="py-16 md:py-20 bg-[#F8F9FA]" data-testid="faq-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -211,7 +211,7 @@ const Contact = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
                 Frequently Asked Questions
               </h2>
             </motion.div>
@@ -225,10 +225,10 @@ const Contact = () => {
                       className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FAFAF8] transition-colors"
                       data-testid={`faq-${index}`}
                     >
-                      <span className="font-semibold text-[#2C2C2C] pr-4">{faq.question}</span>
+                      <span className="font-semibold text-[#1A2B4A] pr-4">{faq.question}</span>
                       <ChevronDown
                         size={20}
-                        className={`text-[#B8975A] flex-shrink-0 transition-transform ${
+                        className={`text-[#C9A961] flex-shrink-0 transition-transform ${
                           openFaq === index ? 'rotate-180' : ''
                         }`}
                       />
@@ -243,7 +243,7 @@ const Contact = () => {
                           className="overflow-hidden"
                         >
                           <div className="px-6 pb-5">
-                            <p className="text-[#6B6B6B] leading-relaxed">{faq.answer}</p>
+                            <p className="text-[#6C757D] leading-relaxed">{faq.answer}</p>
                           </div>
                         </motion.div>
                       )}
