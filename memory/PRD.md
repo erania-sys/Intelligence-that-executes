@@ -1,116 +1,129 @@
-# Brackett Agency Website - PRD
+# Brackett Agency Website - Product Requirements Document
+
+## Project Overview
+**Project Name:** Brackett Agency Website Redesign  
+**Last Updated:** December 2025  
+**Status:** ✅ Complete - Major Restructuring Done
 
 ## Original Problem Statement
-Create a cleaner version of the Brackett Agency website (https://brackett.agency/) for business purposes. Ensure the messaging is clear, the services offered are clear, and that the code can be redeployed to Squarespace.
+Create a cleaner, more business-oriented version of the Brackett Agency website with premium positioning for mid-market B2B strategic consulting services.
 
-## User Choices
-- **Design**: Modern & Bold with dynamic sections and strong typography
-- **Color Scheme**: Keep current brand colors (dark/black backgrounds with white text)
-- **Pages**: Home + About + Services + Case Studies + Contact (all pages)
-- **Contact Form**: External JotForm (https://form.jotform.com/252728460666061)
-- **Updates**: New tagline and service descriptions
-- **Intelligence Partner**: OSG Analytics platforms (o360, PatientX360, ASEMAP) - not mentioned by company name
+## Brand Identity
+- **Tagline:** "Intelligence That Executes."
+- **Positioning:** Fractional strategy partner for mid-market B2B companies ($10-50M revenue) needing senior strategic thinking backed by AI-powered intelligence
+- **Target Audience:** CEOs, leadership teams, PE-backed portfolio companies, funded startups (Series A+)
 
-## Target Audience
-Corporate executives, startup founders, and small business owners seeking strategic consulting powered by advanced customer analytics.
+## Brand Colors
+- **Brackett Brown:** #8B6F47 (primary accent from logo)
+- **Brackett Gold:** #B8975A 
+- **Deep Charcoal:** #2C2C2C (headings)
+- **Warm Gray:** #6B6B6B (body text)
+- **Cream:** #F5F3EF (backgrounds)
+- **Growth Teal:** #2D7B7B (CTAs)
+- **Intelligence Blue:** #1E4D7B (technology sections)
 
-## Tech Stack
-- **Frontend**: React 19 with React Router
-- **Styling**: Tailwind CSS + Custom CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Typography**: Syne (headings) + Manrope (body) via Google Fonts
-
----
-
-## What's Been Implemented (January 2026)
-
-### Intelligence Platform Integration
-The website now explains that Brackett's strategic intelligence is powered by three advanced platforms:
-- **o360**: Comprehensive customer intelligence platform for real-time analytics
-- **PatientX360**: Healthcare-specific intelligence for patient choice and behavior
-- **ASEMAP**: Proprietary choice analytics revealing behavioral/cognitive drivers behind decisions
-
-### Core Pages
-1. **Home Page**
-   - Hero section with tagline: "Strategic Intelligence for the Modern Age"
-   - NEW: "Our Intelligence Engine" section showcasing o360, PatientX360, ASEMAP
-   - Philosophy section highlighting approach
-   - Services overview with 3 key categories
-   - Testimonials from industry leaders
-   - CTA sections with JotForm integration
-
-2. **About Page**
-   - Company story and intelligence-powered approach
-   - NEW: Platform cards explaining o360, PatientX360, ASEMAP capabilities
-   - Core values grid (Insight-Driven, Execution-Focused, Client-Centric, Technology-Enabled)
-   - Key strengths with visual design
-
-3. **Services Page** (Updated - Removed Executive Coaching/Leadership)
-   - Strategic Intelligence Advisory (Customer Intelligence, Choice Analytics, Predictive Intelligence)
-   - Customer Experience & Brand (CX Strategy, Execution Planning, Brand Positioning)
-   - Healthcare Intelligence (Patient Choice Analytics, Healthcare Experience, Market Intelligence)
-   - Platform-Powered Insights capabilities section
-
-4. **Case Studies Page**
-   - Stats section (50+ Projects, 3x ROI, 95% Retention, 12+ Industries)
-   - 3 featured case studies with challenge/solution/result format
-   - Industry partners section
-
-5. **Contact Page**
-   - Main CTA linking to external JotForm
-   - Resource downloads (Advisory Overview, One Page Brochure)
-   - Engagement process steps
-
-### Removed Services
-- Executive Leadership Development
-- Executive Coaching
-- Leadership Transformation
-- Organizational Transformation Advisory
-
-### Design System (Updated January 2026)
-- **Theme**: Light, warm, business-oriented with approachable personality
-- **Colors**: Cream background (#FAFAF8), Forest green accent (#2D5A4A), Dark footer (#1A1A1A)
-- **Typography**: Playfair Display (serif headings), DM Sans (body text)
-- **Cards**: Clean white backgrounds with subtle borders, gentle hover effects
-- **Accent Elements**: Colored dots, accent lines, stylized quote marks
-- **CTAs**: Forest green buttons with white text, friendly "Let's Talk" language
-
-### Components
-- **Navigation**: Floating glassmorphism navbar with mobile responsive menu
-- **Footer**: Full footer with navigation, resources, and copyright
+## Typography
+- **Headings:** Playfair Display (serif)
+- **Body:** Montserrat (sans-serif)
 
 ---
 
-## External Links (Preserved)
-- JotForm Contact: https://form.jotform.com/252728460666061
-- Advisory Overview PDF: https://brackett.agency/s/brackett_strategic_intelligence_deck.pdf
-- One Page Brochure PDF: https://brackett.agency/s/brackett_agency_one_pager_1.pdf
+## What's Been Implemented ✅
+
+### December 2025 - Complete Website Restructuring
+
+**Navigation Structure (8 Pages):**
+1. ✅ **Home** - Hero, Problem section, Solution overview, Technology preview, Leadership, CTA
+2. ✅ **How We Work** - 3-phase methodology (Intelligence → Strategy → Execution), Industries served
+3. ✅ **Solutions** - Tabbed interface with 3 tabs:
+   - Signature Programs (Revenue Clarity System™, Market Position Reset™, Growth Execution Accelerator™)
+   - Strategic Partnerships (Executive & Growth retainers)
+   - Diagnostic Audit (Strategic Blindspot Audit™)
+4. ✅ **Brand & Design** - NEW PAGE with services, packages, industry expertise, approach
+5. ✅ **Intelligence** - 3 platforms (Customer Choice Intelligence™, Brackett Intelligence Engine™, CX Analytics™)
+6. ✅ **Insights** - Blog/resources with filter tabs and newsletter signup
+7. ✅ **About** - Leadership bios (Erania Brackett, Dr. R. Sukumar), Our Story, OSG Partnership
+8. ✅ **Contact** - JotForm link, Strategic Blindspot Audit CTA, FAQ accordion
+
+**Components:**
+- ✅ Navigation with responsive design (desktop + mobile)
+- ✅ Footer with CTA banner, navigation links, contact info
+- ✅ Animated counters for statistics
+- ✅ Tab components for Solutions and Insights pages
+- ✅ FAQ accordion for Contact and Brand & Design pages
+
+**Technical Features:**
+- ✅ React Router for navigation
+- ✅ Framer Motion for animations
+- ✅ Lucide React for icons
+- ✅ CSS variables for theming
+- ✅ Responsive design (mobile-first)
+- ✅ External JotForm integration for contact
 
 ---
 
-## Future Backlog (P1/P2)
+## Architecture
 
-### P1 - High Priority
-- Add demo request form or platform showcase
-- Add analytics tracking (Google Analytics/Plausible)
-
-### P2 - Medium Priority
-- Add individual case study detail pages
-- Blog/Insights section for thought leadership
-- Platform integration demos or videos
-
-### P3 - Nice to Have
-- Newsletter signup integration
-- Live chat widget
-- CRM integration for leads
+```
+/app/frontend/src/
+├── App.js                    # Main routing
+├── App.css                   # Component styles
+├── index.css                 # Global styles, CSS variables
+├── components/
+│   ├── Navigation.js         # Header navigation
+│   ├── Footer.js             # Footer component
+│   ├── AnimatedCounter.js    # Stats animation
+│   └── ui/                   # Shadcn UI components
+└── pages/
+    ├── Home.js               # Homepage
+    ├── HowWeWork.js          # Methodology page
+    ├── Solutions.js          # Solutions with tabs
+    ├── BrandDesign.js        # Brand & Design services
+    ├── Intelligence.js       # Technology platforms
+    ├── Insights.js           # Blog/resources
+    ├── About.js              # Team & company info
+    └── Contact.js            # Contact with FAQ
+```
 
 ---
 
-## Squarespace Redeployment Notes
-The current React implementation would need to be either:
-1. Exported as static HTML/CSS/JS and imported to Squarespace
-2. Rebuilt using Squarespace's native page builder following this design system
-3. Hosted externally and embedded via Squarespace
+## External Integrations
+- **JotForm:** https://form.jotform.com/252728460666061 (contact form)
+- **No backend required** - Static frontend site
 
-Recommended: Consider hosting on Vercel/Netlify for full functionality, or recreate the design in Squarespace's builder using this as reference.
+---
+
+## Testing Status
+- ✅ All 8 navigation pages working
+- ✅ All CTAs link to JotForm correctly
+- ✅ Solutions tabs functional
+- ✅ FAQ accordions working
+- ✅ Insights filter tabs working
+- ✅ Mobile navigation working
+- ✅ Footer links working
+
+**Test Report:** `/app/test_reports/iteration_6.json` - 100% pass rate
+
+---
+
+## Future Considerations / Backlog
+
+### P1 - Nice to Have
+- [ ] Add actual case study content when available
+- [ ] Add blog article content to Insights page
+- [ ] Client logo carousel for social proof
+- [ ] Testimonial quotes from actual clients
+
+### P2 - Enhancement Ideas
+- [ ] Newsletter integration (currently static form)
+- [ ] Calendar widget for scheduling consultations
+- [ ] Dark mode toggle
+- [ ] More interactive data visualizations
+
+### Squarespace Deployment Notes
+For deploying to Squarespace:
+1. Build the React app: `yarn build`
+2. Options for deployment:
+   - Use Squarespace Code Block for embedding
+   - Use Developer Mode for full integration
+   - Consider external hosting (Vercel/Netlify) with custom domain redirect
