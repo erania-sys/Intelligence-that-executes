@@ -85,8 +85,12 @@ const Home = () => {
 
   return (
     <div data-testid="home-page" className="bg-white">
-      {/* Hero Section */}
+      {/* Hero Section - Now with black accents */}
       <section className="min-h-[90vh] flex items-center pt-20 pb-16 relative overflow-hidden bg-white" data-testid="hero-section">
+        {/* Decorative elements */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-[#0A0A0A]/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#C9A961]/10 to-transparent rounded-full blur-2xl"></div>
+        
         <div className="section-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -96,7 +100,7 @@ const Home = () => {
             >
               <motion.h1
                 variants={fadeUpVariant}
-                className="text-[36px] md:text-[42px] lg:text-[48px] font-semibold leading-[1.15] mb-6 text-[#1A2B4A]"
+                className="text-[36px] md:text-[42px] lg:text-[48px] font-semibold leading-[1.15] mb-6 text-[#0A0A0A]"
               >
                 Stop Leaving Millions on the Table. Get the Strategic Intelligence You Need—Without the Full-Time Overhead.
               </motion.h1>
@@ -117,18 +121,18 @@ const Home = () => {
                   href="https://form.jotform.com/252728460666061"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-black group"
                   data-testid="hero-cta-primary"
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   Request Strategic Consultation
-                  <ArrowRight size={18} className="ml-2" />
+                  <ArrowRight size={18} className="ml-2 arrow-slide" />
                 </motion.a>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     to="/how-we-work"
-                    className="btn-secondary"
+                    className="btn-secondary border-[#0A0A0A] text-[#0A0A0A] hover:bg-[#0A0A0A]"
                     data-testid="hero-cta-secondary"
                   >
                     Explore Our Approach
@@ -138,23 +142,23 @@ const Home = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 50, scale: 0.95 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden lg:block"
+              className="hidden lg:block img-zoom rounded-lg overflow-hidden shadow-2xl"
             >
               <img 
                 src="https://images.unsplash.com/photo-1758518727707-b023e285b709?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwbWVldGluZyUyMGV4ZWN1dGl2ZXxlbnwwfHx8fDE3NzE3MDQwNjV8MA&ixlib=rb-4.1.0&q=85"
                 alt="Business strategy meeting"
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
+                className="w-full h-auto object-cover"
               />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Problem Section */}
-      <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="problem-section">
+      {/* Problem Section - Black background */}
+      <section className="py-20 md:py-28 bg-[#0A0A0A]" data-testid="problem-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -163,7 +167,7 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1A2B4A] mb-4">
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-white mb-4">
                 You're Making Million-Dollar Decisions in the Dark
               </h2>
             </motion.div>
@@ -176,15 +180,16 @@ const Home = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-md p-8 border border-[#E9ECEF] shadow-sm"
+                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                  className="bg-[#1A1A1A] rounded-md p-8 border border-[#2A2A2A] card-hover-lift"
                 >
-                  <div className="w-8 h-8 rounded-full bg-[#1A2B4A] flex items-center justify-center mb-4">
-                    <span className="text-white font-semibold text-sm">{index + 1}</span>
+                  <div className="w-10 h-10 rounded-full bg-[#C9A961] flex items-center justify-center mb-4">
+                    <span className="text-[#0A0A0A] font-bold text-sm">{index + 1}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-[#1A2B4A]">
+                  <h3 className="text-xl font-semibold mb-3 text-white">
                     {problem.title}
                   </h3>
-                  <p className="text-[#6C757D] leading-relaxed">
+                  <p className="text-white/60 leading-relaxed">
                     {problem.description}
                   </p>
                 </motion.div>
