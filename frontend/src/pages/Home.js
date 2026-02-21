@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Target, Zap, Brain, Check } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import AnimatedCounter from '../components/AnimatedCounter';
 
 const fadeUpVariant = {
@@ -32,17 +32,14 @@ const Home = () => {
 
   const valueProps = [
     {
-      icon: Target,
       title: 'Fractional Strategic Executives',
       description: 'Senior strategic thinking when you need it—without full-time salary, benefits, and equity overhead. Direct access to battle-tested executives who\'ve led Fortune 500 transformations.'
     },
     {
-      icon: Brain,
       title: 'Proprietary Intelligence Technology',
       description: 'AI-powered Customer Choice Intelligence and behavioral analytics that predict what drives customer decisions with exceptional accuracy. Not consultant opinions—data-driven insights.'
     },
     {
-      icon: Zap,
       title: 'Outcomes, Not Overhead',
       description: 'Structured programs with measurable outcomes. Revenue intelligence roadmaps. Positioning transformations. Execution partnerships. Real results, not endless retainers.'
     }
@@ -223,9 +220,6 @@ const Home = () => {
                   variants={fadeUpVariant}
                   className="bg-[#F8F9FA] rounded-md p-8 border border-[#E9ECEF] hover:shadow-md transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-md bg-[#1A2B4A] flex items-center justify-center mb-4">
-                    <prop.icon className="text-white" size={24} />
-                  </div>
                   <h3 className="text-xl font-semibold mb-3 text-[#1A2B4A]">
                     {prop.title}
                   </h3>
