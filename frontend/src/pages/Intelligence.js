@@ -17,7 +17,7 @@ const Intelligence = () => {
   const platforms = [
     {
       icon: Brain,
-      name: 'Customer Choice Intelligence™',
+      name: 'Customer Choice Intelligence',
       tagline: 'Predictive Tradeoff Technology',
       description: 'Measures the magnitude of customer decisions—not just preferences or rankings.',
       howItWorks: [
@@ -41,11 +41,11 @@ const Intelligence = () => {
         'Innovation pipeline prioritization',
         'Customer segmentation and targeting'
       ],
-      partner: 'Powered by OSG Analytics\' ASEMAP™ methodology'
+      partner: 'Powered by OSG Analytics\' ASEMAP methodology'
     },
     {
       icon: Database,
-      name: 'Brackett Intelligence Engine™',
+      name: 'Brackett Intelligence Engine',
       tagline: 'AI/ML Analytics Platform',
       description: 'Consolidates structured and unstructured data sources into real-time intelligence dashboards.',
       capabilities: {
@@ -73,7 +73,7 @@ const Intelligence = () => {
     },
     {
       icon: Users,
-      name: 'Customer Experience Analytics™',
+      name: 'Customer Experience Analytics',
       tagline: 'Advanced CX Measurement',
       description: 'Measures customer sentiment drivers, engagement triggers, and lifetime value optimization opportunities.',
       capabilities: {
@@ -97,7 +97,7 @@ const Intelligence = () => {
         ]
       },
       whyMatters: 'Most companies measure NPS. We tell you why customers feel that way and what interventions will change behavior. That\'s actionable intelligence, not just interesting metrics.',
-      partner: 'Powered by OSG Analytics\' o360™ platform'
+      partner: 'Powered by OSG Analytics\' o360 platform'
     }
   ];
 
@@ -131,7 +131,7 @@ const Intelligence = () => {
             <motion.h1
               variants={fadeUpVariant}
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              style={{  }}
+              
             >
               Proprietary Technology. Predictive Intelligence.
             </motion.h1>
@@ -155,7 +155,7 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" >
                 What Makes Brackett Different
               </h2>
               <p className="text-[#6C757D] leading-relaxed mb-6">
@@ -187,7 +187,7 @@ const Intelligence = () => {
               </div>
               <div>
                 <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 1</p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
                   {platforms[0].name}
                 </h2>
                 <p className="text-[#6C757D] mt-1">{platforms[0].tagline}</p>
@@ -260,7 +260,7 @@ const Intelligence = () => {
               </div>
               <div>
                 <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 2</p>
-                <h2 className="text-2xl md:text-3xl font-bold" style={{  }}>
+                <h2 className="text-2xl md:text-3xl font-bold" >
                   {platforms[1].name}
                 </h2>
                 <p className="text-white/60 mt-1">{platforms[1].tagline}</p>
@@ -333,7 +333,7 @@ const Intelligence = () => {
               </div>
               <div>
                 <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 3</p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
                   {platforms[2].name}
                 </h2>
                 <p className="text-[#6C757D] mt-1">{platforms[2].tagline}</p>
@@ -401,7 +401,7 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
                 Technology Advantages
               </h2>
             </motion.div>
@@ -440,7 +440,7 @@ const Intelligence = () => {
                 <Shield className="text-[#4A7C59]" size={32} />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
                   Security & Compliance
                 </h2>
                 <p className="text-[#6C757D] mt-1">Enterprise-Grade Infrastructure</p>
@@ -479,11 +479,11 @@ const Intelligence = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{  }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" >
               See What Our Intelligence Can Reveal About Your Business
             </h2>
             <p className="text-white/80 mb-8 leading-relaxed">
-              The Strategic Blindspot Audit™ includes access to all three intelligence platforms with analysis of your customer and market data.
+              The Strategic Blindspot Audit includes access to all three intelligence platforms with analysis of your customer and market data.
             </p>
             <a
               href="https://form.jotform.com/252728460666061"

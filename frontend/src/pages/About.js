@@ -44,7 +44,7 @@ const About = () => {
       'Fortune 500 Transformation Leaders'
     ],
     academic: [
-      'Stanford-Born Methodology (ASEMAP™)',
+      'Stanford-Born Methodology (ASEMAP)',
       'Top-Tier Business School Faculty',
       'Peer-Reviewed Research Publications'
     ],
@@ -76,7 +76,7 @@ const About = () => {
             <motion.h1
               variants={fadeUpVariant}
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              style={{  }}
+              
             >
               Battle-Tested Leadership. Enterprise-Grade Results.
             </motion.h1>
@@ -101,7 +101,7 @@ const About = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Leadership</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
                 Meet Our Team
               </h2>
             </motion.div>
@@ -113,9 +113,9 @@ const About = () => {
                   <div className="md:w-1/3 bg-gradient-to-br from-[#C9A961] to-[#6B5A3A] p-8 md:p-12 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-32 h-32 rounded-full bg-white/20 mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-5xl font-bold text-white" style={{  }}>EB</span>
+                        <span className="text-5xl font-bold text-white" >EB</span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white" style={{  }}>
+                      <h3 className="text-2xl font-bold text-white" >
                         Erania Brackett
                       </h3>
                       <p className="text-white/80">Founder & CEO</p>
@@ -156,9 +156,9 @@ const About = () => {
                   <div className="md:w-1/3 bg-gradient-to-br from-[#2E5C8A] to-[#153A5E] p-8 md:p-12 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-32 h-32 rounded-full bg-white/20 mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-5xl font-bold text-white" style={{  }}>RS</span>
+                        <span className="text-5xl font-bold text-white" >RS</span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white" style={{  }}>
+                      <h3 className="text-2xl font-bold text-white" >
                         Dr. R. Sukumar
                       </h3>
                       <p className="text-white/80 text-sm">President & Global CEO, OSG Analytics</p>
@@ -170,7 +170,7 @@ const About = () => {
                       Dr. Sukumar brings over 25 years of experience spanning academia and global corporations. He has taught at top institutions including Rutgers Business School, Thunderbird School of Global Management, University of Maryland, and Rice University, and served as Associate Dean at the Indian School of Business.
                     </p>
                     <p className="text-[#6C757D] leading-relaxed mb-6">
-                      As President & Global CEO of OSG Analytics and strategic technology partner to Brackett Agency, Dr. Sukumar is the architect of the Stanford-born ASEMAP™ methodology and OSG's AI/ML analytics platforms. His proprietary intelligence frameworks have been academically validated and are used by Fortune 500 companies across CPG, Financial Services, Pharmaceutical, and Healthcare industries.
+                      As President & Global CEO of OSG Analytics and strategic technology partner to Brackett Agency, Dr. Sukumar is the architect of the Stanford-born ASEMAP methodology and OSG's AI/ML analytics platforms. His proprietary intelligence frameworks have been academically validated and are used by Fortune 500 companies across CPG, Financial Services, Pharmaceutical, and Healthcare industries.
                     </p>
                     <div className="mb-6">
                       <h4 className="font-semibold text-[#1A2B4A] mb-3">Expertise</h4>
@@ -202,7 +202,7 @@ const About = () => {
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Our Story</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-6" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-6" >
                 Why We Founded Brackett Agency
               </h2>
             </motion.div>
@@ -220,7 +220,7 @@ const About = () => {
                 </p>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1A2B4A] mb-6 text-center" style={{  }}>
+              <h3 className="text-xl font-bold text-[#1A2B4A] mb-6 text-center" >
                 What We Believe
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -256,7 +256,7 @@ const About = () => {
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto text-center mb-12">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Technology Partner</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-6" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-6" >
                 OSG Analytics (Optimal Strategix Group)
               </h2>
             </motion.div>
@@ -270,8 +270,8 @@ const About = () => {
                 <h4 className="font-semibold text-[#1A2B4A] mb-4">OSG Analytics Capabilities:</h4>
                 <ul className="grid md:grid-cols-2 gap-3 mb-6">
                   {[
-                    'ASEMAP™: Stanford-born predictive tradeoff methodology',
-                    'o360™: Advanced customer experience analytics',
+                    'ASEMAP: Stanford-born predictive tradeoff methodology',
+                    'o360: Advanced customer experience analytics',
                     'AI/ML analytics platform with real-time dashboards',
                     '25+ years of research methodology innovation',
                     'Trusted by Fortune 500 companies across industries'
@@ -305,7 +305,7 @@ const About = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold" >
                 Credentials & Recognition
               </h2>
             </motion.div>
@@ -365,7 +365,7 @@ const About = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A2B4A]" style={{  }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A2B4A]" >
               Ready to Work With Us?
             </h2>
             <p className="text-[#6C757D] mb-8 leading-relaxed">

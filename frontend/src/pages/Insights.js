@@ -156,7 +156,7 @@ const Insights = () => {
             <motion.h1
               variants={fadeUpVariant}
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              style={{  }}
+              
             >
               Strategic Intelligence. Delivered Weekly.
             </motion.h1>
@@ -246,7 +246,7 @@ const Insights = () => {
                         >
                           {getCategoryLabel(featuredArticle.category)}
                         </span>
-                        <h2 className="text-2xl md:text-3xl font-bold text-white" style={{  }}>
+                        <h2 className="text-2xl md:text-3xl font-bold text-white" >
                           Featured Article
                         </h2>
                       </div>
@@ -259,7 +259,7 @@ const Insights = () => {
                           {featuredArticle.readTime}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
+                      <h3 className="text-2xl font-bold text-[#1A2B4A] mb-4" >
                         {featuredArticle.title}
                       </h3>
                       <p className="text-[#6C757D] leading-relaxed mb-6">
@@ -300,7 +300,7 @@ const Insights = () => {
                         {article.readTime}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-[#1A2B4A] mb-3 group-hover:text-[#C9A961] transition-colors" style={{  }}>
+                    <h3 className="text-lg font-bold text-[#1A2B4A] mb-3 group-hover:text-[#C9A961] transition-colors" >
                       {article.title}
                     </h3>
                     <p className="text-[#6C757D] text-sm leading-relaxed mb-4 line-clamp-3">
@@ -340,11 +340,11 @@ const Insights = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" >
               Want Strategic Intelligence Applied to Your Business?
             </h2>
             <p className="text-[#6C757D] mb-6">
-              Request a Strategic Blindspot Audit™ to uncover the opportunities hiding in your data.
+              Request a Strategic Blindspot Audit to uncover the opportunities hiding in your data.
             </p>
             <a
               href="https://form.jotform.com/252728460666061"

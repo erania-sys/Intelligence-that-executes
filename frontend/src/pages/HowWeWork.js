@@ -22,14 +22,14 @@ const HowWeWork = () => {
       icon: Search,
       color: '#2E5C8A',
       whatHappens: [
-        'Customer Choice Intelligence™ analysis (understanding decision drivers)',
+        'Customer Choice Intelligence analysis (understanding decision drivers)',
         'Competitive positioning gap assessment',
         'Behavioral analytics and journey mapping',
         'Market trend and opportunity identification'
       ],
       technology: [
-        'Brackett Intelligence Engine™ platform access',
-        'Customer Experience Analytics™ tracking',
+        'Brackett Intelligence Engine platform access',
+        'Customer Experience Analytics tracking',
         'Predictive modeling and segmentation'
       ],
       deliverables: [
@@ -147,7 +147,7 @@ const HowWeWork = () => {
             <motion.h1
               variants={fadeUpVariant}
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              style={{  }}
+              
             >
               Intelligence → Strategy → Execution
             </motion.h1>
@@ -187,7 +187,7 @@ const HowWeWork = () => {
                     <span className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">
                       Phase {phase.number}
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mt-1" style={{  }}>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mt-1" >
                       {phase.title}
                     </h2>
                     <p className="text-[#6C757D] mt-2 max-w-2xl">
@@ -251,7 +251,7 @@ const HowWeWork = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold" >
                 Our Guarantee
               </h2>
             </motion.div>
@@ -266,7 +266,7 @@ const HowWeWork = () => {
                   variants={fadeUpVariant}
                   className="bg-white/5 rounded-xl p-8 border border-white/10"
                 >
-                  <h3 className="text-xl font-bold mb-3 text-[#C9A961]" style={{  }}>
+                  <h3 className="text-xl font-bold mb-3 text-[#C9A961]" >
                     {item.title}
                   </h3>
                   <p className="text-white/70 leading-relaxed text-sm">
@@ -290,7 +290,7 @@ const HowWeWork = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Industries</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
                 Industries We Serve
               </h2>
             </motion.div>
@@ -308,7 +308,7 @@ const HowWeWork = () => {
                   <div className="w-12 h-12 rounded-lg bg-[#F8F9FA] flex items-center justify-center mb-4">
                     <industry.icon className="text-[#C9A961]" size={24} />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-[#1A2B4A]" style={{  }}>
+                  <h3 className="text-lg font-bold mb-2 text-[#1A2B4A]" >
                     {industry.name}
                   </h3>
                   <p className="text-[#6C757D] text-sm leading-relaxed">
@@ -331,7 +331,7 @@ const HowWeWork = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A2B4A]" style={{  }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A2B4A]" >
               Ready to Transform Strategy into Results?
             </h2>
             <p className="text-[#6C757D] mb-8 leading-relaxed">

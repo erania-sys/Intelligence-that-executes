@@ -24,7 +24,7 @@ const Solutions = () => {
   const signaturePrograms = [
     {
       icon: TrendingUp,
-      name: 'The Revenue Clarity System™',
+      name: 'The Revenue Clarity System',
       problem: 'You know your company is leaving significant revenue on the table annually, but you can\'t pinpoint which customer segments, channels, or products actually drive profitable growth—and which drain resources.',
       outcome: '120-day intelligence-to-execution program identifying your top revenue leaks and opportunities with an executable roadmap for capturing substantial value within 12 months.',
       whoFor: [
@@ -34,7 +34,7 @@ const Solutions = () => {
         'Leadership asking "where should we invest?"'
       ],
       phases: [
-        { name: 'Intelligence Gathering', weeks: '1-4', items: ['Customer Choice Intelligence™ analysis', 'Competitive positioning gap assessment', 'Revenue architecture audit', 'Customer journey friction mapping'] },
+        { name: 'Intelligence Gathering', weeks: '1-4', items: ['Customer Choice Intelligence analysis', 'Competitive positioning gap assessment', 'Revenue architecture audit', 'Customer journey friction mapping'] },
         { name: 'Strategic Synthesis', weeks: '5-8', items: ['Priority stack-rank of revenue opportunities', 'Customer segmentation by lifetime value', 'Pricing/packaging optimization', 'Channel effectiveness analysis'] },
         { name: 'Execution Planning', weeks: '9-12', items: ['12-month revenue roadmap with milestones', 'Sales enablement toolkit', 'Marketing optimization plan', 'KPI dashboard with leading indicators'] },
         { name: 'Implementation Support', weeks: '13-16', items: ['Regular strategic review sessions', 'Unlimited async counsel', 'Mid-course corrections', 'Team training on frameworks'] }
@@ -45,7 +45,7 @@ const Solutions = () => {
     },
     {
       icon: Target,
-      name: 'The Market Position Reset™',
+      name: 'The Market Position Reset',
       problem: 'Your positioning sounds like everyone else. Sales can\'t articulate why prospects should choose you in 30 seconds. Buyers default to price comparisons. Win rates are stagnant.',
       outcome: '90-day positioning transformation that makes you the obvious choice for your ideal customer—measurable by improvements in sales cycle velocity and win rates.',
       whoFor: [
@@ -55,7 +55,7 @@ const Solutions = () => {
         'Mergers/acquisitions requiring unified positioning'
       ],
       phases: [
-        { name: 'Customer Intelligence', weeks: '1-4', items: ['Customer Choice Intelligence™ study', 'Buyer persona deep-dive', '"Jobs to be Done" framework analysis', 'Competitive perception audit'] },
+        { name: 'Customer Intelligence', weeks: '1-4', items: ['Customer Choice Intelligence study', 'Buyer persona deep-dive', '"Jobs to be Done" framework analysis', 'Competitive perception audit'] },
         { name: 'Positioning Strategy', weeks: '5-8', items: ['Differentiation architecture', 'Value proposition hierarchy', 'Competitive positioning map', 'Messaging framework development'] },
         { name: 'Market Activation', weeks: '9-12', items: ['Sales enablement toolkit', 'Website messaging recommendations', 'Content strategy roadmap', 'Sales team training sessions'] }
       ],
@@ -65,7 +65,7 @@ const Solutions = () => {
     },
     {
       icon: Zap,
-      name: 'The Growth Execution Accelerator™',
+      name: 'The Growth Execution Accelerator',
       problem: 'You have a strategic plan (maybe even a great one), but six months in, results aren\'t materializing. Teams are misaligned. You\'re burning significant resources without clear progress.',
       outcome: 'Diagnostic + execution partnership turning strategy into measurable momentum with defined wins achieved within the program timeline.',
       whoFor: [
@@ -166,7 +166,7 @@ const Solutions = () => {
   ];
 
   const auditTechnology = [
-    'Customer Choice Intelligence™ platform preview',
+    'Customer Choice Intelligence platform preview',
     'Real-time data visualization',
     'Competitive intelligence dashboard',
     'Behavioral analytics insights'
@@ -186,7 +186,7 @@ const Solutions = () => {
             <motion.h1
               variants={fadeUpVariant}
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              style={{  }}
+              
             >
               Productized Solutions. Predictable Outcomes.
             </motion.h1>
@@ -238,7 +238,7 @@ const Solutions = () => {
                         <program.icon className="text-[#1A2B4A]" size={28} />
                       </div>
                       <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" style={{  }}>
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
                           {program.name}
                         </h2>
                       </div>
@@ -309,7 +309,7 @@ const Solutions = () => {
                           <Clock size={18} className="text-[#C9A961]" />
                           <h4 className="font-semibold text-[#1A2B4A]">Timeline</h4>
                         </div>
-                        <p className="text-2xl font-bold text-[#1A2B4A]" style={{  }}>
+                        <p className="text-2xl font-bold text-[#1A2B4A]" >
                           {program.timeline}
                         </p>
                       </div>
@@ -353,7 +353,7 @@ const Solutions = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="text-center mb-12">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" >
                     Fractional Strategic Executives On Retainer
                   </h2>
                 </div>
@@ -366,7 +366,7 @@ const Solutions = () => {
                           <Users className="text-[#2E5C8A]" size={24} />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-[#1A2B4A]" style={{  }}>
+                          <h3 className="text-xl font-bold text-[#1A2B4A]" >
                             {partnership.name}
                           </h3>
                           <p className="text-[#C9A961] font-medium">{partnership.subtitle}</p>
@@ -468,10 +468,10 @@ const Solutions = () => {
               >
                 <div className="max-w-4xl mx-auto">
                   <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
-                      The Strategic Blindspot Audit™
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-4" >
+                      The Strategic Blindspot Audit
                     </h2>
-                    <p className="text-xl text-[#C9A961]" style={{  }}>
+                    <p className="text-xl text-[#C9A961]" >
                       What You Can't See Is Costing You More Than You Think
                     </p>
                   </div>
@@ -544,7 +544,7 @@ const Solutions = () => {
                   </div>
 
                   <div className="bg-[#1A2B4A] rounded-xl p-8 text-center text-white">
-                    <h4 className="font-bold text-xl mb-4" style={{  }}>
+                    <h4 className="font-bold text-xl mb-4" >
                       Why This Matters
                     </h4>
                     <p className="text-white/80 leading-relaxed mb-6">

@@ -21,7 +21,7 @@ const BrandDesign = () => {
   };
 
   const differentiators = [
-    { title: 'Intelligence-Driven', desc: 'Brand strategy built on Customer Choice Intelligence™ data, not creative whims' },
+    { title: 'Intelligence-Driven', desc: 'Brand strategy built on Customer Choice Intelligence data, not creative whims' },
     { title: 'Strategic Foundation', desc: 'Led by former Fortune 500 CMO with NYSE company brand leadership' },
     { title: 'Complete Systems', desc: 'From strategic positioning to visual identity to go-to-market execution' },
     { title: 'Industry Expertise', desc: 'Specialized in Healthcare, MedTech, Financial Services, and B2B Technology' }
@@ -120,7 +120,7 @@ const BrandDesign = () => {
   ];
 
   const approach = [
-    { num: '01', title: 'Intelligence Foundation', desc: 'We don\'t start with creative concepts. We start with Customer Choice Intelligence™—understanding what actually drives customer decisions in your category.' },
+    { num: '01', title: 'Intelligence Foundation', desc: 'We don\'t start with creative concepts. We start with Customer Choice Intelligence—understanding what actually drives customer decisions in your category.' },
     { num: '02', title: 'Strategic Rigor', desc: 'Every visual decision is backed by strategic positioning. Your logo, colors, typography—all stem from differentiation strategy, not design trends.' },
     { num: '03', title: 'Behavioral Science', desc: 'We integrate OSG Analytics\' behavioral research into brand development—understanding how visual systems influence perception and decision-making.' },
     { num: '04', title: 'Measurable Impact', desc: 'Brand work isn\'t subjective. We track awareness, perception, preference, and conversion metrics to ensure your brand drives business results.' },
@@ -132,7 +132,7 @@ const BrandDesign = () => {
     'Strategic Foundation: Every design decision backed by market intelligence and positioning strategy',
     'Complete Systems: From strategy to visual identity to implementation—not piecemeal services',
     'Industry Expertise: Deep experience in Healthcare, MedTech, Financial Services, and B2B Technology',
-    'Intelligence Integration: Brand development powered by Customer Choice Intelligence™ and behavioral analytics',
+    'Intelligence Integration: Brand development powered by Customer Choice Intelligence and behavioral analytics',
     'Execution Partnership: We don\'t hand you a brand book and disappear—we support implementation'
   ];
 
@@ -147,7 +147,7 @@ const BrandDesign = () => {
     },
     {
       question: 'How is your brand work different from design agencies?',
-      answer: 'We\'re led by a former Fortune 500 CMO, not junior designers. Every brand decision is backed by market intelligence and strategic positioning data—using our Customer Choice Intelligence™ technology. You get senior strategic thinking plus design excellence.'
+      answer: 'We\'re led by a former Fortune 500 CMO, not junior designers. Every brand decision is backed by market intelligence and strategic positioning data—using our Customer Choice Intelligence technology. You get senior strategic thinking plus design excellence.'
     },
     {
       question: 'Do you handle brand implementation (website, collateral production)?',
@@ -177,7 +177,7 @@ const BrandDesign = () => {
             <motion.h1
               variants={fadeUpVariant}
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              style={{  }}
+              
             >
               Build Brands That Command Attention.
             </motion.h1>
@@ -220,7 +220,7 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" >
                 Your Brand Is Your Strategic Advantage
               </h2>
               <p className="text-[#6C757D] leading-relaxed">
@@ -260,7 +260,7 @@ const BrandDesign = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Services</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
                 Brand & Design Services
               </h2>
             </motion.div>
@@ -275,7 +275,7 @@ const BrandDesign = () => {
                   <div className="w-12 h-12 rounded-xl bg-[#C9A961]/10 flex items-center justify-center">
                     <category.icon className="text-[#C9A961]" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1A2B4A]" style={{  }}>
+                  <h3 className="text-xl font-bold text-[#1A2B4A]" >
                     {category.title}
                   </h3>
                 </div>
@@ -305,7 +305,7 @@ const BrandDesign = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Packages</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
                 Signature Packages
               </h2>
             </motion.div>
@@ -320,7 +320,7 @@ const BrandDesign = () => {
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#C9A961]/10 mb-4">
                     <Sparkles className="text-[#C9A961]" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1A2B4A] mb-1" style={{  }}>
+                  <h3 className="text-xl font-bold text-[#1A2B4A] mb-1" >
                     {pkg.name}
                   </h3>
                   <p className="text-[#C9A961] text-sm mb-4">{pkg.subtitle}</p>
@@ -361,7 +361,7 @@ const BrandDesign = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Specialization</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
                 Industry Expertise
               </h2>
             </motion.div>
@@ -378,7 +378,7 @@ const BrandDesign = () => {
                       <industry.icon className="text-[#C9A961]" size={20} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#1A2B4A]" style={{  }}>
+                      <h3 className="font-bold text-[#1A2B4A]" >
                         {industry.name}
                       </h3>
                       <p className="text-[#6C757D] text-sm mt-1">{industry.expertise}</p>
@@ -449,7 +449,7 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
                 The Brackett Brand Promise
               </h2>
               <p className="text-[#6C757D] mt-4">What You Can Expect</p>
@@ -481,7 +481,7 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
                 Frequently Asked Questions
               </h2>
             </motion.div>
@@ -536,7 +536,7 @@ const BrandDesign = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{  }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" >
               Your Brand Is Your Competitive Advantage. Let's Build It.
             </h2>
             <p className="text-white/80 mb-8 leading-relaxed">

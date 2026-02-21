@@ -21,7 +21,7 @@ const Contact = () => {
 
   const auditFeatures = [
     'Intensive facilitated session',
-    'Customer Choice Intelligence™ technology access',
+    'Customer Choice Intelligence technology access',
     'Comprehensive Strategic Intelligence Brief',
     'Prioritized action roadmap',
     'Follow-up consultation'
@@ -58,11 +58,11 @@ const Contact = () => {
     },
     {
       question: 'What makes your intelligence technology different?',
-      answer: 'Our Customer Choice Intelligence™ methodology doesn\'t just measure what customers say they want—it predicts what will drive their future decisions with exceptional accuracy. Through our strategic partnership with OSG Analytics, we bring Stanford-born behavioral science combined with AI/ML analytics—technology typically available only to Fortune 500 companies.'
+      answer: 'Our Customer Choice Intelligence methodology doesn\'t just measure what customers say they want—it predicts what will drive their future decisions with exceptional accuracy. Through our strategic partnership with OSG Analytics, we bring Stanford-born behavioral science combined with AI/ML analytics—technology typically available only to Fortune 500 companies.'
     },
     {
       question: 'How do you work with OSG Analytics?',
-      answer: 'OSG Analytics (Optimal Strategix Group) is our strategic technology partner. Dr. R. Sukumar serves as President & Global CEO of OSG and strategic partner to Brackett Agency. This partnership gives our clients access to OSG\'s enterprise-grade ASEMAP™ and o360™ platforms, along with AI/ML analytics infrastructure.'
+      answer: 'OSG Analytics (Optimal Strategix Group) is our strategic technology partner. Dr. R. Sukumar serves as President & Global CEO of OSG and strategic partner to Brackett Agency. This partnership gives our clients access to OSG\'s enterprise-grade ASEMAP and o360 platforms, along with AI/ML analytics infrastructure.'
     }
   ];
 
@@ -80,7 +80,7 @@ const Contact = () => {
             <motion.h1
               variants={fadeUpVariant}
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
-              style={{  }}
+              
             >
               Ready to See What You're Missing?
             </motion.h1>
@@ -107,7 +107,7 @@ const Contact = () => {
               {/* Left Column - Contact Form CTA */}
               <motion.div variants={fadeUpVariant}>
                 <div className="bg-white rounded-xl p-8 border border-[#E9ECEF] mb-8">
-                  <h2 className="text-2xl font-bold text-[#1A2B4A] mb-4" style={{  }}>
+                  <h2 className="text-2xl font-bold text-[#1A2B4A] mb-4" >
                     Request Strategic Consultation
                   </h2>
                   <p className="text-[#6C757D] mb-6 leading-relaxed">
@@ -132,7 +132,7 @@ const Contact = () => {
 
                 {/* Contact Information */}
                 <div className="bg-[#F8F9FA] rounded-xl p-8">
-                  <h3 className="text-lg font-bold text-[#1A2B4A] mb-6" style={{  }}>
+                  <h3 className="text-lg font-bold text-[#1A2B4A] mb-6" >
                     Contact Information
                   </h3>
                   
@@ -161,8 +161,8 @@ const Contact = () => {
               {/* Right Column - Strategic Blindspot Audit */}
               <motion.div variants={fadeUpVariant}>
                 <div className="bg-[#1A2B4A] rounded-xl p-8 text-white">
-                  <h2 className="text-2xl font-bold mb-2" style={{  }}>
-                    The Strategic Blindspot Audit™
+                  <h2 className="text-2xl font-bold mb-2" >
+                    The Strategic Blindspot Audit
                   </h2>
                   <p className="text-white/80 mb-6">
                     Premium diagnostic intensive using AI-powered intelligence technology.
@@ -211,7 +211,7 @@ const Contact = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" style={{  }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
                 Frequently Asked Questions
               </h2>
             </motion.div>
