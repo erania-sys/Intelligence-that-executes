@@ -30,23 +30,29 @@
 
 .nav-link {
   color: #6B6B6B;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #1A1A1A;
+  color: #2C2C2C;
 }
 
 .nav-logo {
-  height: 36px;
+  height: 32px;
   width: auto;
   mix-blend-mode: multiply;
 }
 
 @media (min-width: 768px) {
+  .nav-logo {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
   .nav-logo {
     height: 44px;
   }
