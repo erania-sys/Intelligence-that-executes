@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import logoWhite from '../assets/logo-white.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,9 +47,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <img 
-              src="https://customer-assets.emergentagent.com/job_agency-refresh-8/artifacts/w4rp0d42_Rainy082003%20final-01%20%281%29.jpg" 
+              src={logoWhite}
               alt="Brackett Agency" 
-              className="h-10 mb-4 brightness-0 invert"
+              className="h-14 md:h-16 w-auto mb-4"
             />
             <p className="text-white/60 leading-relaxed text-sm mb-4">
               Intelligence That Executes.
