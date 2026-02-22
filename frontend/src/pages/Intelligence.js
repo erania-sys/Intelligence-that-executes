@@ -181,6 +181,195 @@ const Intelligence = () => {
         </div>
       </section>
 
+      {/* OSG Partnership Deep Dive */}
+      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white" data-testid="osg-partnership">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <motion.div variants={fadeUpVariant}>
+                <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider mb-4">Strategic Technology Partner</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Powered by OSG Analytics
+                </h2>
+                <p className="text-white/80 leading-relaxed mb-6">
+                  OSG Analytics (Optimal Strategix Group) is a global leader in AI/ML-powered customer intelligence, with 25+ years of research methodology innovation and platforms trusted by Fortune 500 companies worldwide.
+                </p>
+                <p className="text-white/80 leading-relaxed mb-6">
+                  Through our exclusive partnership, Brackett Agency clients gain access to the same enterprise-grade intelligence platforms used by the world's most demanding organizations—at a fraction of the cost of direct engagement.
+                </p>
+                <div className="grid grid-cols-3 gap-6 mt-8">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-[#C9A961]">25+</div>
+                    <div className="text-sm text-white/60">Years of Innovation</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-[#C9A961]">500+</div>
+                    <div className="text-sm text-white/60">Enterprise Clients</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-[#C9A961]">50+</div>
+                    <div className="text-sm text-white/60">Countries Served</div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant}>
+                <div className="bg-white/5 rounded-xl p-8 border border-white/10">
+                  <h3 className="text-xl font-bold text-white mb-6">How Brackett + OSG Works</h3>
+                  <div className="space-y-6">
+                    <div className="flex gap-4">
+                      <div className="w-10 h-10 rounded-full bg-[#C9A961] flex items-center justify-center flex-shrink-0 text-[#0A0A0A] font-bold">1</div>
+                      <div>
+                        <h4 className="font-semibold text-white">Brackett Leads Strategy</h4>
+                        <p className="text-white/60 text-sm">Our executive team leads client engagements with Fortune 500 CMO experience</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-4">
+                      <div className="w-10 h-10 rounded-full bg-[#C9A961] flex items-center justify-center flex-shrink-0 text-[#0A0A0A] font-bold">2</div>
+                      <div>
+                        <h4 className="font-semibold text-white">OSG Powers Intelligence</h4>
+                        <p className="text-white/60 text-sm">Proprietary AI/ML platforms process customer data with Stanford-validated methodologies</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-4">
+                      <div className="w-10 h-10 rounded-full bg-[#C9A961] flex items-center justify-center flex-shrink-0 text-[#0A0A0A] font-bold">3</div>
+                      <div>
+                        <h4 className="font-semibold text-white">Combined Execution</h4>
+                        <p className="text-white/60 text-sm">Strategic recommendations powered by predictive analytics, not just experience</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* OSG Core Technologies */}
+            <motion.div variants={fadeUpVariant} className="mb-16">
+              <h3 className="text-2xl font-bold text-white text-center mb-8">OSG Core Technologies</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-[#C9A961]/50 transition-colors">
+                  <h4 className="text-lg font-bold text-[#C9A961] mb-2">ASEMAP</h4>
+                  <p className="text-sm text-white/60 mb-4">Stanford-born Adaptive Self-Explication Methodology for Advanced Preferences</p>
+                  <ul className="space-y-2">
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      Predictive tradeoff analysis
+                    </li>
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      Customer choice intelligence
+                    </li>
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      Academically peer-reviewed
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-[#C9A961]/50 transition-colors">
+                  <h4 className="text-lg font-bold text-[#C9A961] mb-2">o360</h4>
+                  <p className="text-sm text-white/60 mb-4">Advanced Customer Experience Analytics Platform</p>
+                  <ul className="space-y-2">
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      NPS+ methodology
+                    </li>
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      Journey mapping analytics
+                    </li>
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      Lifetime value optimization
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-[#C9A961]/50 transition-colors">
+                  <h4 className="text-lg font-bold text-[#C9A961] mb-2">AI/ML Engine</h4>
+                  <p className="text-sm text-white/60 mb-4">Enterprise Intelligence Processing Platform</p>
+                  <ul className="space-y-2">
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      Real-time dashboards
+                    </li>
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      Predictive modeling
+                    </li>
+                    <li className="text-sm text-white/80 flex items-start gap-2">
+                      <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                      HIPAA/GDPR compliant
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* OSG Client Logos */}
+      <section className="py-16 bg-white" data-testid="client-logos">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="text-center mb-12">
+              <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider mb-2">Trusted by Industry Leaders</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]">
+                OSG Intelligence Powers Fortune 500 Companies
+              </h2>
+              <p className="text-[#6C757D] mt-2 max-w-2xl mx-auto">
+                Through our partnership with OSG Analytics, you get access to the same technology platforms trusted by these global leaders.
+              </p>
+            </motion.div>
+
+            {/* Logo Grid - Healthcare/Pharma */}
+            <motion.div variants={fadeUpVariant} className="mb-8">
+              <p className="text-xs font-semibold text-[#6C757D] uppercase tracking-wider mb-4 text-center">Healthcare & Life Sciences</p>
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
+                {['Medtronic', 'Philips', 'Novartis', 'Merck', 'Amgen', 'Bayer', 'Boston Scientific', 'GE Healthcare', 'Siemens Healthineers', 'Johnson & Johnson'].map((brand, i) => (
+                  <div key={i} className="text-center">
+                    <span className="text-[#6C757D] font-semibold text-sm">{brand}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Logo Grid - Consumer & CPG */}
+            <motion.div variants={fadeUpVariant} className="mb-8">
+              <p className="text-xs font-semibold text-[#6C757D] uppercase tracking-wider mb-4 text-center">Consumer & CPG</p>
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
+                {['P&G', 'Nestlé', 'PepsiCo', 'Kimberly-Clark', 'Danone', 'Red Bull', 'Natura'].map((brand, i) => (
+                  <div key={i} className="text-center">
+                    <span className="text-[#6C757D] font-semibold text-sm">{brand}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Logo Grid - Financial & Tech */}
+            <motion.div variants={fadeUpVariant}>
+              <p className="text-xs font-semibold text-[#6C757D] uppercase tracking-wider mb-4 text-center">Financial Services & Technology</p>
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
+                {['Cigna', 'BUPA', 'Amazon Pay', 'Leica', 'Metro', 'ADCB'].map((brand, i) => (
+                  <div key={i} className="text-center">
+                    <span className="text-[#6C757D] font-semibold text-sm">{brand}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Platform 1: Customer Choice Intelligence */}
       <section className="py-20 md:py-28" data-testid="platform-1">
         <div className="section-container">
