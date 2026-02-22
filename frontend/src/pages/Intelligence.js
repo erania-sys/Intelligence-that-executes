@@ -193,7 +193,7 @@ const Intelligence = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <motion.div variants={fadeUpVariant}>
                 <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider mb-4">Strategic Technology Partner</p>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                   Powered by OSG Analytics
                 </h2>
                 <p className="text-white/80 leading-relaxed mb-6">
@@ -665,7 +665,7 @@ const Intelligence = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white" >
               See What Our Intelligence Can Reveal About Your Business
             </h2>
             <p className="text-white/80 mb-8 leading-relaxed">
