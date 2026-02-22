@@ -117,7 +117,7 @@ const Intelligence = () => {
   return (
     <div data-testid="intelligence-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-[#FAFAF8]" data-testid="hero-section">
+      <section className="pt-28 pb-16 bg-white" data-testid="hero-section">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
