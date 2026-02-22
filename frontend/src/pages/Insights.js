@@ -127,7 +127,7 @@ const Insights = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      revenue: '#1A2B4A',
+      revenue: '#0A0A0A',
       positioning: '#C9A961',
       intelligence: '#2E5C8A',
       execution: '#4A7C59'
@@ -155,7 +155,7 @@ const Insights = () => {
             >
               <motion.h1
                 variants={fadeUpVariant}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
                 Strategic Intelligence. Delivered Weekly.
               </motion.h1>
@@ -250,7 +250,7 @@ const Insights = () => {
               >
                 <div className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-lg transition-shadow cursor-pointer">
                   <div className="md:flex">
-                    <div className="md:w-1/2 bg-gradient-to-br from-[#1A2B4A] to-[#1A1A1A] p-12 flex items-center justify-center">
+                    <div className="md:w-1/2 bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] p-12 flex items-center justify-center">
                       <div className="text-center">
                         <span 
                           className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4"
@@ -271,7 +271,7 @@ const Insights = () => {
                           {featuredArticle.readTime}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-[#1A2B4A] mb-4" >
+                      <h3 className="text-2xl font-bold text-[#0A0A0A] mb-4" >
                         {featuredArticle.title}
                       </h3>
                       <p className="text-[#6C757D] leading-relaxed mb-6">
@@ -312,7 +312,7 @@ const Insights = () => {
                         {article.readTime}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-[#1A2B4A] mb-3 group-hover:text-[#C9A961] transition-colors" >
+                    <h3 className="text-lg font-bold text-[#0A0A0A] mb-3 group-hover:text-[#C9A961] transition-colors" >
                       {article.title}
                     </h3>
                     <p className="text-[#6C757D] text-sm leading-relaxed mb-4 line-clamp-3">
@@ -352,7 +352,7 @@ const Insights = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" >
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mb-4" >
               Want Strategic Intelligence Applied to Your Business?
             </h2>
             <p className="text-[#6C757D] mb-6">

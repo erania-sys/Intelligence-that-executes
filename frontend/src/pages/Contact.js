@@ -79,7 +79,7 @@ const Contact = () => {
             >
               <motion.h1
                 variants={fadeUpVariant}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
                 Ready to See What You're Missing?
               </motion.h1>
@@ -119,7 +119,7 @@ const Contact = () => {
               {/* Left Column - Contact Form CTA */}
               <motion.div variants={fadeUpVariant}>
                 <div className="bg-white rounded-xl p-8 border border-[#E9ECEF] mb-8">
-                  <h2 className="text-2xl font-bold text-[#1A2B4A] mb-4" >
+                  <h2 className="text-2xl font-bold text-[#0A0A0A] mb-4" >
                     Request Strategic Consultation
                   </h2>
                   <p className="text-[#6C757D] mb-6 leading-relaxed">
@@ -144,7 +144,7 @@ const Contact = () => {
 
                 {/* Contact Information */}
                 <div className="bg-[#F8F9FA] rounded-xl p-8">
-                  <h3 className="text-lg font-bold text-[#1A2B4A] mb-6" >
+                  <h3 className="text-lg font-bold text-[#0A0A0A] mb-6" >
                     Contact Information
                   </h3>
                   
@@ -153,7 +153,7 @@ const Contact = () => {
                       <Mail size={18} className="text-[#C9A961] mt-1" />
                       <div>
                         <p className="text-sm text-[#6C757D]">Email</p>
-                        <a href="mailto:erania@brackett.agency" className="text-[#1A2B4A] font-medium hover:text-[#C9A961] transition-colors">
+                        <a href="mailto:erania@brackett.agency" className="text-[#0A0A0A] font-medium hover:text-[#C9A961] transition-colors">
                           erania@brackett.agency
                         </a>
                       </div>
@@ -163,7 +163,7 @@ const Contact = () => {
                       <Clock size={18} className="text-[#C9A961] mt-1" />
                       <div>
                         <p className="text-sm text-[#6C757D]">Office Hours</p>
-                        <p className="text-[#1A2B4A] font-medium">Monday-Friday, 9:00 AM - 5:00 PM EST</p>
+                        <p className="text-[#0A0A0A] font-medium">Monday-Friday, 9:00 AM - 5:00 PM EST</p>
                       </div>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ const Contact = () => {
 
               {/* Right Column - Strategic Blindspot Audit */}
               <motion.div variants={fadeUpVariant}>
-                <div className="bg-[#1A2B4A] rounded-xl p-8 text-white">
+                <div className="bg-[#0A0A0A] rounded-xl p-8 text-white">
                   <h2 className="text-2xl font-bold mb-2" >
                     The Strategic Blindspot Audit
                   </h2>
@@ -200,7 +200,7 @@ const Contact = () => {
                     href="https://form.jotform.com/252728460666061"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-white text-[#1A2B4A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors w-full justify-center"
+                    className="inline-flex items-center gap-2 bg-white text-[#0A0A0A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors w-full justify-center"
                     data-testid="cta-audit"
                   >
                     Request Your Strategic Audit
@@ -223,7 +223,7 @@ const Contact = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]" >
                 Frequently Asked Questions
               </h2>
             </motion.div>
@@ -237,7 +237,7 @@ const Contact = () => {
                       className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FAFAF8] transition-colors"
                       data-testid={`faq-${index}`}
                     >
-                      <span className="font-semibold text-[#1A2B4A] pr-4">{faq.question}</span>
+                      <span className="font-semibold text-[#0A0A0A] pr-4">{faq.question}</span>
                       <ChevronDown
                         size={20}
                         className={`text-[#C9A961] flex-shrink-0 transition-transform ${

@@ -127,7 +127,7 @@ const Intelligence = () => {
             >
               <motion.h1
                 variants={fadeUpVariant}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
                 Proprietary Technology. Predictive Intelligence.
               </motion.h1>
@@ -164,7 +164,7 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" >
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mb-4" >
                 What Makes Brackett Different
               </h2>
               <p className="text-[#6C757D] leading-relaxed mb-6">
@@ -193,7 +193,7 @@ const Intelligence = () => {
             <motion.div variants={fadeUpVariant} className="mb-8">
               <div>
                 <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 1</p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]" >
                   {platforms[0].name}
                 </h2>
                 <p className="text-[#6C757D] mt-1">{platforms[0].tagline}</p>
@@ -205,7 +205,7 @@ const Intelligence = () => {
                 <p className="text-[#6C757D] leading-relaxed mb-6">
                   {platforms[0].description}
                 </p>
-                <h4 className="font-semibold text-[#1A2B4A] mb-4">How It Works</h4>
+                <h4 className="font-semibold text-[#0A0A0A] mb-4">How It Works</h4>
                 <ul className="space-y-3">
                   {platforms[0].howItWorks.map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-[#6C757D]">
@@ -218,7 +218,7 @@ const Intelligence = () => {
               
               <motion.div variants={fadeUpVariant}>
                 <div className="bg-[#F8F9FA] rounded-xl p-6 mb-6">
-                  <h4 className="font-semibold text-[#1A2B4A] mb-3">Why It Matters</h4>
+                  <h4 className="font-semibold text-[#0A0A0A] mb-3">Why It Matters</h4>
                   <p className="text-[#6C757D] text-sm leading-relaxed">
                     {platforms[0].whyMatters}
                   </p>
@@ -227,8 +227,8 @@ const Intelligence = () => {
                 <div className="grid grid-cols-2 gap-4">
                   {platforms[0].benefits.map((benefit, i) => (
                     <div key={i} className="bg-white rounded-lg p-4 border border-[#E9ECEF]">
-                      <Check size={16} className="text-[#1A2B4A] mb-2" />
-                      <h5 className="font-semibold text-[#1A2B4A] text-sm">{benefit.title}</h5>
+                      <Check size={16} className="text-[#0A0A0A] mb-2" />
+                      <h5 className="font-semibold text-[#0A0A0A] text-sm">{benefit.title}</h5>
                       <p className="text-[#6C757D] text-xs">{benefit.desc}</p>
                     </div>
                   ))}
@@ -237,7 +237,7 @@ const Intelligence = () => {
             </div>
 
             <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-              <h4 className="font-semibold text-[#1A2B4A] mb-4">Use Cases</h4>
+              <h4 className="font-semibold text-[#0A0A0A] mb-4">Use Cases</h4>
               <div className="flex flex-wrap gap-3">
                 {platforms[0].useCases.map((useCase, i) => (
                   <span key={i} className="bg-[#F8F9FA] text-[#6C757D] px-4 py-2 rounded-full text-sm">
@@ -252,7 +252,7 @@ const Intelligence = () => {
       </section>
 
       {/* Platform 2: OSG Intelligence Engine */}
-      <section className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="platform-2">
+      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white" data-testid="platform-2">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -333,7 +333,7 @@ const Intelligence = () => {
             <motion.div variants={fadeUpVariant} className="mb-8">
               <div>
                 <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 3</p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]" >
                   {platforms[2].name}
                 </h2>
                 <p className="text-[#6C757D] mt-1">{platforms[2].tagline}</p>
@@ -346,33 +346,33 @@ const Intelligence = () => {
 
             <motion.div variants={staggerContainer} className="grid md:grid-cols-3 gap-6 mb-8">
               <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                <h4 className="font-semibold text-[#1A2B4A] mb-4">NPS+ Methodology</h4>
+                <h4 className="font-semibold text-[#0A0A0A] mb-4">NPS+ Methodology</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.npsPlus.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                      <ArrowRight size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
               <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                <h4 className="font-semibold text-[#1A2B4A] mb-4">Journey Intelligence</h4>
+                <h4 className="font-semibold text-[#0A0A0A] mb-4">Journey Intelligence</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.journey.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                      <ArrowRight size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
               <motion.div variants={fadeUpVariant} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                <h4 className="font-semibold text-[#1A2B4A] mb-4">Lifetime Value Optimization</h4>
+                <h4 className="font-semibold text-[#0A0A0A] mb-4">Lifetime Value Optimization</h4>
                 <ul className="space-y-2">
                   {platforms[2].capabilities.ltv.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                      <ArrowRight size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                      <ArrowRight size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -381,7 +381,7 @@ const Intelligence = () => {
             </motion.div>
 
             <motion.div variants={fadeUpVariant} className="bg-[#F8F9FA] rounded-xl p-6">
-              <h4 className="font-semibold text-[#1A2B4A] mb-3">Why It Matters</h4>
+              <h4 className="font-semibold text-[#0A0A0A] mb-3">Why It Matters</h4>
               <p className="text-[#6C757D] leading-relaxed">
                 {platforms[2].whyMatters}
               </p>
@@ -401,7 +401,7 @@ const Intelligence = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]" >
                 Technology Advantages
               </h2>
             </motion.div>
@@ -418,7 +418,7 @@ const Intelligence = () => {
               {comparisonData.map((row, index) => (
                 <div key={index} className="grid grid-cols-2 border-t border-[#E9ECEF]">
                   <div className="p-4 text-[#6C757D] text-sm">{row.traditional}</div>
-                  <div className="p-4 text-[#1A2B4A] font-medium text-sm bg-[#2E5C8A]/5">{row.brackett}</div>
+                  <div className="p-4 text-[#0A0A0A] font-medium text-sm bg-[#2E5C8A]/5">{row.brackett}</div>
                 </div>
               ))}
             </motion.div>
@@ -437,7 +437,7 @@ const Intelligence = () => {
           >
             <motion.div variants={fadeUpVariant} className="mb-8">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]" >
                   Security & Compliance
                 </h2>
                 <p className="text-[#6C757D] mt-1">Enterprise-Grade Infrastructure</p>
@@ -456,7 +456,7 @@ const Intelligence = () => {
                 </ul>
               </motion.div>
               <motion.div variants={fadeUpVariant} className="bg-[#F8F9FA] rounded-xl p-6">
-                <h4 className="font-semibold text-[#1A2B4A] mb-3">Trusted By</h4>
+                <h4 className="font-semibold text-[#0A0A0A] mb-3">Trusted By</h4>
                 <p className="text-[#6C757D] text-sm leading-relaxed">
                   Healthcare systems, pharmaceutical companies, medical device manufacturers, financial services firms, and Fortune 500 enterprises with the most demanding security requirements.
                 </p>
@@ -467,7 +467,7 @@ const Intelligence = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="cta-section">
+      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -486,7 +486,7 @@ const Intelligence = () => {
               href="https://form.jotform.com/252728460666061"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-[#1A2B4A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[#0A0A0A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
               data-testid="cta-audit"
             >
               Request Your Strategic Audit

@@ -182,7 +182,7 @@ const Solutions = () => {
             >
               <motion.h1
                 variants={fadeUpVariant}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
                 Productized Solutions. Predictable Outcomes.
               </motion.h1>
@@ -243,11 +243,11 @@ const Solutions = () => {
                 {signaturePrograms.map((program, index) => (
                   <div key={index} className="mb-20 last:mb-0">
                     <div className="flex items-start gap-4 mb-8">
-                      <div className="w-14 h-14 rounded-xl bg-[#1A2B4A]/10 flex items-center justify-center flex-shrink-0">
-                        <program.icon className="text-[#1A2B4A]" size={28} />
+                      <div className="w-14 h-14 rounded-xl bg-[#0A0A0A]/10 flex items-center justify-center flex-shrink-0">
+                        <program.icon className="text-[#0A0A0A]" size={28} />
                       </div>
                       <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]" >
                           {program.name}
                         </h2>
                       </div>
@@ -258,18 +258,18 @@ const Solutions = () => {
                         <h4 className="font-semibold text-red-800 mb-3">The Problem You're Facing</h4>
                         <p className="text-red-700 text-sm leading-relaxed">{program.problem}</p>
                       </div>
-                      <div className="bg-[#1A2B4A]/5 rounded-xl p-6 border border-[#1A2B4A]/10">
-                        <h4 className="font-semibold text-[#1A2B4A] mb-3">The Outcome</h4>
+                      <div className="bg-[#0A0A0A]/5 rounded-xl p-6 border border-[#0A0A0A]/10">
+                        <h4 className="font-semibold text-[#0A0A0A] mb-3">The Outcome</h4>
                         <p className="text-[#6C757D] text-sm leading-relaxed">{program.outcome}</p>
                       </div>
                     </div>
 
                     <div className="bg-white rounded-xl p-6 border border-[#E9ECEF] mb-8">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-4">Who This Is For</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Who This Is For</h4>
                       <ul className="grid md:grid-cols-2 gap-2">
                         {program.whoFor.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -277,7 +277,7 @@ const Solutions = () => {
                     </div>
 
                     <div className="mb-8">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-4">The Process</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-4">The Process</h4>
                       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {program.phases.map((phase, i) => (
                           <div key={i} className="bg-[#F8F9FA] rounded-xl p-5">
@@ -287,7 +287,7 @@ const Solutions = () => {
                               </span>
                               <span className="text-xs text-[#6C757D]">Weeks {phase.weeks}</span>
                             </div>
-                            <h5 className="font-semibold text-[#1A2B4A] text-sm mb-2">{phase.name}</h5>
+                            <h5 className="font-semibold text-[#0A0A0A] text-sm mb-2">{phase.name}</h5>
                             <ul className="space-y-1">
                               {phase.items.map((item, j) => (
                                 <li key={j} className="text-xs text-[#6C757D] flex items-start gap-1">
@@ -303,11 +303,11 @@ const Solutions = () => {
 
                     <div className="grid md:grid-cols-3 gap-6">
                       <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                        <h4 className="font-semibold text-[#1A2B4A] mb-4">What You Get</h4>
+                        <h4 className="font-semibold text-[#0A0A0A] mb-4">What You Get</h4>
                         <ul className="space-y-2">
                           {program.deliverables.map((item, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                              <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                              <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -316,16 +316,16 @@ const Solutions = () => {
                       <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                         <div className="flex items-center gap-2 mb-4">
                           <Clock size={18} className="text-[#C9A961]" />
-                          <h4 className="font-semibold text-[#1A2B4A]">Timeline</h4>
+                          <h4 className="font-semibold text-[#0A0A0A]">Timeline</h4>
                         </div>
-                        <p className="text-2xl font-bold text-[#1A2B4A]" >
+                        <p className="text-2xl font-bold text-[#0A0A0A]" >
                           {program.timeline}
                         </p>
                       </div>
                       <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
                         <div className="flex items-center gap-2 mb-4">
-                          <TrendingUp size={18} className="text-[#1A2B4A]" />
-                          <h4 className="font-semibold text-[#1A2B4A]">Expected ROI</h4>
+                          <TrendingUp size={18} className="text-[#0A0A0A]" />
+                          <h4 className="font-semibold text-[#0A0A0A]">Expected ROI</h4>
                         </div>
                         <p className="text-sm text-[#6C757D] leading-relaxed">{program.roi}</p>
                       </div>
@@ -362,7 +362,7 @@ const Solutions = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="text-center mb-12">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" >
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mb-4" >
                     Fractional Strategic Executives On Retainer
                   </h2>
                 </div>
@@ -375,7 +375,7 @@ const Solutions = () => {
                           <Users className="text-[#2E5C8A]" size={24} />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-[#1A2B4A]" >
+                          <h3 className="text-xl font-bold text-[#0A0A0A]" >
                             {partnership.name}
                           </h3>
                           <p className="text-[#C9A961] font-medium">{partnership.subtitle}</p>
@@ -385,11 +385,11 @@ const Solutions = () => {
                       <p className="text-[#6C757D] mb-6">{partnership.description}</p>
 
                       <div className="bg-[#F8F9FA] rounded-lg p-4 mb-6">
-                        <h4 className="font-semibold text-[#1A2B4A] mb-3">Who It's For</h4>
+                        <h4 className="font-semibold text-[#0A0A0A] mb-3">Who It's For</h4>
                         <ul className="grid md:grid-cols-3 gap-2">
                           {partnership.whoFor.map((item, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                              <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                              <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -398,7 +398,7 @@ const Solutions = () => {
 
                       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div>
-                          <h5 className="font-semibold text-[#1A2B4A] mb-3 flex items-center gap-2">
+                          <h5 className="font-semibold text-[#0A0A0A] mb-3 flex items-center gap-2">
                             <Calendar size={16} className="text-[#C9A961]" /> Monthly Support
                           </h5>
                           <ul className="space-y-2">
@@ -411,7 +411,7 @@ const Solutions = () => {
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-[#1A2B4A] mb-3">Quarterly</h5>
+                          <h5 className="font-semibold text-[#0A0A0A] mb-3">Quarterly</h5>
                           <ul className="space-y-2">
                             {partnership.quarterly.map((item, i) => (
                               <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
@@ -423,7 +423,7 @@ const Solutions = () => {
                         </div>
                         {partnership.annual && (
                           <div>
-                            <h5 className="font-semibold text-[#1A2B4A] mb-3">Annual</h5>
+                            <h5 className="font-semibold text-[#0A0A0A] mb-3">Annual</h5>
                             <ul className="space-y-2">
                               {partnership.annual.map((item, i) => (
                                 <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
@@ -436,7 +436,7 @@ const Solutions = () => {
                         )}
                         {partnership.premium && (
                           <div>
-                            <h5 className="font-semibold text-[#1A2B4A] mb-3">Premium Access</h5>
+                            <h5 className="font-semibold text-[#0A0A0A] mb-3">Premium Access</h5>
                             <ul className="space-y-2">
                               {partnership.premium.map((item, i) => (
                                 <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
@@ -477,7 +477,7 @@ const Solutions = () => {
               >
                 <div className="max-w-4xl mx-auto">
                   <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-4" >
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4" >
                       The Strategic Blindspot Audit
                     </h2>
                     <p className="text-xl text-[#C9A961]" >
@@ -494,22 +494,22 @@ const Solutions = () => {
 
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-4">Pre-Work</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Pre-Work</h4>
                       <ul className="space-y-2">
                         {auditFeatures.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-4">Intensive Facilitated Session</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Intensive Facilitated Session</h4>
                       <ul className="space-y-2">
                         {auditSession.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -519,22 +519,22 @@ const Solutions = () => {
 
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-4">Post-Session Deliverables</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Post-Session Deliverables</h4>
                       <ul className="space-y-2">
                         {auditDeliverables.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-4">Technology Access</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Technology Access</h4>
                       <ul className="space-y-2">
                         {auditTechnology.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -543,7 +543,7 @@ const Solutions = () => {
                   </div>
 
                   <div className="bg-[#F8F9FA] rounded-xl p-8 text-center mb-8">
-                    <h4 className="font-semibold text-[#1A2B4A] mb-4">Value Proposition</h4>
+                    <h4 className="font-semibold text-[#0A0A0A] mb-4">Value Proposition</h4>
                     <p className="text-[#6C757D] leading-relaxed mb-4">
                       Premium diagnostic intensive using proprietary AI-powered intelligence technology. This isn't a free consultation or sales pitch—it's a strategic diagnostic using enterprise-grade analytics.
                     </p>
@@ -552,7 +552,7 @@ const Solutions = () => {
                     </p>
                   </div>
 
-                  <div className="bg-[#1A2B4A] rounded-xl p-8 text-center text-white">
+                  <div className="bg-[#0A0A0A] rounded-xl p-8 text-center text-white">
                     <h4 className="font-bold text-xl mb-4" >
                       Why This Matters
                     </h4>
@@ -563,7 +563,7 @@ const Solutions = () => {
                       href="https://form.jotform.com/252728460666061"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-white text-[#1A2B4A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+                      className="inline-flex items-center gap-2 bg-white text-[#0A0A0A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
                       data-testid="cta-audit"
                     >
                       Request Your Strategic Audit

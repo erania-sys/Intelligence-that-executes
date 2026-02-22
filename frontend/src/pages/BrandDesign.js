@@ -176,7 +176,7 @@ const BrandDesign = () => {
             >
               <motion.h1
                 variants={fadeUpVariant}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
                 Build Brands That Command Attention.
               </motion.h1>
@@ -232,7 +232,7 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A] mb-4" >
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mb-4" >
                 Your Brand Is Your Strategic Advantage
               </h2>
               <p className="text-[#6C757D] leading-relaxed">
@@ -250,7 +250,7 @@ const BrandDesign = () => {
                   <div className="flex items-start gap-3">
                     <ArrowRight size={16} className="text-[#C9A961] mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-[#1A2B4A] mb-1">{item.title}</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-1">{item.title}</h4>
                       <p className="text-[#6C757D] text-sm">{item.desc}</p>
                     </div>
                   </div>
@@ -272,7 +272,7 @@ const BrandDesign = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Services</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]" >
                 Brand & Design Services
               </h2>
             </motion.div>
@@ -287,7 +287,7 @@ const BrandDesign = () => {
                   <div className="w-12 h-12 rounded-xl bg-[#C9A961]/10 flex items-center justify-center">
                     <category.icon className="text-[#C9A961]" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1A2B4A]" >
+                  <h3 className="text-xl font-bold text-[#0A0A0A]" >
                     {category.title}
                   </h3>
                 </div>
@@ -295,7 +295,7 @@ const BrandDesign = () => {
                 <div className="grid md:grid-cols-2 gap-4 pl-0 md:pl-16">
                   {category.services.map((service, i) => (
                     <div key={i} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-2">{service.name}</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-2">{service.name}</h4>
                       <p className="text-[#6C757D] text-sm leading-relaxed">{service.desc}</p>
                     </div>
                   ))}
@@ -317,7 +317,7 @@ const BrandDesign = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Packages</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]" >
                 Signature Packages
               </h2>
             </motion.div>
@@ -332,7 +332,7 @@ const BrandDesign = () => {
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#C9A961]/10 mb-4">
                     <Sparkles className="text-[#C9A961]" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1A2B4A] mb-1" >
+                  <h3 className="text-xl font-bold text-[#0A0A0A] mb-1" >
                     {pkg.name}
                   </h3>
                   <p className="text-[#C9A961] text-sm mb-4">{pkg.subtitle}</p>
@@ -340,7 +340,7 @@ const BrandDesign = () => {
                   <ul className="space-y-2 mb-6">
                     {pkg.includes.map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                        <Check size={14} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                        <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -349,7 +349,7 @@ const BrandDesign = () => {
                   <div className="pt-4 border-t border-[#E9ECEF]">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm text-[#6C757D]">Timeline</span>
-                      <span className="font-semibold text-[#1A2B4A]">{pkg.timeline}</span>
+                      <span className="font-semibold text-[#0A0A0A]">{pkg.timeline}</span>
                     </div>
                     <p className="text-xs text-[#6C757D]">
                       <span className="font-semibold">Ideal for:</span> {pkg.ideal}
@@ -373,7 +373,7 @@ const BrandDesign = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Specialization</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]" >
                 Industry Expertise
               </h2>
             </motion.div>
@@ -390,7 +390,7 @@ const BrandDesign = () => {
                       <industry.icon className="text-[#C9A961]" size={20} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#1A2B4A]" >
+                      <h3 className="font-bold text-[#0A0A0A]" >
                         {industry.name}
                       </h3>
                       <p className="text-[#6C757D] text-sm mt-1">{industry.expertise}</p>
@@ -414,7 +414,7 @@ const BrandDesign = () => {
       </section>
 
       {/* Our Approach */}
-      <section id="approach" className="py-20 md:py-28 bg-[#1A2B4A]" data-testid="approach-section">
+      <section id="approach" className="py-20 md:py-28 bg-[#0A0A0A]" data-testid="approach-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -461,7 +461,7 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]" >
                 The Brackett Brand Promise
               </h2>
               <p className="text-[#6C757D] mt-4">What You Can Expect</p>
@@ -472,7 +472,7 @@ const BrandDesign = () => {
                 <ul className="space-y-4">
                   {promises.map((promise, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <Check size={18} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                      <Check size={18} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                       <span className="text-[#6C757D]">{promise}</span>
                     </li>
                   ))}
@@ -493,7 +493,7 @@ const BrandDesign = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]" >
                 Frequently Asked Questions
               </h2>
             </motion.div>
@@ -507,7 +507,7 @@ const BrandDesign = () => {
                       className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#FAFAF8] transition-colors"
                       data-testid={`faq-${index}`}
                     >
-                      <span className="font-semibold text-[#1A2B4A] pr-4">{faq.question}</span>
+                      <span className="font-semibold text-[#0A0A0A] pr-4">{faq.question}</span>
                       <ChevronDown
                         size={20}
                         className={`text-[#C9A961] flex-shrink-0 transition-transform ${
@@ -559,7 +559,7 @@ const BrandDesign = () => {
                 href="https://form.jotform.com/252728460666061"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white text-[#1A2B4A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center gap-2 bg-white text-[#0A0A0A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
                 data-testid="cta-consultation"
               >
                 Request Brand Consultation

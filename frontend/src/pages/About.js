@@ -75,7 +75,7 @@ const About = () => {
             >
               <motion.h1
                 variants={fadeUpVariant}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#1A2B4A]"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
                 Battle-Tested Leadership. Enterprise-Grade Results.
               </motion.h1>
@@ -113,7 +113,7 @@ const About = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Leadership</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A]" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]" >
                 Meet Our Team
               </h2>
             </motion.div>
@@ -141,7 +141,7 @@ const About = () => {
                       With a proven track record leading Fortune 500 companies through complex market transitions, Erania brings people-first leadership focused on building high-performing teams and driving measurable business outcomes. She's an award-winning marketer who combines strategic thinking with execution excellence.
                     </p>
                     <div className="mb-6">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-3">Expertise</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-3">Expertise</h4>
                       <ul className="grid md:grid-cols-2 gap-2">
                         {eraniaExpertise.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
@@ -185,7 +185,7 @@ const About = () => {
                       As President & Global CEO of OSG Analytics and strategic technology partner to Brackett Agency, Dr. Sukumar is the architect of the Stanford-born ASEMAP methodology and OSG's AI/ML analytics platforms. His proprietary intelligence frameworks have been academically validated and are used by Fortune 500 companies across CPG, Financial Services, Pharmaceutical, and Healthcare industries.
                     </p>
                     <div className="mb-6">
-                      <h4 className="font-semibold text-[#1A2B4A] mb-3">Expertise</h4>
+                      <h4 className="font-semibold text-[#0A0A0A] mb-3">Expertise</h4>
                       <ul className="grid md:grid-cols-2 gap-2">
                         {sukumarExpertise.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
@@ -214,7 +214,7 @@ const About = () => {
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto text-center mb-16">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Our Story</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-6" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-6" >
                 Why We Founded Brackett Agency
               </h2>
             </motion.div>
@@ -225,14 +225,14 @@ const About = () => {
                   Mid-market B2B companies face an impossible choice: hire a full-time strategic executive (with lengthy searches, significant salary expectations, and equity), or work with traditional consultants who bill hourly, delegate to junior teams, and hand you a deck without execution support.
                 </p>
                 <p className="text-[#6C757D] leading-relaxed mb-6">
-                  We built Brackett Agency to offer a third option: <span className="font-semibold text-[#1A2B4A]">fractional strategic executives backed by proprietary AI-powered intelligence technology.</span>
+                  We built Brackett Agency to offer a third option: <span className="font-semibold text-[#0A0A0A]">fractional strategic executives backed by proprietary AI-powered intelligence technology.</span>
                 </p>
                 <p className="text-[#6C757D] leading-relaxed">
                   You get senior strategic thinking, enterprise-grade analytics, and execution partnership—at a fraction of the cost of full-time hires, with structured outcomes instead of hourly uncertainty.
                 </p>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1A2B4A] mb-6 text-center" >
+              <h3 className="text-xl font-bold text-[#0A0A0A] mb-6 text-center" >
                 What We Believe
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -243,9 +243,9 @@ const About = () => {
                     className="bg-white rounded-xl p-6 border border-[#E9ECEF]"
                   >
                     <div className="flex items-start gap-3">
-                      <Check size={18} className="text-[#1A2B4A] mt-1 flex-shrink-0" />
+                      <Check size={18} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-[#1A2B4A] mb-1">{belief.title}</h4>
+                        <h4 className="font-semibold text-[#0A0A0A] mb-1">{belief.title}</h4>
                         <p className="text-[#6C757D] text-sm">{belief.desc}</p>
                       </div>
                     </div>
@@ -268,7 +268,7 @@ const About = () => {
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto text-center mb-12">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Technology Partner</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B4A] mb-6" >
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-6" >
                 OSG Analytics (Optimal Strategix Group)
               </h2>
             </motion.div>
@@ -279,7 +279,7 @@ const About = () => {
                   Brackett Agency partners strategically with OSG Analytics, a global leader in AI/ML-powered customer intelligence and behavioral analytics. This partnership enables us to offer enterprise-grade technology platforms to mid-market companies.
                 </p>
                 
-                <h4 className="font-semibold text-[#1A2B4A] mb-4">OSG Analytics Capabilities:</h4>
+                <h4 className="font-semibold text-[#0A0A0A] mb-4">OSG Analytics Capabilities:</h4>
                 <ul className="grid md:grid-cols-2 gap-3 mb-6">
                   {[
                     'ASEMAP: Stanford-born predictive tradeoff methodology',
@@ -296,7 +296,7 @@ const About = () => {
                 </ul>
 
                 <div className="bg-white rounded-lg p-4 border border-[#E9ECEF]">
-                  <h5 className="font-semibold text-[#1A2B4A] mb-2">Why This Partnership Matters</h5>
+                  <h5 className="font-semibold text-[#0A0A0A] mb-2">Why This Partnership Matters</h5>
                   <p className="text-[#6C757D] text-sm">
                     Most mid-market companies can't afford to build or license enterprise-grade intelligence technology. Through our strategic partnership with OSG Analytics, Brackett clients get access to platforms typically reserved for Fortune 500 organizations—at a fraction of the cost.
                   </p>
@@ -308,7 +308,7 @@ const About = () => {
       </section>
 
       {/* Credentials & Recognition */}
-      <section className="py-20 md:py-28 bg-[#1A2B4A] text-white" data-testid="credentials-section">
+      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white" data-testid="credentials-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -377,7 +377,7 @@ const About = () => {
             variants={fadeUpVariant}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1A2B4A]" >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0A0A0A]" >
               Ready to Work With Us?
             </h2>
             <p className="text-[#6C757D] mb-8 leading-relaxed">
