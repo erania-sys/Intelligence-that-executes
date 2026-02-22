@@ -356,9 +356,14 @@ const HowWeWork = () => {
         </div>
       </section>
 
-      {/* Our Guarantee */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white" data-testid="guarantee-section">
-        <div className="section-container">
+      {/* Our Guarantee - Enhanced */}
+      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white dark-section relative overflow-hidden" data-testid="guarantee-section">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-[#C9A961]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-[#C9A961]/5 rounded-full blur-2xl"></div>
+        
+        <div className="section-container relative z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -367,7 +372,7 @@ const HowWeWork = () => {
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-12">
               <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Why Choose Brackett</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
+              <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'white' }}>
                 Our Guarantee
               </h2>
             </motion.div>
@@ -380,8 +385,12 @@ const HowWeWork = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white/5 rounded-xl p-8 border border-white/10"
+                  className="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-[#C9A961]/50 transition-all duration-300 group"
+                  whileHover={{ y: -5 }}
                 >
+                  <div className="w-12 h-12 rounded-xl bg-[#C9A961]/20 flex items-center justify-center mb-4 group-hover:bg-[#C9A961] transition-colors">
+                    <Check className="text-[#C9A961] group-hover:text-white transition-colors" size={24} />
+                  </div>
                   <h3 className="text-xl font-bold mb-3 text-[#C9A961]" >
                     {item.title}
                   </h3>
