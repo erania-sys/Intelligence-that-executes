@@ -438,10 +438,7 @@ const Intelligence = () => {
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
-              <div className="w-16 h-16 rounded-xl bg-[#4A7C59]/10 flex items-center justify-center flex-shrink-0">
-                <Shield className="text-[#4A7C59]" size={32} />
-              </div>
+            <motion.div variants={fadeUpVariant} className="mb-8">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
                   Security & Compliance
