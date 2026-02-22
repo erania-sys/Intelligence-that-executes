@@ -43,7 +43,6 @@ const Intelligence = () => {
       partner: 'Powered by OSG Analytics\' ASEMAP methodology'
     },
     {
-      icon: Database,
       name: 'OSG Intelligence Engine',
       tagline: 'AI/ML Analytics Platform',
       description: 'Consolidates structured and unstructured data sources into real-time intelligence dashboards.',
