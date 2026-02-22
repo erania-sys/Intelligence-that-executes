@@ -153,5 +153,100 @@ For deploying to Squarespace:
 
 ---
 
-## Deployment Instructions (Pending)
-**P0 Task:** Provide detailed Squarespace deployment instructions for embedding or deploying this React application.
+## ✅ Squarespace Deployment Instructions
+
+Since Squarespace does not natively support React applications, you have **two main deployment options**:
+
+### Option 1: External Hosting with iframe Embed (Recommended)
+
+**Step 1: Deploy React App to a Static Hosting Service**
+
+Choose one of these free options:
+
+| Platform | How to Deploy | Result |
+|----------|---------------|--------|
+| **Vercel** | Connect GitHub repo → Auto-deploy | `yourapp.vercel.app` |
+| **Netlify** | Connect GitHub repo → Auto-deploy | `yourapp.netlify.app` |
+| **GitHub Pages** | `yarn build` then push `build/` folder | `username.github.io/repo` |
+
+**For Vercel (Easiest):**
+1. Go to https://vercel.com and sign up with GitHub
+2. Click "New Project" → Import your repository
+3. Vercel auto-detects React → Click "Deploy"
+4. Your site is live at `https://your-project.vercel.app`
+
+**Step 2: Embed in Squarespace**
+
+Requirements: Business, Commerce Basic, or higher Squarespace plan
+
+1. Edit your Squarespace page
+2. Add a **Code Block** where you want the website
+3. Paste this code (replace URL with your deployed app URL):
+
+```html
+<iframe 
+  src="https://your-app.vercel.app" 
+  width="100%" 
+  height="100vh" 
+  frameborder="0" 
+  style="border:none; min-height:100vh; max-width:100%;"
+  loading="lazy">
+</iframe>
+```
+
+4. Save and publish
+
+### Option 2: Full Domain Redirect
+
+If you want the React app to BE your entire site:
+
+1. Deploy to Vercel/Netlify
+2. Add your custom domain (e.g., `brackett.agency`) in Vercel's domain settings
+3. Update your domain's DNS records to point to Vercel
+4. Cancel/pause your Squarespace subscription
+
+### Option 3: Squarespace Developer Mode (Advanced)
+
+For partial integration (e.g., specific pages):
+
+1. Enable Developer Mode in Squarespace settings
+2. Run `yarn build` locally
+3. Upload built files (`build/static/`) to Squarespace Assets
+4. Add script/link tags in Page Header Code Injection
+
+**Note:** This option has limitations with React Router and requires more maintenance.
+
+### Custom Domain Setup (Optional)
+
+For either option, to use your own domain:
+1. In Vercel: Settings → Domains → Add `brackett.agency`
+2. Update DNS records:
+   - Type A: `@` → `76.76.21.21`
+   - Type CNAME: `www` → `cname.vercel-dns.com`
+
+---
+
+## Test Reports
+
+| Iteration | Date | Status | Notes |
+|-----------|------|--------|-------|
+| 6 | Dec 2025 | ✅ 100% pass | Website restructuring complete |
+| 7 | Dec 2025 | ✅ 100% pass | Design updates complete |
+| 8 | Feb 2026 | ✅ 100% pass | Imagery & headline fix |
+| 9 | Feb 2026 | ✅ 100% pass | JavaScript icon fixes - all pages render |
+
+---
+
+## Changelog
+
+### February 22, 2026
+- **Bug Fix:** Fixed blank page rendering on multiple pages
+  - Added missing icon imports in `About.js` (Award, GraduationCap, Shield, Building)
+  - Fixed undefined `phase.icon` in `HowWeWork.js` methodology section
+  - Fixed undefined `program.icon` and added missing imports (TrendingUp, Users, Calendar, Target, Compass, Zap) in `Solutions.js`
+- **Documentation:** Added comprehensive Squarespace deployment instructions
+
+### February 2026 (Previous Session)
+- Added hero images to all 8 pages
+- Fixed "Our Guarantee" section headline on How We Work page
+- Implemented dynamic animations and black/gold color scheme
