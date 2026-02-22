@@ -447,8 +447,8 @@ const BrandDesign = () => {
                 className="mb-12 last:mb-0"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#C9A961]/10 flex items-center justify-center">
-                    <category.icon className="text-[#C9A961]" size={24} />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center shadow-lg">
+                    <category.icon className="text-white" size={24} />
                   </div>
                   <h3 className="text-xl font-bold text-[#0A0A0A]" >
                     {category.title}
@@ -457,10 +457,19 @@ const BrandDesign = () => {
                 
                 <div className="grid md:grid-cols-2 gap-4 pl-0 md:pl-16">
                   {category.services.map((service, i) => (
-                    <div key={i} className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-2">{service.name}</h4>
-                      <p className="text-[#6C757D] text-sm leading-relaxed">{service.desc}</p>
-                    </div>
+                    <motion.div 
+                      key={i} 
+                      className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/40 hover:shadow-md transition-all duration-300 group cursor-pointer"
+                      whileHover={{ x: 5 }}
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-[#C9A961] mt-2 group-hover:scale-150 transition-transform"></div>
+                        <div>
+                          <h4 className="font-semibold text-[#0A0A0A] mb-2 group-hover:text-[#C9A961] transition-colors">{service.name}</h4>
+                          <p className="text-[#6C757D] text-sm leading-relaxed">{service.desc}</p>
+                        </div>
+                      </div>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
@@ -469,8 +478,9 @@ const BrandDesign = () => {
         </div>
       </section>
 
-      {/* Signature Packages */}
-      <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="packages-section">
+      {/* Signature Packages - Enhanced */}
+      <section className="py-20 md:py-28 bg-[#F8F9FA] relative" data-testid="packages-section">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent"></div>
         <div className="section-container">
           <motion.div
             initial="hidden"
@@ -490,10 +500,18 @@ const BrandDesign = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-8 border border-[#E9ECEF] hover:shadow-lg transition-shadow"
+                  className={`bg-white rounded-xl p-8 border-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden group ${
+                    index === 1 ? 'border-[#C9A961] shadow-lg' : 'border-[#E9ECEF]'
+                  }`}
+                  whileHover={{ y: -8 }}
                 >
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#C9A961]/10 mb-4">
-                    <Sparkles className="text-[#C9A961]" size={24} />
+                  {index === 1 && (
+                    <div className="absolute top-0 right-0 bg-[#C9A961] text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
+                      POPULAR
+                    </div>
+                  )}
+                  <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Sparkles className="text-white" size={26} />
                   </div>
                   <h3 className="text-xl font-bold text-[#0A0A0A] mb-1" >
                     {pkg.name}
