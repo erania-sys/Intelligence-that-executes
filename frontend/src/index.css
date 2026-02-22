@@ -304,13 +304,28 @@ h4 {
 }
 
 /* Force white text for dark sections */
+.dark-section,
 .dark-section h1,
 .dark-section h2,
 .dark-section h3,
 .dark-section h4,
 .dark-section h5,
-.dark-section h6 {
+.dark-section h6,
+.dark-section p,
+.dark-section span {
   color: white !important;
+}
+
+.dark-section .text-\[#C9A961\] {
+  color: #C9A961 !important;
+}
+
+.dark-section .text-white\/80 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dark-section .text-white\/60 {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
 
 /* Decorative elements */
