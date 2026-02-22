@@ -327,7 +327,7 @@ const BrandDesign = () => {
         </div>
       </section>
 
-      {/* Introduction Section */}
+      {/* Introduction Section - Enhanced */}
       <section className="py-16 border-b border-[#E9ECEF]" data-testid="intro-section">
         <div className="section-container">
           <motion.div
@@ -350,10 +350,13 @@ const BrandDesign = () => {
                 <motion.div
                   key={i}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-6 border border-[#E9ECEF]"
+                  className="group bg-white rounded-xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  whileHover={{ y: -5 }}
                 >
                   <div className="flex items-start gap-3">
-                    <ArrowRight size={16} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                    <div className="w-8 h-8 rounded-lg bg-[#C9A961]/10 flex items-center justify-center group-hover:bg-[#C9A961] transition-colors duration-300">
+                      <ArrowRight size={16} className="text-[#C9A961] group-hover:text-white transition-colors duration-300" />
+                    </div>
                     <div>
                       <h4 className="font-semibold text-[#0A0A0A] mb-1">{item.title}</h4>
                       <p className="text-[#6C757D] text-sm">{item.desc}</p>
@@ -362,6 +365,61 @@ const BrandDesign = () => {
                 </motion.div>
               ))}
             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Creative Process Visual */}
+      <section className="py-20 bg-[#0A0A0A] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#C9A961] rounded-full blur-[150px]"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#C9A961] rounded-full blur-[100px]"></div>
+        </div>
+        <div className="section-container relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-16"
+          >
+            <motion.p variants={fadeUpVariant} className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Our Creative Process</motion.p>
+            <motion.h2 variants={fadeUpVariant} className="text-3xl md:text-4xl font-bold text-white mb-4">
+              From Strategy to Stunning
+            </motion.h2>
+          </motion.div>
+
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-4 gap-8"
+          >
+            {[
+              { step: '01', title: 'Discover', desc: 'Deep dive into your brand, market, and audience', icon: '🔍' },
+              { step: '02', title: 'Define', desc: 'Crystallize positioning and strategic direction', icon: '📐' },
+              { step: '03', title: 'Design', desc: 'Create visual systems that capture your essence', icon: '🎨' },
+              { step: '04', title: 'Deliver', desc: 'Launch with comprehensive brand guidelines', icon: '🚀' }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                variants={fadeUpVariant}
+                className="relative group"
+              >
+                {i < 3 && (
+                  <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[#C9A961] to-transparent -z-10"></div>
+                )}
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#1A1A1A] border-2 border-[#C9A961]/30 mb-6 group-hover:border-[#C9A961] group-hover:shadow-[0_0_30px_rgba(201,169,97,0.3)] transition-all duration-300">
+                    <span className="text-4xl">{item.icon}</span>
+                  </div>
+                  <div className="text-[#C9A961] text-sm font-bold mb-2">{item.step}</div>
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-white/60 text-sm">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
