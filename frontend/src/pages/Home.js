@@ -109,7 +109,28 @@ const Home = () => {
                 variants={fadeUpVariant}
                 className="text-[36px] md:text-[42px] lg:text-[48px] font-semibold leading-[1.15] mb-6 text-[#0A0A0A]"
               >
-                Stop Leaving Millions on the Table. Get the Strategic Intelligence You Need—Without the Full-Time Overhead.
+                Stop Leaving{' '}
+                <span className="relative inline-block">
+                  <span className="relative z-10 bg-gradient-to-r from-[#C9A961] to-[#8B7340] bg-clip-text text-transparent">Millions</span>
+                  <span className="absolute bottom-1 left-0 w-full h-2 bg-[#C9A961]/20 -z-10 rounded"></span>
+                </span>{' '}
+                on the Table.{' '}
+                <br className="hidden md:block" />
+                Get the{' '}
+                <span className="relative inline-block">
+                  <span className="text-[#0A0A0A]" style={{ textShadow: '2px 2px 0px rgba(201, 169, 97, 0.3)' }}>Strategic Intelligence</span>
+                </span>{' '}
+                You Need—
+                <br className="hidden lg:block" />
+                <span className="relative">
+                  <span className="text-[#6C757D] font-normal italic">Without</span>
+                </span>{' '}
+                the{' '}
+                <span className="relative inline-block group">
+                  <span className="relative z-10">Full-Time Overhead</span>
+                  <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#C9A961] via-[#D4B87A] to-[#C9A961] rounded-full"></span>
+                </span>
+                <span className="text-[#C9A961]">.</span>
               </motion.h1>
               
               <motion.p
