@@ -349,7 +349,7 @@ h4 {
 }
 
 .faq-question:hover {
-  color: var(--accent-blue);
+  color: var(--gold);
 }
 
 .faq-answer {
@@ -362,7 +362,7 @@ h4 {
 .stat-number {
   font-size: 36px;
   font-weight: 700;
-  color: var(--navy-blue);
+  color: var(--black);
 }
 
 .stat-label {
