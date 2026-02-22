@@ -968,6 +968,51 @@ const Solutions = () => {
           </AnimatePresence>
         </div>
       </section>
+
+      {/* Final CTA Section */}
+      <section className="py-20 md:py-28 bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-[#C9A961]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-[#C9A961]/5 rounded-full blur-2xl"></div>
+        
+        <div className="section-container relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUpVariant}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20">
+              <Target size={16} className="text-[#C9A961]" />
+              Ready to Transform?
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Let's Find Your Strategic Advantage
+            </h2>
+            <p className="text-white/70 mb-10 leading-relaxed text-lg">
+              Whether you need a focused 90-day program, an ongoing strategic partnership, or a diagnostic audit to identify your biggest opportunities—we have a solution designed for your specific challenges.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.a
+                href="https://form.jotform.com/252728460666061"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#C9A961] to-[#8B7340] text-[#0A0A0A] font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(201,169,97,0.4)] transition-all duration-300 group"
+                data-testid="final-cta"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Schedule a Consultation
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </motion.a>
+            </div>
+            <p className="text-white/50 text-sm mt-8">
+              Contact: erania@brackett.agency
+            </p>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
