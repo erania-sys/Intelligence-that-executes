@@ -193,10 +193,7 @@ const Intelligence = () => {
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            <motion.div variants={fadeUpVariant} className="flex items-start gap-4 mb-8">
-              <div className="w-16 h-16 rounded-xl bg-[#C9A961]/10 flex items-center justify-center flex-shrink-0">
-                <Brain className="text-[#C9A961]" size={32} />
-              </div>
+            <motion.div variants={fadeUpVariant} className="mb-8">
               <div>
                 <p className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">Platform 1</p>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1A2B4A]" >
