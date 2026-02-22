@@ -86,7 +86,7 @@ const Home = () => {
   return (
     <div data-testid="home-page" className="bg-white">
       {/* Hero Section - Now with black accents */}
-      <section className="min-h-[85vh] flex items-center pt-24 pb-16 relative overflow-hidden bg-white" data-testid="hero-section">
+      <section className="min-h-[80vh] pt-28 pb-16 relative overflow-hidden bg-white" data-testid="hero-section">
         {/* Decorative elements */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-[#0A0A0A]/5 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#C9A961]/10 to-transparent rounded-full blur-2xl"></div>
