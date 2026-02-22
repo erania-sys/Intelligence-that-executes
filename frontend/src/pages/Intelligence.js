@@ -170,8 +170,8 @@ const Intelligence = () => {
               <p className="text-[#6C757D] leading-relaxed mb-6">
                 Most strategy consultants bring experience and frameworks. We bring that plus proprietary intelligence technology that processes customer behavioral data in ways traditional consulting can't.
               </p>
-              <div className="bg-[#2E5C8A]/5 rounded-xl p-6 border border-[#2E5C8A]/10">
-                <h4 className="font-semibold text-[#2E5C8A] mb-2">Our Strategic Partnership</h4>
+              <div className="bg-[#C9A961]/5 rounded-xl p-6 border border-[#C9A961]/10">
+                <h4 className="font-semibold text-[#C9A961] mb-2">Our Strategic Partnership</h4>
                 <p className="text-[#6C757D] text-sm leading-relaxed">
                   Brackett Agency partners strategically with OSG Analytics, a leader in AI/ML-powered customer intelligence and behavioral analytics. This partnership gives our clients access to enterprise-grade technology platforms typically reserved for Fortune 500 companies.
                 </p>
@@ -411,14 +411,14 @@ const Intelligence = () => {
                 <div className="bg-[#6C757D] text-white p-4 font-semibold text-center text-sm">
                   Traditional Consulting
                 </div>
-                <div className="bg-[#2E5C8A] text-white p-4 font-semibold text-center text-sm">
+                <div className="bg-[#0A0A0A] text-white p-4 font-semibold text-center text-sm">
                   OSG Intelligence
                 </div>
               </div>
               {comparisonData.map((row, index) => (
                 <div key={index} className="grid grid-cols-2 border-t border-[#E9ECEF]">
                   <div className="p-4 text-[#6C757D] text-sm">{row.traditional}</div>
-                  <div className="p-4 text-[#0A0A0A] font-medium text-sm bg-[#2E5C8A]/5">{row.brackett}</div>
+                  <div className="p-4 text-[#0A0A0A] font-medium text-sm bg-[#C9A961]/5">{row.brackett}</div>
                 </div>
               ))}
             </motion.div>
