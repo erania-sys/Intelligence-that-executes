@@ -16,7 +16,6 @@ const staggerContainer = {
 const Intelligence = () => {
   const platforms = [
     {
-      icon: Brain,
       name: 'Customer Choice Intelligence',
       tagline: 'Predictive Tradeoff Technology',
       description: 'Measures the magnitude of customer decisions—not just preferences or rankings.',
