@@ -328,116 +328,235 @@ const Solutions = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
+                {/* Section Header */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-center mb-16"
+                >
+                  <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Our Core Programs</p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]">
+                    Signature Programs for Transformative Results
+                  </h2>
+                  <p className="text-[#6C757D] mt-4 max-w-2xl mx-auto">
+                    Each program is designed to solve specific growth challenges with measurable outcomes.
+                  </p>
+                </motion.div>
+
                 {signaturePrograms.map((program, index) => (
-                  <div key={index} className="mb-20 last:mb-0">
-                    <div className="flex items-start gap-4 mb-8">
-                      <div className="w-14 h-14 rounded-xl bg-[#0A0A0A]/10 flex items-center justify-center flex-shrink-0">
-                        {index === 0 && <Target className="text-[#0A0A0A]" size={28} />}
-                        {index === 1 && <Compass className="text-[#0A0A0A]" size={28} />}
-                        {index === 2 && <Zap className="text-[#0A0A0A]" size={28} />}
-                      </div>
-                      <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]" >
-                          {program.name}
-                        </h2>
+                  <motion.div 
+                    key={index} 
+                    className="mb-24 last:mb-0"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    {/* Program Header */}
+                    <div className="relative mb-10">
+                      <div className="flex items-start gap-6">
+                        <motion.div 
+                          className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center flex-shrink-0 shadow-lg"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ type: "spring", stiffness: 300 }}
+                        >
+                          {index === 0 && <Target className="text-white" size={28} />}
+                          {index === 1 && <Compass className="text-white" size={28} />}
+                          {index === 2 && <Zap className="text-white" size={28} />}
+                        </motion.div>
+                        <div>
+                          <span className="text-xs font-bold text-[#C9A961] uppercase tracking-wider mb-1 block">
+                            Program {String(index + 1).padStart(2, '0')}
+                          </span>
+                          <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]">
+                            {program.name}
+                          </h2>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-8 mb-8">
-                      <div className="bg-red-50 rounded-xl p-6 border border-red-100">
-                        <h4 className="font-semibold text-red-800 mb-3">The Problem You're Facing</h4>
-                        <p className="text-red-700 text-sm leading-relaxed">{program.problem}</p>
-                      </div>
-                      <div className="bg-[#0A0A0A]/5 rounded-xl p-6 border border-[#0A0A0A]/10">
-                        <h4 className="font-semibold text-[#0A0A0A] mb-3">The Outcome</h4>
-                        <p className="text-[#6C757D] text-sm leading-relaxed">{program.outcome}</p>
-                      </div>
-                    </div>
-
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF] mb-8">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Who This Is For</h4>
-                      <ul className="grid md:grid-cols-2 gap-2">
-                        {program.whoFor.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="mb-8">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">The Process</h4>
-                      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {program.phases.map((phase, i) => (
-                          <div key={i} className="bg-[#F8F9FA] rounded-xl p-5">
-                            <div className="flex items-center gap-2 mb-3">
-                              <span className="w-6 h-6 rounded-full bg-[#C9A961] text-white text-xs flex items-center justify-center font-semibold">
-                                {i + 1}
-                              </span>
-                              <span className="text-xs text-[#6C757D]">Weeks {phase.weeks}</span>
+                    {/* Problem & Outcome Cards */}
+                    <div className="grid lg:grid-cols-2 gap-6 mb-10">
+                      <motion.div 
+                        className="relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border border-red-200 overflow-hidden group"
+                        whileHover={{ y: -5 }}
+                      >
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-red-200/30 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+                        <div className="relative z-10">
+                          <div className="flex items-center gap-2 mb-4">
+                            <div className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center">
+                              <span className="text-red-600 text-lg">!</span>
                             </div>
-                            <h5 className="font-semibold text-[#0A0A0A] text-sm mb-2">{phase.name}</h5>
-                            <ul className="space-y-1">
-                              {phase.items.map((item, j) => (
-                                <li key={j} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                  <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
+                            <h4 className="font-bold text-red-800">The Problem You're Facing</h4>
                           </div>
+                          <p className="text-red-700 leading-relaxed">{program.problem}</p>
+                        </div>
+                      </motion.div>
+                      <motion.div 
+                        className="relative bg-gradient-to-br from-[#C9A961]/5 to-[#C9A961]/15 rounded-2xl p-8 border border-[#C9A961]/30 overflow-hidden group"
+                        whileHover={{ y: -5 }}
+                      >
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A961]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+                        <div className="relative z-10">
+                          <div className="flex items-center gap-2 mb-4">
+                            <div className="w-8 h-8 rounded-lg bg-[#C9A961]/30 flex items-center justify-center">
+                              <TrendingUp size={18} className="text-[#8B7340]" />
+                            </div>
+                            <h4 className="font-bold text-[#0A0A0A]">The Outcome</h4>
+                          </div>
+                          <p className="text-[#6C757D] leading-relaxed">{program.outcome}</p>
+                        </div>
+                      </motion.div>
+                    </div>
+
+                    {/* Who This Is For */}
+                    <motion.div 
+                      className="bg-white rounded-2xl p-8 border border-[#E9ECEF] mb-10 hover:border-[#C9A961]/40 hover:shadow-lg transition-all duration-300"
+                      whileHover={{ y: -3 }}
+                    >
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-10 h-10 rounded-xl bg-[#0A0A0A] flex items-center justify-center">
+                          <Users size={20} className="text-white" />
+                        </div>
+                        <h4 className="font-bold text-[#0A0A0A] text-lg">Who This Is For</h4>
+                      </div>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {program.whoFor.map((item, i) => (
+                          <motion.div 
+                            key={i} 
+                            className="flex items-start gap-3 p-3 rounded-lg bg-[#F8F9FA] hover:bg-[#C9A961]/10 transition-colors group cursor-pointer"
+                            whileHover={{ x: 5 }}
+                          >
+                            <div className="w-6 h-6 rounded-full bg-[#C9A961]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#C9A961] transition-colors">
+                              <Check size={12} className="text-[#C9A961] group-hover:text-white transition-colors" />
+                            </div>
+                            <span className="text-[#6C757D] text-sm">{item}</span>
+                          </motion.div>
                         ))}
+                      </div>
+                    </motion.div>
+
+                    {/* The Process - Enhanced Timeline */}
+                    <div className="mb-10">
+                      <div className="flex items-center gap-3 mb-8">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center">
+                          <Calendar size={20} className="text-white" />
+                        </div>
+                        <h4 className="font-bold text-[#0A0A0A] text-lg">The Process</h4>
+                      </div>
+                      <div className="relative">
+                        {/* Connection line */}
+                        <div className="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-[#C9A961] via-[#C9A961]/50 to-[#C9A961]/20"></div>
+                        
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                          {program.phases.map((phase, i) => (
+                            <motion.div 
+                              key={i} 
+                              className="relative bg-white rounded-2xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-xl transition-all duration-300 group"
+                              whileHover={{ y: -8 }}
+                            >
+                              {/* Phase number badge */}
+                              <div className="absolute -top-4 left-6">
+                                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A961] to-[#8B7340] text-white text-sm font-bold flex items-center justify-center shadow-lg">
+                                  {i + 1}
+                                </div>
+                              </div>
+                              
+                              <div className="pt-4">
+                                <div className="flex items-center gap-2 mb-3">
+                                  <Clock size={14} className="text-[#C9A961]" />
+                                  <span className="text-xs font-semibold text-[#C9A961]">Weeks {phase.weeks}</span>
+                                </div>
+                                <h5 className="font-bold text-[#0A0A0A] mb-4 group-hover:text-[#C9A961] transition-colors">{phase.name}</h5>
+                                <ul className="space-y-2">
+                                  {phase.items.map((item, j) => (
+                                    <li key={j} className="text-xs text-[#6C757D] flex items-start gap-2">
+                                      <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                                      <span>{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </motion.div>
+                          ))}
+                        </div>
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                        <h4 className="font-semibold text-[#0A0A0A] mb-4">What You Get</h4>
-                        <ul className="space-y-2">
+                    {/* Deliverables, Timeline, ROI Grid */}
+                    <div className="grid md:grid-cols-3 gap-6 mb-8">
+                      <motion.div 
+                        className="bg-white rounded-2xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
+                        whileHover={{ y: -5 }}
+                      >
+                        <div className="flex items-center gap-2 mb-5">
+                          <div className="w-8 h-8 rounded-lg bg-[#C9A961]/20 flex items-center justify-center">
+                            <Check size={16} className="text-[#C9A961]" />
+                          </div>
+                          <h4 className="font-bold text-[#0A0A0A]">What You Get</h4>
+                        </div>
+                        <ul className="space-y-3">
                           {program.deliverables.map((item, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                              <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-2 flex-shrink-0"></div>
                               <span>{item}</span>
                             </li>
                           ))}
                         </ul>
-                      </div>
-                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                        <div className="flex items-center gap-2 mb-4">
-                          <Clock size={18} className="text-[#C9A961]" />
-                          <h4 className="font-semibold text-[#0A0A0A]">Timeline</h4>
+                      </motion.div>
+                      <motion.div 
+                        className="bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] rounded-2xl p-6 text-white"
+                        whileHover={{ y: -5 }}
+                      >
+                        <div className="flex items-center gap-2 mb-5">
+                          <div className="w-8 h-8 rounded-lg bg-[#C9A961]/30 flex items-center justify-center">
+                            <Clock size={16} className="text-[#C9A961]" />
+                          </div>
+                          <h4 className="font-bold text-white">Timeline</h4>
                         </div>
-                        <p className="text-2xl font-bold text-[#0A0A0A]" >
+                        <p className="text-3xl font-bold text-[#C9A961] mb-2">
                           {program.timeline}
                         </p>
-                      </div>
-                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                        <div className="flex items-center gap-2 mb-4">
-                          <TrendingUp size={18} className="text-[#0A0A0A]" />
-                          <h4 className="font-semibold text-[#0A0A0A]">Expected ROI</h4>
+                        <p className="text-white/60 text-sm">Program Duration</p>
+                      </motion.div>
+                      <motion.div 
+                        className="bg-gradient-to-br from-[#C9A961]/10 to-[#C9A961]/20 rounded-2xl p-6 border border-[#C9A961]/30"
+                        whileHover={{ y: -5 }}
+                      >
+                        <div className="flex items-center gap-2 mb-5">
+                          <div className="w-8 h-8 rounded-lg bg-[#C9A961]/30 flex items-center justify-center">
+                            <TrendingUp size={16} className="text-[#8B7340]" />
+                          </div>
+                          <h4 className="font-bold text-[#0A0A0A]">Expected ROI</h4>
                         </div>
                         <p className="text-sm text-[#6C757D] leading-relaxed">{program.roi}</p>
-                      </div>
+                      </motion.div>
                     </div>
 
-                    <div className="mt-6 flex gap-4">
-                      <a
+                    {/* CTA */}
+                    <div className="flex flex-wrap gap-4">
+                      <motion.a
                         href="https://form.jotform.com/252728460666061"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-primary"
+                        className="btn-primary group"
                         data-testid={`cta-${program.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
                       >
                         Request Consultation
-                        <ArrowRight size={16} className="ml-2" />
-                      </a>
+                        <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                      </motion.a>
                     </div>
 
                     {index < signaturePrograms.length - 1 && (
-                      <hr className="mt-16 border-[rgba(0,0,0,0.08)]" />
+                      <div className="mt-20 flex items-center gap-4">
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E9ECEF] to-transparent"></div>
+                        <div className="w-2 h-2 rounded-full bg-[#C9A961]"></div>
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E9ECEF] to-transparent"></div>
+                      </div>
                     )}
-                  </div>
+                  </motion.div>
                 ))}
               </motion.div>
             )}
