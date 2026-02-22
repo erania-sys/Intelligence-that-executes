@@ -570,108 +570,184 @@ const Solutions = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="text-center mb-12">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mb-4" >
+                {/* Section Header */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-center mb-16"
+                >
+                  <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Ongoing Partnerships</p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4">
                     Fractional Strategic Executives On Retainer
                   </h2>
+                  <p className="text-[#6C757D] max-w-2xl mx-auto">
+                    Senior strategic thinking when you need it, without full-time executive overhead.
+                  </p>
+                </motion.div>
+
+                <div className="space-y-8">
+                  {strategicPartnerships.map((partnership, index) => (
+                    <motion.div 
+                      key={index} 
+                      className="relative"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.15 }}
+                    >
+                      <div className={`bg-white rounded-2xl overflow-hidden border-2 transition-all duration-300 hover:shadow-2xl ${
+                        index === 0 ? 'border-[#C9A961]' : 'border-[#E9ECEF] hover:border-[#C9A961]/50'
+                      }`}>
+                        {/* Partnership Badge */}
+                        {index === 0 && (
+                          <div className="bg-gradient-to-r from-[#C9A961] to-[#8B7340] text-white text-center py-2 text-sm font-semibold">
+                            RECOMMENDED FOR ENTERPRISE
+                          </div>
+                        )}
+                        
+                        <div className="p-8 md:p-10">
+                          {/* Header */}
+                          <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
+                            <motion.div 
+                              className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center flex-shrink-0 shadow-lg"
+                              whileHover={{ scale: 1.1, rotate: 5 }}
+                            >
+                              <Users className="text-white" size={28} />
+                            </motion.div>
+                            <div className="flex-1">
+                              <h3 className="text-2xl font-bold text-[#0A0A0A] mb-2">
+                                {partnership.name}
+                              </h3>
+                              <p className="text-[#C9A961] font-semibold mb-3">{partnership.subtitle}</p>
+                              <p className="text-[#6C757D] leading-relaxed">{partnership.description}</p>
+                            </div>
+                          </div>
+
+                          {/* Who It's For */}
+                          <div className="bg-gradient-to-r from-[#F8F9FA] to-white rounded-xl p-6 mb-8 border border-[#E9ECEF]">
+                            <div className="flex items-center gap-2 mb-4">
+                              <div className="w-8 h-8 rounded-lg bg-[#0A0A0A] flex items-center justify-center">
+                                <Target size={16} className="text-white" />
+                              </div>
+                              <h4 className="font-bold text-[#0A0A0A]">Who It's For</h4>
+                            </div>
+                            <div className="grid md:grid-cols-3 gap-3">
+                              {partnership.whoFor.map((item, i) => (
+                                <motion.div 
+                                  key={i} 
+                                  className="flex items-start gap-2 p-3 rounded-lg bg-white border border-[#E9ECEF] hover:border-[#C9A961]/50 transition-colors"
+                                  whileHover={{ x: 3 }}
+                                >
+                                  <Check size={14} className="text-[#C9A961] mt-0.5 flex-shrink-0" />
+                                  <span className="text-sm text-[#6C757D]">{item}</span>
+                                </motion.div>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Support Grid */}
+                          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                            <motion.div 
+                              className="bg-[#0A0A0A] rounded-xl p-5 text-white"
+                              whileHover={{ y: -5 }}
+                            >
+                              <div className="flex items-center gap-2 mb-4">
+                                <Calendar size={18} className="text-[#C9A961]" />
+                                <h5 className="font-semibold text-white">Monthly</h5>
+                              </div>
+                              <ul className="space-y-2">
+                                {partnership.monthly.map((item, i) => (
+                                  <li key={i} className="text-xs text-white/70 flex items-start gap-2">
+                                    <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </motion.div>
+                            <motion.div 
+                              className="bg-white rounded-xl p-5 border border-[#E9ECEF]"
+                              whileHover={{ y: -5 }}
+                            >
+                              <div className="flex items-center gap-2 mb-4">
+                                <TrendingUp size={18} className="text-[#C9A961]" />
+                                <h5 className="font-semibold text-[#0A0A0A]">Quarterly</h5>
+                              </div>
+                              <ul className="space-y-2">
+                                {partnership.quarterly.map((item, i) => (
+                                  <li key={i} className="text-xs text-[#6C757D] flex items-start gap-2">
+                                    <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </motion.div>
+                            {partnership.annual && (
+                              <motion.div 
+                                className="bg-white rounded-xl p-5 border border-[#E9ECEF]"
+                                whileHover={{ y: -5 }}
+                              >
+                                <div className="flex items-center gap-2 mb-4">
+                                  <Compass size={18} className="text-[#C9A961]" />
+                                  <h5 className="font-semibold text-[#0A0A0A]">Annual</h5>
+                                </div>
+                                <ul className="space-y-2">
+                                  {partnership.annual.map((item, i) => (
+                                    <li key={i} className="text-xs text-[#6C757D] flex items-start gap-2">
+                                      <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                                      <span>{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </motion.div>
+                            )}
+                            {partnership.premium && (
+                              <motion.div 
+                                className="bg-gradient-to-br from-[#C9A961]/10 to-[#C9A961]/20 rounded-xl p-5 border border-[#C9A961]/30"
+                                whileHover={{ y: -5 }}
+                              >
+                                <div className="flex items-center gap-2 mb-4">
+                                  <Zap size={18} className="text-[#C9A961]" />
+                                  <h5 className="font-semibold text-[#0A0A0A]">Premium</h5>
+                                </div>
+                                <ul className="space-y-2">
+                                  {partnership.premium.map((item, i) => (
+                                    <li key={i} className="text-xs text-[#6C757D] flex items-start gap-2">
+                                      <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                                      <span>{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </motion.div>
+                            )}
+                          </div>
+
+                          {/* CTA */}
+                          <div className="flex flex-wrap gap-4 pt-6 border-t border-[#E9ECEF]">
+                            <motion.a
+                              href="https://form.jotform.com/252728460666061"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="btn-primary group"
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                            >
+                              Discuss Partnership
+                              <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                            </motion.a>
+                            <motion.a
+                              href="#audit"
+                              onClick={(e) => { e.preventDefault(); setActiveTab('audit'); }}
+                              className="btn-secondary"
+                              whileHover={{ scale: 1.02 }}
+                            >
+                              Start with an Audit
+                            </motion.a>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-
-                {strategicPartnerships.map((partnership, index) => (
-                  <div key={index} className="mb-16 last:mb-0">
-                    <div className="bg-white rounded-xl p-8 border border-[#E9ECEF]">
-                      <div className="flex items-start gap-4 mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-[#C9A961]/10 flex items-center justify-center flex-shrink-0">
-                          <Users className="text-[#C9A961]" size={24} />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-[#0A0A0A]" >
-                            {partnership.name}
-                          </h3>
-                          <p className="text-[#C9A961] font-medium">{partnership.subtitle}</p>
-                        </div>
-                      </div>
-
-                      <p className="text-[#6C757D] mb-6">{partnership.description}</p>
-
-                      <div className="bg-[#F8F9FA] rounded-lg p-4 mb-6">
-                        <h4 className="font-semibold text-[#0A0A0A] mb-3">Who It's For</h4>
-                        <ul className="grid md:grid-cols-3 gap-2">
-                          {partnership.whoFor.map((item, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                              <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div>
-                          <h5 className="font-semibold text-[#0A0A0A] mb-3 flex items-center gap-2">
-                            <Calendar size={16} className="text-[#C9A961]" /> Monthly Support
-                          </h5>
-                          <ul className="space-y-2">
-                            {partnership.monthly.map((item, i) => (
-                              <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-[#0A0A0A] mb-3">Quarterly</h5>
-                          <ul className="space-y-2">
-                            {partnership.quarterly.map((item, i) => (
-                              <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        {partnership.annual && (
-                          <div>
-                            <h5 className="font-semibold text-[#0A0A0A] mb-3">Annual</h5>
-                            <ul className="space-y-2">
-                              {partnership.annual.map((item, i) => (
-                                <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                  <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                        {partnership.premium && (
-                          <div>
-                            <h5 className="font-semibold text-[#0A0A0A] mb-3">Premium Access</h5>
-                            <ul className="space-y-2">
-                              {partnership.premium.map((item, i) => (
-                                <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                  <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="mt-6 pt-6 border-t border-[#E9ECEF]">
-                        <a
-                          href="https://form.jotform.com/252728460666061"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-primary"
-                        >
-                          Discuss Partnership
-                          <ArrowRight size={16} className="ml-2" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </motion.div>
             )}
 
