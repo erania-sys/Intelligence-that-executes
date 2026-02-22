@@ -182,7 +182,7 @@ const Intelligence = () => {
       </section>
 
       {/* OSG Partnership Deep Dive */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white" data-testid="osg-partnership">
+      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white dark-section" data-testid="osg-partnership">
         <div className="section-container">
           <motion.div
             initial="hidden"
