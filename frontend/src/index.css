@@ -303,6 +303,16 @@ h4 {
   color: var(--secondary);
 }
 
+/* Force white text for dark sections */
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4,
+.dark-section h5,
+.dark-section h6 {
+  color: white !important;
+}
+
 /* Decorative elements */
 .accent-dot {
   display: inline-block;
