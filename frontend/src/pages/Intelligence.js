@@ -70,7 +70,6 @@ const Intelligence = () => {
       partner: 'Powered by OSG Analytics platform'
     },
     {
-      icon: Users,
       name: 'Customer Experience Analytics',
       tagline: 'Advanced CX Measurement',
       description: 'Measures customer sentiment drivers, engagement triggers, and lifetime value optimization opportunities.',
