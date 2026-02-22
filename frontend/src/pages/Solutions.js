@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Check, Clock } from 'lucide-react';
+import { ArrowRight, Check, Clock, TrendingUp, Users, Calendar, Target, Compass, Zap } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -244,7 +244,9 @@ const Solutions = () => {
                   <div key={index} className="mb-20 last:mb-0">
                     <div className="flex items-start gap-4 mb-8">
                       <div className="w-14 h-14 rounded-xl bg-[#0A0A0A]/10 flex items-center justify-center flex-shrink-0">
-                        <program.icon className="text-[#0A0A0A]" size={28} />
+                        {index === 0 && <Target className="text-[#0A0A0A]" size={28} />}
+                        {index === 1 && <Compass className="text-[#0A0A0A]" size={28} />}
+                        {index === 2 && <Zap className="text-[#0A0A0A]" size={28} />}
                       </div>
                       <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]" >
