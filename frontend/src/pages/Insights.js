@@ -129,7 +129,7 @@ const Insights = () => {
     const colors = {
       revenue: '#0A0A0A',
       positioning: '#C9A961',
-      intelligence: '#2E5C8A',
+      intelligence: '#C9A961',
       execution: '#4A7C59'
     };
     return colors[category] || '#6C757D';

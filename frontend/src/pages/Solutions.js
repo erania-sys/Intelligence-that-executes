@@ -373,8 +373,8 @@ const Solutions = () => {
                   <div key={index} className="mb-16 last:mb-0">
                     <div className="bg-white rounded-xl p-8 border border-[#E9ECEF]">
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-[#2E5C8A]/10 flex items-center justify-center flex-shrink-0">
-                          <Users className="text-[#2E5C8A]" size={24} />
+                        <div className="w-12 h-12 rounded-xl bg-[#C9A961]/10 flex items-center justify-center flex-shrink-0">
+                          <Users className="text-[#C9A961]" size={24} />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-[#0A0A0A]" >
