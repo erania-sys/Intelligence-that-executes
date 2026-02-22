@@ -21,28 +21,31 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer py-16 md:py-20 bg-[#0A0A0A]" data-testid="footer">
-      <div className="section-container">
-        {/* CTA Banner */}
-        <div className="bg-[#C9A961] rounded-md p-8 md:p-12 mb-16 text-center">
-          <h3 className="text-2xl md:text-3xl font-semibold text-[#1A2B4A] mb-4">
+    <footer className="footer bg-[#0A0A0A]" data-testid="footer">
+      {/* CTA Banner - Gold accent */}
+      <div className="bg-[#C9A961]">
+        <div className="section-container py-12 md:py-16 text-center">
+          <h3 className="text-2xl md:text-3xl font-semibold text-[#0A0A0A] mb-4">
             Ready to See What You're Missing?
           </h3>
-          <p className="text-[#1A2B4A]/80 mb-6 max-w-xl mx-auto">
+          <p className="text-[#0A0A0A]/70 mb-6 max-w-xl mx-auto">
             Request your Strategic Blindspot Audit and discover the opportunities hiding in your business.
           </p>
           <a
             href="https://form.jotform.com/252728460666061"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#1A1A1A] transition-colors"
+            className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white font-semibold px-8 py-4 rounded-md hover:bg-[#1A1A1A] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
             data-testid="footer-cta"
           >
             Request Strategic Consultation
-            <ArrowRight size={16} />
+            <ArrowRight size={18} />
           </a>
         </div>
+      </div>
 
+      {/* Main Footer Content */}
+      <div className="section-container py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
@@ -51,17 +54,17 @@ const Footer = () => {
               alt="Brackett Agency" 
               className="h-14 md:h-16 w-auto mb-4"
             />
-            <p className="text-white/60 leading-relaxed text-sm mb-4">
+            <p className="text-[#C9A961] font-medium leading-relaxed text-sm mb-4">
               Intelligence That Executes.
             </p>
-            <p className="text-white/40 text-xs leading-relaxed">
+            <p className="text-white/50 text-xs leading-relaxed">
               Fractional strategy partners for mid-market B2B companies who need senior strategic thinking backed by AI-powered intelligence.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-xs font-semibold tracking-wider uppercase text-white/40 mb-6">
+            <h4 className="text-xs font-semibold tracking-wider uppercase text-[#C9A961] mb-6">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -69,7 +72,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
+                    className="text-sm text-white/70 transition-colors hover:text-[#C9A961]"
                     data-testid={`footer-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {link.name}
@@ -81,7 +84,7 @@ const Footer = () => {
 
           {/* More */}
           <div>
-            <h4 className="text-xs font-semibold tracking-wider uppercase text-white/40 mb-6">
+            <h4 className="text-xs font-semibold tracking-wider uppercase text-[#C9A961] mb-6">
               More
             </h4>
             <ul className="space-y-3">
@@ -89,7 +92,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
+                    className="text-sm text-white/70 transition-colors hover:text-[#C9A961]"
                     data-testid={`footer-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {link.name}
@@ -101,14 +104,14 @@ const Footer = () => {
 
           {/* Contact & Resources */}
           <div>
-            <h4 className="text-xs font-semibold tracking-wider uppercase text-white/40 mb-6">
+            <h4 className="text-xs font-semibold tracking-wider uppercase text-[#C9A961] mb-6">
               Connect
             </h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="mailto:erania@brackett.agency"
-                  className="text-sm text-white/70 transition-colors hover:text-white"
+                  className="text-sm text-white/70 transition-colors hover:text-[#C9A961]"
                   data-testid="footer-email"
                 >
                   erania@brackett.agency
@@ -119,7 +122,7 @@ const Footer = () => {
                   href="https://form.jotform.com/252728460666061"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm inline-flex items-center gap-2 text-white/70 transition-colors hover:text-white"
+                  className="text-sm inline-flex items-center gap-2 text-white/70 transition-colors hover:text-[#C9A961]"
                   data-testid="footer-contact-form"
                 >
                   Contact Form
@@ -128,10 +131,10 @@ const Footer = () => {
               </li>
             </ul>
             
-            <h4 className="text-xs font-semibold tracking-wider uppercase text-white/40 mb-4 mt-8">
+            <h4 className="text-xs font-semibold tracking-wider uppercase text-[#C9A961] mb-4 mt-8">
               Partners
             </h4>
-            <p className="text-white/40 text-xs">
+            <p className="text-white/50 text-xs">
               Strategic Partnership with OSG Analytics
             </p>
           </div>
@@ -139,10 +142,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-sm">
+          <p className="text-white/50 text-sm">
             &copy; {currentYear} Brackett Agency. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-white/40 text-xs">
+          <div className="flex items-center gap-6 text-white/50 text-xs">
             <span>GDPR Compliant</span>
             <span>HIPAA Compliant</span>
           </div>
