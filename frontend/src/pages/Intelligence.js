@@ -656,7 +656,7 @@ const Intelligence = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white" data-testid="cta-section">
+      <section className="py-20 md:py-28 bg-[#0A0A0A] text-white dark-section" data-testid="cta-section">
         <div className="section-container">
           <motion.div
             initial="hidden"
