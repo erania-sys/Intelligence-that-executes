@@ -98,6 +98,13 @@ const Home = () => {
               animate="visible"
               variants={staggerContainer}
             >
+              <motion.p
+                variants={fadeUpVariant}
+                className="text-sm font-semibold text-[#C9A961] mb-4 uppercase tracking-wider"
+              >
+                Solving Your 3 AM Problem
+              </motion.p>
+              
               <motion.h1
                 variants={fadeUpVariant}
                 className="text-[36px] md:text-[42px] lg:text-[48px] font-semibold leading-[1.15] mb-6 text-[#0A0A0A]"
@@ -109,8 +116,7 @@ const Home = () => {
                 variants={fadeUpVariant}
                 className="text-lg text-[#6C757D] max-w-xl mb-8 leading-relaxed"
               >
-                Fractional strategic executives backed by AI-powered intelligence 
-                for mid-market B2B companies who need clarity, not more consultants.
+                The questions keeping you up at night—unclear growth levers, competitive noise, scattered execution—we solve them. Fractional strategic executives backed by AI-powered intelligence for mid-market B2B companies who need clarity, not more consultants.
               </motion.p>
               
               <motion.div
