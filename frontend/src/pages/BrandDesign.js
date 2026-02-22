@@ -165,20 +165,39 @@ const BrandDesign = () => {
 
   return (
     <div data-testid="brand-design-page" className="bg-[#FAFAF8]">
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-white" data-testid="hero-section">
-        <div className="section-container">
+      {/* Hero Section - Enhanced with Creative Elements */}
+      <section className="pt-28 pb-16 bg-white relative overflow-hidden" data-testid="hero-section">
+        {/* Floating Design Elements */}
+        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-[#C9A961]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-tr from-[#0A0A0A]/5 to-transparent rounded-full blur-2xl"></div>
+        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-[#C9A961] rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-[#0A0A0A] rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-4 h-4 border-2 border-[#C9A961] rounded-full animate-ping" style={{ animationDuration: '2s' }}></div>
+        
+        <div className="section-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
             >
+              <motion.div
+                variants={fadeUpVariant}
+                className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-4 py-2 rounded-full text-sm font-medium mb-6"
+              >
+                <Sparkles size={16} className="text-[#C9A961]" />
+                Brand & Design Studio
+              </motion.div>
               <motion.h1
                 variants={fadeUpVariant}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
-                Build Brands That Command Attention.
+                Build Brands That{' '}
+                <span className="relative">
+                  <span className="relative z-10">Command</span>
+                  <span className="absolute bottom-2 left-0 w-full h-3 bg-[#C9A961]/30 -z-10"></span>
+                </span>{' '}
+                Attention.
               </motion.h1>
               <motion.p
                 variants={fadeUpVariant}
@@ -191,32 +210,118 @@ const BrandDesign = () => {
                 variants={fadeUpVariant}
                 className="flex flex-wrap gap-4"
               >
-                <a
+                <motion.a
                   href="https://form.jotform.com/252728460666061"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className="btn-black group"
                   data-testid="hero-cta-primary"
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   Request Brand Consultation
-                  <ArrowRight size={18} className="ml-2" />
-                </a>
-                <a href="#approach" className="btn-secondary">
+                  <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </motion.a>
+                <motion.a 
+                  href="#approach" 
+                  className="btn-secondary border-[#0A0A0A] text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-white"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
                   View Our Approach
-                </a>
+                </motion.a>
               </motion.div>
             </motion.div>
+            
+            {/* Creative Visual Element */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden lg:block"
+              className="hidden lg:block relative"
             >
-              <img 
-                src="https://images.pexels.com/photos/7661185/pexels-photo-7661185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="Branding and marketing concept"
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
-              />
+              {/* Decorative Frame */}
+              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#C9A961]/20 rounded-lg"></div>
+              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#0A0A0A]/10 rounded-lg"></div>
+              
+              <div className="relative rounded-lg overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.pexels.com/photos/7661185/pexels-photo-7661185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  alt="Branding and marketing concept"
+                  className="w-full h-auto object-cover"
+                />
+                {/* Overlay with brand colors */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/20 to-transparent"></div>
+              </div>
+              
+              {/* Floating Brand Elements */}
+              <motion.div 
+                className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl border border-[#E9ECEF]"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#C9A961] flex items-center justify-center">
+                    <Palette size={20} className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-[#6C757D]">Brand Identity</p>
+                    <p className="font-semibold text-[#0A0A0A]">Visual Systems</p>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                className="absolute -top-6 -right-6 bg-[#0A0A0A] rounded-xl p-4 shadow-xl"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#C9A961] flex items-center justify-center">
+                    <PenTool size={20} className="text-[#0A0A0A]" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-white/60">Strategy</p>
+                    <p className="font-semibold text-white">Positioning</p>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Color Showcase */}
+      <section className="py-8 bg-[#0A0A0A]">
+        <div className="section-container">
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <motion.div 
+              className="flex items-center gap-3"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="w-8 h-8 rounded-full bg-[#0A0A0A] border-2 border-white/30"></div>
+              <span className="text-white/70 text-sm">Sophisticated Black</span>
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-3"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="w-8 h-8 rounded-full bg-[#C9A961]"></div>
+              <span className="text-white/70 text-sm">Signature Gold</span>
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-3"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="w-8 h-8 rounded-full bg-white"></div>
+              <span className="text-white/70 text-sm">Clean White</span>
+            </motion.div>
+            <motion.div 
+              className="flex items-center gap-3"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="w-8 h-8 rounded-full bg-[#F8F9FA] border border-white/20"></div>
+              <span className="text-white/70 text-sm">Warm Gray</span>
             </motion.div>
           </div>
         </div>
