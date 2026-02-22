@@ -132,24 +132,58 @@ const HowWeWork = () => {
 
   return (
     <div data-testid="how-we-work-page" className="bg-[#FAFAF8]">
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-white" data-testid="hero-section">
-        <div className="section-container">
+      {/* Hero Section - Enhanced */}
+      <section className="pt-28 pb-16 bg-white relative overflow-hidden" data-testid="hero-section">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#C9A961]/5 to-transparent"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 border border-[#C9A961]/10 rounded-full"></div>
+        <div className="absolute bottom-10 right-40 w-32 h-32 border border-[#C9A961]/10 rounded-full"></div>
+        
+        <div className="section-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
             >
+              {/* Process indicator */}
+              <motion.div 
+                variants={fadeUpVariant}
+                className="flex items-center gap-3 mb-6"
+              >
+                <div className="flex items-center">
+                  <span className="w-8 h-8 rounded-full bg-[#C9A961] text-white text-xs font-bold flex items-center justify-center">01</span>
+                  <div className="w-8 h-0.5 bg-[#C9A961]"></div>
+                  <span className="w-8 h-8 rounded-full bg-[#C9A961]/60 text-white text-xs font-bold flex items-center justify-center">02</span>
+                  <div className="w-8 h-0.5 bg-[#C9A961]/40"></div>
+                  <span className="w-8 h-8 rounded-full bg-[#C9A961]/30 text-white text-xs font-bold flex items-center justify-center">03</span>
+                </div>
+                <span className="text-sm text-[#6C757D] font-medium">Three-Phase Methodology</span>
+              </motion.div>
+
               <motion.h1
                 variants={fadeUpVariant}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
-                Intelligence → Strategy → Execution
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-[#C9A961] to-[#8B7340] bg-clip-text text-transparent">Intelligence</span>
+                </span>
+                <span className="text-[#C9A961] mx-2">→</span>
+                <br className="hidden md:block" />
+                <span className="relative inline-block">
+                  Strategy
+                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-[#C9A961]/30 rounded"></span>
+                </span>
+                <span className="text-[#C9A961] mx-2">→</span>
+                <br className="hidden md:block" />
+                <span className="relative inline-block">
+                  Execution
+                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-[#C9A961] to-[#0A0A0A] rounded"></span>
+                </span>
               </motion.h1>
               <motion.p
                 variants={fadeUpVariant}
-                className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+                className="text-lg md:text-xl text-[#6C757D] leading-relaxed max-w-lg"
               >
                 Our proven methodology turns customer data into competitive advantage.
               </motion.p>
@@ -158,14 +192,53 @@ const HowWeWork = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden lg:block"
+              className="hidden lg:block relative"
             >
+              {/* Decorative frame */}
+              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#C9A961]/20 rounded-lg"></div>
               <img 
                 src="https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjB0ZWFtJTIwY29sbGFib3JhdGlvbiUyMG1vZGVybiUyMG9mZmljZXxlbnwwfHx8fDE3NzE3MDc4ODJ8MA&ixlib=rb-4.1.0&q=85"
                 alt="Team collaboration in modern office"
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
+                className="rounded-lg shadow-2xl w-full h-auto object-cover relative z-10"
               />
+              {/* Stats overlay card */}
+              <motion.div 
+                className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl border border-[#E9ECEF] z-20"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#C9A961] flex items-center justify-center">
+                    <Check size={20} className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-[#6C757D]">Average Timeline</p>
+                    <p className="font-bold text-[#0A0A0A]">90-120 Days</p>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Process Overview */}
+      <section className="py-8 bg-[#0A0A0A]">
+        <div className="section-container">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
+            {phases.map((phase, i) => (
+              <motion.div 
+                key={i}
+                className="flex items-center gap-3 group"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="w-10 h-10 rounded-full bg-[#C9A961] text-[#0A0A0A] font-bold flex items-center justify-center text-sm group-hover:bg-white transition-colors">
+                  {phase.number}
+                </span>
+                <span className="text-white/80 font-medium text-sm">{phase.title}</span>
+                {i < phases.length - 1 && <ArrowRight className="text-[#C9A961] ml-2" size={16} />}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
