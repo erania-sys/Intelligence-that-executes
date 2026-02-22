@@ -190,7 +190,7 @@ const HowWeWork = () => {
                     className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ backgroundColor: `${phase.color}15` }}
                   >
-                    <phase.icon size={28} style={{ color: phase.color }} />
+                    <span className="text-2xl font-bold" style={{ color: phase.color }}>{phase.number}</span>
                   </div>
                   <div>
                     <span className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">

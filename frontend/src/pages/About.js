@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Award, GraduationCap, Shield, Building } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
