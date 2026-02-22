@@ -243,7 +243,7 @@ const HowWeWork = () => {
         </div>
       </section>
 
-      {/* Methodology Framework */}
+      {/* Methodology Framework - Enhanced */}
       <section className="py-20 md:py-28" data-testid="methodology-section">
         <div className="section-container">
           <motion.div
@@ -252,69 +252,102 @@ const HowWeWork = () => {
             viewport={{ once: true }}
             variants={staggerContainer}
           >
+            <motion.div variants={fadeUpVariant} className="text-center mb-16">
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Our Process</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]">
+                The Brackett Methodology
+              </h2>
+            </motion.div>
+
             {phases.map((phase, index) => (
               <motion.div
                 key={index}
                 variants={fadeUpVariant}
                 className="mb-20 last:mb-0"
               >
-                <div className="flex items-start gap-6 mb-8">
-                  <div 
-                    className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: `${phase.color}15` }}
-                  >
-                    <span className="text-2xl font-bold" style={{ color: phase.color }}>{phase.number}</span>
+                <div className="relative">
+                  {/* Connection line */}
+                  {index < phases.length - 1 && (
+                    <div className="hidden md:block absolute left-8 top-20 bottom-0 w-0.5 bg-gradient-to-b from-[#C9A961] to-[#C9A961]/20"></div>
+                  )}
+                  
+                  <div className="flex items-start gap-6 mb-8">
+                    <motion.div 
+                      className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-[#C9A961] to-[#8B7340] shadow-lg"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <span className="text-2xl font-bold text-white">{phase.number}</span>
+                    </motion.div>
+                    <div>
+                      <span className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">
+                        Phase {phase.number}
+                      </span>
+                      <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mt-1" >
+                        {phase.title}
+                      </h2>
+                      <p className="text-[#6C757D] mt-2 max-w-2xl">
+                        {phase.subtitle}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">
-                      Phase {phase.number}
-                    </span>
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mt-1" >
-                      {phase.title}
-                    </h2>
-                    <p className="text-[#6C757D] mt-2 max-w-2xl">
-                      {phase.subtitle}
-                    </p>
-                  </div>
-                </div>
                 
-                <div className="grid md:grid-cols-3 gap-6 ml-0 md:ml-22">
-                  <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                    <h4 className="font-semibold text-[#0A0A0A] mb-4">What Happens</h4>
-                    <ul className="space-y-2">
-                      {phase.whatHappens.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                          <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <div className="grid md:grid-cols-3 gap-6 ml-0 md:ml-22">
+                    <motion.div 
+                      className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-[#C9A961]"></div>
+                        <h4 className="font-semibold text-[#0A0A0A]">What Happens</h4>
+                      </div>
+                      <ul className="space-y-2">
+                        {phase.whatHappens.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                            <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
                   
-                  <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                    <h4 className="font-semibold text-[#0A0A0A] mb-4">
-                      {phase.technology ? 'Technology Used' : phase.different ? 'How We\'re Different' : 'Engagement Models'}
-                    </h4>
-                    <ul className="space-y-2">
-                      {(phase.technology || phase.different || phase.models).map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                          <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    <motion.div 
+                      className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-[#C9A961]"></div>
+                        <h4 className="font-semibold text-[#0A0A0A]">
+                          {phase.technology ? 'Technology Used' : phase.different ? 'How We\'re Different' : 'Engagement Models'}
+                        </h4>
+                      </div>
+                      <ul className="space-y-2">
+                        {(phase.technology || phase.different || phase.models).map((item, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                            <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
                   
-                  <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                    <h4 className="font-semibold text-[#0A0A0A] mb-4">Deliverables</h4>
-                    <ul className="space-y-2">
-                      {phase.deliverables.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                          <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <motion.div 
+                      className="bg-gradient-to-br from-[#C9A961]/5 to-[#C9A961]/10 rounded-xl p-6 border border-[#C9A961]/20 hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-[#C9A961]"></div>
+                        <h4 className="font-semibold text-[#0A0A0A]">Deliverables</h4>
+                      </div>
+                      <ul className="space-y-2">
+                        {phase.deliverables.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
+                            <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
                   </div>
                 </div>
               </motion.div>
