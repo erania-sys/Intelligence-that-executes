@@ -162,7 +162,7 @@
 
 /* Footer */
 .footer {
-  background: #1A2B4A;
+  background: #0A0A0A;
   color: white;
 }
 
@@ -171,7 +171,7 @@
 }
 
 .footer a:hover {
-  color: white;
+  color: #C9A961;
 }
 
 /* Decorative shapes - subtle for business */
