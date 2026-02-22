@@ -182,8 +182,8 @@ const Intelligence = () => {
       </section>
 
       {/* OSG Partnership Deep Dive */}
-      <section className="py-20 md:py-28 dark-section" style={{ backgroundColor: '#0A0A0A', color: 'white' }} data-testid="osg-partnership">
-        <div className="section-container">
+      <section className="py-20 md:py-28 dark-section" style={{ backgroundColor: '#0A0A0A' }} data-testid="osg-partnership">
+        <div className="section-container" style={{ color: '#FFFFFF' }}>
           <motion.div
             initial="hidden"
             whileInView="visible"
