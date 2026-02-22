@@ -291,42 +291,6 @@ const BrandDesign = () => {
         </div>
       </section>
 
-      {/* Brand Color Showcase */}
-      <section className="py-8 bg-[#0A0A0A]">
-        <div className="section-container">
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            <motion.div 
-              className="flex items-center gap-3"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="w-8 h-8 rounded-full bg-[#0A0A0A] border-2 border-white/30"></div>
-              <span className="text-white/70 text-sm">Sophisticated Black</span>
-            </motion.div>
-            <motion.div 
-              className="flex items-center gap-3"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="w-8 h-8 rounded-full bg-[#C9A961]"></div>
-              <span className="text-white/70 text-sm">Signature Gold</span>
-            </motion.div>
-            <motion.div 
-              className="flex items-center gap-3"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="w-8 h-8 rounded-full bg-white"></div>
-              <span className="text-white/70 text-sm">Clean White</span>
-            </motion.div>
-            <motion.div 
-              className="flex items-center gap-3"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="w-8 h-8 rounded-full bg-[#F8F9FA] border border-white/20"></div>
-              <span className="text-white/70 text-sm">Warm Gray</span>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Introduction Section - Enhanced */}
       <section className="py-16 border-b border-[#E9ECEF]" data-testid="intro-section">
         <div className="section-container">
