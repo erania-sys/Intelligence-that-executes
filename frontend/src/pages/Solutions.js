@@ -354,24 +354,13 @@ const Solutions = () => {
                   >
                     {/* Program Header */}
                     <div className="relative mb-10">
-                      <div className="flex items-start gap-6">
-                        <motion.div 
-                          className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center flex-shrink-0 shadow-lg"
-                          whileHover={{ scale: 1.1, rotate: 5 }}
-                          transition={{ type: "spring", stiffness: 300 }}
-                        >
-                          {index === 0 && <Target className="text-white" size={28} />}
-                          {index === 1 && <Compass className="text-white" size={28} />}
-                          {index === 2 && <Zap className="text-white" size={28} />}
-                        </motion.div>
-                        <div>
-                          <span className="text-xs font-bold text-[#C9A961] uppercase tracking-wider mb-1 block">
-                            Program {String(index + 1).padStart(2, '0')}
-                          </span>
-                          <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]">
-                            {program.name}
-                          </h2>
-                        </div>
+                      <div>
+                        <span className="text-xs font-bold text-[#C9A961] uppercase tracking-wider mb-2 block">
+                          Program {String(index + 1).padStart(2, '0')}
+                        </span>
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]">
+                          {program.name}
+                        </h2>
                       </div>
                     </div>
 
