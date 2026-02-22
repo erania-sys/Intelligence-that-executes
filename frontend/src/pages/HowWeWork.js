@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Search, Lightbulb, Rocket, Check, Building2, Heart, Landmark, Monitor, ShoppingBag } from 'lucide-react';
+import { ArrowRight, Check, Building2, Heart, Landmark, Monitor, ShoppingBag } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -19,8 +19,7 @@ const HowWeWork = () => {
       number: '01',
       title: 'Intelligence Gathering',
       subtitle: 'We don\'t start with assumptions. We start with proprietary AI-powered intelligence.',
-      icon: Search,
-      color: '#2E5C8A',
+      color: '#C9A961',
       whatHappens: [
         'Customer Choice Intelligence analysis (understanding decision drivers)',
         'Competitive positioning gap assessment',
@@ -43,7 +42,6 @@ const HowWeWork = () => {
       number: '02',
       title: 'Strategy Development',
       subtitle: 'Intelligence without strategy is just interesting data. We turn insights into executable plans.',
-      icon: Lightbulb,
       color: '#C9A961',
       whatHappens: [
         'Priority stack-ranking (high-impact opportunities)',
@@ -68,8 +66,7 @@ const HowWeWork = () => {
       number: '03',
       title: 'Execution Partnership',
       subtitle: 'We don\'t hand you a deck and disappear. We partner through implementation.',
-      icon: Rocket,
-      color: '#1A2B4A',
+      color: '#C9A961',
       whatHappens: [
         'Regular strategic reviews',
         'Real-time course corrections',

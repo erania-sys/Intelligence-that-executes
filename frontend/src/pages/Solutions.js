@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Check, Clock, Target, TrendingUp, Zap, Users, Calendar } from 'lucide-react';
+import { ArrowRight, Check, Clock } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -23,7 +23,6 @@ const Solutions = () => {
 
   const signaturePrograms = [
     {
-      icon: TrendingUp,
       name: 'The Revenue Clarity System',
       problem: 'You know your company is leaving significant revenue on the table annually, but you can\'t pinpoint which customer segments, channels, or products actually drive profitable growth—and which drain resources.',
       outcome: '120-day intelligence-to-execution program identifying your top revenue leaks and opportunities with an executable roadmap for capturing substantial value within 12 months.',
@@ -44,7 +43,6 @@ const Solutions = () => {
       roi: 'Programs designed to identify opportunities that significantly exceed investment'
     },
     {
-      icon: Target,
       name: 'The Market Position Reset',
       problem: 'Your positioning sounds like everyone else. Sales can\'t articulate why prospects should choose you in 30 seconds. Buyers default to price comparisons. Win rates are stagnant.',
       outcome: '90-day positioning transformation that makes you the obvious choice for your ideal customer—measurable by improvements in sales cycle velocity and win rates.',
@@ -64,7 +62,6 @@ const Solutions = () => {
       roi: '15-30% improvement in win rates and sales cycle velocity'
     },
     {
-      icon: Zap,
       name: 'The Growth Execution Accelerator',
       problem: 'You have a strategic plan (maybe even a great one), but six months in, results aren\'t materializing. Teams are misaligned. You\'re burning significant resources without clear progress.',
       outcome: 'Diagnostic + execution partnership turning strategy into measurable momentum with defined wins achieved within the program timeline.',
