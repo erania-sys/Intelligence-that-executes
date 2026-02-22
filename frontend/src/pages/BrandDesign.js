@@ -408,33 +408,92 @@ const BrandDesign = () => {
               <motion.div
                 key={index}
                 variants={fadeUpVariant}
-                className="mb-12 last:mb-0"
+                className="mb-16 last:mb-0"
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center shadow-lg">
-                    <category.icon className="text-white" size={24} />
+                {/* Category with optional image */}
+                <div className={`${index === 1 || index === 2 || index === 3 ? 'grid lg:grid-cols-3 gap-8 items-start' : ''}`}>
+                  <div className={`${index === 1 || index === 2 || index === 3 ? 'lg:col-span-2' : ''}`}>
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center shadow-lg">
+                        <category.icon className="text-white" size={24} />
+                      </div>
+                      <h3 className="text-xl font-bold text-[#0A0A0A]" >
+                        {category.title}
+                      </h3>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-4 pl-0 md:pl-16">
+                      {category.services.map((service, i) => (
+                        <motion.div 
+                          key={i} 
+                          className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/40 hover:shadow-md transition-all duration-300 group cursor-pointer"
+                          whileHover={{ x: 5 }}
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-2 h-2 rounded-full bg-[#C9A961] mt-2 group-hover:scale-150 transition-transform"></div>
+                            <div>
+                              <h4 className="font-semibold text-[#0A0A0A] mb-2 group-hover:text-[#C9A961] transition-colors">{service.name}</h4>
+                              <p className="text-[#6C757D] text-sm leading-relaxed">{service.desc}</p>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-[#0A0A0A]" >
-                    {category.title}
-                  </h3>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-4 pl-0 md:pl-16">
-                  {category.services.map((service, i) => (
+                  
+                  {/* Visual Identity Image */}
+                  {index === 1 && (
                     <motion.div 
-                      key={i} 
-                      className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/40 hover:shadow-md transition-all duration-300 group cursor-pointer"
-                      whileHover={{ x: 5 }}
+                      className="hidden lg:block"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
                     >
-                      <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[#C9A961] mt-2 group-hover:scale-150 transition-transform"></div>
-                        <div>
-                          <h4 className="font-semibold text-[#0A0A0A] mb-2 group-hover:text-[#C9A961] transition-colors">{service.name}</h4>
-                          <p className="text-[#6C757D] text-sm leading-relaxed">{service.desc}</p>
-                        </div>
+                      <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#E9ECEF]">
+                        <img 
+                          src="https://customer-assets.emergentagent.com/job_ef95eb66-08cb-4abd-a44e-bc8ec7fc0947/artifacts/ah3rvqna_iStock-1572385588.jpg"
+                          alt="Brand identity mockup and visual systems"
+                          className="w-full h-auto object-cover"
+                        />
                       </div>
                     </motion.div>
-                  ))}
+                  )}
+                  
+                  {/* Campaign & Messaging Strategy Image */}
+                  {index === 2 && (
+                    <motion.div 
+                      className="hidden lg:block"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#E9ECEF]">
+                        <img 
+                          src="https://customer-assets.emergentagent.com/job_ef95eb66-08cb-4abd-a44e-bc8ec7fc0947/artifacts/8l17xux5_iStock-1559523522.jpg"
+                          alt="Digital messaging and campaign strategy"
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+                  
+                  {/* CMO Consulting Image */}
+                  {index === 3 && (
+                    <motion.div 
+                      className="hidden lg:block"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#E9ECEF]">
+                        <img 
+                          src="https://customer-assets.emergentagent.com/job_ef95eb66-08cb-4abd-a44e-bc8ec7fc0947/artifacts/djsz7ri7_iStock-1720679909.jpg"
+                          alt="Executive CMO consulting meeting"
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    </motion.div>
+                  )}
                 </div>
               </motion.div>
             ))}
