@@ -246,8 +246,8 @@ const BrandDesign = () => {
               
               <div className="relative rounded-lg overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.pexels.com/photos/7661185/pexels-photo-7661185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                  alt="Branding and marketing concept"
+                  src="https://customer-assets.emergentagent.com/job_ef95eb66-08cb-4abd-a44e-bc8ec7fc0947/artifacts/9d761ey4_iStock-2212329390.jpg"
+                  alt="Times Square advertising and branding"
                   className="w-full h-auto object-cover"
                 />
                 {/* Overlay with brand colors */}
