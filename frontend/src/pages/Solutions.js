@@ -760,101 +760,208 @@ const Solutions = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="max-w-4xl mx-auto">
-                  <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4" >
+                <div className="max-w-5xl mx-auto">
+                  {/* Section Header */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-center mb-16"
+                  >
+                    <div className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+                      <Target size={16} className="text-[#C9A961]" />
+                      Starting Point
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4">
                       The Strategic Blindspot Audit
                     </h2>
-                    <p className="text-xl text-[#C9A961]" >
+                    <p className="text-xl text-[#C9A961] font-semibold">
                       What You Can't See Is Costing You More Than You Think
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="bg-red-50 rounded-xl p-6 border border-red-100 mb-8">
-                    <h4 className="font-semibold text-red-800 mb-3">The Problem</h4>
-                    <p className="text-red-700 leading-relaxed">
-                      Most mid-market B2B companies are leaving substantial annual opportunity on the table due to strategic blindspots they can't identify from inside the business.
-                    </p>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Pre-Work</h4>
-                      <ul className="space-y-2">
-                        {auditFeatures.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
+                  {/* Problem Statement */}
+                  <motion.div 
+                    className="relative bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border border-red-200 mb-10 overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="absolute top-0 right-0 w-48 h-48 bg-red-200/30 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-xl bg-red-500/20 flex items-center justify-center">
+                          <span className="text-red-600 text-xl font-bold">!</span>
+                        </div>
+                        <h4 className="font-bold text-red-800 text-lg">The Problem</h4>
+                      </div>
+                      <p className="text-red-700 leading-relaxed text-lg">
+                        Most mid-market B2B companies are leaving substantial annual opportunity on the table due to strategic blindspots they can't identify from inside the business.
+                      </p>
                     </div>
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Intensive Facilitated Session</h4>
-                      <ul className="space-y-2">
-                        {auditSession.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Post-Session Deliverables</h4>
-                      <ul className="space-y-2">
-                        {auditDeliverables.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Technology Access</h4>
-                      <ul className="space-y-2">
-                        {auditTechnology.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="bg-[#F8F9FA] rounded-xl p-8 text-center mb-8">
-                    <h4 className="font-semibold text-[#0A0A0A] mb-4">Value Proposition</h4>
-                    <p className="text-[#6C757D] leading-relaxed mb-4">
-                      Premium diagnostic intensive using proprietary AI-powered intelligence technology. This isn't a free consultation or sales pitch—it's a strategic diagnostic using enterprise-grade analytics.
-                    </p>
-                    <p className="text-[#C9A961] font-medium">
-                      Investment fully credited toward full engagement.
-                    </p>
-                  </div>
-
-                  <div className="bg-[#0A0A0A] rounded-xl p-8 text-center text-white">
-                    <h4 className="font-bold text-xl mb-4" >
-                      Why This Matters
-                    </h4>
-                    <p className="text-white/80 leading-relaxed mb-6">
-                      Think of this as insurance against making the wrong strategic bet. You get immediate clarity on where to invest resources, validated by data and senior executive judgment—before committing to a larger transformation program.
-                    </p>
-                    <a
-                      href="https://form.jotform.com/252728460666061"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-white text-[#0A0A0A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
-                      data-testid="cta-audit"
+                  {/* Audit Process */}
+                  <div className="grid md:grid-cols-2 gap-6 mb-10">
+                    <motion.div 
+                      className="bg-white rounded-2xl p-8 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
+                      whileHover={{ y: -5 }}
                     >
-                      Request Your Strategic Audit
-                      <ArrowRight size={16} />
-                    </a>
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-10 h-10 rounded-xl bg-[#C9A961] flex items-center justify-center">
+                          <span className="text-white font-bold">1</span>
+                        </div>
+                        <h4 className="font-bold text-[#0A0A0A] text-lg">Pre-Work</h4>
+                      </div>
+                      <ul className="space-y-3">
+                        {auditFeatures.map((item, i) => (
+                          <motion.li 
+                            key={i} 
+                            className="flex items-start gap-3 p-3 rounded-lg bg-[#F8F9FA] hover:bg-[#C9A961]/10 transition-colors"
+                            whileHover={{ x: 3 }}
+                          >
+                            <div className="w-5 h-5 rounded-full bg-[#C9A961]/20 flex items-center justify-center flex-shrink-0">
+                              <Check size={12} className="text-[#C9A961]" />
+                            </div>
+                            <span className="text-[#6C757D]">{item}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                    <motion.div 
+                      className="bg-white rounded-2xl p-8 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-10 h-10 rounded-xl bg-[#C9A961] flex items-center justify-center">
+                          <span className="text-white font-bold">2</span>
+                        </div>
+                        <h4 className="font-bold text-[#0A0A0A] text-lg">Intensive Session</h4>
+                      </div>
+                      <ul className="space-y-3">
+                        {auditSession.map((item, i) => (
+                          <motion.li 
+                            key={i} 
+                            className="flex items-start gap-3 p-3 rounded-lg bg-[#F8F9FA] hover:bg-[#C9A961]/10 transition-colors"
+                            whileHover={{ x: 3 }}
+                          >
+                            <div className="w-5 h-5 rounded-full bg-[#C9A961]/20 flex items-center justify-center flex-shrink-0">
+                              <Check size={12} className="text-[#C9A961]" />
+                            </div>
+                            <span className="text-[#6C757D]">{item}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </motion.div>
                   </div>
+
+                  <div className="grid md:grid-cols-2 gap-6 mb-10">
+                    <motion.div 
+                      className="bg-gradient-to-br from-[#C9A961]/5 to-[#C9A961]/15 rounded-2xl p-8 border border-[#C9A961]/30"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-10 h-10 rounded-xl bg-[#C9A961] flex items-center justify-center">
+                          <span className="text-white font-bold">3</span>
+                        </div>
+                        <h4 className="font-bold text-[#0A0A0A] text-lg">Post-Session Deliverables</h4>
+                      </div>
+                      <ul className="space-y-3">
+                        {auditDeliverables.map((item, i) => (
+                          <motion.li 
+                            key={i} 
+                            className="flex items-start gap-3 p-3 rounded-lg bg-white/60 hover:bg-white transition-colors"
+                            whileHover={{ x: 3 }}
+                          >
+                            <div className="w-5 h-5 rounded-full bg-[#C9A961]/30 flex items-center justify-center flex-shrink-0">
+                              <ArrowRight size={12} className="text-[#8B7340]" />
+                            </div>
+                            <span className="text-[#6C757D]">{item}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                    <motion.div 
+                      className="bg-[#0A0A0A] rounded-2xl p-8 text-white"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-10 h-10 rounded-xl bg-[#C9A961]/30 flex items-center justify-center">
+                          <Zap size={20} className="text-[#C9A961]" />
+                        </div>
+                        <h4 className="font-bold text-white text-lg">Technology Access</h4>
+                      </div>
+                      <ul className="space-y-3">
+                        {auditTechnology.map((item, i) => (
+                          <motion.li 
+                            key={i} 
+                            className="flex items-start gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                            whileHover={{ x: 3 }}
+                          >
+                            <div className="w-5 h-5 rounded-full bg-[#C9A961]/30 flex items-center justify-center flex-shrink-0">
+                              <ArrowRight size={12} className="text-[#C9A961]" />
+                            </div>
+                            <span className="text-white/80">{item}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  </div>
+
+                  {/* Value Proposition */}
+                  <motion.div 
+                    className="bg-gradient-to-r from-[#F8F9FA] to-white rounded-2xl p-10 text-center mb-10 border border-[#E9ECEF] relative overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#C9A961]/5 rounded-full blur-3xl"></div>
+                    <div className="relative z-10">
+                      <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] mb-6 shadow-lg">
+                        <TrendingUp size={26} className="text-white" />
+                      </div>
+                      <h4 className="font-bold text-[#0A0A0A] mb-4 text-xl">Value Proposition</h4>
+                      <p className="text-[#6C757D] leading-relaxed mb-6 max-w-2xl mx-auto">
+                        Premium diagnostic intensive using proprietary AI-powered intelligence technology. This isn't a free consultation or sales pitch—it's a strategic diagnostic using enterprise-grade analytics.
+                      </p>
+                      <div className="inline-flex items-center gap-2 bg-[#C9A961]/20 text-[#8B7340] px-6 py-3 rounded-full font-semibold">
+                        <Check size={18} />
+                        Investment fully credited toward full engagement
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Why This Matters CTA */}
+                  <motion.div 
+                    className="bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] rounded-2xl p-10 text-center text-white relative overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent"></div>
+                    <div className="absolute top-20 right-10 w-32 h-32 bg-[#C9A961]/10 rounded-full blur-2xl"></div>
+                    <div className="absolute bottom-10 left-10 w-24 h-24 bg-[#C9A961]/10 rounded-full blur-xl"></div>
+                    
+                    <div className="relative z-10">
+                      <h4 className="font-bold text-2xl mb-6 text-white">
+                        Why This Matters
+                      </h4>
+                      <p className="text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto text-lg">
+                        Think of this as insurance against making the wrong strategic bet. You get immediate clarity on where to invest resources, validated by data and senior executive judgment—before committing to a larger transformation program.
+                      </p>
+                      <motion.a
+                        href="https://form.jotform.com/252728460666061"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-gradient-to-r from-[#C9A961] to-[#8B7340] text-[#0A0A0A] font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(201,169,97,0.4)] transition-all duration-300 group"
+                        data-testid="cta-audit"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        Request Your Strategic Audit
+                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                      </motion.a>
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             )}
