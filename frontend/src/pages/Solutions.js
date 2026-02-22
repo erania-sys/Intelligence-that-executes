@@ -171,56 +171,144 @@ const Solutions = () => {
 
   return (
     <div data-testid="solutions-page" className="bg-[#FAFAF8]">
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-white" data-testid="hero-section">
-        <div className="section-container">
+      {/* Hero Section - Enhanced */}
+      <section className="pt-28 pb-16 bg-white relative overflow-hidden" data-testid="hero-section">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#C9A961]/5 to-transparent"></div>
+        <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#C9A961] rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-[#0A0A0A] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        
+        <div className="section-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
             >
+              {/* Solution type badges */}
+              <motion.div 
+                variants={fadeUpVariant}
+                className="flex flex-wrap gap-3 mb-6"
+              >
+                <span className="px-4 py-2 bg-[#0A0A0A] text-white text-xs font-bold rounded-full">
+                  3 Signature Programs
+                </span>
+                <span className="px-4 py-2 bg-[#C9A961]/10 text-[#C9A961] text-xs font-bold rounded-full border border-[#C9A961]/30">
+                  Strategic Partnerships
+                </span>
+                <span className="px-4 py-2 bg-white text-[#6C757D] text-xs font-bold rounded-full border border-[#E9ECEF]">
+                  Diagnostic Audits
+                </span>
+              </motion.div>
+
               <motion.h1
                 variants={fadeUpVariant}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-[#0A0A0A]"
               >
-                Productized Solutions. Predictable Outcomes.
+                <span className="relative inline-block">
+                  Productized
+                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-[#C9A961]/30 rounded"></span>
+                </span>{' '}
+                Solutions.
+                <br className="hidden md:block" />
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-[#C9A961] to-[#8B7340] bg-clip-text text-transparent">Predictable</span>
+                </span>{' '}
+                Outcomes<span className="text-[#C9A961]">.</span>
               </motion.h1>
               <motion.p
                 variants={fadeUpVariant}
-                className="text-lg md:text-xl text-[#6C757D] leading-relaxed"
+                className="text-lg md:text-xl text-[#6C757D] leading-relaxed max-w-lg"
               >
                 Structured programs designed for the problems mid-market B2B companies actually face.
               </motion.p>
+
+              {/* Quick stats */}
+              <motion.div 
+                variants={fadeUpVariant}
+                className="flex gap-8 mt-8"
+              >
+                <div>
+                  <div className="text-2xl font-bold text-[#0A0A0A]">90-180</div>
+                  <div className="text-xs text-[#6C757D]">Day Programs</div>
+                </div>
+                <div className="w-px bg-[#E9ECEF]"></div>
+                <div>
+                  <div className="text-2xl font-bold text-[#C9A961]">3x-10x</div>
+                  <div className="text-xs text-[#6C757D]">Typical ROI</div>
+                </div>
+                <div className="w-px bg-[#E9ECEF]"></div>
+                <div>
+                  <div className="text-2xl font-bold text-[#0A0A0A]">100%</div>
+                  <div className="text-xs text-[#6C757D]">Outcome Focus</div>
+                </div>
+              </motion.div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden lg:block"
+              className="hidden lg:block relative"
             >
+              {/* Decorative frame */}
+              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#C9A961]/20 rounded-lg"></div>
               <img 
                 src="https://images.pexels.com/photos/7433824/pexels-photo-7433824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                 alt="Business strategy meeting"
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
+                className="rounded-lg shadow-2xl w-full h-auto object-cover relative z-10"
               />
+              {/* Floating card */}
+              <motion.div 
+                className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl border border-[#E9ECEF] z-20"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center">
+                    <Target size={20} className="text-white" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-[#6C757D]">Focus On</p>
+                    <p className="font-bold text-[#0A0A0A]">Measurable Results</p>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Tabs Navigation */}
-      <section className="border-b border-[rgba(0,0,0,0.08)] sticky top-[72px] bg-[#FAFAF8] z-40">
+      {/* Tabs Navigation - Enhanced */}
+      <section className="border-b border-[rgba(0,0,0,0.08)] sticky top-[72px] bg-white z-40 shadow-sm">
         <div className="section-container">
           <div className="flex gap-0 overflow-x-auto">
-            {tabs.map((tab) => (
+            {tabs.map((tab, index) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`tab-button whitespace-nowrap ${activeTab === tab.id ? 'active' : ''}`}
+                className={`relative px-6 py-4 font-medium text-sm transition-all duration-300 whitespace-nowrap ${
+                  activeTab === tab.id 
+                    ? 'text-[#0A0A0A]' 
+                    : 'text-[#6C757D] hover:text-[#0A0A0A]'
+                }`}
                 data-testid={`tab-${tab.id}`}
               >
-                {tab.label}
+                <span className="flex items-center gap-2">
+                  <span className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center transition-all ${
+                    activeTab === tab.id 
+                      ? 'bg-[#C9A961] text-white' 
+                      : 'bg-[#E9ECEF] text-[#6C757D]'
+                  }`}>
+                    {index + 1}
+                  </span>
+                  {tab.label}
+                </span>
+                {activeTab === tab.id && (
+                  <motion.div 
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C9A961]"
+                    layoutId="activeTab"
+                  />
+                )}
               </button>
             ))}
           </div>
