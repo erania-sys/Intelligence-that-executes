@@ -404,7 +404,7 @@ const HowWeWork = () => {
         </div>
       </section>
 
-      {/* Industries We Serve */}
+      {/* Industries We Serve - Enhanced */}
       <section className="py-20 md:py-28" data-testid="industries-section">
         <div className="section-container">
           <motion.div
@@ -418,6 +418,9 @@ const HowWeWork = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A]" >
                 Industries We Serve
               </h2>
+              <p className="text-[#6C757D] mt-4 max-w-2xl mx-auto">
+                Our methodology adapts to your industry's unique challenges and opportunities.
+              </p>
             </motion.div>
             
             <motion.div
@@ -428,12 +431,13 @@ const HowWeWork = () => {
                 <motion.div
                   key={index}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                  whileHover={{ y: -8 }}
                 >
-                  <div className="w-12 h-12 rounded-lg bg-[#F8F9FA] flex items-center justify-center mb-4">
-                    <industry.icon className="text-[#C9A961]" size={24} />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C9A961]/10 to-[#C9A961]/20 flex items-center justify-center mb-4 group-hover:from-[#C9A961] group-hover:to-[#8B7340] transition-all duration-300">
+                    <industry.icon className="text-[#C9A961] group-hover:text-white transition-colors" size={28} />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-[#0A0A0A]" >
+                  <h3 className="text-lg font-bold mb-2 text-[#0A0A0A] group-hover:text-[#C9A961] transition-colors" >
                     {industry.name}
                   </h3>
                   <p className="text-[#6C757D] text-sm leading-relaxed">
