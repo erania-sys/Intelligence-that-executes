@@ -232,13 +232,13 @@ h4 {
 /* Link Style */
 .link-underline {
   text-decoration: underline;
-  text-decoration-color: var(--accent-blue);
+  text-decoration-color: var(--gold);
   text-underline-offset: 4px;
   transition: text-decoration-color 0.3s ease;
 }
 
 .link-underline:hover {
-  text-decoration-color: var(--navy-blue);
+  text-decoration-color: var(--black);
 }
 
 /* Section container */
