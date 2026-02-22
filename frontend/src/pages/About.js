@@ -120,15 +120,15 @@ const About = () => {
 
             {/* Erania Brackett */}
             <motion.div variants={fadeUpVariant} className="mb-16">
-              <div className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF]">
+              <div className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-xl transition-shadow duration-300">
                 <div className="md:flex">
                   <div className="md:w-1/3 bg-gradient-to-br from-[#C9A961] to-[#6B5A3A] p-8 md:p-12 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-40 h-40 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white/30">
+                    <div className="text-center group">
+                      <div className="w-40 h-40 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white/30 group-hover:border-white/60 transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
                         <img 
                           src="https://customer-assets.emergentagent.com/job_7baffe86-c194-4b68-b67d-b7c4d0c7407e/artifacts/71yeaiw8_Erania%20HeadsShot.jpg"
                           alt="Erania Brackett"
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
                       <h3 className="text-2xl font-bold text-white" >
