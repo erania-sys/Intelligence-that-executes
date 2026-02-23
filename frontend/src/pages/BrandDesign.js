@@ -375,10 +375,9 @@ const BrandDesign = () => {
                   <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[#C9A961] to-transparent -z-10"></div>
                 )}
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#1A1A1A] border-2 border-[#C9A961]/30 mb-6 group-hover:border-[#C9A961] group-hover:shadow-[0_0_30px_rgba(201,169,97,0.3)] transition-all duration-300">
-                    <span className="text-4xl">{item.icon}</span>
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#C9A961] to-[#8B7340] mb-6 group-hover:shadow-[0_0_30px_rgba(201,169,97,0.4)] transition-all duration-300">
+                    <span className="text-2xl font-bold text-[#0A0A0A]">{item.step}</span>
                   </div>
-                  <div className="text-[#C9A961] text-sm font-bold mb-2">{item.step}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-white/60 text-sm">{item.desc}</p>
                 </div>
