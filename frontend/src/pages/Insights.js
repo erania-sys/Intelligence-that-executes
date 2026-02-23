@@ -27,7 +27,7 @@ const Insights = () => {
   const articles = [
     {
       id: 1,
-      title: 'The Revenue Leaks Most B2B Companies Miss',
+      title: 'The Revenue Leaks Most Companies Miss',
       excerpt: 'Discover the hidden patterns that drain profitability—and how strategic intelligence can help you plug the gaps before they cost millions.',
       category: 'revenue',
       readTime: '8 min read',
@@ -77,7 +77,7 @@ const Insights = () => {
     },
     {
       id: 6,
-      title: 'Why "Me-Too" Positioning Kills B2B Companies',
+      title: 'Why "Me-Too" Positioning Kills Companies',
       excerpt: 'In crowded markets, differentiation isn\'t optional—it\'s survival. Here\'s how to find your unique strategic position.',
       category: 'positioning',
       readTime: '5 min read',
