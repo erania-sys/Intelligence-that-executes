@@ -57,7 +57,7 @@ const About = () => {
       'Healthcare & MedTech',
       'Pharmaceutical',
       'Financial Services',
-      'B2B Technology',
+      'Technology',
       'Consumer Goods & Retail'
     ]
   };
@@ -250,7 +250,7 @@ const About = () => {
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto">
               <div className="bg-white rounded-xl p-8 md:p-12 border border-[#E9ECEF] mb-12">
                 <p className="text-[#6C757D] leading-relaxed mb-6">
-                  Mid-market B2B companies face an impossible choice: hire a full-time strategic executive (with lengthy searches, significant salary expectations, and equity), or work with traditional consultants who bill hourly, delegate to junior teams, and hand you a deck without execution support.
+                  Mid-market companies face an impossible choice: hire a full-time strategic executive (with lengthy searches, significant salary expectations, and equity), or work with traditional consultants who bill hourly, delegate to junior teams, and hand you a deck without execution support.
                 </p>
                 <p className="text-[#6C757D] leading-relaxed mb-6">
                   We built Brackett Agency to offer a third option: <span className="font-semibold text-[#0A0A0A]">fractional strategic executives backed by proprietary AI-powered intelligence technology.</span>
