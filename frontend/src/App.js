@@ -5,6 +5,7 @@ import '@/App.css';
 // Components
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className="App min-h-screen bg-[#FAFAF8] text-[#2C2C2C]">
       <BrowserRouter>
+        <ScrollToTop />
         <NoiseOverlay />
         <Navigation />
         <main>
