@@ -38,7 +38,7 @@ const Footer = () => {
             className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white font-semibold px-8 py-4 rounded-md hover:bg-[#1A1A1A] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
             data-testid="footer-cta"
           >
-            Request Strategic Consultation
+            Discover Your Blind Spots
             <ArrowRight size={18} />
           </a>
         </div>
