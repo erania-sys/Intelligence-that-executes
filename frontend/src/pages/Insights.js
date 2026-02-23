@@ -310,6 +310,14 @@ const Insights = () => {
                   className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-lg transition-shadow cursor-pointer group"
                   data-testid={`article-${article.id}`}
                 >
+                  {/* Article Image */}
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <span 
@@ -324,7 +332,7 @@ const Insights = () => {
                         {article.readTime}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-[#0A0A0A] mb-3 group-hover:text-[#C9A961] transition-colors" >
+                    <h3 className="text-lg font-bold text-[#0A0A0A] mb-3 group-hover:text-[#C9A961] transition-colors line-clamp-2" >
                       {article.title}
                     </h3>
                     <p className="text-[#6C757D] text-sm leading-relaxed mb-4 line-clamp-3">
