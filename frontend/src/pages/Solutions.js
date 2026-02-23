@@ -468,12 +468,7 @@ const Solutions = () => {
                         className="bg-white rounded-2xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
                         whileHover={{ y: -5 }}
                       >
-                        <div className="flex items-center gap-2 mb-5">
-                          <div className="w-8 h-8 rounded-lg bg-[#C9A961]/20 flex items-center justify-center">
-                            <Check size={16} className="text-[#C9A961]" />
-                          </div>
-                          <h4 className="font-bold text-[#0A0A0A]">What You Get</h4>
-                        </div>
+                        <h4 className="font-bold text-[#0A0A0A] mb-5">What You Get</h4>
                         <ul className="space-y-3">
                           {program.deliverables.map((item, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
@@ -487,12 +482,7 @@ const Solutions = () => {
                         className="bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] rounded-2xl p-6 text-white"
                         whileHover={{ y: -5 }}
                       >
-                        <div className="flex items-center gap-2 mb-5">
-                          <div className="w-8 h-8 rounded-lg bg-[#C9A961]/30 flex items-center justify-center">
-                            <Clock size={16} className="text-[#C9A961]" />
-                          </div>
-                          <h4 className="font-bold text-white">Timeline</h4>
-                        </div>
+                        <h4 className="font-bold text-white mb-5">Timeline</h4>
                         <p className="text-3xl font-bold text-[#C9A961] mb-2">
                           {program.timeline}
                         </p>
@@ -502,12 +492,7 @@ const Solutions = () => {
                         className="bg-gradient-to-br from-[#C9A961]/10 to-[#C9A961]/20 rounded-2xl p-6 border border-[#C9A961]/30"
                         whileHover={{ y: -5 }}
                       >
-                        <div className="flex items-center gap-2 mb-5">
-                          <div className="w-8 h-8 rounded-lg bg-[#C9A961]/30 flex items-center justify-center">
-                            <TrendingUp size={16} className="text-[#8B7340]" />
-                          </div>
-                          <h4 className="font-bold text-[#0A0A0A]">Expected ROI</h4>
-                        </div>
+                        <h4 className="font-bold text-[#0A0A0A] mb-5">Expected ROI</h4>
                         <p className="text-sm text-[#6C757D] leading-relaxed">{program.roi}</p>
                       </motion.div>
                     </div>
