@@ -145,8 +145,8 @@ const Intelligence = () => {
               className="hidden lg:block"
             >
               <img 
-                src="https://images.unsplash.com/photo-1744640326166-433469d102f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYnVzaW5lc3N8ZW58MHx8fHwxNzcxNzA3ODg2fDA&ixlib=rb-4.1.0&q=85"
-                alt="AI technology chip on circuit board"
+                src="https://customer-assets.emergentagent.com/job_577a5455-5b18-44ce-962a-d721dc276c63/artifacts/r23dxcpl_iStock-537459762.jpg"
+                alt="Customer intelligence visualization with people and data signals"
                 className="rounded-lg shadow-lg w-full h-auto object-cover"
               />
             </motion.div>
