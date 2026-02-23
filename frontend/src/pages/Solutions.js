@@ -403,12 +403,7 @@ const Solutions = () => {
                       className="bg-white rounded-2xl p-8 border border-[#E9ECEF] mb-10 hover:border-[#C9A961]/40 hover:shadow-lg transition-all duration-300"
                       whileHover={{ y: -3 }}
                     >
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-[#0A0A0A] flex items-center justify-center">
-                          <Users size={20} className="text-white" />
-                        </div>
-                        <h4 className="font-bold text-[#0A0A0A] text-lg">Who This Is For</h4>
-                      </div>
+                      <h4 className="font-bold text-[#0A0A0A] text-lg mb-6">Who This Is For</h4>
                       <div className="grid md:grid-cols-2 gap-4">
                         {program.whoFor.map((item, i) => (
                           <motion.div 
@@ -427,12 +422,7 @@ const Solutions = () => {
 
                     {/* The Process - Enhanced Timeline */}
                     <div className="mb-10">
-                      <div className="flex items-center gap-3 mb-8">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center">
-                          <Calendar size={20} className="text-white" />
-                        </div>
-                        <h4 className="font-bold text-[#0A0A0A] text-lg">The Process</h4>
-                      </div>
+                      <h4 className="font-bold text-[#0A0A0A] text-lg mb-8">The Process</h4>
                       <div className="relative">
                         {/* Connection line */}
                         <div className="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-[#C9A961] via-[#C9A961]/50 to-[#C9A961]/20"></div>
