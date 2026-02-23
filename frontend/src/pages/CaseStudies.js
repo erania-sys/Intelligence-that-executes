@@ -31,6 +31,17 @@ const CaseStudies = () => {
           'Need to validate optimal pricing strategy before launch'
         ]
       },
+      intelligenceInsight: {
+        title: 'The Predictive Intelligence Insight',
+        intro: 'Our fractional CSO deployed ASEMAP™ intelligence to reveal what traditional research would have missed:',
+        findings: [
+          'Mid-size hospital systems showed 68% conversion probability vs. 22% for large academic centers',
+          '"Workflow efficiency" ranked 4x higher in actual trade-offs than in survey responses',
+          'Cultural response bias had inflated European market interest by 35%'
+        ],
+        whyMattered: 'Instead of pursuing large prestigious accounts (the obvious target), we focused on mid-size systems where barriers to adoption were lowest.',
+        result: 'First three customers closed in 8 weeks instead of projected 6 months.'
+      },
       approach: {
         title: 'Our Approach',
         description: 'We deployed our proprietary ASEMAP™ behavioral analytics platform to decode the true drivers of purchasing decisions in this complex B2B healthcare environment.',
@@ -75,6 +86,17 @@ const CaseStudies = () => {
       industry: 'Medical Devices',
       product: 'Surgical Mesh Portfolio',
       image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MDY2fDB8MXxzZWFyY2h8M3x8aGVhbHRoY2FyZSUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzA5ODIxMjAwfDA&ixlib=rb-4.0.3&q=85',
+      intelligenceInsight: {
+        title: 'The Predictive Intelligence Insight',
+        intro: 'Our fractional CMO deployed ASEMAP™ intelligence to reveal what traditional research would have missed:',
+        findings: [
+          '55% of patients actively request specific products, directly influencing surgeon choice',
+          'Reimbursement concerns ranked 2.5x higher as a barrier than product performance',
+          'Peer recommendations drove 72% of surgeon adoption decisions'
+        ],
+        whyMattered: 'Instead of focusing on clinical messaging (the standard approach), we prioritized patient education and payer strategy to address actual adoption barriers.',
+        result: 'Reduced claim denial rates by 40% and accelerated surgeon adoption through targeted peer programs.'
+      },
       challenge: {
         title: 'The Challenge',
         points: [
