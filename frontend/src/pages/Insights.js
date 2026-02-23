@@ -15,7 +15,6 @@ const staggerContainer = {
 
 const Insights = () => {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [email, setEmail] = useState('');
 
   const filters = [
     { id: 'all', label: 'All Insights' },
