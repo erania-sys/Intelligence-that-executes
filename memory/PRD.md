@@ -241,6 +241,9 @@ For either option, to use your own domain:
 ## Changelog
 
 ### February 23, 2026
+- **Bug Fix:** Fixed scroll position not resetting on page navigation
+  - Added `ScrollToTop` component using React Router's `useLocation` hook
+  - All pages now open at the top instead of maintaining previous scroll position
 - **Verification:** Confirmed app is fully functional after fork handoff
 - **Blog Content:** Article #9 "From $10M to $50M: The Strategic Inflection Points" content expansion verified complete
 - **App Status:** All pages rendering correctly, no syntax errors present
