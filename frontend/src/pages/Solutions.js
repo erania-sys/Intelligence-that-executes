@@ -27,7 +27,7 @@ const Solutions = () => {
       problem: 'You know your company is leaving significant revenue on the table annually, but you can\'t pinpoint which customer segments, channels, or products actually drive profitable growth—and which drain resources.',
       outcome: '120-day intelligence-to-execution program identifying your top revenue leaks and opportunities with an executable roadmap for capturing substantial value within 12 months.',
       whoFor: [
-        'B2B companies $10-50M revenue with plateaued or chaotic growth',
+        'B2B and B2C companies $10-50M revenue with plateaued or chaotic growth',
         'Multiple customer segments but unclear value drivers',
         'Inefficient resource allocation across channels/products',
         'Leadership asking "where should we invest?"'
@@ -220,7 +220,7 @@ const Solutions = () => {
                 variants={fadeUpVariant}
                 className="text-lg md:text-xl text-[#6C757D] leading-relaxed max-w-lg"
               >
-                Structured programs designed for the problems mid-market B2B companies actually face.
+                Structured programs designed for the problems mid-market companies actually face.
               </motion.p>
 
               {/* Quick stats */}
@@ -719,7 +719,7 @@ const Solutions = () => {
                     <div className="relative z-10">
                       <h4 className="font-bold text-red-800 text-lg mb-4">The Problem</h4>
                       <p className="text-red-700 leading-relaxed text-lg">
-                        Most mid-market B2B companies are leaving substantial annual opportunity on the table due to strategic blindspots they can't identify from inside the business.
+                        Most mid-market companies are leaving substantial annual opportunity on the table due to strategic blindspots they can't identify from inside the business.
                       </p>
                     </div>
                   </motion.div>

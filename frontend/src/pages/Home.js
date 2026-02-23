@@ -137,7 +137,7 @@ const Home = () => {
                 variants={fadeUpVariant}
                 className="text-lg text-[#6C757D] max-w-xl mb-8 leading-relaxed"
               >
-                The questions keeping you up at night—unclear growth levers, competitive noise, scattered execution—we solve them. Fractional strategic executives backed by AI-powered intelligence for mid-market B2B companies who need clarity, not more consultants.
+                The questions keeping you up at night—unclear growth levers, competitive noise, scattered execution—we solve them. Fractional strategic executives backed by AI-powered intelligence for mid-market companies who need clarity, not more consultants.
               </motion.p>
               
               <motion.div
