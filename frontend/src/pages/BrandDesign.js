@@ -24,7 +24,7 @@ const BrandDesign = () => {
     { title: 'Intelligence-Driven', desc: 'Brand strategy built on Customer Choice Intelligence data, not creative whims' },
     { title: 'Strategic Foundation', desc: 'Led by former Fortune 500 CMO with NYSE company brand leadership' },
     { title: 'Complete Systems', desc: 'From strategic positioning to visual identity to go-to-market execution' },
-    { title: 'Industry Expertise', desc: 'Specialized in Healthcare, MedTech, Financial Services, and B2B Technology' }
+    { title: 'Industry Expertise', desc: 'Specialized in Healthcare, MedTech, Financial Services, Consumer, and Technology' }
   ];
 
   const serviceCategories = [
@@ -107,7 +107,7 @@ const BrandDesign = () => {
     },
     {
       icon: Monitor,
-      name: 'B2B Technology',
+      name: 'Technology',
       expertise: 'Brand strategy for SaaS, enterprise software, and technology companies cutting through competitive noise.',
       services: ['Technical value proposition translation', 'Category creation/leadership positioning', 'Product marketing alignment', 'Sales enablement integration']
     },
@@ -131,7 +131,7 @@ const BrandDesign = () => {
     'Senior Leadership: Direct access to former Fortune 500 CMO Erania Brackett—not delegated to junior designers',
     'Strategic Foundation: Every design decision backed by market intelligence and positioning strategy',
     'Complete Systems: From strategy to visual identity to implementation—not piecemeal services',
-    'Industry Expertise: Deep experience in Healthcare, MedTech, Financial Services, and B2B Technology',
+    'Industry Expertise: Deep experience in Healthcare, MedTech, Financial Services, Consumer, and Technology',
     'Intelligence Integration: Brand development powered by Customer Choice Intelligence and behavioral analytics',
     'Execution Partnership: We don\'t hand you a brand book and disappear—we support implementation'
   ];
@@ -305,7 +305,7 @@ const BrandDesign = () => {
                 Your Brand Is Your Strategic Advantage
               </h2>
               <p className="text-[#6C757D] leading-relaxed">
-                In crowded B2B markets, your brand isn't just a logo—it's the strategic clarity that helps customers choose you over competitors. Brackett Agency combines strategic intelligence with brand design excellence to create identity systems that position you for growth.
+                In crowded markets, your brand isn't just a logo—it's the strategic clarity that helps customers choose you over competitors. Brackett Agency combines strategic intelligence with brand design excellence to create identity systems that position you for growth.
               </p>
             </motion.div>
 
