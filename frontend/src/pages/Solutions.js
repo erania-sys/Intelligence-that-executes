@@ -140,33 +140,134 @@ const Solutions = () => {
     }
   ];
 
-  const auditFeatures = [
-    'Strategic questionnaire and pre-work',
-    'Financial data review',
-    'Customer data analysis',
-    'Marketing analytics audit'
+  const auditOverview = {
+    title: 'Blind Spot Audit',
+    subtitle: 'What You Can\'t See Is Costing You More Than You Think',
+    description: 'A comprehensive diagnostic assessment designed to uncover hidden barriers to growth and identify untapped opportunities in your market. This audit combines strategic market analysis with predictive intelligence technology to reveal what\'s holding your business back and where your biggest wins lie.',
+    timeline: '12-week engagement'
+  };
+
+  const auditDiscoveries = {
+    marketOpportunity: {
+      title: 'Market Opportunity Analysis',
+      items: [
+        { name: 'Total Addressable Market (TAM) Sizing', desc: 'Quantify the true size of your opportunity' },
+        { name: 'Serviceable Market Assessment', desc: 'Understand your realistic market penetration potential' },
+        { name: 'Competitive Landscape Mapping', desc: 'Identify where competitors are winning and where gaps exist' },
+        { name: 'Geographic Market Validation', desc: 'Determine which markets offer the highest return potential' }
+      ]
+    },
+    winStrategy: {
+      title: 'Win Strategy Intelligence',
+      items: [
+        { name: 'Customer Segmentation Analysis', desc: 'Discover which customer segments are most likely to convert' },
+        { name: 'Barriers to Adoption', desc: 'Uncover the hidden obstacles preventing customer acquisition' },
+        { name: 'Value Proposition Gaps', desc: 'Identify misalignments between what you offer and what the market values' },
+        { name: 'Competitive Differentiation Opportunities', desc: 'Pinpoint where you can win against established players' }
+      ]
+    },
+    predictiveInsights: {
+      title: 'Predictive Personalization Insights',
+      subtitle: 'Powered by OSG Analytics\' proprietary ASEMAP™ platform',
+      items: [
+        { name: 'Customer Trade-off Analysis', desc: 'Understand what customers truly value vs. what they say they value' },
+        { name: 'Cultural & Geographic Bias Elimination', desc: 'Get accurate insights across diverse markets without survey bias' },
+        { name: 'Priority Hierarchy Mapping', desc: 'See exactly which features, benefits, and messaging resonate most' },
+        { name: 'Quick Win Identification', desc: 'Discover the fastest paths to market traction' }
+      ]
+    }
+  };
+
+  const auditPhases = [
+    {
+      phase: 1,
+      name: 'Market Intelligence',
+      weeks: 'Weeks 1-4',
+      subtitle: 'Discovery & Market Sizing',
+      description: 'We begin by establishing a clear baseline understanding of your market opportunity and competitive position.',
+      activities: [
+        'Stakeholder interviews to understand current strategy, assumptions, and market hypotheses',
+        'Market landscape assessment and competitive positioning analysis',
+        'TAM/SAM/SOM quantification with supporting data sources and validation',
+        'Geographic and segment opportunity evaluation',
+        'Initial barrier and opportunity identification'
+      ],
+      deliverables: [
+        'Market Opportunity Report with sizing methodology and confidence levels',
+        'Competitive landscape map with strategic positioning analysis',
+        'Barrier and opportunity hypothesis framework'
+      ]
+    },
+    {
+      phase: 2,
+      name: 'Predictive Intelligence Deployment',
+      weeks: 'Weeks 5-12',
+      subtitle: 'ASEMAP™ Platform Activation',
+      description: 'This is where we move from hypothesis to evidence-based strategy using advanced predictive intelligence.',
+      activities: [
+        'Custom study design tailored to your specific market, customer profile, and business objectives',
+        'ASEMAP™ survey deployment to target customer segments',
+        'Advanced conjoint analysis and trade-off modeling',
+        'Cross-segment validation and preference mapping',
+        'Real-time data analysis and pattern identification'
+      ],
+      deliverables: [
+        'Customer Value Hierarchy Report showing what truly drives purchase decisions',
+        'Segment-specific win strategies with confidence scores and prioritization',
+        'Barrier priority matrix identifying which obstacles have the highest impact on growth',
+        'Quick wins roadmap with implementation recommendations and success metrics'
+      ]
+    }
   ];
 
-  const auditSession = [
-    'Revenue architecture assessment',
-    'Competitive positioning analysis',
-    'Execution effectiveness review',
-    'Growth blocker identification',
-    'Priority opportunity stack-rank'
+  const auditDifferentiators = [
+    {
+      title: 'Beyond Traditional Market Research',
+      description: 'Most companies rely on surveys that ask customers what they want—but customers often don\'t know or can\'t articulate their true preferences. The ASEMAP™ platform uses forced trade-off methodology to reveal:',
+      points: [
+        'What customers will actually pay for, not just what they say they want',
+        'Which segments will convert first, not just who shows interest',
+        'Where response biases are skewing your data across different cultures and geographies'
+      ]
+    },
+    {
+      title: 'Validated Across 60+ Countries',
+      description: 'Our methodology has been proven across diverse global markets and industries, delivering insights free from the cultural response biases that plague traditional survey research.'
+    },
+    {
+      title: 'Actionable Intelligence, Not Shelf-Ware',
+      description: 'You won\'t receive a 200-page report that collects dust. Every insight comes with:',
+      points: [
+        'Confidence scores so you know which recommendations to prioritize',
+        'Quick win identification for immediate traction and early ROI',
+        'Implementation roadmaps that connect directly to execution',
+        'Ongoing monitoring capability to track market shifts'
+      ]
+    }
   ];
 
   const auditDeliverables = [
-    'Comprehensive Strategic Blindspot Brief',
-    'Priority opportunity stack-rank',
-    'Quick-win action roadmap',
-    'Follow-up strategy consultation'
+    { name: 'Market Opportunity Brief', desc: 'Clear quantification of your addressable market with confidence intervals and validation sources' },
+    { name: 'Win Strategy Playbook', desc: 'Segment-specific strategies for customer acquisition and competitive differentiation' },
+    { name: 'Barrier Elimination Roadmap', desc: 'Prioritized list of obstacles with impact assessment and mitigation strategies' },
+    { name: 'Quick Wins Action Plan', desc: '90-day execution roadmap with specific tactics, metrics, and success criteria' },
+    { name: 'Executive Presentation', desc: 'Strategic findings and recommendations presented to leadership team' }
   ];
 
-  const auditTechnology = [
-    'Customer Choice Intelligence platform preview',
-    'Real-time data visualization',
-    'Competitive intelligence dashboard',
-    'Behavioral analytics insights'
+  const auditIdealFor = [
+    'Experiencing stalled growth despite having a strong product or service',
+    'Entering new markets and need to de-risk their go-to-market strategy',
+    'Facing unexpected competitive pressure and need to differentiate effectively',
+    'Launching new products and want to maximize first-mover advantage',
+    'Struggling with customer acquisition costs that don\'t align with conversion rates',
+    'Uncertain about market prioritization and which segments to target first'
+  ];
+
+  const o360Benefits = [
+    { name: 'Real-time Market Monitoring', desc: 'Track shifts in customer preferences and competitive dynamics' },
+    { name: 'Continuous Intelligence Updates', desc: 'Stay informed as market conditions evolve' },
+    { name: 'Strategic Decision Support', desc: 'Validate new initiatives against current market data' },
+    { name: 'ROI Tracking', desc: 'Monitor the performance of implemented strategies against baseline metrics' }
   ];
 
   return (
