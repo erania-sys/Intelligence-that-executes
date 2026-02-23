@@ -310,44 +310,48 @@ const Insights = () => {
                 <motion.article
                   key={article.id}
                   variants={fadeUpVariant}
-                  className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-lg transition-shadow cursor-pointer group"
                   data-testid={`article-${article.id}`}
                 >
-                  {/* Article Image */}
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <span 
-                        className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold"
-                        style={{ backgroundColor: `${getCategoryColor(article.category)}15`, color: getCategoryColor(article.category) }}
-                      >
-                        <Tag size={12} />
-                        {getCategoryLabel(article.category)}
-                      </span>
-                      <span className="flex items-center gap-1 text-[#6C757D] text-xs">
-                        <Clock size={12} />
-                        {article.readTime}
-                      </span>
+                  <Link 
+                    to={`/insights/${article.id}`}
+                    className="block bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-lg transition-shadow cursor-pointer group h-full"
+                  >
+                    {/* Article Image */}
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={article.image}
+                        alt={article.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
-                    <h3 className="text-lg font-bold text-[#0A0A0A] mb-3 group-hover:text-[#C9A961] transition-colors line-clamp-2" >
-                      {article.title}
-                    </h3>
-                    <p className="text-[#6C757D] text-sm leading-relaxed mb-4 line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-[#6C757D] text-xs">{article.date}</span>
-                      <span className="inline-flex items-center gap-1 text-[#C9A961] font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                        Read <ArrowRight size={14} />
-                      </span>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <span 
+                          className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold"
+                          style={{ backgroundColor: `${getCategoryColor(article.category)}15`, color: getCategoryColor(article.category) }}
+                        >
+                          <Tag size={12} />
+                          {getCategoryLabel(article.category)}
+                        </span>
+                        <span className="flex items-center gap-1 text-[#6C757D] text-xs">
+                          <Clock size={12} />
+                          {article.readTime}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-bold text-[#0A0A0A] mb-3 group-hover:text-[#C9A961] transition-colors line-clamp-2" >
+                        {article.title}
+                      </h3>
+                      <p className="text-[#6C757D] text-sm leading-relaxed mb-4 line-clamp-3">
+                        {article.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[#6C757D] text-xs">{article.date}</span>
+                        <span className="inline-flex items-center gap-1 text-[#C9A961] font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                          Read <ArrowRight size={14} />
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </motion.article>
               ))}
             </motion.div>
