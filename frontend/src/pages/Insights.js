@@ -195,33 +195,23 @@ const Insights = () => {
       {/* Newsletter Signup */}
       <section className="py-8 border-b border-[rgba(0,0,0,0.08)]" data-testid="newsletter-section">
         <div className="section-container">
-          <motion.form
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeUpVariant}
-            onSubmit={handleSubscribe}
             className="flex flex-col md:flex-row gap-4 items-center justify-center"
           >
             <p className="text-[#6C757D] text-sm">Get weekly strategic intelligence delivered to your inbox:</p>
-            <div className="flex gap-2 w-full md:w-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="px-4 py-2 border border-[rgba(0,0,0,0.1)] rounded-lg text-sm focus:outline-none focus:border-[#C9A961] w-full md:w-64"
-                required
-                data-testid="newsletter-email"
-              />
-              <button
-                type="submit"
-                className="btn-primary py-2 px-4 text-sm"
-                data-testid="newsletter-submit"
-              >
-                Subscribe
-              </button>
-            </div>
-          </motion.form>
+            <a
+              href="https://form.jotform.com/260530287080048"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary py-2 px-6 text-sm"
+              data-testid="newsletter-subscribe-btn"
+            >
+              Subscribe to Newsletter
+            </a>
+          </motion.div>
         </div>
       </section>
 
