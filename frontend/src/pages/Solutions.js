@@ -717,12 +717,7 @@ const Solutions = () => {
                   >
                     <div className="absolute top-0 right-0 w-48 h-48 bg-red-200/30 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
                     <div className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-red-500/20 flex items-center justify-center">
-                          <span className="text-red-600 text-xl font-bold">!</span>
-                        </div>
-                        <h4 className="font-bold text-red-800 text-lg">The Problem</h4>
-                      </div>
+                      <h4 className="font-bold text-red-800 text-lg mb-4">The Problem</h4>
                       <p className="text-red-700 leading-relaxed text-lg">
                         Most mid-market B2B companies are leaving substantial annual opportunity on the table due to strategic blindspots they can't identify from inside the business.
                       </p>
@@ -735,12 +730,7 @@ const Solutions = () => {
                       className="bg-white rounded-2xl p-8 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
                       whileHover={{ y: -5 }}
                     >
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-[#C9A961] flex items-center justify-center">
-                          <span className="text-white font-bold">1</span>
-                        </div>
-                        <h4 className="font-bold text-[#0A0A0A] text-lg">Pre-Work</h4>
-                      </div>
+                      <h4 className="font-bold text-[#0A0A0A] text-lg mb-6">1. Pre-Work</h4>
                       <ul className="space-y-3">
                         {auditFeatures.map((item, i) => (
                           <motion.li 
@@ -760,12 +750,7 @@ const Solutions = () => {
                       className="bg-white rounded-2xl p-8 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
                       whileHover={{ y: -5 }}
                     >
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-[#C9A961] flex items-center justify-center">
-                          <span className="text-white font-bold">2</span>
-                        </div>
-                        <h4 className="font-bold text-[#0A0A0A] text-lg">Intensive Session</h4>
-                      </div>
+                      <h4 className="font-bold text-[#0A0A0A] text-lg mb-6">2. Intensive Session</h4>
                       <ul className="space-y-3">
                         {auditSession.map((item, i) => (
                           <motion.li 
