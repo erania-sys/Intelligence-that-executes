@@ -173,17 +173,6 @@ const Home = () => {
                   Real-Time Intelligence
                 </span>
               </motion.div>
-                  Stanford-Born AI
-                </span>
-                <span className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-3 py-1.5 rounded-full text-xs font-medium">
-                  <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
-                  60+ Countries Validated
-                </span>
-                <span className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-3 py-1.5 rounded-full text-xs font-medium">
-                  <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
-                  Predictive Intelligence
-                </span>
-              </motion.div>
             </motion.div>
             
             <motion.div
