@@ -606,10 +606,7 @@ const Solutions = () => {
                               className="bg-white rounded-xl p-5 border border-[#E9ECEF]"
                               whileHover={{ y: -5 }}
                             >
-                              <div className="flex items-center gap-2 mb-4">
-                                <TrendingUp size={18} className="text-[#C9A961]" />
-                                <h5 className="font-semibold text-[#0A0A0A]">Quarterly</h5>
-                              </div>
+                              <h5 className="font-semibold text-[#0A0A0A] mb-4">Quarterly</h5>
                               <ul className="space-y-2">
                                 {partnership.quarterly.map((item, i) => (
                                   <li key={i} className="text-xs text-[#6C757D] flex items-start gap-2">
@@ -624,10 +621,7 @@ const Solutions = () => {
                                 className="bg-white rounded-xl p-5 border border-[#E9ECEF]"
                                 whileHover={{ y: -5 }}
                               >
-                                <div className="flex items-center gap-2 mb-4">
-                                  <Compass size={18} className="text-[#C9A961]" />
-                                  <h5 className="font-semibold text-[#0A0A0A]">Annual</h5>
-                                </div>
+                                <h5 className="font-semibold text-[#0A0A0A] mb-4">Annual</h5>
                                 <ul className="space-y-2">
                                   {partnership.annual.map((item, i) => (
                                     <li key={i} className="text-xs text-[#6C757D] flex items-start gap-2">
@@ -643,10 +637,7 @@ const Solutions = () => {
                                 className="bg-gradient-to-br from-[#C9A961]/10 to-[#C9A961]/20 rounded-xl p-5 border border-[#C9A961]/30"
                                 whileHover={{ y: -5 }}
                               >
-                                <div className="flex items-center gap-2 mb-4">
-                                  <Zap size={18} className="text-[#C9A961]" />
-                                  <h5 className="font-semibold text-[#0A0A0A]">Premium</h5>
-                                </div>
+                                <h5 className="font-semibold text-[#0A0A0A] mb-4">Premium</h5>
                                 <ul className="space-y-2">
                                   {partnership.premium.map((item, i) => (
                                     <li key={i} className="text-xs text-[#6C757D] flex items-start gap-2">
