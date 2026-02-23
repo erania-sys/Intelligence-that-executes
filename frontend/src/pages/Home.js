@@ -98,58 +98,42 @@ const Home = () => {
               animate="visible"
               variants={staggerContainer}
             >
-              <motion.p
-                variants={fadeUpVariant}
-                className="text-sm font-semibold text-[#C9A961] mb-4 uppercase tracking-wider"
-              >
-                Solving Your 3 AM Problem
-              </motion.p>
+              <motion.div variants={fadeUpVariant} className="flex items-center gap-3 mb-6">
+                <span className="inline-block px-4 py-1.5 bg-[#0A0A0A] text-white text-xs font-semibold tracking-wider uppercase rounded-full">
+                  Fractional CSO & CMO
+                </span>
+                <span className="text-[#C9A961] text-sm font-medium">+ Predictive Intelligence</span>
+              </motion.div>
               
               <motion.h1
                 variants={fadeUpVariant}
-                className="text-[36px] md:text-[42px] lg:text-[48px] font-semibold leading-[1.15] mb-6 text-[#0A0A0A]"
+                className="text-[40px] md:text-[52px] lg:text-[60px] font-bold leading-[1.08] mb-6 text-[#0A0A0A]"
               >
-                Stop Leaving{' '}
+                Intelligence That{' '}
                 <span className="relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-[#C9A961] to-[#8B7340] bg-clip-text text-transparent">Millions</span>
-                  <span className="absolute bottom-1 left-0 w-full h-2 bg-[#C9A961]/20 -z-10 rounded"></span>
-                </span>{' '}
-                on the Table.{' '}
-                <br className="hidden md:block" />
-                Get the{' '}
-                <span className="relative inline-block">
-                  <span className="text-[#0A0A0A]" style={{ textShadow: '2px 2px 0px rgba(201, 169, 97, 0.3)' }}>Strategic Intelligence</span>
-                </span>{' '}
-                You Need—
-                <br className="hidden lg:block" />
-                <span className="relative">
-                  <span className="text-[#6C757D] font-normal italic">Without</span>
-                </span>{' '}
-                the{' '}
-                <span className="relative inline-block group">
-                  <span className="relative z-10">Full-Time Overhead</span>
-                  <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#C9A961] via-[#D4B87A] to-[#C9A961] rounded-full"></span>
+                  <span className="bg-gradient-to-r from-[#C9A961] to-[#8B7340] bg-clip-text text-transparent">Executes</span>
+                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-[#C9A961] to-[#8B7340] rounded-full"></span>
                 </span>
                 <span className="text-[#C9A961]">.</span>
               </motion.h1>
               
               <motion.p
                 variants={fadeUpVariant}
-                className="text-lg text-[#6C757D] max-w-xl mb-4 leading-relaxed"
+                className="text-xl md:text-2xl text-[#0A0A0A] max-w-xl mb-4 leading-snug font-medium"
               >
-                Fractional Chief Strategy & Marketing Officers equipped with Stanford-born predictive intelligence that identifies which customers will convert, which markets to enter first, and how to win.
+                Stop leaving millions on the table.
               </motion.p>
               
               <motion.p
                 variants={fadeUpVariant}
-                className="text-base text-[#6C757D] max-w-xl mb-8 leading-relaxed"
+                className="text-base md:text-lg text-[#6C757D] max-w-xl mb-8 leading-relaxed"
               >
-                The questions keeping you up at night—unclear growth levers, competitive noise, scattered execution—we solve them. Intelligence-backed fractional executives for mid-market companies who need clarity, not more consultants.
+                Fractional Chief Strategy & Marketing Officers equipped with Stanford-born predictive intelligence that identifies which customers will convert, which markets to enter first, and how to win.
               </motion.p>
               
               <motion.div
                 variants={fadeUpVariant}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap gap-4 mb-8"
               >
                 <motion.a
                   href="https://form.jotform.com/252728460666061"
@@ -165,19 +149,30 @@ const Home = () => {
                 </motion.a>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Link
-                    to="/how-we-work"
+                    to="/solutions"
                     className="btn-secondary border-[#0A0A0A] text-[#0A0A0A] hover:bg-[#0A0A0A]"
                     data-testid="hero-cta-secondary"
                   >
-                    Experience the Intelligence Advantage
+                    View Solutions
                   </Link>
                 </motion.div>
               </motion.div>
               
               {/* Intelligence Badges */}
-              <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-3 mt-6">
-                <span className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-3 py-1.5 rounded-full text-xs font-medium">
+              <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-3">
+                <span className="inline-flex items-center gap-2 bg-[#F8F9FA] text-[#0A0A0A] px-3 py-1.5 rounded-full text-xs font-medium border border-[#E9ECEF]">
                   <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
+                  Stanford-Born AI
+                </span>
+                <span className="inline-flex items-center gap-2 bg-[#F8F9FA] text-[#0A0A0A] px-3 py-1.5 rounded-full text-xs font-medium border border-[#E9ECEF]">
+                  <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
+                  60+ Countries Validated
+                </span>
+                <span className="inline-flex items-center gap-2 bg-[#F8F9FA] text-[#0A0A0A] px-3 py-1.5 rounded-full text-xs font-medium border border-[#E9ECEF]">
+                  <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
+                  Real-Time Intelligence
+                </span>
+              </motion.div>
                   Stanford-Born AI
                 </span>
                 <span className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-3 py-1.5 rounded-full text-xs font-medium">
