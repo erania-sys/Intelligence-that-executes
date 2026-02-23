@@ -36,6 +36,7 @@ function App() {
             <Route path="/brand-design" element={<BrandDesign />} />
             <Route path="/intelligence" element={<Intelligence />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:id" element={<BlogArticle />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
