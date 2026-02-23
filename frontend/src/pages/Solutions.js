@@ -773,12 +773,7 @@ const Solutions = () => {
                       className="bg-gradient-to-br from-[#C9A961]/5 to-[#C9A961]/15 rounded-2xl p-8 border border-[#C9A961]/30"
                       whileHover={{ y: -5 }}
                     >
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-[#C9A961] flex items-center justify-center">
-                          <span className="text-white font-bold">3</span>
-                        </div>
-                        <h4 className="font-bold text-[#0A0A0A] text-lg">Post-Session Deliverables</h4>
-                      </div>
+                      <h4 className="font-bold text-[#0A0A0A] text-lg mb-6">3. Post-Session Deliverables</h4>
                       <ul className="space-y-3">
                         {auditDeliverables.map((item, i) => (
                           <motion.li 
@@ -798,12 +793,7 @@ const Solutions = () => {
                       className="bg-[#0A0A0A] rounded-2xl p-8 text-white"
                       whileHover={{ y: -5 }}
                     >
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-[#C9A961]/30 flex items-center justify-center">
-                          <Zap size={20} className="text-[#C9A961]" />
-                        </div>
-                        <h4 className="font-bold text-white text-lg">Technology Access</h4>
-                      </div>
+                      <h4 className="font-bold text-white text-lg mb-6">4. Technology Access</h4>
                       <ul className="space-y-3">
                         {auditTechnology.map((item, i) => (
                           <motion.li 
