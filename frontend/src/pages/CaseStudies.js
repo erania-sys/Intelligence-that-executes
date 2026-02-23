@@ -243,6 +243,37 @@ const CaseStudies = () => {
                   </ul>
                 </div>
 
+                {/* Predictive Intelligence Insight Section */}
+                {study.intelligenceInsight && (
+                  <div className="bg-gradient-to-r from-[#C9A961]/20 to-[#C9A961]/10 rounded-2xl p-8 md:p-12 mb-8 border border-[#C9A961]/30">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 rounded-xl bg-[#C9A961] flex items-center justify-center">
+                        <Zap className="w-5 h-5 text-[#0A0A0A]" />
+                      </div>
+                      <h3 className="text-xl font-bold text-[#0A0A0A]">{study.intelligenceInsight.title}</h3>
+                    </div>
+                    <p className="text-[#6C757D] mb-4">{study.intelligenceInsight.intro}</p>
+                    <ul className="space-y-3 mb-6">
+                      {study.intelligenceInsight.findings.map((finding, i) => (
+                        <li key={i} className="flex items-start gap-3 bg-white/60 rounded-lg p-3">
+                          <span className="text-[#C9A961] font-bold">•</span>
+                          <span className="text-[#0A0A0A]">{finding}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="bg-white rounded-xl p-4 mb-4">
+                      <p className="text-sm text-[#6C757D]">
+                        <span className="font-semibold text-[#0A0A0A]">Why this mattered:</span> {study.intelligenceInsight.whyMattered}
+                      </p>
+                    </div>
+                    <div className="bg-[#0A0A0A] rounded-xl p-4">
+                      <p className="text-sm text-[#C9A961]">
+                        <span className="font-semibold">Result:</span> {study.intelligenceInsight.result}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
                 {/* Approach Section */}
                 <div className="bg-white rounded-2xl p-8 md:p-12 mb-8 border border-[#E9ECEF]">
                   <h3 className="text-xl font-bold text-[#0A0A0A] mb-4 flex items-center gap-3">
