@@ -190,6 +190,9 @@ const About = () => {
                     <p className="text-[#6C757D] leading-relaxed mb-6">
                       With a proven track record leading Fortune 500 companies through complex market transitions, Erania brings people-first leadership focused on building high-performing teams and driving measurable business outcomes. She's an award-winning marketer who combines strategic thinking with execution excellence.
                     </p>
+                    <p className="text-[#6C757D] leading-relaxed mb-6 bg-[#C9A961]/5 p-4 rounded-lg border-l-4 border-[#C9A961]">
+                      <span className="font-semibold text-[#0A0A0A]">Intelligence-Equipped Leadership:</span> As a fractional Chief Strategy Officer and Chief Marketing Officer, Erania combines strategic and marketing execution expertise with predictive intelligence technology. She deploys ASEMAP™ to reveal which customer segments will convert, which positioning will resonate, and where competitive differentiation matters most—transforming how strategic and marketing decisions are made.
+                    </p>
                     <div className="mb-6">
                       <h4 className="font-semibold text-[#0A0A0A] mb-3">Expertise</h4>
                       <ul className="grid md:grid-cols-2 gap-2">
