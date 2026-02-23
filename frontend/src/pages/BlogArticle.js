@@ -300,7 +300,7 @@ const BlogArticle = () => {
       author: 'Erania Brackett',
       authorRole: 'Founder & CEO',
       image: 'https://images.pexels.com/photos/6476787/pexels-photo-6476787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      content: \`
+      content: `
         <p class="lead">The journey from $10M to $50M in revenue isn't linear. It's marked by predictable inflection points where the strategies that got you here won't get you there. After working with dozens of mid-market companies through these transitions, I've mapped the walls they hit—and the breakthroughs that get them through.</p>
         
         <p>Here's the uncomfortable truth: most companies that reach $10M never make it to $50M. Not because they lack ambition or talent, but because they fail to recognize that growth requires transformation—not just more of what worked before.</p>
@@ -396,7 +396,7 @@ const BlogArticle = () => {
         <p>The Strategic Blindspot Audit is designed exactly for this moment: to surface the capabilities you need, identify the changes required, and create a roadmap for the next phase of growth.</p>
         
         <p>The companies that make it from $10M to $50M aren't the ones with the best products or the most funding. They're the ones that recognize when transformation is required—and have the courage to do it.</p>
-      \`
+      `
     }
   };
 
