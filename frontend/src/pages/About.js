@@ -128,7 +128,7 @@ const About = () => {
                         <img 
                           src="https://customer-assets.emergentagent.com/job_7baffe86-c194-4b68-b67d-b7c4d0c7407e/artifacts/71yeaiw8_Erania%20HeadsShot.jpg"
                           alt="Erania Brackett"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
                       <h3 className="text-2xl font-bold text-white" >
