@@ -561,30 +561,17 @@ const Solutions = () => {
                         
                         <div className="p-8 md:p-10">
                           {/* Header */}
-                          <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
-                            <motion.div 
-                              className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center flex-shrink-0 shadow-lg"
-                              whileHover={{ scale: 1.1, rotate: 5 }}
-                            >
-                              <Users className="text-white" size={28} />
-                            </motion.div>
-                            <div className="flex-1">
-                              <h3 className="text-2xl font-bold text-[#0A0A0A] mb-2">
-                                {partnership.name}
-                              </h3>
-                              <p className="text-[#C9A961] font-semibold mb-3">{partnership.subtitle}</p>
-                              <p className="text-[#6C757D] leading-relaxed">{partnership.description}</p>
-                            </div>
+                          <div className="mb-8">
+                            <h3 className="text-2xl font-bold text-[#0A0A0A] mb-2">
+                              {partnership.name}
+                            </h3>
+                            <p className="text-[#C9A961] font-semibold mb-3">{partnership.subtitle}</p>
+                            <p className="text-[#6C757D] leading-relaxed">{partnership.description}</p>
                           </div>
 
                           {/* Who It's For */}
                           <div className="bg-gradient-to-r from-[#F8F9FA] to-white rounded-xl p-6 mb-8 border border-[#E9ECEF]">
-                            <div className="flex items-center gap-2 mb-4">
-                              <div className="w-8 h-8 rounded-lg bg-[#0A0A0A] flex items-center justify-center">
-                                <Target size={16} className="text-white" />
-                              </div>
-                              <h4 className="font-bold text-[#0A0A0A]">Who It's For</h4>
-                            </div>
+                            <h4 className="font-bold text-[#0A0A0A] mb-4">Who It's For</h4>
                             <div className="grid md:grid-cols-3 gap-3">
                               {partnership.whoFor.map((item, i) => (
                                 <motion.div 
@@ -605,10 +592,7 @@ const Solutions = () => {
                               className="bg-[#0A0A0A] rounded-xl p-5 text-white"
                               whileHover={{ y: -5 }}
                             >
-                              <div className="flex items-center gap-2 mb-4">
-                                <Calendar size={18} className="text-[#C9A961]" />
-                                <h5 className="font-semibold text-white">Monthly</h5>
-                              </div>
+                              <h5 className="font-semibold text-white mb-4">Monthly</h5>
                               <ul className="space-y-2">
                                 {partnership.monthly.map((item, i) => (
                                   <li key={i} className="text-xs text-white/70 flex items-start gap-2">
