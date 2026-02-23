@@ -323,6 +323,16 @@ const Solutions = () => {
               >
                 Structured programs designed for the problems mid-market companies actually face.
               </motion.p>
+              
+              {/* Intelligence-backed intro */}
+              <motion.div
+                variants={fadeUpVariant}
+                className="mt-6 p-4 bg-gradient-to-r from-[#C9A961]/10 to-transparent rounded-lg border-l-4 border-[#C9A961]"
+              >
+                <p className="text-sm text-[#6C757D] leading-relaxed">
+                  <span className="font-semibold text-[#0A0A0A]">Intelligence-Backed Fractional Leadership:</span> Every engagement leverages our fractional Chief Strategy Officers and Chief Marketing Officers equipped with Stanford-born predictive intelligence that reveals which strategies will work before you commit resources.
+                </p>
+              </motion.div>
 
               {/* Quick stats */}
               <motion.div 
