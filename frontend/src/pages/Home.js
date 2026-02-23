@@ -47,25 +47,25 @@ const Home = () => {
 
   const techPillars = [
     {
-      name: 'Customer Choice Intelligence',
-      description: 'Predictive tradeoff methodology that measures the magnitude of customer decisions—not just preferences. Stanford-born behavioral science.'
+      name: 'Intelligence',
+      description: 'Powered by OSG Analytics\' ASEMAP™ platform—validated across 60+ countries—that eliminates cultural bias and reveals true customer preferences through forced trade-off methodology.'
     },
     {
-      name: 'OSG Intelligence Engine',
-      description: 'AI/ML-powered analytics platform consolidating structured and unstructured data. Real-time dashboards, predictive modeling, and behavioral analytics.'
+      name: 'Strategy',
+      description: 'Your fractional CSO/CMO uses predictive personalization to identify which customers to target first, which value propositions will resonate strongest, and where your path of least resistance lies.'
     },
     {
-      name: 'Customer Experience Analytics',
-      description: 'Advanced NPS+ methodology measuring sentiment drivers and engagement triggers. Journey mapping with behavioral nudge identification.'
+      name: 'Execution',
+      description: 'With o360™ platform access, strategies stay current through real-time market intelligence—enabling rapid adaptation as conditions evolve.'
     }
   ];
 
   const comparisonData = [
-    { traditional: 'Hourly billing, scope creep', brackett: 'Fixed programs, clear outcomes' },
+    { traditional: 'Experience + Intuition alone', brackett: 'Experience + Predictive Intelligence' },
+    { traditional: 'Best guess strategies', brackett: 'Probability-based decisions' },
+    { traditional: 'Reactive adjustments', brackett: 'Proactive adaptation' },
+    { traditional: 'Hope for success', brackett: 'Confidence scores & validation' },
     { traditional: 'Junior teams do the work', brackett: 'Senior executives lead directly' },
-    { traditional: 'Generic frameworks', brackett: 'Proprietary AI/ML technology' },
-    { traditional: 'Recommendations you implement', brackett: 'Strategic partnership through execution' },
-    { traditional: 'Uncertain timelines', brackett: '90-120 day transformations' },
   ];
 
   const stats = [
