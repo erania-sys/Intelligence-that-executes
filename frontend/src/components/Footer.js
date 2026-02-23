@@ -132,11 +132,22 @@ const Footer = () => {
             </ul>
             
             <h4 className="text-xs font-semibold tracking-wider uppercase text-[#C9A961] mb-4 mt-8">
-              Partners
+              Technology Partner
             </h4>
-            <p className="text-white/50 text-xs">
-              Strategic Partnership with OSG Analytics
-            </p>
+            <div className="bg-white/5 rounded-lg p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 rounded bg-[#C9A961]/20 flex items-center justify-center">
+                  <span className="text-[#C9A961] font-bold text-xs">OSG</span>
+                </div>
+                <span className="text-white text-sm font-medium">OSG Analytics</span>
+              </div>
+              <p className="text-white/50 text-xs leading-relaxed">
+                Stanford-born predictive intelligence powering our fractional executives.
+              </p>
+              <Link to="/intelligence" className="text-[#C9A961] text-xs mt-2 inline-flex items-center gap-1 hover:underline">
+                Learn more <ArrowRight size={10} />
+              </Link>
+            </div>
           </div>
         </div>
 
