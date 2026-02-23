@@ -30,7 +30,7 @@ const Contact = () => {
   const faqs = [
     {
       question: 'Who is the Strategic Blindspot Audit for?',
-      answer: 'CEOs and leadership teams of B2B companies ($10-50M revenue) who need strategic clarity on growth levers, competitive positioning, or execution effectiveness. Also ideal for PE firms evaluating portfolio company strategic needs.'
+      answer: 'CEOs and leadership teams of B2B and B2C companies ($10-50M revenue) who need strategic clarity on growth levers, competitive positioning, or execution effectiveness. Also ideal for PE firms evaluating portfolio company strategic needs.'
     },
     {
       question: 'What makes this different from a free consultation?',
@@ -50,7 +50,7 @@ const Contact = () => {
     },
     {
       question: 'What industries do you serve?',
-      answer: 'We specialize in mid-market B2B companies across Healthcare, MedTech, Pharmaceutical, Financial Services, and B2B Technology. Our proprietary intelligence platforms are built for complex, regulated industries with demanding data security requirements.'
+      answer: 'We specialize in mid-market companies across Healthcare, MedTech, Pharmaceutical, Financial Services, Consumer, and Technology. Our proprietary intelligence platforms are built for complex industries with demanding data security requirements.'
     },
     {
       question: 'Can you help with implementation, or just strategy?',
