@@ -32,7 +32,8 @@ const Insights = () => {
       category: 'revenue',
       readTime: '8 min read',
       featured: true,
-      date: 'December 2025'
+      date: 'December 2025',
+      image: 'https://images.unsplash.com/photo-1758691736545-5c33b6255dca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwbWVldGluZyUyMGFuYWx5dGljc3xlbnwwfHx8fDE3NzE4MTMzNTJ8MA&ixlib=rb-4.1.0&q=85'
     },
     {
       id: 2,
@@ -41,7 +42,8 @@ const Insights = () => {
       category: 'positioning',
       readTime: '6 min read',
       featured: false,
-      date: 'December 2025'
+      date: 'December 2025',
+      image: 'https://images.unsplash.com/photo-1758691736424-4b4273948341?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwbWVldGluZyUyMGFuYWx5dGljc3xlbnwwfHx8fDE3NzE4MTMzNTJ8MA&ixlib=rb-4.1.0&q=85'
     },
     {
       id: 3,
@@ -50,7 +52,8 @@ const Insights = () => {
       category: 'intelligence',
       readTime: '7 min read',
       featured: false,
-      date: 'November 2025'
+      date: 'November 2025',
+      image: 'https://images.unsplash.com/photo-1758876202980-0a28b744fb24?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwyfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzE4MTMzNTN8MA&ixlib=rb-4.1.0&q=85'
     },
     {
       id: 4,
@@ -59,7 +62,8 @@ const Insights = () => {
       category: 'execution',
       readTime: '10 min read',
       featured: false,
-      date: 'November 2025'
+      date: 'November 2025',
+      image: 'https://images.pexels.com/photos/9304682/pexels-photo-9304682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
     {
       id: 5,
@@ -68,7 +72,8 @@ const Insights = () => {
       category: 'revenue',
       readTime: '7 min read',
       featured: false,
-      date: 'October 2025'
+      date: 'October 2025',
+      image: 'https://images.unsplash.com/photo-1763038311036-6d18805537e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzE4MTMzNTN8MA&ixlib=rb-4.1.0&q=85'
     },
     {
       id: 6,
@@ -77,7 +82,8 @@ const Insights = () => {
       category: 'positioning',
       readTime: '5 min read',
       featured: false,
-      date: 'October 2025'
+      date: 'October 2025',
+      image: 'https://images.pexels.com/photos/7172856/pexels-photo-7172856.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
     {
       id: 7,
@@ -86,7 +92,8 @@ const Insights = () => {
       category: 'intelligence',
       readTime: '6 min read',
       featured: false,
-      date: 'September 2025'
+      date: 'September 2025',
+      image: 'https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
     {
       id: 8,
@@ -95,7 +102,8 @@ const Insights = () => {
       category: 'execution',
       readTime: '8 min read',
       featured: false,
-      date: 'September 2025'
+      date: 'September 2025',
+      image: 'https://images.unsplash.com/photo-1758691736498-422201cc57da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwbWVldGluZyUyMGFuYWx5dGljc3xlbnwwfHx8fDE3NzE4MTMzNTJ8MA&ixlib=rb-4.1.0&q=85'
     },
     {
       id: 9,
@@ -104,7 +112,8 @@ const Insights = () => {
       category: 'revenue',
       readTime: '9 min read',
       featured: false,
-      date: 'August 2025'
+      date: 'August 2025',
+      image: 'https://images.pexels.com/photos/6476787/pexels-photo-6476787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     }
   ];
 
