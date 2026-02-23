@@ -58,7 +58,7 @@ const Footer = () => {
               Intelligence That Executes.
             </p>
             <p className="text-white/50 text-xs leading-relaxed">
-              Fractional strategy partners for mid-market B2B companies who need senior strategic thinking backed by AI-powered intelligence.
+              Fractional strategy partners for mid-market companies who need senior strategic thinking backed by AI-powered intelligence.
             </p>
           </div>
 
