@@ -241,6 +241,10 @@ For either option, to use your own domain:
 ## Changelog
 
 ### February 23, 2026
+- **New Feature:** Added Case Studies page (`/case-studies`) with two case studies from OSG MedTech deck:
+  - Single-Use Medical Device Launch (Cystoscope pricing optimization)
+  - Breast Reconstruction Market Strategy (GalaFLEX positioning)
+- Added Case Studies to navigation menu
 - **Bug Fix:** Fixed scroll position not resetting on page navigation
   - Added `ScrollToTop` component using React Router's `useLocation` hook
   - All pages now open at the top instead of maintaining previous scroll position
