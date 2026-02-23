@@ -258,44 +258,46 @@ const Insights = () => {
                 variants={fadeUpVariant}
                 className="mb-12"
               >
-                <div className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-lg transition-shadow cursor-pointer">
-                  <div className="md:flex">
-                    <div className="md:w-1/2 h-64 md:h-auto overflow-hidden">
-                      <img 
-                        src={featuredArticle.image}
-                        alt={featuredArticle.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="md:w-1/2 p-8 md:p-12">
-                      <div className="flex items-center gap-4 mb-4">
-                        <span 
-                          className="inline-block px-3 py-1 rounded-full text-xs font-semibold"
-                          style={{ backgroundColor: `${getCategoryColor(featuredArticle.category)}20`, color: getCategoryColor(featuredArticle.category) }}
-                        >
-                          {getCategoryLabel(featuredArticle.category)}
-                        </span>
-                        <span className="text-[#C9A961] text-xs font-semibold uppercase tracking-wider">Featured</span>
+                <Link to={`/insights/${featuredArticle.id}`} className="block">
+                  <div className="bg-white rounded-xl overflow-hidden border border-[#E9ECEF] hover:shadow-lg transition-shadow cursor-pointer">
+                    <div className="md:flex">
+                      <div className="md:w-1/2 h-64 md:h-auto overflow-hidden">
+                        <img 
+                          src={featuredArticle.image}
+                          alt={featuredArticle.title}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        />
                       </div>
-                      <div className="flex items-center gap-4 mb-4">
-                        <span className="text-[#6C757D] text-sm">{featuredArticle.date}</span>
-                        <span className="flex items-center gap-1 text-[#6C757D] text-sm">
-                          <Clock size={14} />
-                          {featuredArticle.readTime}
+                      <div className="md:w-1/2 p-8 md:p-12">
+                        <div className="flex items-center gap-4 mb-4">
+                          <span 
+                            className="inline-block px-3 py-1 rounded-full text-xs font-semibold"
+                            style={{ backgroundColor: `${getCategoryColor(featuredArticle.category)}20`, color: getCategoryColor(featuredArticle.category) }}
+                          >
+                            {getCategoryLabel(featuredArticle.category)}
+                          </span>
+                          <span className="text-[#C9A961] text-xs font-semibold uppercase tracking-wider">Featured</span>
+                        </div>
+                        <div className="flex items-center gap-4 mb-4">
+                          <span className="text-[#6C757D] text-sm">{featuredArticle.date}</span>
+                          <span className="flex items-center gap-1 text-[#6C757D] text-sm">
+                            <Clock size={14} />
+                            {featuredArticle.readTime}
+                          </span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-[#0A0A0A] mb-4" >
+                          {featuredArticle.title}
+                        </h3>
+                        <p className="text-[#6C757D] leading-relaxed mb-6">
+                          {featuredArticle.excerpt}
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-[#C9A961] font-medium hover:underline">
+                          Read Article <ArrowRight size={16} />
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-[#0A0A0A] mb-4" >
-                        {featuredArticle.title}
-                      </h3>
-                      <p className="text-[#6C757D] leading-relaxed mb-6">
-                        {featuredArticle.excerpt}
-                      </p>
-                      <span className="inline-flex items-center gap-2 text-[#C9A961] font-medium hover:underline">
-                        Read Article <ArrowRight size={16} />
-                      </span>
                     </div>
                   </div>
-                </div>
+                </Link>
               </motion.article>
             )}
 
