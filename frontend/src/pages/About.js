@@ -102,6 +102,52 @@ const About = () => {
         </div>
       </section>
 
+      {/* Our Differentiator Section */}
+      <section className="py-16 bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A]" data-testid="differentiator-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="text-center mb-12">
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Our Differentiator</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                What Makes Our Fractional Executives Different
+              </h2>
+              <p className="text-white/70 max-w-2xl mx-auto leading-relaxed">
+                In a market where fractional CSOs and CMOs are increasingly common, our differentiator is clear: proprietary predictive intelligence.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto">
+              <p className="text-white/70 mb-8 text-center leading-relaxed">
+                Through our partnership with OSG Analytics, our executives are equipped with Stanford-born ASEMAP™ technology that reveals which strategies will succeed before clients invest. This isn't experience alone—it's experience augmented by AI that:
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                {[
+                  'Identifies which customers have highest conversion probability',
+                  'Eliminates cultural bias across 60+ countries',
+                  'Reveals true preferences through forced trade-offs (not surveys)',
+                  'Provides real-time intelligence monitoring via o360™ platform'
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 bg-white/5 rounded-lg p-4">
+                    <Check size={18} className="text-[#C9A961] flex-shrink-0" />
+                    <span className="text-white/80 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <p className="text-center text-white/60 text-sm">
+                <span className="text-[#C9A961] font-semibold">The result:</span> Fractional leadership that delivers dramatically higher success rates because every major decision is backed by predictive data, not best guesses.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Leadership Section */}
       <section className="py-20 md:py-28" data-testid="leadership-section">
         <div className="section-container">
