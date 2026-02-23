@@ -241,16 +241,19 @@ For either option, to use your own domain:
 ## Changelog
 
 ### February 23, 2026
-- **New Feature:** Added Case Studies page (`/case-studies`) with two case studies from OSG MedTech deck:
-  - Single-Use Medical Device Launch (Cystoscope pricing optimization)
-  - Breast Reconstruction Market Strategy (GalaFLEX positioning)
+- **Major Site-Wide Updates:** Implemented comprehensive intelligence-focused content updates:
+  - **Homepage:** Added hero subheadline about Fractional CSO/CMO with Stanford-born intelligence, intelligence badges (Stanford-Born AI, 60+ Countries Validated, Predictive Intelligence), differentiator section, updated comparison table (Traditional vs Intelligence-Equipped), Technology Partner section with OSG Analytics
+  - **Solutions Page:** Added intelligence-backed intro, Intelligence Advantage callout boxes for each signature program
+  - **Case Studies:** Added "Predictive Intelligence Insight" sections with data-driven findings
+  - **About Page:** Added "Our Differentiator" section, updated Erania's bio with intelligence context
+  - **Footer:** Added Technology Partner section with OSG Analytics branding
+  - **CTAs:** Updated to "Discover Your Blind Spots" and "Experience the Intelligence Advantage"
+- **Blind Spot Audit:** Complete content overhaul with 12-week engagement, phases, deliverables, differentiators, o360™ recommendation
+- **New Feature:** Added Case Studies page (`/case-studies`) with two case studies from OSG MedTech deck
 - Added Case Studies to navigation menu
 - **Bug Fix:** Fixed scroll position not resetting on page navigation
-  - Added `ScrollToTop` component using React Router's `useLocation` hook
-  - All pages now open at the top instead of maintaining previous scroll position
-- **Verification:** Confirmed app is fully functional after fork handoff
-- **Blog Content:** Article #9 "From $10M to $50M: The Strategic Inflection Points" content expansion verified complete
-- **App Status:** All pages rendering correctly, no syntax errors present
+- **Removed:** "Made with Emergent" badge from deployed site
+- **App Status:** All pages rendering correctly, deployed to Vercel
 
 ### February 22, 2026
 - **Solutions Page Redesign:** Complete visual overhaul to match HowWeWork and BrandDesign pages
