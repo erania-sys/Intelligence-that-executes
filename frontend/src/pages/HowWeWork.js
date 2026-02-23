@@ -120,7 +120,7 @@ const HowWeWork = () => {
     },
     {
       icon: Monitor,
-      name: 'B2B Technology',
+      name: 'Technology',
       description: 'Revenue architecture, market positioning, sales enablement, and growth execution for SaaS and enterprise software.'
     },
     {
