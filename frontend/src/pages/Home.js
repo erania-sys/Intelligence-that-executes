@@ -273,7 +273,28 @@ const Home = () => {
         </div>
       </section>
 
-      {/* How We're Different */}
+      {/* Intelligence Differentiator Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#C9A961]/10 to-[#C9A961]/5" data-testid="differentiator-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUpVariant}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">The Intelligence Advantage</p>
+            <h2 className="text-[24px] md:text-[32px] font-semibold text-[#0A0A0A] mb-6">
+              What Differentiates Our Fractional Executives?
+            </h2>
+            <p className="text-lg text-[#6C757D] leading-relaxed">
+              While others rely on experience and intuition alone, our CSOs and CMOs leverage proprietary predictive intelligence from OSG Analytics. This Stanford-born technology reveals which strategies will succeed before you invest—dramatically de-risking growth initiatives and increasing probability of success.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* How We're Different - Comparison */}
       <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="comparison-section">
         <div className="section-container">
           <motion.div
@@ -283,9 +304,9 @@ const Home = () => {
             variants={staggerContainer}
           >
             <motion.div variants={fadeUpVariant} className="text-center mb-16">
-              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">How We're Different</p>
+              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Intelligence-Backed Leadership</p>
               <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0A0A0A]">
-                Not Consultants. Strategic Partners.
+                Traditional vs. Intelligence-Equipped Executives
               </h2>
             </motion.div>
             
@@ -295,10 +316,10 @@ const Home = () => {
             >
               <div className="grid grid-cols-2">
                 <div className="bg-[#6C757D] text-white p-4 font-semibold text-center text-sm">
-                  Traditional Consultants
+                  Traditional Fractional Executive
                 </div>
                 <div className="bg-[#0A0A0A] text-white p-4 font-semibold text-center text-sm">
-                  Brackett Agency
+                  Brackett Fractional Executive
                 </div>
               </div>
               {comparisonData.map((row, index) => (
