@@ -144,13 +144,6 @@ const Insights = () => {
     return colors[category] || '#6C757D';
   };
 
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    // In a real implementation, this would send to a newsletter service
-    alert('Thank you for subscribing! You\'ll receive our weekly strategic intelligence.');
-    setEmail('');
-  };
-
   return (
     <div data-testid="insights-page" className="bg-[#FAFAF8]">
       {/* Hero Section */}
