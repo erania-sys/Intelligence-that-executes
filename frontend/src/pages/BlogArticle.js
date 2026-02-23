@@ -295,23 +295,108 @@ const BlogArticle = () => {
       title: 'From $10M to $50M: The Strategic Inflection Points',
       excerpt: "Growing mid-market companies hit predictable walls. Here's how to anticipate them—and break through.",
       category: 'revenue',
-      readTime: '9 min read',
+      readTime: '12 min read',
       date: 'August 25, 2025',
       author: 'Erania Brackett',
       authorRole: 'Founder & CEO',
       image: 'https://images.pexels.com/photos/6476787/pexels-photo-6476787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      content: `
-        <p class="lead">The journey from $10M to $50M in revenue isn't linear. It's marked by predictable inflection points where the strategies that got you here won't get you there.</p>
+      content: \`
+        <p class="lead">The journey from $10M to $50M in revenue isn't linear. It's marked by predictable inflection points where the strategies that got you here won't get you there. After working with dozens of mid-market companies through these transitions, I've mapped the walls they hit—and the breakthroughs that get them through.</p>
+        
+        <p>Here's the uncomfortable truth: most companies that reach $10M never make it to $50M. Not because they lack ambition or talent, but because they fail to recognize that growth requires transformation—not just more of what worked before.</p>
         
         <h2>The Growth Walls</h2>
-        <p>Every growing company hits walls—moments when the current operating model stops scaling. These walls are predictable, but most companies don't see them coming until they've already stalled.</p>
+        <p>Every growing company hits walls—moments when the current operating model stops scaling. These walls are predictable, but most companies don't see them coming until they've already stalled. Revenue plateaus. Margins compress. The team that built the company starts struggling to run it.</p>
         
-        <h2>The Inflection Points</h2>
-        <p>Key transitions typically occur around $15M (founder-led to leadership-led), $25M (single product to portfolio), and $40M (regional to national/global). Each requires different capabilities and often different strategies.</p>
+        <p>The walls aren't random. They occur at predictable revenue levels because each stage of growth requires fundamentally different capabilities, structures, and strategies.</p>
         
-        <h2>Breaking Through</h2>
-        <p>The companies that successfully navigate these transitions are the ones that anticipate them, prepare for them, and aren't afraid to evolve their strategies and structures.</p>
-      `
+        <h2>The First Inflection Point: $15M (Founder-Led to Leadership-Led)</h2>
+        
+        <h3>What's Happening</h3>
+        <p>At $10-15M, the founder can no longer be involved in every major decision. The company has grown beyond what one person—or even a small founding team—can manage through direct involvement.</p>
+        
+        <h3>The Wall</h3>
+        <p>Companies hit this wall when founders can't let go. They become bottlenecks for decisions, hiring, and customer relationships. Growth stalls because everything still flows through the same people who built the company from scratch.</p>
+        
+        <h3>The Breakthrough</h3>
+        <ul>
+          <li><strong>Build a leadership team:</strong> Not just managers, but true leaders who can own outcomes without constant oversight</li>
+          <li><strong>Create decision frameworks:</strong> Document how decisions get made so others can make them</li>
+          <li><strong>Establish operating rhythms:</strong> Weekly, monthly, and quarterly cadences that keep alignment without requiring founder involvement in everything</li>
+          <li><strong>Accept imperfection:</strong> Others won't do it exactly like you would—and that's okay if results are achieved</li>
+        </ul>
+        
+        <h2>The Second Inflection Point: $25M (Single Product to Portfolio)</h2>
+        
+        <h3>What's Happening</h3>
+        <p>The product or service that got you to $25M is approaching market saturation—at least in your current positioning. Growth requires either expanding the offering or expanding the market.</p>
+        
+        <h3>The Wall</h3>
+        <p>Companies hit this wall when they try to grow by doing more of the same. They push harder on the same sales motions, target the same customer profiles, and offer the same solutions—just with more people and more budget. Returns diminish rapidly.</p>
+        
+        <h3>The Breakthrough</h3>
+        <ul>
+          <li><strong>Segment ruthlessly:</strong> Understand which customer segments have the highest growth potential and lifetime value</li>
+          <li><strong>Expand strategically:</strong> Add products, services, or market segments that leverage existing strengths</li>
+          <li><strong>Build platform capabilities:</strong> Create the operational infrastructure to manage multiple offerings efficiently</li>
+          <li><strong>Develop strategic planning muscles:</strong> Move from opportunistic growth to deliberate portfolio management</li>
+        </ul>
+        
+        <h2>The Third Inflection Point: $40M (Regional to National/Global)</h2>
+        
+        <h3>What's Happening</h3>
+        <p>You've maximized growth in your home market or region. The next level of scale requires geographic expansion or serving enterprise customers with national/global footprints.</p>
+        
+        <h3>The Wall</h3>
+        <p>Companies hit this wall when they underestimate the complexity of expansion. They assume what worked in one market will work everywhere. They don't invest adequately in local presence, relationships, or adaptation.</p>
+        
+        <h3>The Breakthrough</h3>
+        <ul>
+          <li><strong>Invest in infrastructure:</strong> Systems, processes, and tools that work across geographies</li>
+          <li><strong>Build local capabilities:</strong> Hire leaders who understand local markets and can adapt the model</li>
+          <li><strong>Standardize what matters:</strong> Core processes and quality standards that don't vary by location</li>
+          <li><strong>Localize what doesn't:</strong> Sales approaches, partnerships, and customer engagement that reflect local realities</li>
+        </ul>
+        
+        <h2>The Hidden Inflection Point: Culture</h2>
+        <p>There's one more inflection point that doesn't map to a specific revenue number but affects every transition: culture.</p>
+        
+        <p>The scrappy, all-hands-on-deck culture that built a $10M company often becomes toxic at $30M. What felt like family becomes cliquish. What felt like agility becomes chaos. What felt like passion becomes burnout.</p>
+        
+        <p>Successful companies deliberately evolve their culture at each stage:</p>
+        <ul>
+          <li><strong>From founder-centric to values-centric:</strong> The culture can't depend on the founder's presence</li>
+          <li><strong>From implicit to explicit:</strong> Expectations and norms must be documented and onboarded</li>
+          <li><strong>From heroic to systematic:</strong> Success comes from processes, not individual heroics</li>
+        </ul>
+        
+        <h2>Why Most Companies Don't Make It</h2>
+        <p>The companies that stall at these inflection points share common patterns:</p>
+        <ul>
+          <li><strong>They don't see the wall coming:</strong> They're so focused on current execution that they don't anticipate the transition</li>
+          <li><strong>They resist change:</strong> "This is how we built the company" becomes a reason not to evolve</li>
+          <li><strong>They under-invest in transition:</strong> They try to change incrementally when transformation is required</li>
+          <li><strong>They wait too long:</strong> By the time they recognize the wall, momentum has stalled and talent has left</li>
+        </ul>
+        
+        <h2>The Brackett Approach</h2>
+        <p>At Brackett Agency, we help companies anticipate and navigate these inflection points before they become crises. Our Strategic Blindspot Audit identifies where you are in the growth journey, what walls are approaching, and what capabilities you need to build.</p>
+        
+        <p>The companies that successfully make the $10M to $50M journey are the ones that:</p>
+        <ul>
+          <li>Recognize that each stage requires different strategies</li>
+          <li>Build capabilities ahead of when they're needed</li>
+          <li>Make deliberate investments in leadership, systems, and culture</li>
+          <li>Partner with advisors who've seen the patterns before</li>
+        </ul>
+        
+        <h2>Taking Action</h2>
+        <p>If you're approaching one of these inflection points—or if you've hit a wall and aren't sure why—it's time for an honest assessment of where you are and what needs to change.</p>
+        
+        <p>The Strategic Blindspot Audit is designed exactly for this moment: to surface the capabilities you need, identify the changes required, and create a roadmap for the next phase of growth.</p>
+        
+        <p>The companies that make it from $10M to $50M aren't the ones with the best products or the most funding. They're the ones that recognize when transformation is required—and have the courage to do it.</p>
+      \`
     }
   };
 
