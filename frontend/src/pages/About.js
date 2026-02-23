@@ -159,6 +159,15 @@ const About = () => {
                       <a href="mailto:erania@brackett.agency" className="text-[#C9A961] hover:underline">
                         erania@brackett.agency
                       </a>
+                      <a 
+                        href="https://www.linkedin.com/in/erania-brackett/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-[#0A0A0A] hover:text-[#C9A961] transition-colors"
+                      >
+                        <Linkedin size={18} />
+                        <span>LinkedIn</span>
+                      </a>
                     </div>
                   </div>
                 </div>
