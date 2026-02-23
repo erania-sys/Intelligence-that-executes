@@ -337,7 +337,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Technology Preview - Black background */}
+      {/* Technology Partner Section */}
       <section className="py-20 md:py-28 bg-[#0A0A0A]" data-testid="technology-section">
         <div className="section-container">
           <motion.div
@@ -346,14 +346,48 @@ const Home = () => {
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            <motion.div variants={fadeUpVariant} className="max-w-2xl mb-16">
-              <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Technology</p>
-              <h2 className="text-[28px] md:text-[36px] font-semibold mb-4 text-white">
-                Powered by OSG Intelligence Engine
-              </h2>
-              <p className="text-white/70 leading-relaxed">
-                Enterprise-grade AI/ML analytics powered by our strategic partnership with OSG Analytics.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <motion.div variants={fadeUpVariant}>
+                <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Technology Partner</p>
+                <h2 className="text-[28px] md:text-[36px] font-semibold mb-4 text-white">
+                  Powered by OSG Analytics
+                </h2>
+                <p className="text-white/70 leading-relaxed mb-6">
+                  Our fractional executives are equipped with proprietary predictive intelligence technology developed at Stanford University—IP-protected capabilities that traditional fractional leaders simply don't have access to.
+                </p>
+                <Link
+                  to="/intelligence"
+                  className="inline-flex items-center gap-2 text-[#C9A961] font-medium hover:gap-3 transition-all"
+                >
+                  Learn more about our technology advantage
+                  <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={fadeUpVariant} className="bg-[#1A1A1A] rounded-xl p-8 border border-[#2A2A2A]">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-[#C9A961]/20 flex items-center justify-center">
+                    <span className="text-[#C9A961] font-bold text-lg">OSG</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">OSG Analytics</p>
+                    <p className="text-white/50 text-sm">Strategic Technology Partner</p>
+                  </div>
+                </div>
+                <ul className="space-y-3">
+                  {['Stanford-born AI platform', '60+ country validation', 'Cultural bias elimination', 'Real-time intelligence monitoring'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-white/70 text-sm">
+                      <Check size={16} className="text-[#C9A961]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+            
+            <motion.div variants={fadeUpVariant} className="text-center mb-8">
+              <h3 className="text-xl font-semibold text-white mb-2">How We Work</h3>
+              <p className="text-white/60">Intelligence → Strategy → Execution</p>
             </motion.div>
             
             <motion.div
