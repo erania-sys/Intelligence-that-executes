@@ -361,10 +361,10 @@ const BrandDesign = () => {
             className="grid md:grid-cols-4 gap-8"
           >
             {[
-              { step: '01', title: 'Discover', desc: 'Deep dive into your brand, market, and audience', icon: '🔍' },
-              { step: '02', title: 'Define', desc: 'Crystallize positioning and strategic direction', icon: '📐' },
-              { step: '03', title: 'Design', desc: 'Create visual systems that capture your essence', icon: '🎨' },
-              { step: '04', title: 'Deliver', desc: 'Launch with comprehensive brand guidelines', icon: '🚀' }
+              { step: '01', title: 'Discover', desc: 'Deep dive into your brand, market, and audience' },
+              { step: '02', title: 'Define', desc: 'Crystallize positioning and strategic direction' },
+              { step: '03', title: 'Design', desc: 'Create visual systems that capture your essence' },
+              { step: '04', title: 'Deliver', desc: 'Launch with comprehensive brand guidelines' }
             ].map((item, i) => (
               <motion.div 
                 key={i}
