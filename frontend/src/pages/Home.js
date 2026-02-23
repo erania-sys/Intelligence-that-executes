@@ -32,7 +32,7 @@ const Home = () => {
 
   const valueProps = [
     {
-      title: 'Fractional Strategic Executives',
+      title: 'Fractional Strategic & Marketing Executives',
       description: 'Senior strategic thinking when you need it—without full-time salary, benefits, and equity overhead. Direct access to battle-tested executives who\'ve led Fortune 500 transformations.'
     },
     {
@@ -137,7 +137,7 @@ const Home = () => {
                 variants={fadeUpVariant}
                 className="text-lg text-[#6C757D] max-w-xl mb-8 leading-relaxed"
               >
-                The questions keeping you up at night—unclear growth levers, competitive noise, scattered execution—we solve them. Fractional strategic executives backed by AI-powered intelligence for mid-market companies who need clarity, not more consultants.
+                The questions keeping you up at night—unclear growth levers, competitive noise, scattered execution—we solve them. Fractional strategic and marketing executives backed by AI-powered intelligence for mid-market companies who need clarity, not more consultants.
               </motion.p>
               
               <motion.div

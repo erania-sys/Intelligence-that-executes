@@ -532,7 +532,7 @@ const Solutions = () => {
                 >
                   <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Ongoing Partnerships</p>
                   <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4">
-                    Fractional Strategic Executives On Retainer
+                    Fractional Strategic & Marketing Executives On Retainer
                   </h2>
                   <p className="text-[#6C757D] max-w-2xl mx-auto">
                     Senior strategic thinking when you need it, without full-time executive overhead.
