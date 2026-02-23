@@ -13,6 +13,7 @@ import Solutions from './pages/Solutions';
 import BrandDesign from './pages/BrandDesign';
 import Intelligence from './pages/Intelligence';
 import Insights from './pages/Insights';
+import BlogArticle from './pages/BlogArticle';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
