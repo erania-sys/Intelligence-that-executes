@@ -372,12 +372,7 @@ const Solutions = () => {
                       >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-red-200/30 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
                         <div className="relative z-10">
-                          <div className="flex items-center gap-2 mb-4">
-                            <div className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center">
-                              <span className="text-red-600 text-lg">!</span>
-                            </div>
-                            <h4 className="font-bold text-red-800">The Problem You're Facing</h4>
-                          </div>
+                          <h4 className="font-bold text-red-800 mb-4">The Problem You're Facing</h4>
                           <p className="text-red-700 leading-relaxed">{program.problem}</p>
                         </div>
                       </motion.div>
@@ -387,12 +382,7 @@ const Solutions = () => {
                       >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A961]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
                         <div className="relative z-10">
-                          <div className="flex items-center gap-2 mb-4">
-                            <div className="w-8 h-8 rounded-lg bg-[#C9A961]/30 flex items-center justify-center">
-                              <TrendingUp size={18} className="text-[#8B7340]" />
-                            </div>
-                            <h4 className="font-bold text-[#0A0A0A]">The Outcome</h4>
-                          </div>
+                          <h4 className="font-bold text-[#0A0A0A] mb-4">The Outcome</h4>
                           <p className="text-[#6C757D] leading-relaxed">{program.outcome}</p>
                         </div>
                       </motion.div>
