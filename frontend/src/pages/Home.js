@@ -173,6 +173,22 @@ const Home = () => {
                   </Link>
                 </motion.div>
               </motion.div>
+              
+              {/* Intelligence Badges */}
+              <motion.div variants={fadeUpVariant} className="flex flex-wrap gap-3 mt-6">
+                <span className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-3 py-1.5 rounded-full text-xs font-medium">
+                  <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
+                  Stanford-Born AI
+                </span>
+                <span className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-3 py-1.5 rounded-full text-xs font-medium">
+                  <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
+                  60+ Countries Validated
+                </span>
+                <span className="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-3 py-1.5 rounded-full text-xs font-medium">
+                  <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
+                  Predictive Intelligence
+                </span>
+              </motion.div>
             </motion.div>
             
             <motion.div
