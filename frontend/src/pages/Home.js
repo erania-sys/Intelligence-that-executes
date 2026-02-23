@@ -135,9 +135,16 @@ const Home = () => {
               
               <motion.p
                 variants={fadeUpVariant}
-                className="text-lg text-[#6C757D] max-w-xl mb-8 leading-relaxed"
+                className="text-lg text-[#6C757D] max-w-xl mb-4 leading-relaxed"
               >
-                The questions keeping you up at night—unclear growth levers, competitive noise, scattered execution—we solve them. Fractional strategic and marketing executives backed by AI-powered intelligence for mid-market companies who need clarity, not more consultants.
+                Fractional Chief Strategy & Marketing Officers equipped with Stanford-born predictive intelligence that identifies which customers will convert, which markets to enter first, and how to win.
+              </motion.p>
+              
+              <motion.p
+                variants={fadeUpVariant}
+                className="text-base text-[#6C757D] max-w-xl mb-8 leading-relaxed"
+              >
+                The questions keeping you up at night—unclear growth levers, competitive noise, scattered execution—we solve them. Intelligence-backed fractional executives for mid-market companies who need clarity, not more consultants.
               </motion.p>
               
               <motion.div
