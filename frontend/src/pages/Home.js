@@ -160,7 +160,7 @@ const Home = () => {
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Request Strategic Consultation
+                  Discover Your Blind Spots
                   <ArrowRight size={18} className="ml-2 arrow-slide" />
                 </motion.a>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
@@ -169,7 +169,7 @@ const Home = () => {
                     className="btn-secondary border-[#0A0A0A] text-[#0A0A0A] hover:bg-[#0A0A0A]"
                     data-testid="hero-cta-secondary"
                   >
-                    Explore Our Approach
+                    Experience the Intelligence Advantage
                   </Link>
                 </motion.div>
               </motion.div>
