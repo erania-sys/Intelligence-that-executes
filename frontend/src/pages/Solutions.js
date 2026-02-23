@@ -820,9 +820,6 @@ const Solutions = () => {
                   >
                     <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#C9A961]/5 rounded-full blur-3xl"></div>
                     <div className="relative z-10">
-                      <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] mb-6 shadow-lg">
-                        <TrendingUp size={26} className="text-white" />
-                      </div>
                       <h4 className="font-bold text-[#0A0A0A] mb-4 text-xl">Value Proposition</h4>
                       <p className="text-[#6C757D] leading-relaxed mb-6 max-w-2xl mx-auto">
                         Premium diagnostic intensive using proprietary AI-powered intelligence technology. This isn't a free consultation or sales pitch—it's a strategic diagnostic using enterprise-grade analytics.
