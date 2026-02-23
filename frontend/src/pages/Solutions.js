@@ -499,6 +499,29 @@ const Solutions = () => {
                       </motion.div>
                     </div>
 
+                    {/* Intelligence Advantage Callout */}
+                    <motion.div 
+                      className="relative bg-gradient-to-r from-[#0A0A0A] to-[#1A1A1A] rounded-2xl p-8 mb-10 overflow-hidden"
+                      whileHover={{ y: -3 }}
+                    >
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C9A961] via-[#C9A961]/50 to-transparent"></div>
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-[#C9A961]/20 flex items-center justify-center flex-shrink-0">
+                          <Target size={24} className="text-[#C9A961]" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-[#C9A961] text-sm uppercase tracking-wider mb-2">The Intelligence Advantage</h4>
+                          <p className="text-white/80 leading-relaxed text-sm mb-3">
+                            Your fractional CSO/CMO deploys ASEMAP™ predictive intelligence to {index === 0 ? 'identify which customer segments, channels, and products have highest conversion probability—moving beyond historical analysis to predictive forecasting' : index === 1 ? 'reveal which value propositions will resonate strongest with high-probability customer segments—eliminating guesswork from positioning decisions' : 'pinpoint exactly where friction exists and which initiatives will drive highest ROI—enabling rapid course correction based on real-time signals'}. Unlike traditional approaches that rely on surveys and assumptions, we reveal what customers actually value—dramatically increasing probability of success.
+                          </p>
+                          <div className="flex items-center gap-2 text-[#C9A961] text-xs font-medium">
+                            <Check size={14} />
+                            <span>Includes: o360™ platform access for real-time monitoring (recommended)</span>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+
                     {/* Who This Is For */}
                     <motion.div 
                       className="bg-white rounded-2xl p-8 border border-[#E9ECEF] mb-10 hover:border-[#C9A961]/40 hover:shadow-lg transition-all duration-300"
