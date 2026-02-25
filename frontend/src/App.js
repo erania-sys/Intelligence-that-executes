@@ -6,6 +6,7 @@ import '@/App.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ChatWidget from './components/ChatWidget';
 
 // Pages
 import Home from './pages/Home';
@@ -52,6 +53,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <ChatWidget />
       </BrowserRouter>
     </div>
   );
