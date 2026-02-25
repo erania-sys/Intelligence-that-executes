@@ -126,6 +126,78 @@ async def get_status_checks():
     
     return status_checks
 
+# Chat endpoint for the AI assistant
+@api_router.post("/chat", response_model=ChatResponse)
+async def chat_with_assistant(request: ChatRequest):
+    """Chat with the Brackett Agency AI assistant"""
+    try:
+        # Generate session ID if not provided
+        session_id = request.session_id or str(uuid.uuid4())
+        
+        # Get chat history from database
+        chat_history = await db.chat_sessions.find_one(
+            {"session_id": session_id},
+            {"_id": 0}
+        )
+        
+        # Initialize LLM chat
+        api_key = os.environ.get('EMERGENT_LLM_KEY')
+        chat = LlmChat(
+            api_key=api_key,
+            session_id=session_id,
+            system_message=BRACKETT_SYSTEM_PROMPT
+        ).with_model("openai", "gpt-4o")
+        
+        # Load previous messages if they exist
+        if chat_history and chat_history.get('messages'):
+            for msg in chat_history['messages']:
+                if msg['role'] == 'user':
+                    chat.messages.append({"role": "user", "content": msg['content']})
+                else:
+                    chat.messages.append({"role": "assistant", "content": msg['content']})
+        
+        # Send user message and get response
+        user_message = UserMessage(text=request.message)
+        response = await chat.send_message(user_message)
+        
+        # Store the conversation in database
+        new_messages = []
+        if chat_history and chat_history.get('messages'):
+            new_messages = chat_history['messages']
+        
+        new_messages.append({
+            "role": "user",
+            "content": request.message,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        })
+        new_messages.append({
+            "role": "assistant", 
+            "content": response,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        })
+        
+        # Update or insert session
+        await db.chat_sessions.update_one(
+            {"session_id": session_id},
+            {
+                "$set": {
+                    "session_id": session_id,
+                    "messages": new_messages,
+                    "updated_at": datetime.now(timezone.utc).isoformat()
+                }
+            },
+            upsert=True
+        )
+        
+        return ChatResponse(response=response, session_id=session_id)
+        
+    except Exception as e:
+        logger.error(f"Chat error: {str(e)}")
+        return ChatResponse(
+            response="I apologize, but I'm having trouble processing your request. Please try again or contact us directly at erania@brackett.agency.",
+            session_id=request.session_id or str(uuid.uuid4())
+        )
+
 # Include the router in the main app
 app.include_router(api_router)
 
