@@ -195,16 +195,17 @@ const BrandDesign = () => {
     },
     {
       title: 'Customer Experience Strategy',
-      tagline: 'Intelligence-Driven CX Design',
-      description: 'Design experiences based on what customers actually value—not what internal teams assume. We identify friction points and moments that matter most.',
+      tagline: 'Behavioral CX Intelligence',
+      description: 'Go beyond NPS and surveys to understand what customers actually value. We use cognitive analytics and ASEMAP™ trade-off methodology to reveal the experiences that truly drive loyalty and lifetime value.',
       deliverables: [
-        'Customer journey mapping with behavioral data overlay',
-        'Experience gap analysis and prioritization',
-        'Touchpoint optimization recommendations',
+        'Behavioral customer journey mapping with true preference data',
+        'Experience gap analysis using conjoint methodology',
+        'Touchpoint prioritization based on behavioral impact',
         'Voice of customer program design',
-        'CX metrics framework and tracking'
+        'CX metrics framework with leading indicators',
+        'Personalization strategy for key segments'
       ],
-      ideal: 'Companies seeking to differentiate through customer experience'
+      ideal: 'Companies seeking to differentiate through customer experience and improve retention'
     }
   ];
 
