@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Clock, Tag, Calendar, Share2, Linkedin, Twitter } from 'lucide-react';
+import { ArrowLeft, Clock, Tag, Calendar, Share2, Linkedin, Send } from 'lucide-react';
 
 const BlogArticle = () => {
   const { id } = useParams();
@@ -840,12 +840,13 @@ const BlogArticle = () => {
                     <Linkedin size={18} />
                   </a>
                   <a 
-                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(article.title)}`}
+                    href={`https://substack.com/note/compose?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(article.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-[#0A0A0A] text-white flex items-center justify-center hover:bg-[#C9A961] transition-colors"
+                    title="Share on Substack"
                   >
-                    <Twitter size={18} />
+                    <Send size={18} />
                   </a>
                 </div>
                 <Link 
