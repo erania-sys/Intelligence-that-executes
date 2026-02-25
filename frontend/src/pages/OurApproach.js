@@ -137,7 +137,7 @@ const OurApproach = () => {
               variants={fadeUpVariant}
               className="text-xl text-white/80 leading-relaxed max-w-3xl"
             >
-              Most consultants bring experience and frameworks. We bring that plus proprietary AI-powered intelligence that reveals what traditional consulting can't see.
+              We combine proven consulting expertise with proprietary AI-powered intelligence tools—giving you the strategic insight of a Fortune 500 team with the predictive capabilities that only became possible in the last few years.
             </motion.p>
           </motion.div>
         </div>
