@@ -347,6 +347,9 @@ const CaseStudies = () => {
         </div>
       </section>
 
+      {/* Intelligence Advantage Section */}
+      <IntelligenceAdvantage variant="full" showLink={true} />
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A]">
         <div className="section-container">
