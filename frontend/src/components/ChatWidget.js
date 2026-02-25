@@ -127,23 +127,23 @@ const ChatWidget = () => {
             data-testid="chat-window"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-[#0A0A0A] to-[#1A1A1A] p-4 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#C9A961] flex items-center justify-center">
-                  <Sparkles size={20} className="text-[#0A0A0A]" />
+            <div className="bg-gradient-to-r from-[#0A0A0A] to-[#1A1A1A] p-3 sm:p-4 flex items-center justify-between">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#C9A961] flex items-center justify-center">
+                  <Sparkles size={16} className="sm:w-5 sm:h-5 text-[#0A0A0A]" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-sm">Brackett AI Assistant</h3>
-                  <p className="text-white/60 text-xs">Powered by Predictive Intelligence</p>
+                  <h3 className="text-white font-semibold text-xs sm:text-sm">Brackett AI Assistant</h3>
+                  <p className="text-white/60 text-[10px] sm:text-xs">Powered by Predictive Intelligence</p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                 data-testid="chat-close-btn"
                 aria-label="Close chat"
               >
-                <X size={18} className="text-white" />
+                <X size={16} className="sm:w-[18px] sm:h-[18px] text-white" />
               </button>
             </div>
 
