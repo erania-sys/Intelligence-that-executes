@@ -116,6 +116,96 @@ const Insights = () => {
       featured: false,
       date: 'August 2025',
       image: 'https://images.pexels.com/photos/6476787/pexels-photo-6476787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    },
+    {
+      id: 10,
+      title: 'Why Your Marketing Isn\'t Converting: The Intelligence Gap',
+      excerpt: 'You\'re spending on marketing but not seeing results. The problem isn\'t your channels—it\'s that you\'re targeting based on assumptions, not behavioral data.',
+      category: 'marketing',
+      readTime: '7 min read',
+      featured: false,
+      date: 'February 2026',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
+    },
+    {
+      id: 11,
+      title: 'The Death of Demographic Marketing',
+      excerpt: 'Age, income, and location used to drive marketing decisions. Today\'s winners segment by behavior and intent—here\'s how.',
+      category: 'marketing',
+      readTime: '6 min read',
+      featured: false,
+      date: 'February 2026',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
+    },
+    {
+      id: 12,
+      title: 'Marketing ROI: Stop Measuring Clicks, Start Measuring Conversions',
+      excerpt: 'Vanity metrics make dashboards look good but don\'t move revenue. Learn the metrics that actually predict marketing success.',
+      category: 'marketing',
+      readTime: '8 min read',
+      featured: false,
+      date: 'January 2026',
+      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
+    },
+    {
+      id: 13,
+      title: 'The Fractional CMO Advantage: When to Bring in Senior Marketing Leadership',
+      excerpt: 'Not every company needs a full-time CMO. Learn when fractional leadership makes sense—and how to maximize the engagement.',
+      category: 'marketing',
+      readTime: '5 min read',
+      featured: false,
+      date: 'January 2026',
+      image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
+    },
+    {
+      id: 14,
+      title: 'Why NPS Scores Plateau (And What to Do About It)',
+      excerpt: 'Your Net Promoter Score hit a ceiling. Traditional improvements aren\'t working. It\'s time for behavioral CX intelligence.',
+      category: 'cx',
+      readTime: '7 min read',
+      featured: false,
+      date: 'February 2026',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
+    },
+    {
+      id: 15,
+      title: 'The Customer Journey Mapping Mistake Everyone Makes',
+      excerpt: 'Most journey maps are built on assumptions. Learn how behavioral analytics transforms journey mapping from art to science.',
+      category: 'cx',
+      readTime: '6 min read',
+      featured: false,
+      date: 'February 2026',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
+    },
+    {
+      id: 16,
+      title: 'What Customers Actually Value vs. What They Say They Value',
+      excerpt: 'Surveys ask customers what they want—and customers lie. Here\'s how conjoint analysis reveals true preferences.',
+      category: 'cx',
+      readTime: '8 min read',
+      featured: false,
+      date: 'January 2026',
+      image: 'https://images.unsplash.com/photo-1553028826-f4804a6dba3b?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
+    },
+    {
+      id: 17,
+      title: 'Designing Experiences That Convert: The Behavioral Approach',
+      excerpt: 'Stop guessing which touchpoints matter. Use behavioral data to design experiences that actually drive loyalty and lifetime value.',
+      category: 'cx',
+      readTime: '9 min read',
+      featured: false,
+      date: 'January 2026',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
+    },
+    {
+      id: 18,
+      title: 'The $100M Retention Problem: Why Customers Leave Without Warning',
+      excerpt: 'By the time customers complain, they\'ve already decided to leave. Predictive CX intelligence identifies churn signals early.',
+      category: 'cx',
+      readTime: '7 min read',
+      featured: false,
+      date: 'December 2025',
+      image: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?crop=entropy&cs=srgb&fm=jpg&q=85&w=800'
     }
   ];
 
