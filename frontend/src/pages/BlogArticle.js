@@ -397,6 +397,121 @@ const BlogArticle = () => {
         
         <p>The companies that make it from $10M to $50M aren't the ones with the best products or the most funding. They're the ones that recognize when transformation is required—and have the courage to do it.</p>
       `
+    },
+    10: {
+      id: 10,
+      title: "Why Your Marketing Isn't Converting: The Intelligence Gap",
+      excerpt: "You're spending on marketing but not seeing results. The problem isn't your channels—it's that you're targeting based on assumptions, not behavioral data.",
+      category: 'marketing',
+      readTime: '7 min read',
+      date: 'February 20, 2026',
+      author: 'Erania Brackett',
+      authorRole: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&q=85&w=800',
+      content: `
+        <p class="lead">Your marketing budget keeps growing, but conversion rates stay flat. You've optimized landing pages, tested headlines, and refreshed creative—but nothing moves the needle. The problem isn't your tactics. It's that you're marketing to who you think your customers are, not who they actually are.</p>
+        
+        <h2>The Intelligence Gap in Modern Marketing</h2>
+        <p>Most marketing teams build campaigns based on demographic data, survey responses, and competitive analysis. This creates a fundamental intelligence gap: you're making million-dollar marketing decisions based on incomplete information.</p>
+        
+        <h2>What Behavioral Intelligence Reveals</h2>
+        <p>When we apply ASEMAP™ behavioral analytics to marketing strategy, we consistently find segment misalignment, message disconnect, and channel inefficiency—companies targeting based on assumptions rather than behavioral data.</p>
+        
+        <h2>Taking Action</h2>
+        <p>If your marketing is underperforming despite optimization efforts, the problem is likely upstream—in your targeting, messaging, and channel strategy. Intelligence-backed marketing starts with understanding what customers actually value.</p>
+      `
+    },
+    11: {
+      id: 11,
+      title: 'The Death of Demographic Marketing',
+      excerpt: "Age, income, and location used to drive marketing decisions. Today's winners segment by behavior and intent—here's how.",
+      category: 'marketing',
+      readTime: '6 min read',
+      date: 'February 15, 2026',
+      author: 'Erania Brackett',
+      authorRole: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&q=85&w=800',
+      content: `
+        <p class="lead">For decades, marketers relied on demographics: age, income, geography, job title. Build personas based on these attributes, target accordingly, and watch the conversions roll in. But that playbook is dead.</p>
+        
+        <h2>Why Demographics Fail</h2>
+        <p>Demographics describe who people are—not what they value, how they make decisions, or what problems they're trying to solve. Two demographically identical customers can have completely different lifetime values.</p>
+        
+        <h2>The Behavioral Segmentation Advantage</h2>
+        <p>Behavioral segmentation groups customers by decision patterns, value hierarchies, problem urgency, and purchase triggers. These behavioral attributes predict conversion and lifetime value far better than any demographic profile.</p>
+        
+        <h2>The Competitive Advantage</h2>
+        <p>Most of your competitors are still using demographic segmentation. While they target "VP-level decision makers in manufacturing," you can target "efficiency-driven buyers who prioritize implementation speed over price"—and win every time.</p>
+      `
+    },
+    14: {
+      id: 14,
+      title: 'Why NPS Scores Plateau (And What to Do About It)',
+      excerpt: "Your Net Promoter Score hit a ceiling. Traditional improvements aren't working. It's time for behavioral CX intelligence.",
+      category: 'cx',
+      readTime: '7 min read',
+      date: 'February 18, 2026',
+      author: 'Erania Brackett',
+      authorRole: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=srgb&fm=jpg&q=85&w=800',
+      content: `
+        <p class="lead">Your NPS hit 45 two years ago. Since then, despite significant investment in customer experience, it hasn't budged. You've improved response times, added features, trained staff—but the score stays flat.</p>
+        
+        <h2>The NPS Plateau Problem</h2>
+        <p>Net Promoter Score tells you how customers feel, not why they feel that way or what would change their minds. When NPS plateaus, it's usually because you've optimized the obvious improvements and survey feedback points to symptoms, not root causes.</p>
+        
+        <h2>Beyond Asking: Behavioral CX Intelligence</h2>
+        <p>Behavioral CX intelligence uses conjoint methodology and forced trade-offs to reveal which experience attributes actually drive satisfaction and loyalty, and which improvements will move NPS vs. which are just noise.</p>
+        
+        <h2>Taking Action</h2>
+        <p>If your NPS has plateaued, the answer isn't working harder on the same improvements. It's gaining new intelligence about what actually drives customer loyalty through behavioral analytics.</p>
+      `
+    },
+    15: {
+      id: 15,
+      title: 'The Customer Journey Mapping Mistake Everyone Makes',
+      excerpt: "Most journey maps are built on assumptions. Learn how behavioral analytics transforms journey mapping from art to science.",
+      category: 'cx',
+      readTime: '6 min read',
+      date: 'February 12, 2026',
+      author: 'Erania Brackett',
+      authorRole: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=srgb&fm=jpg&q=85&w=800',
+      content: `
+        <p class="lead">Every company has a customer journey map. Most of them are wrong. Not because the teams who built them aren't smart, but because they're built on a flawed foundation: internal assumptions about what customers experience.</p>
+        
+        <h2>The Journey Mapping Problem</h2>
+        <p>Traditional journey mapping involves workshop sessions with internal stakeholders and customer surveys—resulting in a beautiful document that reflects what the company thinks customers experience, not what actually happens.</p>
+        
+        <h2>What's Missing: Behavioral Data</h2>
+        <p>The critical gap in most journey maps is behavioral data—evidence of what customers actually do, value, and decide at each touchpoint. Without it, you can't identify which touchpoints actually influence purchase decisions.</p>
+        
+        <h2>Taking Action</h2>
+        <p>Before investing in journey improvements, invest in journey intelligence. Apply behavioral analytics to validate your journey map against reality. You may find that your biggest opportunities aren't where you expected.</p>
+      `
+    },
+    16: {
+      id: 16,
+      title: 'What Customers Actually Value vs. What They Say They Value',
+      excerpt: "Surveys ask customers what they want—and customers lie. Here's how conjoint analysis reveals true preferences.",
+      category: 'cx',
+      readTime: '8 min read',
+      date: 'January 25, 2026',
+      author: 'Erania Brackett',
+      authorRole: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1553028826-f4804a6dba3b?crop=entropy&cs=srgb&fm=jpg&q=85&w=800',
+      content: `
+        <p class="lead">Ask customers what they value, and they'll say "quality" and "service" and "innovation." These answers are useless. Not because customers are dishonest, but because they literally can't articulate what drives their actual decisions.</p>
+        
+        <h2>The Stated vs. Revealed Preference Problem</h2>
+        <p>There's a well-documented gap between stated preferences (what people say they want) and revealed preferences (what their behavior shows they actually value). This gap exists due to social desirability bias and cognitive limitations.</p>
+        
+        <h2>How Conjoint Analysis Works</h2>
+        <p>Conjoint analysis reveals true preferences by forcing trade-offs: present customers with realistic choice scenarios, force them to choose between combinations of attributes, and analyze patterns to determine the weight of each attribute.</p>
+        
+        <h2>Taking Action</h2>
+        <p>If you're making product, pricing, or experience decisions based on survey data, you're likely optimizing for stated preferences—not revealed ones. Behavioral analytics can show you what customers actually value.</p>
+      `
     }
   };
 
