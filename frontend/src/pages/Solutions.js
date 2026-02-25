@@ -1102,6 +1102,11 @@ const Solutions = () => {
         </div>
       </section>
 
+      {/* Intelligence Advantage Section */}
+      <div className="section-container py-12">
+        <IntelligenceAdvantage variant="standard" />
+      </div>
+
       {/* Final CTA Section */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent"></div>
