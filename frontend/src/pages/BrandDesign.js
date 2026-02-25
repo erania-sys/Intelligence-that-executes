@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Check, ChevronDown, Palette, PenTool, Megaphone, Users, Sparkles, Heart, Landmark, Monitor, ShoppingBag } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, Palette, PenTool, Megaphone, Users, Sparkles, Heart, Landmark, Monitor, ShoppingBag, Target, TrendingUp, Zap, BarChart3, Rocket, LineChart } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
