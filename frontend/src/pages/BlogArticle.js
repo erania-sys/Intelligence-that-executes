@@ -522,7 +522,9 @@ const BlogArticle = () => {
       revenue: '#10B981',
       positioning: '#8B5CF6',
       intelligence: '#3B82F6',
-      execution: '#F59E0B'
+      execution: '#F59E0B',
+      marketing: '#7C3AED',
+      cx: '#DC2626'
     };
     return colors[category] || '#6B7280';
   };
@@ -532,7 +534,9 @@ const BlogArticle = () => {
       revenue: 'Revenue Strategy',
       positioning: 'Market Positioning',
       intelligence: 'Customer Intelligence',
-      execution: 'Execution Excellence'
+      execution: 'Execution Excellence',
+      marketing: 'Marketing Strategy',
+      cx: 'Customer Experience'
     };
     return labels[category] || category;
   };
