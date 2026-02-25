@@ -767,6 +767,92 @@ const BrandDesign = () => {
         </div>
       </section>
 
+      {/* À La Carte Services Section */}
+      <section className="py-20 md:py-28 bg-[#0A0A0A]" data-testid="alacarte-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeUpVariant} className="text-center mb-16">
+              <span className="inline-block px-4 py-1.5 bg-[#C9A961]/20 text-[#C9A961] text-xs font-semibold tracking-wider uppercase rounded-full mb-4">
+                Flexible Engagement Options
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                À La Carte Services
+              </h2>
+              <p className="text-white/70 max-w-2xl mx-auto">
+                Not ready for a full engagement? Access specific capabilities powered by the same predictive intelligence that drives our signature programs.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeUpVariant} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {alaCarteServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-[#1A1A1A] rounded-2xl p-8 border border-[#2A2A2A] hover:border-[#C9A961]/50 transition-all group"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#C9A961]/20 flex items-center justify-center">
+                      {index === 0 && <Megaphone size={20} className="text-[#C9A961]" />}
+                      {index === 1 && <TrendingUp size={20} className="text-[#C9A961]" />}
+                      {index === 2 && <Monitor size={20} className="text-[#C9A961]" />}
+                      {index === 3 && <Rocket size={20} className="text-[#C9A961]" />}
+                      {index === 4 && <BarChart3 size={20} className="text-[#C9A961]" />}
+                      {index === 5 && <Users size={20} className="text-[#C9A961]" />}
+                    </div>
+                    <span className="text-[#C9A961] text-xs font-medium uppercase tracking-wider">{service.tagline}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#C9A961] transition-colors">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-white/60 text-sm mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <p className="text-white/40 text-xs uppercase tracking-wider mb-3">Deliverables</p>
+                    <ul className="space-y-2">
+                      {service.deliverables.slice(0, 3).map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-white/70">
+                          <Check size={14} className="text-[#C9A961] mt-0.5 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                      {service.deliverables.length > 3 && (
+                        <li className="text-[#C9A961] text-sm">+ {service.deliverables.length - 3} more</li>
+                      )}
+                    </ul>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-[#2A2A2A]">
+                    <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Ideal For</p>
+                    <p className="text-white/70 text-sm">{service.ideal}</p>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div variants={fadeUpVariant} className="text-center mt-12">
+              <a
+                href="https://form.jotform.com/252728460666061"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-[#C9A961] to-[#8B7340] text-[#0A0A0A] font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(201,169,97,0.4)] transition-all"
+              >
+                Discuss Your Needs
+                <ArrowRight size={18} />
+              </a>
+              <p className="text-white/40 text-sm mt-4">All services include access to predictive intelligence insights</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 md:py-28 bg-[#F8F9FA]" data-testid="faq-section">
         <div className="section-container">
