@@ -50,23 +50,23 @@ const OurApproach = () => {
 
   const differentiators = [
     {
-      traditional: 'Relies on surveys and stated preferences',
-      brackett: 'Uses behavioral analytics to reveal true preferences'
+      traditional: 'Surveys and stated preferences',
+      brackett: 'Behavioral analytics revealing true preferences'
     },
     {
-      traditional: 'Delivers static PowerPoint recommendations',
-      brackett: 'Provides real-time intelligence dashboards'
+      traditional: 'Static reports and recommendations',
+      brackett: 'Real-time intelligence dashboards'
     },
     {
-      traditional: 'Generic frameworks applied to every client',
+      traditional: 'Proven frameworks and best practices',
       brackett: 'Proprietary algorithms customized to your data'
     },
     {
-      traditional: 'Consultants leave after the presentation',
-      brackett: 'Fractional executives embed with your team'
+      traditional: 'Project-based engagements',
+      brackett: 'Fractional executives embedded with your team'
     },
     {
-      traditional: 'Months of analysis before recommendations',
+      traditional: 'Comprehensive analysis phases',
       brackett: 'Actionable insights in weeks'
     }
   ];
