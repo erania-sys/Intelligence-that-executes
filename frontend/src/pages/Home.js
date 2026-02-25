@@ -273,6 +273,37 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Client Industries Section */}
+      <section className="py-12 bg-white border-y border-[#E9ECEF]" data-testid="clients-section">
+        <div className="section-container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUpVariant}
+            className="text-center"
+          >
+            <p className="text-sm text-[#6C757D] mb-8">Trusted by leading companies in</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              {[
+                { name: 'MedTech', icon: '🏥' },
+                { name: 'Pharma & Healthcare', icon: '💊' },
+                { name: 'Consumer Goods', icon: '🛒' },
+                { name: 'Retail', icon: '🏪' },
+                { name: 'Automotive', icon: '🚗' },
+                { name: 'Financial Services', icon: '📊' }
+              ].map((industry, index) => (
+                <div key={index} className="flex items-center gap-2 text-[#6C757D] hover:text-[#0A0A0A] transition-colors">
+                  <span className="text-2xl">{industry.icon}</span>
+                  <span className="font-medium text-sm">{industry.name}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-[#6C757D]/60 mt-6">60+ countries | $100M+ revenue impact delivered</p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Intelligence Differentiator Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-[#C9A961]/10 to-[#C9A961]/5" data-testid="differentiator-section">
         <div className="section-container">
