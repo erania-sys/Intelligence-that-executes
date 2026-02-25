@@ -220,7 +220,7 @@ const ChatWidget = () => {
             )}
 
             {/* Input Area */}
-            <div className="p-4 bg-white border-t border-[#E9ECEF]">
+            <div className="p-3 sm:p-4 bg-white border-t border-[#E9ECEF]">
               <div className="flex items-center gap-2">
                 <input
                   ref={inputRef}
@@ -229,21 +229,21 @@ const ChatWidget = () => {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about our services..."
-                  className="flex-1 bg-[#F8F9FA] border border-[#E9ECEF] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#C9A961] focus:ring-1 focus:ring-[#C9A961]/20 transition-colors"
+                  className="flex-1 bg-[#F8F9FA] border border-[#E9ECEF] rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-sm focus:outline-none focus:border-[#C9A961] focus:ring-1 focus:ring-[#C9A961]/20 transition-colors"
                   disabled={isLoading}
                   data-testid="chat-input"
                 />
                 <button
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim() || isLoading}
-                  className="w-12 h-12 rounded-xl bg-[#0A0A0A] text-white flex items-center justify-center hover:bg-[#1A1A1A] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#0A0A0A] text-white flex items-center justify-center hover:bg-[#1A1A1A] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex-shrink-0"
                   data-testid="chat-send-btn"
                   aria-label="Send message"
                 >
-                  <Send size={18} />
+                  <Send size={16} className="sm:w-[18px] sm:h-[18px]" />
                 </button>
               </div>
-              <p className="text-[10px] text-[#6C757D] text-center mt-2">
+              <p className="text-[9px] sm:text-[10px] text-[#6C757D] text-center mt-2">
                 AI-powered by OSG Analytics Intelligence
               </p>
             </div>
