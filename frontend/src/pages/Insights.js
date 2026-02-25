@@ -21,7 +21,9 @@ const Insights = () => {
     { id: 'revenue', label: 'Revenue Strategy' },
     { id: 'positioning', label: 'Market Positioning' },
     { id: 'intelligence', label: 'Customer Intelligence' },
-    { id: 'execution', label: 'Execution Excellence' }
+    { id: 'execution', label: 'Execution Excellence' },
+    { id: 'marketing', label: 'Marketing Strategy' },
+    { id: 'cx', label: 'Customer Experience' }
   ];
 
   const articles = [
