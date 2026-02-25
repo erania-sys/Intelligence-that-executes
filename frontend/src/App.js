@@ -19,6 +19,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import CaseStudies from './pages/CaseStudies';
 import Careers from './pages/Careers';
+import CustomerExperience from './pages/CustomerExperience';
 
 // Noise Overlay Component
 const NoiseOverlay = () => (
@@ -43,6 +44,7 @@ function App() {
             <Route path="/insights/:id" element={<BlogArticle />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/customer-experience" element={<CustomerExperience />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
