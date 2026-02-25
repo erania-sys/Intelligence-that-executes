@@ -30,6 +30,7 @@ const Navigation = () => {
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Insights', path: '/insights' },
     { name: 'About', path: '/about' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
   ];
 
