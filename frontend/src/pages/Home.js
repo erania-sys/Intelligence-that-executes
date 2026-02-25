@@ -284,18 +284,18 @@ const Home = () => {
             className="text-center"
           >
             <p className="text-sm text-[#6C757D] mb-8">Trusted by leading companies in</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
               {[
-                { name: 'MedTech', icon: '🏥' },
-                { name: 'Pharma & Healthcare', icon: '💊' },
-                { name: 'Consumer Goods', icon: '🛒' },
-                { name: 'Retail', icon: '🏪' },
-                { name: 'Automotive', icon: '🚗' },
-                { name: 'Financial Services', icon: '📊' }
+                'MedTech',
+                'Pharma & Healthcare',
+                'Consumer Goods',
+                'Retail',
+                'Automotive',
+                'Financial Services'
               ].map((industry, index) => (
                 <div key={index} className="flex items-center gap-2 text-[#6C757D] hover:text-[#0A0A0A] transition-colors">
-                  <span className="text-2xl">{industry.icon}</span>
-                  <span className="font-medium text-sm">{industry.name}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C9A961]"></span>
+                  <span className="font-medium text-sm">{industry}</span>
                 </div>
               ))}
             </div>
