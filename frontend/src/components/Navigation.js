@@ -27,7 +27,7 @@ const Navigation = () => {
     { name: 'Solutions', path: '/solutions' },
     { name: 'Brand & Design', path: '/brand-design' },
     { name: 'Customer Experience', path: '/customer-experience' },
-    { name: 'Intelligence', path: '/intelligence' },
+    { name: 'Our Approach', path: '/our-approach' },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Insights', path: '/insights' },
     { name: 'About', path: '/about' },
