@@ -127,6 +127,87 @@ const BrandDesign = () => {
     { num: '05', title: 'System Thinking', desc: 'We build brand systems that scale—not just pretty logos. Your brand should work across every touchpoint, channel, and audience.' }
   ];
 
+  const alaCarteServices = [
+    {
+      title: 'Marketing Strategy & Execution',
+      tagline: 'Intelligence-Backed Marketing Leadership',
+      description: 'Deploy predictive customer intelligence to optimize your marketing investments. We identify which channels, messages, and audiences drive highest conversion—before you spend.',
+      deliverables: [
+        'Customer segmentation powered by ASEMAP™ behavioral data',
+        'Channel optimization based on conversion probability',
+        'Marketing mix modeling and budget allocation',
+        'Campaign performance dashboards and KPI tracking',
+        'Quarterly strategic reviews and course correction'
+      ],
+      ideal: 'Companies seeking marketing efficiency gains and data-driven decision making'
+    },
+    {
+      title: 'Revenue Acceleration Advisory',
+      tagline: 'Sales & Marketing Alignment',
+      description: 'Bridge the gap between marketing promise and sales reality. We align your revenue teams around customer intelligence that reveals what actually drives buying decisions.',
+      deliverables: [
+        'Sales and marketing alignment workshops',
+        'Customer value hierarchy analysis',
+        'Sales enablement content strategy',
+        'Pipeline optimization recommendations',
+        'Win/loss analysis with behavioral insights'
+      ],
+      ideal: 'B2B companies with complex sales cycles seeking revenue growth'
+    },
+    {
+      title: 'Digital Presence Optimization',
+      tagline: 'Data-Driven Digital Strategy',
+      description: 'Transform your digital footprint from a cost center to a conversion engine. We assess, prioritize, and optimize digital channels based on customer preference data.',
+      deliverables: [
+        'Digital ecosystem audit and opportunity assessment',
+        'Customer journey mapping across digital touchpoints',
+        'Conversion rate optimization roadmap',
+        'Content strategy aligned to search intent and buyer stage',
+        'Performance benchmarking and competitive positioning'
+      ],
+      ideal: 'Companies seeking to maximize ROI from digital investments'
+    },
+    {
+      title: 'Product Launch Intelligence',
+      tagline: 'Market-Validated Go-To-Market',
+      description: 'Launch with confidence, not hope. We de-risk product launches by validating positioning, pricing, and messaging with real customer trade-off data.',
+      deliverables: [
+        'Pre-launch customer preference validation',
+        'Optimal pricing analysis using conjoint methodology',
+        'Segment-specific messaging frameworks',
+        'Competitive differentiation strategy',
+        'Launch playbook with success metrics'
+      ],
+      ideal: 'Companies launching new products or entering new markets'
+    },
+    {
+      title: 'Brand Equity Assessment',
+      tagline: 'Strategic Brand Intelligence',
+      description: 'Go beyond awareness metrics to understand true brand value. We measure what your brand means to customers and where equity gaps exist.',
+      deliverables: [
+        'Brand perception study across target segments',
+        'Competitive brand positioning map',
+        'Brand attribute importance ranking',
+        'Customer loyalty driver analysis',
+        'Strategic recommendations for brand investment'
+      ],
+      ideal: 'Established brands seeking to understand and strengthen market position'
+    },
+    {
+      title: 'Customer Experience Strategy',
+      tagline: 'Intelligence-Driven CX Design',
+      description: 'Design experiences based on what customers actually value—not what internal teams assume. We identify friction points and moments that matter most.',
+      deliverables: [
+        'Customer journey mapping with behavioral data overlay',
+        'Experience gap analysis and prioritization',
+        'Touchpoint optimization recommendations',
+        'Voice of customer program design',
+        'CX metrics framework and tracking'
+      ],
+      ideal: 'Companies seeking to differentiate through customer experience'
+    }
+  ];
+
   const promises = [
     'Senior Leadership: Direct access to former Fortune 500 CMO Erania Brackett—not delegated to junior designers',
     'Strategic Foundation: Every design decision backed by market intelligence and positioning strategy',
