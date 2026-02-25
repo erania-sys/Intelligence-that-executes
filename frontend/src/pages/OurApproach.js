@@ -154,17 +154,17 @@ const OurApproach = () => {
           >
             <motion.div variants={fadeUpVariant} className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-6">
-                The Problem with Traditional Consulting
+                Why We Built Something Different
               </h2>
               <p className="text-lg text-[#6C757D] leading-relaxed">
-                You've hired consultants before. They delivered impressive presentations filled with industry benchmarks and best practices. Then they left—and nothing changed. The insights were interesting but not actionable. The recommendations were generic, not specific to your business.
+                Traditional consulting delivers valuable expertise and proven frameworks. We believe those foundations become even more powerful when combined with predictive intelligence tools that weren't available until recently. That's why we built Brackett—to bring enterprise-grade AI analytics to strategic consulting.
               </p>
             </motion.div>
 
             <motion.div variants={fadeUpVariant} className="bg-white rounded-2xl p-8 md:p-12 border border-[#E9ECEF] shadow-sm">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-bold text-[#6C757D] mb-4">Traditional Approach</h3>
+                  <h3 className="text-xl font-bold text-[#6C757D] mb-4">Traditional Consulting</h3>
                   <ul className="space-y-3">
                     {differentiators.map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-[#6C757D]">
@@ -177,7 +177,7 @@ const OurApproach = () => {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#0A0A0A] mb-4">The Brackett Approach</h3>
+                  <h3 className="text-xl font-bold text-[#0A0A0A] mb-4">Brackett + Intelligence Tools</h3>
                   <ul className="space-y-3">
                     {differentiators.map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-[#0A0A0A]">
