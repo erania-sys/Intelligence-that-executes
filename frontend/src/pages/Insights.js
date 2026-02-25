@@ -237,9 +237,6 @@ const Insights = () => {
       marketing: '#7C3AED',
       cx: '#DC2626'
     };
-      intelligence: '#C9A961',
-      execution: '#4A7C59'
-    };
     return colors[category] || '#6C757D';
   };
 
