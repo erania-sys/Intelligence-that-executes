@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Check, Clock, TrendingUp, Users, Calendar, Target, Compass, Zap } from 'lucide-react';
+import IntelligenceAdvantage from '../components/IntelligenceAdvantage';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
