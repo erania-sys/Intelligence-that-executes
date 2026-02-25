@@ -79,6 +79,25 @@ const Solutions = () => {
       deliverables: ['Comprehensive Execution Diagnostic Report', 'Operating rhythm templates', 'Quarterly scorecard dashboard', 'Multi-month execution roadmap', 'Regular leadership reviews', 'Fractional COO partnership', '12-month o360™ platform subscription'],
       timeline: '6-month program',
       roi: 'Defined strategic wins achieved, measurable momentum on key initiatives'
+    },
+    {
+      name: 'Customer Experience Intelligence',
+      problem: 'You\'re making customer experience decisions based on surveys that tell you what customers say—not what they actually value. NPS scores plateau. Customers leave without warning. You\'re investing in touchpoints that don\'t move the needle.',
+      outcome: '90-day intelligence program that reveals true customer preferences through behavioral analytics—identifying exactly which experiences drive loyalty, conversion, and lifetime value.',
+      whoFor: [
+        'Companies with stagnant NPS or customer satisfaction scores',
+        'High customer acquisition costs with poor retention',
+        'Multiple touchpoints but unclear which ones matter most',
+        'Customer feedback that doesn\'t translate to actionable improvements'
+      ],
+      phases: [
+        { name: 'Behavioral Discovery', weeks: '1-4', items: ['ASEMAP™ customer preference study', 'Journey touchpoint mapping with behavioral data', 'Needs-based customer segmentation', 'Competitive CX benchmarking'] },
+        { name: 'Experience Intelligence', weeks: '5-8', items: ['True preference hierarchy (beyond surveys)', 'Friction point identification and impact scoring', 'Moment-of-truth analysis', 'Experience gap prioritization matrix'] },
+        { name: 'Design & Activation', weeks: '9-12', items: ['Experience improvement roadmap', 'Touchpoint optimization recommendations', 'Voice of customer program design', 'CX metrics framework and dashboards'] }
+      ],
+      deliverables: ['Customer Experience Intelligence Brief', 'Behavioral preference hierarchy report', 'Journey map with behavioral data overlay', 'Experience improvement roadmap', 'CX metrics dashboard', 'Voice of customer program framework', '12-month o360™ platform subscription'],
+      timeline: '90 days',
+      roi: 'Measurable improvement in customer retention, NPS, and lifetime value'
     }
   ];
 
