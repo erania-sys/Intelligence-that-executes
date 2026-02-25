@@ -7,6 +7,8 @@ import logo from '../assets/logo.svg';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -19,14 +21,21 @@ const Navigation = () => {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsMobileSolutionsOpen(false);
   }, [location]);
 
-  const navLinks = [
+  const mainNavLinks = [
     { name: 'Home', path: '/' },
     { name: 'How We Work', path: '/how-we-work' },
-    { name: 'Solutions', path: '/solutions' },
+  ];
+
+  const solutionsSubLinks = [
+    { name: 'All Solutions', path: '/solutions' },
     { name: 'Brand & Design', path: '/brand-design' },
     { name: 'Customer Experience', path: '/customer-experience' },
+  ];
+
+  const afterSolutionsLinks = [
     { name: 'Our Approach', path: '/our-approach' },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Insights', path: '/insights' },
@@ -34,6 +43,8 @@ const Navigation = () => {
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
   ];
+
+  const isSolutionsActive = ['/solutions', '/brand-design', '/customer-experience'].includes(location.pathname);
 
   return (
     <>
@@ -56,7 +67,60 @@ const Navigation = () => {
           
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
+            {mainNavLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                data-testid={`nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            
+            {/* Solutions Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsSolutionsOpen(true)}
+              onMouseLeave={() => setIsSolutionsOpen(false)}
+            >
+              <button
+                className={`nav-link flex items-center gap-1 ${isSolutionsActive ? 'active' : ''}`}
+                data-testid="nav-link-solutions"
+              >
+                Solutions
+                <ChevronDown size={14} className={`transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <AnimatePresence>
+                {isSolutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-[#E9ECEF] py-2 z-50"
+                  >
+                    {solutionsSubLinks.map((subLink) => (
+                      <Link
+                        key={subLink.path}
+                        to={subLink.path}
+                        className={`block px-4 py-2.5 text-sm hover:bg-[#FAFAF8] transition-colors ${
+                          location.pathname === subLink.path 
+                            ? 'text-[#C9A961] font-medium' 
+                            : 'text-[#0A0A0A]'
+                        }`}
+                        data-testid={`nav-dropdown-${subLink.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        {subLink.name}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {afterSolutionsLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -116,7 +180,8 @@ const Navigation = () => {
               />
             </Link>
             
-            {navLinks.map((link, index) => (
+            {/* Home and How We Work */}
+            {mainNavLinks.map((link, index) => (
               <motion.div
                 key={link.path}
                 initial={{ opacity: 0, y: 20 }}
@@ -129,7 +194,72 @@ const Navigation = () => {
                   className={`mobile-nav-link text-xl ${
                     location.pathname === link.path ? 'text-[#C9A961]' : ''
                   }`}
-                  data-testid={`mobile-nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
+            ))}
+
+            {/* Solutions with expandable sub-menu */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ delay: mainNavLinks.length * 0.05 }}
+            >
+              <button
+                onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
+                className={`mobile-nav-link text-xl flex items-center gap-2 w-full text-left ${
+                  isSolutionsActive ? 'text-[#C9A961]' : ''
+                }`}
+              >
+                Solutions
+                <ChevronDown size={18} className={`transition-transform ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <AnimatePresence>
+                {isMobileSolutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="pl-4 mt-2 space-y-2 border-l-2 border-[#C9A961]/30">
+                      {solutionsSubLinks.map((subLink) => (
+                        <Link
+                          key={subLink.path}
+                          to={subLink.path}
+                          className={`block py-2 text-lg ${
+                            location.pathname === subLink.path 
+                              ? 'text-[#C9A961]' 
+                              : 'text-[#6C757D]'
+                          }`}
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Remaining links */}
+            {afterSolutionsLinks.map((link, index) => (
+              <motion.div
+                key={link.path}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ delay: (mainNavLinks.length + 1 + index) * 0.05 }}
+              >
+                <Link
+                  to={link.path}
+                  className={`mobile-nav-link text-xl ${
+                    location.pathname === link.path ? 'text-[#C9A961]' : ''
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -143,7 +273,7 @@ const Navigation = () => {
               className="btn-primary mt-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: navLinks.length * 0.05 }}
+              transition={{ delay: (mainNavLinks.length + 1 + afterSolutionsLinks.length) * 0.05 }}
             >
               Request Consultation
             </motion.a>
