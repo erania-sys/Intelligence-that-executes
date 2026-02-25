@@ -119,7 +119,7 @@ const Insights = () => {
     },
     {
       id: 10,
-      title: 'Why Your Marketing Isn\'t Converting: The Intelligence Gap',
+      title: 'Why Your Marketing Isn\'t Working: The Intelligence Gap Most CMOs Miss',
       excerpt: 'You\'re spending on marketing but not seeing results. The problem isn\'t your channels—it\'s that you\'re targeting based on assumptions, not behavioral data.',
       category: 'marketing',
       readTime: '7 min read',
@@ -129,7 +129,7 @@ const Insights = () => {
     },
     {
       id: 11,
-      title: 'The Death of Demographic Marketing',
+      title: 'Why Demographic Marketing Is Dead (And What to Do Instead)',
       excerpt: 'Age, income, and location used to drive marketing decisions. Today\'s winners segment by behavior and intent—here\'s how.',
       category: 'marketing',
       readTime: '6 min read',
@@ -159,7 +159,7 @@ const Insights = () => {
     },
     {
       id: 14,
-      title: 'Why NPS Scores Plateau (And What to Do About It)',
+      title: 'Your NPS Score Is Lying to You: Why Sentiment Metrics Plateau',
       excerpt: 'Your Net Promoter Score hit a ceiling. Traditional improvements aren\'t working. It\'s time for behavioral CX intelligence.',
       category: 'cx',
       readTime: '7 min read',
@@ -169,7 +169,7 @@ const Insights = () => {
     },
     {
       id: 15,
-      title: 'The Customer Journey Mapping Mistake Everyone Makes',
+      title: 'The #1 Customer Journey Mapping Mistake (And How Behavioral Analytics Fixes It)',
       excerpt: 'Most journey maps are built on assumptions. Learn how behavioral analytics transforms journey mapping from art to science.',
       category: 'cx',
       readTime: '6 min read',
@@ -179,7 +179,7 @@ const Insights = () => {
     },
     {
       id: 16,
-      title: 'What Customers Actually Value vs. What They Say They Value',
+      title: 'Stated vs. Revealed Preferences: Why Customers Lie (Without Knowing It)',
       excerpt: 'Surveys ask customers what they want—and customers lie. Here\'s how conjoint analysis reveals true preferences.',
       category: 'cx',
       readTime: '8 min read',
