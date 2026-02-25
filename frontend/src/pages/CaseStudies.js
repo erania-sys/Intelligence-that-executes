@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, TrendingUp, Target, DollarSign, Users, CheckCircle, BarChart3, Zap } from 'lucide-react';
+import IntelligenceAdvantage from '../components/IntelligenceAdvantage';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
