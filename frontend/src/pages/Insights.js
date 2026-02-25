@@ -221,7 +221,9 @@ const Insights = () => {
       revenue: 'Revenue Strategy',
       positioning: 'Market Positioning',
       intelligence: 'Customer Intelligence',
-      execution: 'Execution Excellence'
+      execution: 'Execution Excellence',
+      marketing: 'Marketing Strategy',
+      cx: 'Customer Experience'
     };
     return labels[category] || category;
   };
@@ -230,6 +232,11 @@ const Insights = () => {
     const colors = {
       revenue: '#0A0A0A',
       positioning: '#C9A961',
+      intelligence: '#2563EB',
+      execution: '#059669',
+      marketing: '#7C3AED',
+      cx: '#DC2626'
+    };
       intelligence: '#C9A961',
       execution: '#4A7C59'
     };
