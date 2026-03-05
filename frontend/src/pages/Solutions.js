@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Check, Clock, TrendingUp, Users, Calendar, Target, Compass, Zap } from 'lucide-react';
+import { ArrowRight, Check, Clock, TrendingUp, Users, Calendar, Target, Compass, Zap, Sparkles, Award, Shield, BarChart3 } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -10,6 +11,11 @@ const fadeUpVariant = {
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
+};
+
+const cardHoverVariant = {
+  rest: { scale: 1, y: 0 },
+  hover: { scale: 1.02, y: -5, transition: { duration: 0.3 } }
 };
 
 const Solutions = () => {
@@ -171,12 +177,15 @@ const Solutions = () => {
 
   return (
     <div data-testid="solutions-page" className="bg-[#FAFAF8]">
-      {/* Hero Section - Enhanced */}
-      <section className="pt-28 pb-16 bg-white relative overflow-hidden" data-testid="hero-section">
+      {/* Hero Section - Premium Enhanced */}
+      <section className="pt-28 pb-20 bg-white relative overflow-hidden" data-testid="hero-section">
         {/* Background decorative elements */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#C9A961]/5 to-transparent"></div>
+        <div className="absolute top-20 right-20 w-72 h-72 border border-[#C9A961]/10 rounded-full"></div>
+        <div className="absolute bottom-20 right-40 w-48 h-48 border border-[#C9A961]/10 rounded-full"></div>
         <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#C9A961] rounded-full animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-[#0A0A0A] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-1/2 left-10 w-4 h-4 border-2 border-[#C9A961] rounded-full animate-ping" style={{ animationDuration: '2s' }}></div>
         
         <div className="section-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -190,15 +199,27 @@ const Solutions = () => {
                 variants={fadeUpVariant}
                 className="flex flex-wrap gap-3 mb-6"
               >
-                <span className="px-4 py-2 bg-[#0A0A0A] text-white text-xs font-bold rounded-full">
+                <motion.span 
+                  className="px-4 py-2 bg-[#0A0A0A] text-white text-xs font-bold rounded-full inline-flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Target size={12} />
                   3 Signature Programs
-                </span>
-                <span className="px-4 py-2 bg-[#C9A961]/10 text-[#C9A961] text-xs font-bold rounded-full border border-[#C9A961]/30">
+                </motion.span>
+                <motion.span 
+                  className="px-4 py-2 bg-[#C9A961]/10 text-[#C9A961] text-xs font-bold rounded-full border border-[#C9A961]/30 inline-flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Users size={12} />
                   Strategic Partnerships
-                </span>
-                <span className="px-4 py-2 bg-white text-[#6C757D] text-xs font-bold rounded-full border border-[#E9ECEF]">
+                </motion.span>
+                <motion.span 
+                  className="px-4 py-2 bg-white text-[#6C757D] text-xs font-bold rounded-full border border-[#E9ECEF] inline-flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <BarChart3 size={12} />
                   Diagnostic Audits
-                </span>
+                </motion.span>
               </motion.div>
 
               <motion.h1
@@ -223,25 +244,55 @@ const Solutions = () => {
                 Structured programs designed for the problems mid-market B2B companies actually face.
               </motion.p>
 
-              {/* Quick stats */}
+              {/* Quick stats - Enhanced */}
               <motion.div 
                 variants={fadeUpVariant}
-                className="flex gap-8 mt-8"
+                className="flex gap-6 md:gap-8 mt-8 flex-wrap"
               >
-                <div>
-                  <div className="text-2xl font-bold text-[#0A0A0A]">90-180</div>
-                  <div className="text-xs text-[#6C757D]">Day Programs</div>
-                </div>
-                <div className="w-px bg-[#E9ECEF]"></div>
-                <div>
-                  <div className="text-2xl font-bold text-[#C9A961]">3x-10x</div>
-                  <div className="text-xs text-[#6C757D]">Typical ROI</div>
-                </div>
-                <div className="w-px bg-[#E9ECEF]"></div>
-                <div>
-                  <div className="text-2xl font-bold text-[#0A0A0A]">100%</div>
-                  <div className="text-xs text-[#6C757D]">Outcome Focus</div>
-                </div>
+                <motion.div 
+                  className="text-center"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="text-2xl md:text-3xl font-bold text-[#0A0A0A]">90-180</div>
+                  <div className="text-xs text-[#6C757D] mt-1">Day Programs</div>
+                </motion.div>
+                <div className="w-px bg-[#E9ECEF] hidden md:block"></div>
+                <motion.div 
+                  className="text-center"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="text-2xl md:text-3xl font-bold text-[#C9A961]">3x-10x</div>
+                  <div className="text-xs text-[#6C757D] mt-1">Typical ROI</div>
+                </motion.div>
+                <div className="w-px bg-[#E9ECEF] hidden md:block"></div>
+                <motion.div 
+                  className="text-center"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="text-2xl md:text-3xl font-bold text-[#0A0A0A]">100%</div>
+                  <div className="text-xs text-[#6C757D] mt-1">Outcome Focus</div>
+                </motion.div>
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div 
+                variants={fadeUpVariant}
+                className="flex flex-wrap gap-4 mt-8"
+              >
+                <motion.a
+                  href="https://form.jotform.com/252728460666061"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary group"
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Get Started
+                  <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </motion.a>
+                <Link to="/how-we-work" className="btn-secondary">
+                  View Our Process
+                </Link>
               </motion.div>
             </motion.div>
             <motion.div
@@ -250,17 +301,19 @@ const Solutions = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="hidden lg:block relative"
             >
-              {/* Decorative frame */}
+              {/* Decorative frames */}
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#C9A961]/20 rounded-lg"></div>
+              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#0A0A0A]/10 rounded-lg"></div>
               <img 
                 src="https://images.pexels.com/photos/7433824/pexels-photo-7433824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                 alt="Business strategy meeting"
                 className="rounded-lg shadow-2xl w-full h-auto object-cover relative z-10"
               />
-              {/* Floating card */}
+              
+              {/* Floating card - bottom left */}
               <motion.div 
                 className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl border border-[#E9ECEF] z-20"
-                animate={{ y: [0, -5, 0] }}
+                animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <div className="flex items-center gap-3">
@@ -273,7 +326,46 @@ const Solutions = () => {
                   </div>
                 </div>
               </motion.div>
+
+              {/* Floating card - top right */}
+              <motion.div 
+                className="absolute -top-4 -right-4 bg-[#0A0A0A] rounded-xl p-4 shadow-xl z-20"
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#C9A961] flex items-center justify-center">
+                    <TrendingUp size={20} className="text-[#0A0A0A]" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-white/60">Average</p>
+                    <p className="font-bold text-white">5x ROI</p>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Value Props Bar */}
+      <section className="py-6 bg-[#0A0A0A]">
+        <div className="section-container">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
+            {[
+              { icon: Shield, text: 'Outcome Guaranteed' },
+              { icon: Award, text: 'Fortune 500 Experience' },
+              { icon: Sparkles, text: 'AI-Powered Intelligence' }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                className="flex items-center gap-2 group"
+                whileHover={{ scale: 1.05 }}
+              >
+                <item.icon className="text-[#C9A961]" size={18} />
+                <span className="text-white/80 font-medium text-sm">{item.text}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -328,116 +420,205 @@ const Solutions = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
+                {/* Section Header */}
+                <div className="text-center mb-16">
+                  <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Signature Programs</p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4">
+                    Intelligence-to-Execution Programs
+                  </h2>
+                  <p className="text-[#6C757D] max-w-2xl mx-auto">
+                    Structured engagements with defined outcomes, timelines, and measurable ROI.
+                  </p>
+                </div>
+
                 {signaturePrograms.map((program, index) => (
-                  <div key={index} className="mb-20 last:mb-0">
-                    <div className="flex items-start gap-4 mb-8">
-                      <div className="w-14 h-14 rounded-xl bg-[#0A0A0A]/10 flex items-center justify-center flex-shrink-0">
-                        {index === 0 && <Target className="text-[#0A0A0A]" size={28} />}
-                        {index === 1 && <Compass className="text-[#0A0A0A]" size={28} />}
-                        {index === 2 && <Zap className="text-[#0A0A0A]" size={28} />}
-                      </div>
+                  <motion.div 
+                    key={index} 
+                    className="mb-24 last:mb-0"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    {/* Program Header with Icon */}
+                    <div className="flex items-start gap-4 md:gap-6 mb-10">
+                      <motion.div 
+                        className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center flex-shrink-0 shadow-lg"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        {index === 0 && <Target className="text-white" size={28} />}
+                        {index === 1 && <Compass className="text-white" size={28} />}
+                        {index === 2 && <Zap className="text-white" size={28} />}
+                      </motion.div>
                       <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A]" >
+                        <span className="text-sm font-semibold text-[#C9A961] uppercase tracking-wider">
+                          Program {index + 1}
+                        </span>
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mt-1">
                           {program.name}
                         </h2>
                       </div>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-8 mb-8">
-                      <div className="bg-red-50 rounded-xl p-6 border border-red-100">
-                        <h4 className="font-semibold text-red-800 mb-3">The Problem You're Facing</h4>
-                        <p className="text-red-700 text-sm leading-relaxed">{program.problem}</p>
-                      </div>
-                      <div className="bg-[#0A0A0A]/5 rounded-xl p-6 border border-[#0A0A0A]/10">
-                        <h4 className="font-semibold text-[#0A0A0A] mb-3">The Outcome</h4>
-                        <p className="text-[#6C757D] text-sm leading-relaxed">{program.outcome}</p>
-                      </div>
+                    {/* Problem/Outcome Cards */}
+                    <div className="grid lg:grid-cols-2 gap-6 mb-10">
+                      <motion.div 
+                        className="bg-gradient-to-br from-red-50 to-red-100/50 rounded-xl p-6 border border-red-100 relative overflow-hidden"
+                        whileHover={{ y: -5 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-red-200/20 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <h4 className="font-semibold text-red-800 mb-3 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                          The Problem You're Facing
+                        </h4>
+                        <p className="text-red-700 text-sm leading-relaxed relative z-10">{program.problem}</p>
+                      </motion.div>
+                      <motion.div 
+                        className="bg-gradient-to-br from-[#C9A961]/5 to-[#C9A961]/15 rounded-xl p-6 border border-[#C9A961]/20 relative overflow-hidden"
+                        whileHover={{ y: -5 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-[#C9A961]/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <h4 className="font-semibold text-[#0A0A0A] mb-3 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-[#C9A961] rounded-full"></span>
+                          The Outcome
+                        </h4>
+                        <p className="text-[#6C757D] text-sm leading-relaxed relative z-10">{program.outcome}</p>
+                      </motion.div>
                     </div>
 
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF] mb-8">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Who This Is For</h4>
-                      <ul className="grid md:grid-cols-2 gap-2">
+                    {/* Who This Is For */}
+                    <motion.div 
+                      className="bg-white rounded-xl p-6 border border-[#E9ECEF] mb-10 hover:shadow-lg hover:border-[#C9A961]/30 transition-all duration-300"
+                      whileHover={{ y: -3 }}
+                    >
+                      <h4 className="font-semibold text-[#0A0A0A] mb-4 flex items-center gap-2">
+                        <Users size={18} className="text-[#C9A961]" />
+                        Who This Is For
+                      </h4>
+                      <ul className="grid md:grid-cols-2 gap-3">
                         {program.whoFor.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className="mb-8">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">The Process</h4>
-                      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {program.phases.map((phase, i) => (
-                          <div key={i} className="bg-[#F8F9FA] rounded-xl p-5">
-                            <div className="flex items-center gap-2 mb-3">
-                              <span className="w-6 h-6 rounded-full bg-[#C9A961] text-white text-xs flex items-center justify-center font-semibold">
-                                {i + 1}
-                              </span>
-                              <span className="text-xs text-[#6C757D]">Weeks {phase.weeks}</span>
-                            </div>
-                            <h5 className="font-semibold text-[#0A0A0A] text-sm mb-2">{phase.name}</h5>
-                            <ul className="space-y-1">
-                              {phase.items.map((item, j) => (
-                                <li key={j} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                  <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
+                    {/* The Process - Timeline Style */}
+                    <div className="mb-10">
+                      <h4 className="font-semibold text-[#0A0A0A] mb-6 flex items-center gap-2">
+                        <Calendar size={18} className="text-[#C9A961]" />
+                        The Process
+                      </h4>
+                      <div className="relative">
+                        {/* Connection line for desktop */}
+                        <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-[#C9A961] via-[#C9A961]/50 to-[#C9A961]/20"></div>
+                        
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                          {program.phases.map((phase, i) => (
+                            <motion.div 
+                              key={i} 
+                              className="bg-white rounded-xl p-5 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300 relative"
+                              whileHover={{ y: -5 }}
+                            >
+                              <div className="flex items-center gap-2 mb-3">
+                                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A961] to-[#8B7340] text-white text-xs flex items-center justify-center font-bold shadow-md relative z-10">
+                                  {i + 1}
+                                </span>
+                                <span className="text-xs font-medium text-[#C9A961] bg-[#C9A961]/10 px-2 py-1 rounded-full">Weeks {phase.weeks}</span>
+                              </div>
+                              <h5 className="font-semibold text-[#0A0A0A] text-sm mb-3">{phase.name}</h5>
+                              <ul className="space-y-1.5">
+                                {phase.items.map((item, j) => (
+                                  <li key={j} className="text-xs text-[#6C757D] flex items-start gap-1.5">
+                                    <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </motion.div>
+                          ))}
+                        </div>
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                        <h4 className="font-semibold text-[#0A0A0A] mb-4">What You Get</h4>
+                    {/* Bottom Cards - Deliverables, Timeline, ROI */}
+                    <div className="grid md:grid-cols-3 gap-6 mb-8">
+                      <motion.div 
+                        className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-lg transition-all duration-300"
+                        whileHover={{ y: -5 }}
+                      >
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-8 h-8 rounded-lg bg-[#C9A961]/10 flex items-center justify-center">
+                            <Check size={16} className="text-[#C9A961]" />
+                          </div>
+                          <h4 className="font-semibold text-[#0A0A0A]">What You Get</h4>
+                        </div>
                         <ul className="space-y-2">
                           {program.deliverables.map((item, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                              <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
+                              <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                               <span>{item}</span>
                             </li>
                           ))}
                         </ul>
-                      </div>
-                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
+                      </motion.div>
+                      <motion.div 
+                        className="bg-gradient-to-br from-[#0A0A0A] to-[#1a1a1a] rounded-xl p-6 text-white"
+                        whileHover={{ y: -5 }}
+                      >
                         <div className="flex items-center gap-2 mb-4">
                           <Clock size={18} className="text-[#C9A961]" />
-                          <h4 className="font-semibold text-[#0A0A0A]">Timeline</h4>
+                          <h4 className="font-semibold">Timeline</h4>
                         </div>
-                        <p className="text-2xl font-bold text-[#0A0A0A]" >
+                        <p className="text-3xl font-bold text-[#C9A961]">
                           {program.timeline}
                         </p>
-                      </div>
-                      <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
+                        <p className="text-white/60 text-sm mt-2">Start to completion</p>
+                      </motion.div>
+                      <motion.div 
+                        className="bg-gradient-to-br from-[#C9A961]/10 to-[#C9A961]/20 rounded-xl p-6 border border-[#C9A961]/30"
+                        whileHover={{ y: -5 }}
+                      >
                         <div className="flex items-center gap-2 mb-4">
-                          <TrendingUp size={18} className="text-[#0A0A0A]" />
+                          <TrendingUp size={18} className="text-[#C9A961]" />
                           <h4 className="font-semibold text-[#0A0A0A]">Expected ROI</h4>
                         </div>
                         <p className="text-sm text-[#6C757D] leading-relaxed">{program.roi}</p>
-                      </div>
+                      </motion.div>
                     </div>
 
-                    <div className="mt-6 flex gap-4">
-                      <a
+                    {/* CTA Button */}
+                    <div className="flex flex-wrap gap-4">
+                      <motion.a
                         href="https://form.jotform.com/252728460666061"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-primary"
+                        className="btn-primary group"
                         data-testid={`cta-${program.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        whileHover={{ scale: 1.02, y: -2 }}
+                        whileTap={{ scale: 0.98 }}
                       >
                         Request Consultation
-                        <ArrowRight size={16} className="ml-2" />
-                      </a>
+                        <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                      </motion.a>
+                      <Link to="/how-we-work" className="btn-secondary">
+                        Learn Our Process
+                      </Link>
                     </div>
 
                     {index < signaturePrograms.length - 1 && (
-                      <hr className="mt-16 border-[rgba(0,0,0,0.08)]" />
+                      <div className="mt-20 flex items-center gap-4">
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E9ECEF] to-transparent"></div>
+                        <div className="w-2 h-2 rounded-full bg-[#C9A961]"></div>
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#E9ECEF] to-transparent"></div>
+                      </div>
                     )}
-                  </div>
+                  </motion.div>
                 ))}
               </motion.div>
             )}
@@ -451,108 +632,140 @@ const Solutions = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="text-center mb-12">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#0A0A0A] mb-4" >
+                {/* Section Header */}
+                <div className="text-center mb-16">
+                  <p className="text-sm font-semibold text-[#C9A961] mb-3 uppercase tracking-wider">Strategic Partnerships</p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4">
                     Fractional Strategic Executives On Retainer
                   </h2>
+                  <p className="text-[#6C757D] max-w-2xl mx-auto">
+                    Senior strategic thinking when you need it, without full-time executive overhead.
+                  </p>
                 </div>
 
-                {strategicPartnerships.map((partnership, index) => (
-                  <div key={index} className="mb-16 last:mb-0">
-                    <div className="bg-white rounded-xl p-8 border border-[#E9ECEF]">
-                      <div className="flex items-start gap-4 mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-[#C9A961]/10 flex items-center justify-center flex-shrink-0">
-                          <Users className="text-[#C9A961]" size={24} />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-[#0A0A0A]" >
-                            {partnership.name}
-                          </h3>
-                          <p className="text-[#C9A961] font-medium">{partnership.subtitle}</p>
+                <div className="grid md:grid-cols-2 gap-8">
+                  {strategicPartnerships.map((partnership, index) => (
+                    <motion.div 
+                      key={index} 
+                      className="bg-white rounded-2xl overflow-hidden border border-[#E9ECEF] hover:shadow-xl hover:border-[#C9A961]/30 transition-all duration-300"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      whileHover={{ y: -5 }}
+                    >
+                      {/* Card Header */}
+                      <div className="bg-gradient-to-r from-[#0A0A0A] to-[#1a1a1a] p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="w-12 h-12 rounded-xl bg-[#C9A961] flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <Users className="text-white" size={24} />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-white mb-1">
+                              {partnership.name}
+                            </h3>
+                            <p className="text-[#C9A961] font-medium text-sm">{partnership.subtitle}</p>
+                          </div>
                         </div>
                       </div>
+                      
+                      {/* Card Body */}
+                      <div className="p-6">
+                        <p className="text-[#6C757D] mb-6 text-sm leading-relaxed">{partnership.description}</p>
 
-                      <p className="text-[#6C757D] mb-6">{partnership.description}</p>
-
-                      <div className="bg-[#F8F9FA] rounded-lg p-4 mb-6">
-                        <h4 className="font-semibold text-[#0A0A0A] mb-3">Who It's For</h4>
-                        <ul className="grid md:grid-cols-3 gap-2">
-                          {partnership.whoFor.map((item, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                              <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div>
-                          <h5 className="font-semibold text-[#0A0A0A] mb-3 flex items-center gap-2">
-                            <Calendar size={16} className="text-[#C9A961]" /> Monthly Support
-                          </h5>
+                        {/* Who It's For */}
+                        <div className="bg-gradient-to-br from-[#C9A961]/5 to-[#C9A961]/10 rounded-xl p-4 mb-6 border border-[#C9A961]/10">
+                          <h4 className="font-semibold text-[#0A0A0A] mb-3 text-sm flex items-center gap-2">
+                            <Target size={14} className="text-[#C9A961]" />
+                            Who It's For
+                          </h4>
                           <ul className="space-y-2">
-                            {partnership.monthly.map((item, i) => (
-                              <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
+                            {partnership.whoFor.map((item, i) => (
+                              <li key={i} className="flex items-start gap-2 text-xs text-[#6C757D]">
+                                <Check size={12} className="text-[#C9A961] mt-0.5 flex-shrink-0" />
                                 <span>{item}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
-                        <div>
-                          <h5 className="font-semibold text-[#0A0A0A] mb-3">Quarterly</h5>
-                          <ul className="space-y-2">
-                            {partnership.quarterly.map((item, i) => (
-                              <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        {partnership.annual && (
-                          <div>
-                            <h5 className="font-semibold text-[#0A0A0A] mb-3">Annual</h5>
-                            <ul className="space-y-2">
-                              {partnership.annual.map((item, i) => (
-                                <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                  <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                        {partnership.premium && (
-                          <div>
-                            <h5 className="font-semibold text-[#0A0A0A] mb-3">Premium Access</h5>
-                            <ul className="space-y-2">
-                              {partnership.premium.map((item, i) => (
-                                <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
-                                  <ArrowRight size={10} className="text-[#C9A961] mt-1 flex-shrink-0" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
 
-                      <div className="mt-6 pt-6 border-t border-[#E9ECEF]">
-                        <a
-                          href="https://form.jotform.com/252728460666061"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-primary"
-                        >
-                          Discuss Partnership
-                          <ArrowRight size={16} className="ml-2" />
-                        </a>
+                        {/* Support Tiers */}
+                        <div className="space-y-4">
+                          <div className="border-l-2 border-[#C9A961] pl-4">
+                            <h5 className="font-semibold text-[#0A0A0A] mb-2 text-sm flex items-center gap-2">
+                              <Calendar size={14} className="text-[#C9A961]" /> Monthly Support
+                            </h5>
+                            <ul className="space-y-1">
+                              {partnership.monthly.map((item, i) => (
+                                <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
+                                  <ArrowRight size={10} className="text-[#C9A961] mt-0.5 flex-shrink-0" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          <div className="border-l-2 border-[#C9A961]/60 pl-4">
+                            <h5 className="font-semibold text-[#0A0A0A] mb-2 text-sm">Quarterly</h5>
+                            <ul className="space-y-1">
+                              {partnership.quarterly.map((item, i) => (
+                                <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
+                                  <ArrowRight size={10} className="text-[#C9A961] mt-0.5 flex-shrink-0" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
+                          {partnership.annual && (
+                            <div className="border-l-2 border-[#C9A961]/40 pl-4">
+                              <h5 className="font-semibold text-[#0A0A0A] mb-2 text-sm">Annual</h5>
+                              <ul className="space-y-1">
+                                {partnership.annual.map((item, i) => (
+                                  <li key={i} className="text-xs text-[#6C757D] flex items-start gap-1">
+                                    <ArrowRight size={10} className="text-[#C9A961] mt-0.5 flex-shrink-0" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          
+                          {partnership.premium && (
+                            <div className="bg-[#0A0A0A] rounded-lg p-4">
+                              <h5 className="font-semibold text-[#C9A961] mb-2 text-sm flex items-center gap-2">
+                                <Sparkles size={14} /> Premium Access
+                              </h5>
+                              <ul className="space-y-1">
+                                {partnership.premium.map((item, i) => (
+                                  <li key={i} className="text-xs text-white/70 flex items-start gap-1">
+                                    <ArrowRight size={10} className="text-[#C9A961] mt-0.5 flex-shrink-0" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* CTA */}
+                        <div className="mt-6 pt-6 border-t border-[#E9ECEF]">
+                          <motion.a
+                            href="https://form.jotform.com/252728460666061"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-primary w-full justify-center group"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            Discuss Partnership
+                            <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                          </motion.a>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             )}
 
@@ -565,101 +778,186 @@ const Solutions = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="max-w-4xl mx-auto">
-                  <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4" >
+                <div className="max-w-5xl mx-auto">
+                  {/* Section Header */}
+                  <div className="text-center mb-16">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                      className="inline-flex items-center gap-2 bg-[#C9A961]/10 text-[#C9A961] px-4 py-2 rounded-full text-sm font-medium mb-4"
+                    >
+                      <BarChart3 size={16} />
+                      Diagnostic Service
+                    </motion.div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4">
                       The Strategic Blindspot Audit
                     </h2>
-                    <p className="text-xl text-[#C9A961]" >
+                    <p className="text-xl text-[#C9A961] font-medium">
                       What You Can't See Is Costing You More Than You Think
                     </p>
                   </div>
 
-                  <div className="bg-red-50 rounded-xl p-6 border border-red-100 mb-8">
-                    <h4 className="font-semibold text-red-800 mb-3">The Problem</h4>
-                    <p className="text-red-700 leading-relaxed">
-                      Most mid-market B2B companies are leaving substantial annual opportunity on the table due to strategic blindspots they can't identify from inside the business.
-                    </p>
-                  </div>
+                  {/* Problem Statement */}
+                  <motion.div 
+                    className="bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border border-red-100 mb-10 relative overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-red-200/20 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                    <div className="flex items-start gap-4 relative z-10">
+                      <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center flex-shrink-0">
+                        <Target className="text-red-600" size={24} />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-red-800 mb-3 text-lg">The Problem</h4>
+                        <p className="text-red-700 leading-relaxed">
+                          Most mid-market B2B companies are leaving substantial annual opportunity on the table due to strategic blindspots they can't identify from inside the business.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Pre-Work</h4>
+                  {/* Audit Process Grid */}
+                  <div className="grid md:grid-cols-2 gap-6 mb-10">
+                    <motion.div 
+                      className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:shadow-lg hover:border-[#C9A961]/30 transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-[#C9A961]/10 flex items-center justify-center">
+                          <span className="text-[#C9A961] font-bold">01</span>
+                        </div>
+                        <h4 className="font-semibold text-[#0A0A0A]">Pre-Work</h4>
+                      </div>
                       <ul className="space-y-2">
                         {auditFeatures.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
-                    </div>
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Intensive Facilitated Session</h4>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:shadow-lg hover:border-[#C9A961]/30 transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-[#C9A961]/10 flex items-center justify-center">
+                          <span className="text-[#C9A961] font-bold">02</span>
+                        </div>
+                        <h4 className="font-semibold text-[#0A0A0A]">Intensive Facilitated Session</h4>
+                      </div>
                       <ul className="space-y-2">
                         {auditSession.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Post-Session Deliverables</h4>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="bg-white rounded-xl p-6 border border-[#E9ECEF] hover:shadow-lg hover:border-[#C9A961]/30 transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-[#C9A961]/10 flex items-center justify-center">
+                          <span className="text-[#C9A961] font-bold">03</span>
+                        </div>
+                        <h4 className="font-semibold text-[#0A0A0A]">Post-Session Deliverables</h4>
+                      </div>
                       <ul className="space-y-2">
                         {auditDeliverables.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
-                    </div>
-                    <div className="bg-white rounded-xl p-6 border border-[#E9ECEF]">
-                      <h4 className="font-semibold text-[#0A0A0A] mb-4">Technology Access</h4>
+                    </motion.div>
+                    
+                    <motion.div 
+                      className="bg-gradient-to-br from-[#C9A961]/5 to-[#C9A961]/15 rounded-xl p-6 border border-[#C9A961]/20 hover:shadow-lg transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-[#C9A961] flex items-center justify-center">
+                          <Sparkles size={18} className="text-white" />
+                        </div>
+                        <h4 className="font-semibold text-[#0A0A0A]">Technology Access</h4>
+                      </div>
                       <ul className="space-y-2">
                         {auditTechnology.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm text-[#6C757D]">
-                            <Check size={14} className="text-[#0A0A0A] mt-1 flex-shrink-0" />
+                            <Check size={14} className="text-[#C9A961] mt-1 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </motion.div>
                   </div>
 
-                  <div className="bg-[#F8F9FA] rounded-xl p-8 text-center mb-8">
-                    <h4 className="font-semibold text-[#0A0A0A] mb-4">Value Proposition</h4>
-                    <p className="text-[#6C757D] leading-relaxed mb-4">
+                  {/* Value Proposition */}
+                  <motion.div 
+                    className="bg-gradient-to-br from-[#F8F9FA] to-white rounded-2xl p-8 text-center mb-10 border border-[#E9ECEF]"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#C9A961]/10 mb-4">
+                      <Award size={24} className="text-[#C9A961]" />
+                    </div>
+                    <h4 className="font-semibold text-[#0A0A0A] mb-4 text-lg">Value Proposition</h4>
+                    <p className="text-[#6C757D] leading-relaxed mb-4 max-w-2xl mx-auto">
                       Premium diagnostic intensive using proprietary AI-powered intelligence technology. This isn't a free consultation or sales pitch—it's a strategic diagnostic using enterprise-grade analytics.
                     </p>
-                    <p className="text-[#C9A961] font-medium">
+                    <p className="inline-flex items-center gap-2 text-[#C9A961] font-medium bg-[#C9A961]/10 px-4 py-2 rounded-full">
+                      <Check size={16} />
                       Investment fully credited toward full engagement.
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="bg-[#0A0A0A] rounded-xl p-8 text-center text-white">
-                    <h4 className="font-bold text-xl mb-4" >
-                      Why This Matters
-                    </h4>
-                    <p className="text-white/80 leading-relaxed mb-6">
-                      Think of this as insurance against making the wrong strategic bet. You get immediate clarity on where to invest resources, validated by data and senior executive judgment—before committing to a larger transformation program.
-                    </p>
-                    <a
-                      href="https://form.jotform.com/252728460666061"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-white text-[#0A0A0A] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
-                      data-testid="cta-audit"
-                    >
-                      Request Your Strategic Audit
-                      <ArrowRight size={16} />
-                    </a>
-                  </div>
+                  {/* Final CTA Section */}
+                  <motion.div 
+                    className="bg-[#0A0A0A] rounded-2xl p-8 md:p-12 text-center text-white relative overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    {/* Background decorations */}
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent"></div>
+                    <div className="absolute top-10 left-10 w-32 h-32 bg-[#C9A961]/5 rounded-full blur-2xl"></div>
+                    <div className="absolute bottom-10 right-10 w-48 h-48 bg-[#C9A961]/5 rounded-full blur-3xl"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#C9A961] mb-6">
+                        <Target size={28} className="text-white" />
+                      </div>
+                      <h4 className="font-bold text-2xl md:text-3xl mb-4 text-white">
+                        Why This Matters
+                      </h4>
+                      <p className="text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
+                        Think of this as insurance against making the wrong strategic bet. You get immediate clarity on where to invest resources, validated by data and senior executive judgment—before committing to a larger transformation program.
+                      </p>
+                      <motion.a
+                        href="https://form.jotform.com/252728460666061"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-[#C9A961] text-[#0A0A0A] font-semibold px-8 py-4 rounded-lg hover:bg-[#d4b56e] transition-colors shadow-lg group"
+                        data-testid="cta-audit"
+                        whileHover={{ scale: 1.02, y: -2 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        Request Your Strategic Audit
+                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                      </motion.a>
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             )}
