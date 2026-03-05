@@ -15,6 +15,7 @@ import Intelligence from './pages/Intelligence';
 import Insights from './pages/Insights';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Media from './pages/Media';
 
 // Noise Overlay Component
 const NoiseOverlay = () => (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/brand-design" element={<BrandDesign />} />
             <Route path="/intelligence" element={<Intelligence />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/media" element={<Media />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

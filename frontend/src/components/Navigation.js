@@ -28,6 +28,7 @@ const Navigation = () => {
     { name: 'Brand & Design', path: '/brand-design' },
     { name: 'Intelligence', path: '/intelligence' },
     { name: 'Insights', path: '/insights' },
+    { name: 'Media', path: '/media' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
