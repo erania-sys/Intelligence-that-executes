@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Check, ChevronDown, Palette, PenTool, Megaphone, Users, Sparkles, Heart, Landmark, Monitor, ShoppingBag } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, Palette, PenTool, Megaphone, Users, Sparkles, Heart, Landmark, Monitor, ShoppingBag, Zap, Mail, Video, Globe, Share2, BarChart3, Target, Tv, ShoppingCart, Search, MessageSquare } from 'lucide-react';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -160,7 +160,85 @@ const BrandDesign = () => {
     {
       question: 'What if we need a brand refresh, not a complete rebrand?',
       answer: 'We offer brand evolution services—refreshing your visual identity while maintaining brand equity. This is often the right approach for established companies wanting to modernize without starting from scratch.'
+    },
+    {
+      question: 'What digital marketing services do you offer through your partnership?',
+      answer: 'Through our strategic partnership with Hawke Media, we offer full-spectrum digital marketing including paid social, paid search, SEO, email/SMS marketing, influencer marketing, Amazon management, connected TV, and more—all powered by AI-driven analytics for maximum ROI.'
     }
+  ];
+
+  // Hawke Media Digital Marketing Capabilities (White Label Partnership)
+  const digitalMarketingCategories = [
+    {
+      icon: Target,
+      title: 'Paid Media & Advertising',
+      description: 'Data-driven advertising campaigns across all major platforms',
+      services: [
+        { name: 'Paid Social', desc: 'Facebook, Instagram, TikTok, LinkedIn, Pinterest, Snapchat campaigns with AI-optimized targeting' },
+        { name: 'Paid Search (SEM)', desc: 'Google Ads and Microsoft Advertising with continuous A/B testing and Hawke AI optimization' },
+        { name: 'Programmatic & Native', desc: 'Precision audience targeting with real-time bidding and performance tracking' },
+        { name: 'Connected TV (CTV)', desc: 'Targeted streaming ads on Hulu, Roku, Samsung TV, Apple TV with cross-device integration' }
+      ]
+    },
+    {
+      icon: Search,
+      title: 'SEO & Content',
+      description: 'Organic growth through search optimization and compelling content',
+      services: [
+        { name: 'SEO & GEO', desc: 'Search engine and generative AI optimization to achieve top rankings and answer relevant queries' },
+        { name: 'Content Strategy', desc: 'Customized written content leveraging SEO insights and AI to grow audiences through thought leadership' },
+        { name: 'Web Design & UX', desc: 'Conversion-focused websites on WordPress, Shopify, and BigCommerce platforms' }
+      ]
+    },
+    {
+      icon: Share2,
+      title: 'Social & Influencer',
+      description: 'Community building and influencer partnerships at scale',
+      services: [
+        { name: 'Social Media Management', desc: 'Organic social content creation and community management across LinkedIn, Meta, and TikTok' },
+        { name: 'Influencer Marketing', desc: 'Access to networks through CAA, Wasserman partnerships to place products on millions of screens' },
+        { name: 'User-Generated Content', desc: 'UGC campaigns to enhance engagement, recruit brand-aligned creators, and build community' },
+        { name: 'Community Management', desc: 'Active monitoring, engagement, customer service, and weekly performance reporting' }
+      ]
+    },
+    {
+      icon: Mail,
+      title: 'Email & SMS',
+      description: 'Re-engage customers and nurture prospects with targeted messaging',
+      services: [
+        { name: 'Email Marketing', desc: 'Improve open rates, grow subscriber lists, and drive revenue with Klaviyo and Yotpo' },
+        { name: 'SMS Marketing', desc: 'Instant engagement through Postscript and Octane AI integrations' },
+        { name: 'Marketing Automation', desc: 'Customer journey workflows based on retargeting and behavioral data' }
+      ]
+    },
+    {
+      icon: ShoppingCart,
+      title: 'Amazon & Affiliate',
+      description: 'Marketplace optimization and performance-based revenue',
+      services: [
+        { name: 'Amazon Management', desc: 'Full account management, storefront optimization, A+ content, and Sponsored Brand campaigns' },
+        { name: 'Amazon DSP', desc: 'Programmatic display and video with audience targeting, retargeting, and bid management' },
+        { name: 'Affiliate Marketing', desc: 'Long-term revenue streams through Impact, ShareASale, Rakuten partnerships' },
+        { name: 'TikTok Shop', desc: 'Shop setup, creator partnerships, strategic affiliate plans, and performance reporting' }
+      ]
+    },
+    {
+      icon: Video,
+      title: 'Creative & Production',
+      description: 'Compelling visual assets that capture attention',
+      services: [
+        { name: 'Photo & Video Production', desc: 'Branded lifestyle and studio photography, GIFs, and video content' },
+        { name: 'Out-of-Home (OOH)', desc: 'Billboard, transit, and digital out-of-home advertising in high-traffic areas' },
+        { name: 'Personal Branding', desc: 'Position individuals as leaders with cohesive online and in-person presence' }
+      ]
+    }
+  ];
+
+  const hawkeAIFeatures = [
+    { title: 'Real-Time Optimization', desc: 'AI-powered campaign adjustments based on 8,000+ brands\' data' },
+    { title: 'Industry Benchmarking', desc: 'Compare performance against competitors in your category' },
+    { title: 'Anomaly Detection', desc: 'Automatic flagging of analytics issues before they impact results' },
+    { title: 'Performance Forecasting', desc: 'Predictive modeling to optimize budget allocation' }
   ];
 
   return (
@@ -553,6 +631,141 @@ const BrandDesign = () => {
                   </div>
                 </motion.div>
               ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Digital Marketing Capabilities - Hawke Media Partnership */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-[#0A0A0A] to-[#1A1A1A] relative overflow-hidden" data-testid="digital-marketing-section">
+        {/* Background decorations */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C9A961] to-transparent"></div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-[#C9A961]/5 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#C9A961]/5 rounded-full blur-[120px]"></div>
+        
+        <div className="section-container relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {/* Section Header */}
+            <motion.div variants={fadeUpVariant} className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-[#C9A961]/10 text-[#C9A961] px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <Zap size={16} />
+                Full-Service Digital Marketing
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Expand Your Reach with<br />
+                <span className="text-[#C9A961]">Performance Marketing</span>
+              </h2>
+              <p className="text-white/70 max-w-2xl mx-auto">
+                Beyond brand strategy, we deliver full-spectrum digital marketing powered by AI-driven analytics.
+                Launch, scale, and accelerate your growth with data-backed campaigns across every channel.
+              </p>
+            </motion.div>
+
+            {/* Hawke AI Feature Bar */}
+            <motion.div 
+              variants={fadeUpVariant}
+              className="bg-gradient-to-r from-[#C9A961]/20 to-[#C9A961]/5 rounded-2xl p-6 mb-12 border border-[#C9A961]/30"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-[#C9A961] flex items-center justify-center">
+                  <BarChart3 size={20} className="text-[#0A0A0A]" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold">Powered by Hawke AI</h3>
+                  <p className="text-white/60 text-sm">Proprietary analytics platform analyzing 8,000+ brands' data</p>
+                </div>
+              </div>
+              <div className="grid md:grid-cols-4 gap-4">
+                {hawkeAIFeatures.map((feature, i) => (
+                  <div key={i} className="bg-white/5 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-[#C9A961] font-semibold text-sm mb-1">{feature.title}</h4>
+                    <p className="text-white/60 text-xs">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Digital Marketing Categories Grid */}
+            <motion.div variants={staggerContainer} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {digitalMarketingCategories.map((category, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUpVariant}
+                  className="bg-white/5 rounded-xl border border-white/10 hover:border-[#C9A961]/50 transition-all duration-300 overflow-hidden group"
+                  whileHover={{ y: -5 }}
+                >
+                  {/* Card Header */}
+                  <div className="p-6 border-b border-white/10">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#C9A961] to-[#8B7340] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <category.icon className="text-white" size={24} />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-bold text-lg mb-1">{category.title}</h3>
+                        <p className="text-white/50 text-sm">{category.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Card Body */}
+                  <div className="p-6">
+                    <ul className="space-y-3">
+                      {category.services.map((service, i) => (
+                        <li key={i} className="group/item">
+                          <div className="flex items-start gap-2">
+                            <ArrowRight size={14} className="text-[#C9A961] mt-1 flex-shrink-0 group-hover/item:translate-x-1 transition-transform" />
+                            <div>
+                              <span className="text-white font-medium text-sm">{service.name}</span>
+                              <p className="text-white/50 text-xs mt-0.5">{service.desc}</p>
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Stats Bar */}
+            <motion.div 
+              variants={fadeUpVariant}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+            >
+              {[
+                { value: '184%', label: 'Avg Revenue Increase' },
+                { value: '8,000+', label: 'Brands Analyzed' },
+                { value: 'A La Carte', label: 'Flexible Services' },
+                { value: '24/7', label: 'Platform Access' }
+              ].map((stat, i) => (
+                <div key={i} className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
+                  <div className="text-2xl md:text-3xl font-bold text-[#C9A961]">{stat.value}</div>
+                  <div className="text-white/60 text-sm mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div variants={fadeUpVariant} className="text-center">
+              <p className="text-white/70 mb-6 max-w-xl mx-auto">
+                From brand strategy to full-funnel execution—we provide end-to-end marketing solutions tailored to your growth goals.
+              </p>
+              <motion.a
+                href="https://form.jotform.com/252728460666061"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#C9A961] text-[#0A0A0A] font-semibold px-8 py-4 rounded-lg hover:bg-[#d4b56e] transition-colors shadow-lg group"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Discuss Your Marketing Needs
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
