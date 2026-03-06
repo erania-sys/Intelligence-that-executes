@@ -24,7 +24,8 @@ const Media = () => {
       url: 'https://open.spotify.com/episode/3qa0kMWxuT834SaWFBlFsl?si=kHd47uRfSvCCrgrsALo7Og&nd=1&dlsi=060216a005304096',
       icon: Headphones,
       color: '#1DB954',
-      bgColor: '#1DB954/10'
+      bgColor: '#1DB954/10',
+      image: 'https://customer-assets.emergentagent.com/job_27c8f0e9-947d-4d1f-b357-54da0c22fabb/artifacts/omr57tnw_Screenshot%202026-03-06%20at%208.47.12%E2%80%AFAM.png'
     },
     {
       type: 'video',
