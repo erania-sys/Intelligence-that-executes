@@ -50,7 +50,8 @@ const Media = () => {
       url: 'https://music.amazon.com.mx/podcasts/04efeb4a-c716-440b-a935-0a38ad4e868f/episodes/39b14e55-bf90-40c0-b01a-aeefb8b0b856/xraised-strategic-intelligence-for-leaders',
       icon: Mic,
       color: '#FF9900',
-      bgColor: '#FF9900/10'
+      bgColor: '#FF9900/10',
+      image: 'https://customer-assets.emergentagent.com/job_27c8f0e9-947d-4d1f-b357-54da0c22fabb/artifacts/h9jk5rsy_Screenshot%202026-03-06%20at%208.49.16%E2%80%AFAM.png'
     }
   ];
 
@@ -168,11 +169,11 @@ const Media = () => {
                   <div className={`grid ${appearance.image ? 'md:grid-cols-[1fr_1fr]' : 'md:grid-cols-[auto_1fr_auto]'} items-center`}>
                     {/* Platform indicator or Image */}
                     {appearance.image ? (
-                      <div className="relative overflow-hidden">
+                      <div className="relative overflow-hidden bg-gray-100">
                         <img 
                           src={appearance.image}
                           alt={appearance.title}
-                          className="w-full h-full object-cover aspect-video md:aspect-auto md:h-[300px] group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-contain aspect-video md:aspect-auto md:h-[280px] group-hover:scale-105 transition-transform duration-500"
                         />
                         {/* Play button overlay */}
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
