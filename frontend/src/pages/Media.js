@@ -36,7 +36,8 @@ const Media = () => {
       url: 'https://xraised.com/videos/strategic-intelligence-for-leaders/',
       icon: Video,
       color: '#C9A961',
-      bgColor: '#C9A961/10'
+      bgColor: '#C9A961/10',
+      image: 'https://customer-assets.emergentagent.com/job_27c8f0e9-947d-4d1f-b357-54da0c22fabb/artifacts/3w1jnbdf_Screenshot%202026-03-06%20at%208.06.57%E2%80%AFAM.png'
     },
     {
       type: 'podcast',
@@ -163,31 +164,60 @@ const Media = () => {
                   className="group bg-white rounded-2xl overflow-hidden border border-[#E9ECEF] hover:border-[#C9A961]/50 hover:shadow-2xl transition-all duration-500"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="grid md:grid-cols-[auto_1fr_auto] items-center">
-                    {/* Platform indicator */}
-                    <div 
-                      className="p-8 md:p-12 flex items-center justify-center"
-                      style={{ backgroundColor: `${appearance.color}10` }}
-                    >
-                      <div 
-                        className="w-20 h-20 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110"
-                        style={{ backgroundColor: `${appearance.color}20` }}
-                      >
-                        <appearance.icon size={36} style={{ color: appearance.color }} />
+                  <div className={`grid ${appearance.image ? 'md:grid-cols-[1fr_1fr]' : 'md:grid-cols-[auto_1fr_auto]'} items-center`}>
+                    {/* Platform indicator or Image */}
+                    {appearance.image ? (
+                      <div className="relative overflow-hidden">
+                        <img 
+                          src={appearance.image}
+                          alt={appearance.title}
+                          className="w-full h-full object-cover aspect-video md:aspect-auto md:h-[300px] group-hover:scale-105 transition-transform duration-500"
+                        />
+                        {/* Play button overlay */}
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="w-16 h-16 rounded-full bg-[#C9A961] flex items-center justify-center">
+                            <Play className="text-white ml-1" size={28} />
+                          </div>
+                        </div>
+                        {/* Platform badge */}
+                        <div 
+                          className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase"
+                          style={{ backgroundColor: appearance.color, color: 'white' }}
+                        >
+                          {appearance.platform}
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <div 
+                        className="p-8 md:p-12 flex items-center justify-center"
+                        style={{ backgroundColor: `${appearance.color}10` }}
+                      >
+                        <div 
+                          className="w-20 h-20 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110"
+                          style={{ backgroundColor: `${appearance.color}20` }}
+                        >
+                          <appearance.icon size={36} style={{ color: appearance.color }} />
+                        </div>
+                      </div>
+                    )}
                     
                     {/* Content */}
                     <div className="p-8">
-                      <div className="flex items-center gap-3 mb-3">
-                        <span 
-                          className="px-3 py-1 rounded-full text-xs font-bold uppercase"
-                          style={{ backgroundColor: `${appearance.color}15`, color: appearance.color }}
-                        >
-                          {appearance.platform}
-                        </span>
-                        <span className="text-xs text-[#6C757D]">{appearance.type === 'podcast' ? 'Podcast Episode' : 'Video Interview'}</span>
-                      </div>
+                      {!appearance.image && (
+                        <div className="flex items-center gap-3 mb-3">
+                          <span 
+                            className="px-3 py-1 rounded-full text-xs font-bold uppercase"
+                            style={{ backgroundColor: `${appearance.color}15`, color: appearance.color }}
+                          >
+                            {appearance.platform}
+                          </span>
+                          <span className="text-xs text-[#6C757D]">{appearance.type === 'podcast' ? 'Podcast Episode' : 'Video Interview'}</span>
+                        </div>
+                      )}
+                      
+                      {appearance.image && (
+                        <span className="text-xs text-[#6C757D] mb-2 block">Video Interview</span>
+                      )}
                       
                       <h3 className="text-xl md:text-2xl font-bold text-[#0A0A0A] mb-2 group-hover:text-[#C9A961] transition-colors">
                         {appearance.title}
@@ -198,7 +228,7 @@ const Media = () => {
                       </p>
                       
                       {/* Topics */}
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mb-4">
                         {appearance.topics.map((topic, i) => (
                           <span 
                             key={i}
@@ -208,14 +238,23 @@ const Media = () => {
                           </span>
                         ))}
                       </div>
+
+                      {appearance.image && (
+                        <div className="flex items-center gap-2 text-[#C9A961] font-medium text-sm group-hover:gap-3 transition-all">
+                          <span>Watch Interview</span>
+                          <ArrowRight size={16} />
+                        </div>
+                      )}
                     </div>
                     
-                    {/* Action */}
-                    <div className="p-8 hidden md:flex items-center">
-                      <div className="w-14 h-14 rounded-full bg-[#0A0A0A] flex items-center justify-center group-hover:bg-[#C9A961] transition-colors">
-                        <Play className="text-white ml-1" size={24} />
+                    {/* Action - only for non-image cards */}
+                    {!appearance.image && (
+                      <div className="p-8 hidden md:flex items-center">
+                        <div className="w-14 h-14 rounded-full bg-[#0A0A0A] flex items-center justify-center group-hover:bg-[#C9A961] transition-colors">
+                          <Play className="text-white ml-1" size={24} />
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </motion.a>
               ))}
