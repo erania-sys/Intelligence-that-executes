@@ -37,7 +37,7 @@ const Media = () => {
       icon: Video,
       color: '#C9A961',
       bgColor: '#C9A961/10',
-      image: 'https://customer-assets.emergentagent.com/job_27c8f0e9-947d-4d1f-b357-54da0c22fabb/artifacts/3w1jnbdf_Screenshot%202026-03-06%20at%208.06.57%E2%80%AFAM.png'
+      image: 'https://customer-assets.emergentagent.com/job_27c8f0e9-947d-4d1f-b357-54da0c22fabb/artifacts/hxzr2my9_Screenshot%202026-03-06%20at%208.46.27%E2%80%AFAM.png'
     },
     {
       type: 'podcast',
